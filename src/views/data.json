@@ -4,7 +4,7 @@
     "description": "(site meta description)"
   },
   "pages": {
-    "home": {
+    "dashboard": {
       "title": "Tổng quan | Watapy Dashboard System",
       "description": "",
       "stylesheets": ["main"],
@@ -26,9 +26,9 @@
   "menus": {
     "primary": [
       {
-        "id": "home",
-        "path": "/",
-        "children": "Home"
+        "id": "dashboard",
+        "path": "/dasboard",
+        "children": "Dashboard"
       },
       {
         "id": "about-index",

@@ -1,8 +1,24 @@
 {%- block foot -%}
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.1/jquery.min.js" integrity="sha256-VAvG3sHdS5LqTT+5A/aeq/bZGa/Uj04xKxY8KM/w9EE=" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
-  
+  <script src="{{ paths.root + paths.scripts }}/jquery-migrate-1.2.1.min.js"></script>
+  <script src="{{ paths.root + paths.scripts }}/jquery-ui-1.10.3.min.js"></script>
+
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>  
+  <script src="{{ paths.root + paths.scripts }}/modernizr.min.js"></script>
+  <script src="{{ paths.root + paths.scripts }}/jquery.sparkline.min.js"></script>
+  <script src="{{ paths.root + paths.scripts }}/toggles.min.js"></script>
+  <script src="{{ paths.root + paths.scripts }}/retina.min.js"></script>
+  <script src="{{ paths.root + paths.scripts }}/jquery.cookies.js"></script>
+  <script src="{{ paths.root + paths.scripts }}/flot/jquery.flot.min.js"></script>
+  <script src="{{ paths.root + paths.scripts }}/flot/jquery.flot.resize.min.js"></script>
+  <script src="{{ paths.root + paths.scripts }}/flot/jquery.flot.spline.min.js"></script>
+  <script src="{{ paths.root + paths.scripts }}/morris.min.js"></script>
+  <script src="{{ paths.root + paths.scripts }}/raphael-2.1.0.min.js"></script>
+
+  <script src="{{ paths.root + paths.scripts }}/custom.js"></script>
+  <script src="{{ paths.root + paths.scripts }}/dashboard.js"></script>
+
   {%- for script in page.scripts %}
     <script src="{{ paths.root + paths.scripts }}/{{ script }}.js?ver={{ version }}"></script>
   {% endfor -%}
