@@ -51,9 +51,9 @@ const paths = {
     src: `${dirs.entry}/views/pages/**/*.+(html|njk|nunjucks)`,
     dest: `${dirs.output}`,
   },
-  media: {
-    src: `${dirs.entry}/media/**/*.+(gif|jpg|jpeg|png|svg)`,
-    dest: `${dirs.output}/static/media`,
+  images: {
+    src: `${dirs.entry}/images/**/*.+(gif|jpg|jpeg|png|svg)`,
+    dest: `${dirs.output}/static/images`,
   },
   styles: {
     src: `${dirs.entry}/styles/**/*.+(css|scss)`,
@@ -74,7 +74,10 @@ const pluginConfig = {
   autoprefixer: { browsers: ['last 2 versions'] },
   browserSync: {
     port: process.env.PORT || 3000,
-    server: { baseDir: `${dirs.output}` },
+    server: { 
+      baseDir: `${dirs.output}`,
+      directory: true
+    },
   },
   cleanCSS: [
     { debug: true },
@@ -108,7 +111,7 @@ const pluginConfig = {
         root: isProd ? 'https://example.com' : '',
         scripts: '/static/scripts',
         styles: '/static/styles',
-        media: '/static/media',
+        images: '/static/images',
       },
     },
     envOptions: {
@@ -219,23 +222,23 @@ gulp.task('views', () =>
 );
 
 //------------------------------------------------------------------------------
-// Media.
+// images.
 //------------------------------------------------------------------------------
 
-gulp.task('media', () =>
+gulp.task('images', () =>
   gulp
     // Input.
-    .src(paths.media.src)
+    .src(paths.images.src)
     // Report errors.
     .pipe(plumber(pluginConfig.plumber))
     // Production: Do nothing.
     // Development: Pipe only changed files to the next process.
-    .pipe(isProd ? noop() : changed(paths.media.dest))
+    .pipe(isProd ? noop() : changed(paths.images.dest))
     // Production: Optimize.
     // Development: Do Nothing.
     .pipe(isProd ? imagemin(pluginConfig.imagemin) : noop())
     // Output.
-    .pipe(gulp.dest(paths.media.dest))
+    .pipe(gulp.dest(paths.images.dest))
     // Production: Do nothing.
     // Development: Stream changes back to 'watch' tasks.
     .pipe(isProd ? noop() : browserSync.stream()),
@@ -319,7 +322,7 @@ gulp.task('scripts:watch', ['scripts'], done => {
 gulp.task('watch', () => {
   gulp.watch(paths.public.src, ['public']);
   gulp.watch(paths.views.watch, ['views:watch']);
-  gulp.watch(paths.media.src, ['media']);
+  gulp.watch(paths.images.src, ['images']);
   gulp.watch(paths.styles.src, ['styles']);
   gulp.watch(paths.scripts.src[0], ['scripts:watch']);
 });
@@ -336,7 +339,7 @@ gulp.task('clean', () => del([dirs.output]));
 //------------------------------------------------------------------------------
 
 gulp.task('default', callback => {
-  const compile = ['public', 'views', 'media', 'styles', 'scripts'];
+  const compile = ['public', 'views', 'images', 'styles', 'scripts'];
   if (isProd) {
     // Production.
     runSequence('clean', compile, callback);

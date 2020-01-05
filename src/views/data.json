@@ -1,11 +1,17 @@
 {
   "site": {
-    "title": "(site title)",
+    "title": "Watapy Dashboard System",
     "description": "(site meta description)"
   },
   "pages": {
-    "index": {
-      "title": "",
+    "home": {
+      "title": "Tổng quan | Watapy Dashboard System",
+      "description": "",
+      "stylesheets": ["main"],
+      "scripts": ["main"]
+    },
+    "wallet": {
+      "title": "Ví của tôi | Watapy Dashboard System",
       "description": "",
       "stylesheets": ["main"],
       "scripts": ["main"]
@@ -20,7 +26,7 @@
   "menus": {
     "primary": [
       {
-        "id": "index",
+        "id": "home",
         "path": "/",
         "children": "Home"
       },

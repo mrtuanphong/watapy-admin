@@ -3,18 +3,27 @@
   <head>
     {% include 'partials/head.html' %}
   </head>
-  <body class="is-{{ page.id }}">
-    <div class="page" id="top">
+  <body class="stickyheader">
+    {# PAGE WRAPPER: --- #}
+    <div class="page is-{{ page.id }}" id="top">
+      {# HEADER --- #}
+      {# {% include 'partials/header.html' %} #}
 
-      {% include 'partials/header.html' %}
+      <nav class="leftpanel sticky-leftpanel">
+        {% include 'partials/nav.html' %}
+      </nav>
+      <main class="mainpanel">
+        {% block content %}{% endblock %}
+      </main>
+      <aside class="rightpanel">
+        Right...
+      </aside>
 
-      {% block content %}
-      {% endblock %}
-
-      {% include 'partials/footer.html' %}
-
+      {# FOOTER: --- #}
+      {# {% include 'partials/footer.html' %} #}
     </div>
 
+    {# SCRIPTS: --- #}
     {% include 'partials/foot.html' %}
   </body>
 </html>

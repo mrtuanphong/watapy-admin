@@ -6,54 +6,84 @@
 // include-media (vendor functions and mixins, MUST come before variables)
 @import 'include-media/dist/include-media';
 
-// Variables (typography, colors, layout)
-$base-font-family: sans-serif !default;
-
-//------------------------------------------------------------------------------
-// Global (reset, reboot unclassed selectors)
-//------------------------------------------------------------------------------
-
-// Reset (vendor module)
-@import 'normalize.css/normalize';
-
-// Reboot (base, elements, media, tables, forms)
-*,
-::before,
-::after {
-  box-sizing: inherit;
-}
-
-html {
-  box-sizing: border-box;
-}
-
-body {
-  font-family: $base-font-family;
-  @include media('>=tablet') {
-    font-size: .875rem;
-  }
-}
-
-html,
-body {
-  min-height: 100vh;
-}
-
-//------------------------------------------------------------------------------
-// Objects (purely structural reusable objects)
-//------------------------------------------------------------------------------
-
 // Grid system.
 @import 'flexboxgrid/dist/flexboxgrid';
 
-//------------------------------------------------------------------------------
-// Components (designed reusable patterns)
-//------------------------------------------------------------------------------
+/* 
+ *  ---------------------------------------
+ *  ---------- TABLE OF CONTENTS ----------
+ *  ---------------------------------------
+ *  
+ *  2.  RESET STYLES
+ *  3.  HEADER PANEL
+ *          3.1     HEADER LEFT
+ *          3.2     HEADER RIGHT
+ *  4.  LEFT PANEL
+ *          4.1     NAVIGATION STYLES
+ *          4.2     INFO SUMMARY
+ *  5.  MAIN PANEL
+ *          5.1     DASHBOARD
+ *  6.  FORM STYLES
+ *          6.1     FORM WIZARD STYLES
+ *  7.  UI ELEMENTS
+ *  8.  EMAIL
+ *  9.  TABLES
+ *  10. PAGES
+ *          10.1    CALENDAR
+ *          10.2    MEDIA MANAGER
+ *          10.3    PROFILE
+ *          10.4    BLOG LIST
+ *          10.5    BLOG SINGLE
+ *          10.6    PEOPLE DIRECTORY
+ *          10.7    NOT FOUND PAGE
+ *          10.8    SEARCH RESULTS
+ *          10.9    INVOICE
+ *          10.10   TIMELINE
+ *          10.11   LOCKED SCREEN
+ *          10.12   SIGN IN
+ *          10.13   SIGN UP
+ *  11. LEFT PANEL COLLAPSED
+ *  12. RIGHT PANEL STYLES
+ *  13. HORIZONTAL MENU
+ *  14. FIXED WIDTH
+ *  15. MODALS
+ *  16. BUG TRACKER
+ *  17. ADDITIONAL STYLES
+ *          17.1    DROPDOWN
+ *          17.2    ICON
+ *          17.3    TIME PICKER
+ *          17.4    COLOR PICKER
+ *          17.5    STICKY HEADER
+ *          17.6    CUSTOM STYLES
+ *  18. MEDIA QUERIES
+ *  
+ */
 
-// @import 'header';
 
-//------------------------------------------------------------------------------
-// Utilities (helpers classes, cross-browser bugs, print styles)
-//------------------------------------------------------------------------------
+// Core
+@import "variables.scss";
+@import "mixins.scss";
 
-// etc...
+// Reset
+@import "general.scss";
+
+// Header Styles
+@import "headerpanel.scss";
+
+// Left Panel
+@import "leftpanel.scss";
+
+// Main Panels
+@import "mainpanel.scss";
+@import "dashboard.scss";
+@import "forms.scss";
+@import "ui-elements.scss";
+@import "email.scss";
+@import "table.scss";
+@import "pages.scss";
+@import "leftpanel-collapse.scss";
+@import "rightpanel.scss";
+@import "horizontal-menu.scss";
+@import "bug-tracker.scss";
+@import "addons.scss";
+@import "media-queries.scss";

@@ -32,7 +32,7 @@ An example file structure with [include-media](https://www.npmjs.com/package/inc
 
 ```
 src/
-├── media/
+├── images/
 │   └── *.gif, *.jpg, *.png, *.svg
 ├── public/
 │   └── *.ico, *.xml, etc...
