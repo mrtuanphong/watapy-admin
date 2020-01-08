@@ -135,7 +135,9 @@ const pluginConfig = {
     },
   },
   sass: {
-    outputStyle: 'expanded',
+    sourceComments: 'map',
+    sourceMap: 'sass',
+    outputStyle: 'nested',
     includePaths: ['node_modules'],
   },
   sourcemaps: '.',

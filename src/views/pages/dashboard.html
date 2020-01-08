@@ -3,59 +3,9 @@
 {% block content %}
 
 <div class="headerbar">
-  
   {# <a class="menutoggle"><i class="fa fa-bars"></i></a> #}
-  
-  
-  
-  <form class="searchform" action="index.html" method="post">
-    <input type="text" class="form-control" name="keyword" placeholder="Search here...">
-  </form><div class="header-right">
+  <div class="header-right">
     <ul class="headermenu">
-      <li>
-        <div class="btn-group">
-          <button class="btn btn-default dropdown-toggle tp-icon" data-toggle="dropdown">
-            <i class="glyphicon glyphicon-user"></i>
-            <span class="badge">2</span>
-          </button>
-          <div class="dropdown-menu dropdown-menu-head pull-right">
-            <h5 class="title">2 Newly Registered Users</h5>
-            <ul class="dropdown-list user-list">
-              <li class="new">
-                <div class="thumb"><a href=""><img src="{{ paths.root + paths.images }}/photos/user1.png" alt=""></a></div>
-                <div class="desc">
-                  <h5><a href="">Draniem Daamul (@draniem)</a> <span class="badge badge-success">new</span></h5>
-                </div>
-              </li>
-              <li class="new">
-                <div class="thumb"><a href=""><img src="{{ paths.root + paths.images }}/photos/user2.png" alt=""></a></div>
-                <div class="desc">
-                  <h5><a href="">Zaham Sindilmaca (@zaham)</a> <span class="badge badge-success">new</span></h5>
-                </div>
-              </li>
-              <li>
-                <div class="thumb"><a href=""><img src="{{ paths.root + paths.images }}/photos/user3.png" alt=""></a></div>
-                <div class="desc">
-                  <h5><a href="">Weno Carasbong (@wenocar)</a></h5>
-                </div>
-              </li>
-              <li>
-                <div class="thumb"><a href=""><img src="{{ paths.root + paths.images }}/photos/user4.png" alt=""></a></div>
-                <div class="desc">
-                  <h5><a href="">Nusja Nawancali (@nusja)</a></h5>
-                </div>
-              </li>
-              <li>
-                <div class="thumb"><a href=""><img src="{{ paths.root + paths.images }}/photos/user5.png" alt=""></a></div>
-                <div class="desc">
-                  <h5><a href="">Lane Kitmari (@lane_kitmare)</a></h5>
-                </div>
-              </li>
-              <li class="new"><a href="">See All Users</a></li>
-            </ul>
-          </div>
-        </div>
-      </li>
       <li>
         <div class="btn-group">
           <button class="btn btn-default dropdown-toggle tp-icon" data-toggle="dropdown">
@@ -189,16 +139,12 @@
           </ul>
         </div>
       </li>
-      <li>
-        <button id="chatview" class="btn btn-default tp-icon chat-icon">
-            <i class="glyphicon glyphicon-comment"></i>
-        </button>
-      </li>
     </ul>
   </div><!-- header-right -->
   
 </div><!-- headerbar -->
 
+<!-- page header: -->
 <div class="pageheader">
   <h2><i class="fa fa-home"></i> Dashboard <span>Subtitle goes here...</span></h2>
   <div class="breadcrumb-wrapper">
@@ -209,6 +155,7 @@
     </ol>
   </div>
 </div>
+<!-- /page header -->
 
 <div class="contentpanel">
   

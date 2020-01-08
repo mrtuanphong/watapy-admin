@@ -16,44 +16,41 @@
 /***** 3.1 HEADER LEFT *****/
 
 .menutoggle {
-  float: left;
-  width: 50px;
-  height: 50px;
-  font-size: 22px;
+  font-size: 1.5rem;
+  line-height: 1em;
   cursor: pointer;
   color: $main-bg-color;
-  border-right: 1px solid #eee;
   @include transition();
 }
 
-.menutoggle:hover {
-  color: $main-bg-color;
-  background-color: #f7f7f7;
-}
+// .menutoggle:hover {
+//   color: $main-bg-color;
+//   background-color: #f7f7f7;
+// }
 
-.menutoggle .fa,
-.menutoggle .glyphicon {
-  margin: 14px 0 0 15px;
-}
+// .menutoggle .fa,
+// .menutoggle .glyphicon {
+//   margin: 14px 0 0 15px;
+// }
 
-.searchform {
-  input {
-    width: 250px;
-    background: #fff url(../images/icon-search.png) no-repeat 95% center;
-    float: left;
-    padding: 18px 20px;
-    border: 0;
-    border-right: 1px solid #eee;
-    @include border-radius(0);
-    height: 50px;
-    font-size: 14px;
-  }
+// .searchform {
+//   input {
+//     width: 250px;
+//     background: #fff url(../images/icon-search.png) no-repeat 95% center;
+//     float: left;
+//     padding: 18px 20px;
+//     border: 0;
+//     border-right: 1px solid #eee;
+//     @include border-radius(0);
+//     height: 50px;
+//     font-size: 14px;
+//   }
   
-  input:focus {
-    @include noshadow();
-    border-color: #ddd;
-  } 
-}
+//   input:focus {
+//     @include noshadow();
+//     border-color: #ddd;
+//   } 
+// }
 
 .searchform-left {
   margin-top: 10px;

@@ -7,21 +7,21 @@
   top: 0;
   left: 0;
   z-index: 100;
-  .searchform {
-    display: none;
-    input {
-      padding: 10px;
-      height: auto;
-      width: 100%;
-      margin: 5px 0 20px 0;
-      @include border-radius(2px);
-    }
-  }
-  .searchform::after {
-    content: '';
-    display: block;
-    clear: both;
-  }
+  // .searchform {
+  //   display: none;
+  //   input {
+  //     padding: 10px;
+  //     height: auto;
+  //     width: 100%;
+  //     margin: 5px 0 20px 0;
+  //     @include border-radius(2px);
+  //   }
+  // }
+  // .searchform::after {
+  //   content: '';
+  //   display: block;
+  //   clear: both;
+  // }
   .userlogged {
     margin: 0;
     padding: 0;
@@ -94,45 +94,35 @@
   margin-bottom:30px;
   > li {
     > a:hover, > a:active, > a:focus {
-      background-color: #ffffff;
-      color: $main-bg-color;
-      @include box-shadow(0 3px 0, rgba(0,0,0,0.2));
+      background-color: rgba(#ffffff, .1);
     }
     > a {
       color:#8f939e;
       padding:7px 10px;
-      > .badge {
-        margin-top:2px;
-      }
     }
   }
   > li.nav-parent {
     > a:hover, > a:active {
-      color: $main-bg-color;
-      background-color:#ffffff;
+      background-color: rgba(#ffffff, .1);
       background-image:url(../images/plus.png);
     }
     > a {
       background:transparent url(../images/plus-white.png) no-repeat 92% center;
     }
     > a:focus {
-      background-color:none;
-      color:#8f939e;
-      @include noshadow();
+      background-color: rgba(#ffffff, .1);
     }
   }
   > li.nav-active > a {
-    background-color:#ffffff;
+    background-color: rgba(#ffffff, .1);
     background-image:url(../images/minus.png);
-    color:$main-bg-color;
-    @include box-shadow(0 3px 0, rgba(0,0,0,0.2));
   }
   > li.nav-active > a:hover {
     background-image:url(../images/minus.png);
     background-repeat:no-repeat;
   }
   > li.nav-active > a:focus {
-    color:$main-bg-color;
+    //color:$main-bg-color;
   }
   > li.active {
     > a:hover, > a:focus {
@@ -155,7 +145,7 @@
     background-image:url(../images/minus.png);
   }
   li {
-    .fa, .glyphicon {
+    .fa {
       font-size:16px;
       vertical-align:middle;
       margin-right:10px;

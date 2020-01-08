@@ -27,13 +27,66 @@
     "primary": [
       {
         "id": "dashboard",
-        "path": "/dasboard",
-        "children": "Dashboard"
+        "path": "/dasboard.html",
+        "icon": "fa-home",
+        "children": "Tổng quan"
+      },
+      {
+        "id": "my_wallet",
+        "path": "/my-wallet.html",
+        "icon": "fa-credit-card",
+        "children": "Ví của tôi"
+      },
+      {
+        "id": "my_transaction",
+        "path": "/my-transaction.html",
+        "icon": "fa-exchange",
+        "children": "Giao dịch của tôi",
+        "badge": "2"
+      },
+      {
+        "id": "report",
+        "path": "/report.html",
+        "icon": "fa-pie-chart",
+        "children": "Báo cáo"
+      },
+      {
+        "id": "offer",
+        "path": "/offer.html",
+        "icon": "fa-link",
+        "children": "Offer"
+      },
+      {
+        "id": "news",
+        "path": "/news.html",
+        "icon": "fa-newspaper-o",
+        "children": "Tin tức"
+      },
+      {
+        "id": "settings",
+        "path": "#",
+        "icon": "fa-cog",
+        "children": "Thiết lập",
+        "sub": [
+          {
+            "id": "user",
+            "path": "/user.html",
+            "icon": "fa-caret-right",
+            "children": "Quản lý người dùng"
+          },
+          {
+            "id": "bank",
+            "path": "/bank.html",
+            "icon": "fa-caret-right",
+            "children": "Danh sách ngân hàng"
+          }
+        ]
       },
       {
         "id": "about-index",
-        "path": "/about",
-        "children": "<i>About</i>"
+        "path": "/about.html",
+        "icon": "fa-life-buoy",
+        "children": "Hỗ trợ"
       }
     ]
   }
