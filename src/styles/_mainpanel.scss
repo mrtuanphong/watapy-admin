@@ -14,7 +14,7 @@
   border-top:1px solid #eeeeee;
   background:#f7f7f7;
   position:relative;
-  .glyphicon, .fa {
+  .fa {
     font-size:24px;
     margin-right:5px;
     padding:6px 7px;
@@ -22,23 +22,10 @@
     @include border-radius(50px);
   }
   h2 {
-    font-size:28px;
+    //font-size:28px;
     color:$main-bg-color;
     letter-spacing:-0.5px;
-    margin:0;
-    span {
-      font-size:13px;
-      text-transform:none;
-      color:#999999;
-      font-style:italic;
-      vertical-align:middle;
-      letter-spacing:0;
-    }
-    span::before {
-      content:'/';
-      margin:0 10px 0 5px;
-      color:#cccccc;
-    }
+    //margin:0;
   }
   .fa.fa-pencil {
     padding:6px 9px;
@@ -64,28 +51,8 @@
   .fa-clock-o {
     padding:6px 8px;
   }
-  .breadcrumb-wrapper {
-    position:absolute;
-    top:23px;
-    right:25px;
-    .label {
-      color:#999999;
-      text-transform:uppercase;
-      font-size:11px;
-      font-weight:normal;
-      display:inline-block;
-    }
-  }
   .breadcrumb {
-    background:none;
-    display:inline-block;
-    padding:0;
-    li {
-      font-size:12px;
-    }
-    li.active {
-      color:#333333;
-    }
+    background: none;
   }
 }
 
