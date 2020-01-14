@@ -11,7 +11,49 @@
       "scripts": ["main"]
     },
     "wallet": {
-      "title": "Ví của tôi | Watapy Dashboard System",
+      "title": "Ví của tôi",
+      "description": "",
+      "stylesheets": ["main"],
+      "scripts": ["main"]
+    },
+    "transactions": {
+      "title": "Giao dịch",
+      "description": "",
+      "stylesheets": ["main"],
+      "scripts": ["main"]
+    },
+    "reports": {
+      "title": "Báo cáo",
+      "description": "",
+      "stylesheets": ["main"],
+      "scripts": ["main"]
+    },
+    "offers": {
+      "title": "Offers",
+      "description": "",
+      "stylesheets": ["main"],
+      "scripts": ["main"]
+    },
+    "news": {
+      "title": "Tin tức",
+      "description": "",
+      "stylesheets": ["main"],
+      "scripts": ["main"]
+    },
+    "users": {
+      "title": "Quản lý người dùng",
+      "description": "",
+      "stylesheets": ["main"],
+      "scripts": ["main"]
+    },
+    "banks": {
+      "title": "Danh sách ngân hàng",
+      "description": "",
+      "stylesheets": ["main"],
+      "scripts": ["main"]
+    },
+    "support": {
+      "title": "Hỗ trợ",
       "description": "",
       "stylesheets": ["main"],
       "scripts": ["main"]
@@ -27,34 +69,34 @@
     "primary": [
       {
         "id": "dashboard",
-        "path": "/dasboard.html",
+        "path": "/dashboard.html",
         "icon": "fa-home",
         "children": "Tổng quan"
       },
       {
-        "id": "my_wallet",
-        "path": "/my-wallet.html",
+        "id": "wallet",
+        "path": "/wallet.html",
         "icon": "fa-credit-card",
         "children": "Ví của tôi"
       },
       {
-        "id": "my_transaction",
-        "path": "/my-transaction.html",
+        "id": "transactions",
+        "path": "/transactions.html",
         "icon": "fa-exchange",
-        "children": "Giao dịch của tôi",
-        "badge": "2"
+        "children": "Giao dịch",
+        "badge": "new"
       },
       {
-        "id": "report",
-        "path": "/report.html",
+        "id": "reports",
+        "path": "/reports.html",
         "icon": "fa-pie-chart",
         "children": "Báo cáo"
       },
       {
-        "id": "offer",
-        "path": "/offer.html",
+        "id": "offers",
+        "path": "/offers.html",
         "icon": "fa-link",
-        "children": "Offer"
+        "children": "Offers"
       },
       {
         "id": "news",
@@ -69,22 +111,22 @@
         "children": "Thiết lập",
         "sub": [
           {
-            "id": "user",
-            "path": "/user.html",
+            "id": "users",
+            "path": "/users.html",
             "icon": "fa-caret-right",
             "children": "Quản lý người dùng"
           },
           {
-            "id": "bank",
-            "path": "/bank.html",
+            "id": "banks",
+            "path": "/banks.html",
             "icon": "fa-caret-right",
             "children": "Danh sách ngân hàng"
           }
         ]
       },
       {
-        "id": "about-index",
-        "path": "/about.html",
+        "id": "support",
+        "path": "/support.html",
         "icon": "fa-life-buoy",
         "children": "Hỗ trợ"
       }

@@ -1,26 +1,23 @@
-
-
 /********** 11. LEFT PANEL COLLAPSED **********/
 /**********************************************/
 
-
-.leftpanel-collapsed .logopanel {
-  display: none;
-}
-
-.leftpanel-collapsed .headerbar {
-  margin-left: -50px;
-}
-
-.leftpanel-collapsed .leftpanel {
-  width: 50px;
-  top: 50px;
-}
-
-.leftpanel-collapsed .leftpanelinner {
-  padding: 0;
-  .sidebartitle {
+.leftpanel-collapsed {
+  .leftpanel {
+    width: 50px;
+  }
+  .logo {
     display: none;
+  }
+  .menutoggle {
+    width: 100%;
+    height: 100%;
+    margin-right: 0;
+  }
+  .leftpanelinner {
+    padding: 0;
+    .sidebar-title {
+      display: none;
+    }
   }
 }
 
@@ -31,20 +28,22 @@
     @include border-radius(2px);
     padding: 10px;
     position: relative;
+    height: 40px;
     i {
       margin-right: 0;
+      font-size: $font-size-large;
     }
   }
   > li > a:hover {
     @include border-radius(2px 0 0 2px);
   }
   > li > a > span:last-child {
-    position: absolute;
+    position: fixed;
     background: #ffffff;
-    padding: 10px 10px 10px 5px;
-    left: 40px;
-    top: 0;
-    min-width: 209px;
+    padding: .5rem 1rem;
+    left: 45px;
+    height: 40px;
+    min-width: 200px;
     text-align: left;
     z-index: 100;
     display: none;
@@ -64,8 +63,7 @@
     display: none;
     a {
       text-align: left;
-      padding: 6px 10px;
-      padding-left: 0;
+      padding: .5rem 1rem;
     }
     a:hover {
       background: none;
@@ -88,11 +86,11 @@
   }
   li.nav-hover ul {
     display: block;
-    position: absolute;
-    top: 41px;
+    position: fixed;
+    margin-top: 40px;
     left: 45px;
     margin: 0;
-    min-width: 204px;
+    min-width: 200px;
     background: $main-bg-color;
     z-index: 100;
     @include border-radius(0 0 2px 0);
@@ -102,17 +100,25 @@
   }
 }
 
-.leftpanel-collapsed .mainpanel {
-  margin-left: 50px;
+.leftpanel-collapsed {
+  .mainpanel {
+    margin-left: 50px;
+  }
+  .headerbar {
+    left: 50px;
+    .logo {
+      display: block;
+    }
+  }
 }
 
-.leftpanel-collapsed .infosummary {
+.leftpanel-collapsed .sidebar-infosummary {
   display: none;
 }
 
-.leftpanel-collapsed .sticky-leftpanel {
-  overflow-y: visible;
-}
+// .leftpanel-collapsed .sticky-leftpanel {
+//   overflow-y: visible;
+// }
 
 
 

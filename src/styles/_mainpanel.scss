@@ -6,29 +6,20 @@
   margin-left:240px;
   //background:$sub-bg-color;
   min-height: 100vh;
+  padding-top: 50px;
 }
 
-.pageheader {
-  padding:15px;
-  border-bottom:1px solid #d3d7db;
-  border-top:1px solid #eeeeee;
-  background:#f7f7f7;
-  position:relative;
-  .fa {
-    font-size:24px;
-    margin-right:5px;
-    padding:6px 7px;
-    border:2px solid $main-bg-color;
-    @include border-radius(50px);
-  }
-  h2 {
-    font-size: 24px;
-  }
+.page-header {
+  border-bottom: 1px solid rgba(#000, .05);
+  background-color: rgba(#fff, .3);
+}
+.page-title {
+  font-size: $font-size-xlarge;
 }
 
 .contentpanel {
-  padding:20px;
-  position:relative;
+  //padding:20px;
+  //position:relative;
 }
 
 .contentpanel::after {

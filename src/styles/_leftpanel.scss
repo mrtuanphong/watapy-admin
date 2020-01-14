@@ -2,84 +2,48 @@
 /***********************************/
 
 .leftpanel {
+  position: fixed;
   width: 240px;
-  position: absolute;
   top: 0;
   left: 0;
+  height: 100vh;
   z-index: 100;
   background-color: $main-bg-color;
-  
-  .userlogged {
-    margin: 0;
-    padding: 0;
-    padding-bottom: 15px;
-    margin-bottom: 15px;
-    border-bottom: 1px solid rgba(255,255,255,0.1);
-    display: none;
-    .media-object {
-      width: 40px;
-      @include border-radius(100px);
-      float: left;
-      border: 2px solid $success-color;
-      padding: 2px;
-      margin-left: 2px;
-    }
-    .media-body {
-      margin-left: 50px;
-      color: #ccc;
-      h4 {
-        font-size: 15px;
-        margin: 0;
-      }
-      span {
-        font-style: italic;
-        font-size: 11px;
-        opacity: 0.5;
-      }
-    }
+  transition: all 100ms ease;
+}
+
+.menutoggle {
+  font-size: $font-size-xlarge;
+  line-height: 1em;
+  opacity: .5;
+  height: 2rem;
+  width: 2rem;
+  margin-right: .5rem;
+  cursor: pointer;
+  color: $main-bg-color;
+  //@include transition();
+
+  &:hover {
+    opacity: 1;
   }
 }
-
-.sticky-leftpanel {
-  position: fixed;
-  height: 100%;
-  //overflow-y: auto;
-}
-
 .logopanel {
   height: 50px;
-  .logo {
+  .logo img {
     height: 32px;
-  }
-  .menutoggle {
-    font-size: $font-size-xlarge;
-    opacity: .5;
-    height: 2rem;
-    width: 2rem;
-    &:hover {
-      opacity: 1;
-    }
   }
 }
 
 .leftpanelinner {
-  padding: 10px;
+  padding: 0 10px;
   overflow-y: auto;
 }
 
 
 /***** 4.1 NAVIGATION STYLES *****/
 
-
-.sidebartitle {
-  font-size:11px;
-  text-transform:uppercase;
-  color:#999999;
-  margin-bottom:10px;
-}
-
 .nav-bracket {
-  margin-bottom:30px;
+  margin-bottom: 3rem;
   > li {
     > a:hover, > a:active, > a:focus {
       background-color: rgba(#ffffff, .1);
@@ -183,17 +147,16 @@
 
 /***** 4.2 INFO SUMMARY *****/
 
-.infosummary {
-  margin:30px 0;
+.sidebar-infosummary {
   ul {
-    padding:0;
-    margin:20px 0 0;
-    list-style:none;
-    border-top:1px solid rgba(255,255,255,0.05);
+    //padding:0;
+    //margin: 0 0 1rem;
+    //list-style:none;
+    //border-top:1px solid rgba(255,255,255,0.05);
   }
   li {
     padding:10px 0;
-    border-bottom:1px solid rgba(255,255,255,0.05);
+    border-top: 1px solid rgba(255,255,255,0.05);
   }
   li:after {
     clear:both;

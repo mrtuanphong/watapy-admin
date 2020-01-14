@@ -7,29 +7,37 @@
     </li>
   {% endfor %}
 </ul> #}
-<h5 class="sidebartitle">Menu</h5>
-<ul class="nav nav-pills flex-column nav-stacked nav-bracket">
-  {% for item in menus.primary %}
-    <li class="nav-item {% if item.sub %}nav-parent{% endif %}">
-      <a class="nav-link d-flex align-items-center py-2 {% if page.id == item.id %}active{% endif %}" href="{{ paths.root + item.path }}">
-        <i class="fa {{ item.icon }}"></i>
-        <span class="flex-grow-1">{{ item.children }}</span>
-        {% if item.badge %}<span class="pull-right badge badge-success">{{ item.badge }}</span>{% endif %}
-      </a>
-      {# begin: Submenu #}
-      {% if item.sub %}
-      <ul class="children">
-        {% for sub_item in item.sub %}
-        <li>
-          <a href="{{ sub_item.path }}" class="py-2">
-            <i class="fa {{ sub_item.icon }}"></i>
-            <span>{{ sub_item.children }}</span>
-          </a>
-        </li>
-        {% endfor %}
-      </ul>
-      {% endif %}
-      {# end: Submenu #}
-    </li>
-  {% endfor %}
-</ul>
+<div class="sidebar-menu flex-grow-1">
+  <div class="sidebar-title text-uppercase text-muted my-2">
+    <small><strong>Danh mục</strong></small>
+  </div>
+  <ul class="nav nav-pills flex-column nav-stacked nav-bracket">
+    {% for item in menus.primary %}
+      <li class="nav-item {% if item.sub %}nav-parent{% endif %}">
+        <a class="nav-link d-flex align-items-center py-2 {% if page.id == item.id %}active{% endif %}" href="{{ paths.root + item.path }}">
+          <i class="fa {{ item.icon }}"></i>
+          <span class="flex-grow-1">
+            {{ item.children }}
+            {% if item.badge %}
+              <span class="pull-right badge badge-success">{{ item.badge }}</span>
+            {% endif %}
+          </span>
+        </a>
+        {# begin: Submenu #}
+        {% if item.sub %}
+          <ul class="children">
+            {% for sub_item in item.sub %}
+              <li>
+                <a href="{{ sub_item.path }}" class="py-2">
+                  <i class="fa {{ sub_item.icon }}"></i>
+                  <span>{{ sub_item.children }}</span>
+                </a>
+              </li>
+            {% endfor %}
+          </ul>
+        {% endif %}
+        {# end: Submenu #}
+      </li>
+    {% endfor %}
+  </ul>
+</div>

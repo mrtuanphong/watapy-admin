@@ -2,8 +2,19 @@
 /*************************************/
 
 .headerbar {
-  //border-left: 1px solid #eee;
   background: #fff;
+  top: 0;
+  left: 240px;
+  right: 0;
+  border-bottom: 1px solid rgba(#000, .1);
+
+  .logo {
+    display: none;
+    img {
+      height: 32px;
+    }
+  }
+
   .nav-link {
     padding: 0 16px !important;
     height: 50px;
@@ -43,13 +54,7 @@
 
 /***** 3.1 HEADER LEFT *****/
 
-.menutoggle {
-  font-size: 1.5rem;
-  line-height: 1em;
-  cursor: pointer;
-  color: $main-bg-color;
-  @include transition();
-}
+
 
 // .menutoggle:hover {
 //   color: $main-bg-color;

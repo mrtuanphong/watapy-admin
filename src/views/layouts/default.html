@@ -3,16 +3,16 @@
   <head>
     {% include 'partials/head.html' %}
   </head>
-  <body class="stickyheader">
+  <body class="">
     {# PAGE WRAPPER: --- #}
     <div class="page is-{{ page.id }}" id="top">
       {# HEADER --- #}
       {# {% include 'partials/header.html' %} #}
 
-      <nav class="leftpanel sticky-leftpanel d-flex flex-column">
+      <nav class="leftpanel d-flex flex-column">
         {% include 'partials/sidebar.html' %}
       </nav>
-      <div class="mainpanel">
+      <div class="mainpanel d-flex flex-column">
         {% include 'partials/header.html' %}
         {% block content %}{% endblock %}
       </div>
