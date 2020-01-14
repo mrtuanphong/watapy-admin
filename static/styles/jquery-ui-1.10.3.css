@@ -1,0 +1,1090 @@
+/*! jQuery UI - v1.10.3 - 2013-11-20
+* http://jqueryui.com
+* Includes: jquery.ui.core.css, jquery.ui.resizable.css, jquery.ui.selectable.css, jquery.ui.accordion.css, jquery.ui.autocomplete.css, jquery.ui.button.css, jquery.ui.datepicker.css, jquery.ui.dialog.css, jquery.ui.menu.css, jquery.ui.progressbar.css, jquery.ui.slider.css, jquery.ui.spinner.css, jquery.ui.tabs.css, jquery.ui.tooltip.css
+* Copyright 2013 jQuery Foundation and other contributors; Licensed MIT */
+/* Layout helpers
+----------------------------------*/
+/* line 8, src/styles/jquery-ui-1.10.3.css */
+.ui-helper-hidden {
+  display: none; }
+
+/* line 11, src/styles/jquery-ui-1.10.3.css */
+.ui-helper-hidden-accessible {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px; }
+
+/* line 21, src/styles/jquery-ui-1.10.3.css */
+.ui-helper-reset {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  line-height: 1.3;
+  text-decoration: none;
+  font-size: 100%;
+  list-style: none; }
+
+/* line 31, src/styles/jquery-ui-1.10.3.css */
+.ui-helper-clearfix:before,
+.ui-helper-clearfix:after {
+  content: "";
+  display: table;
+  border-collapse: collapse; }
+
+/* line 37, src/styles/jquery-ui-1.10.3.css */
+.ui-helper-clearfix:after {
+  clear: both; }
+
+/* line 40, src/styles/jquery-ui-1.10.3.css */
+.ui-helper-clearfix {
+  min-height: 0;
+  /* support: IE7 */ }
+
+/* line 43, src/styles/jquery-ui-1.10.3.css */
+.ui-helper-zfix {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  opacity: 0;
+  filter: Alpha(Opacity=0); }
+
+/* line 53, src/styles/jquery-ui-1.10.3.css */
+.ui-front {
+  z-index: 100; }
+
+/* Interaction Cues
+----------------------------------*/
+/* line 60, src/styles/jquery-ui-1.10.3.css */
+.ui-state-disabled {
+  cursor: default !important; }
+
+/* Icons
+----------------------------------*/
+/* states and images */
+/* line 69, src/styles/jquery-ui-1.10.3.css */
+.ui-icon {
+  display: block;
+  text-indent: -99999px;
+  overflow: hidden;
+  background-repeat: no-repeat; }
+
+/* Misc visuals
+----------------------------------*/
+/* Overlays */
+/* line 81, src/styles/jquery-ui-1.10.3.css */
+.ui-widget-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; }
+
+/* line 88, src/styles/jquery-ui-1.10.3.css */
+.ui-resizable {
+  position: relative; }
+
+/* line 91, src/styles/jquery-ui-1.10.3.css */
+.ui-resizable-handle {
+  position: absolute;
+  font-size: 0.1px;
+  display: block; }
+
+/* line 96, src/styles/jquery-ui-1.10.3.css */
+.ui-resizable-disabled .ui-resizable-handle,
+.ui-resizable-autohide .ui-resizable-handle {
+  display: none; }
+
+/* line 100, src/styles/jquery-ui-1.10.3.css */
+.ui-resizable-n {
+  cursor: n-resize;
+  height: 7px;
+  width: 100%;
+  top: -5px;
+  left: 0; }
+
+/* line 107, src/styles/jquery-ui-1.10.3.css */
+.ui-resizable-s {
+  cursor: s-resize;
+  height: 7px;
+  width: 100%;
+  bottom: -5px;
+  left: 0; }
+
+/* line 114, src/styles/jquery-ui-1.10.3.css */
+.ui-resizable-e {
+  cursor: e-resize;
+  width: 7px;
+  right: -5px;
+  top: 0;
+  height: 100%; }
+
+/* line 121, src/styles/jquery-ui-1.10.3.css */
+.ui-resizable-w {
+  cursor: w-resize;
+  width: 7px;
+  left: -5px;
+  top: 0;
+  height: 100%; }
+
+/* line 128, src/styles/jquery-ui-1.10.3.css */
+.ui-resizable-se {
+  cursor: se-resize;
+  width: 12px;
+  height: 12px;
+  right: 1px;
+  bottom: 1px; }
+
+/* line 135, src/styles/jquery-ui-1.10.3.css */
+.ui-resizable-sw {
+  cursor: sw-resize;
+  width: 9px;
+  height: 9px;
+  left: -5px;
+  bottom: -5px; }
+
+/* line 142, src/styles/jquery-ui-1.10.3.css */
+.ui-resizable-nw {
+  cursor: nw-resize;
+  width: 9px;
+  height: 9px;
+  left: -5px;
+  top: -5px; }
+
+/* line 149, src/styles/jquery-ui-1.10.3.css */
+.ui-resizable-ne {
+  cursor: ne-resize;
+  width: 9px;
+  height: 9px;
+  right: -5px;
+  top: -5px; }
+
+/* line 156, src/styles/jquery-ui-1.10.3.css */
+.ui-selectable-helper {
+  position: absolute;
+  z-index: 100;
+  border: 1px dotted black; }
+
+/* line 161, src/styles/jquery-ui-1.10.3.css */
+.ui-accordion .ui-accordion-header {
+  display: block;
+  cursor: pointer;
+  position: relative;
+  margin-top: 2px;
+  padding: .5em .5em .5em .7em;
+  min-height: 0;
+  /* support: IE7 */ }
+
+/* line 169, src/styles/jquery-ui-1.10.3.css */
+.ui-accordion .ui-accordion-icons {
+  padding-left: 2.2em; }
+
+/* line 172, src/styles/jquery-ui-1.10.3.css */
+.ui-accordion .ui-accordion-noicons {
+  padding-left: .7em; }
+
+/* line 175, src/styles/jquery-ui-1.10.3.css */
+.ui-accordion .ui-accordion-icons .ui-accordion-icons {
+  padding-left: 2.2em; }
+
+/* line 178, src/styles/jquery-ui-1.10.3.css */
+.ui-accordion .ui-accordion-header .ui-accordion-header-icon {
+  position: absolute;
+  left: .5em;
+  top: 50%;
+  margin-top: -8px; }
+
+/* line 184, src/styles/jquery-ui-1.10.3.css */
+.ui-accordion .ui-accordion-content {
+  padding: 1em 2.2em;
+  border-top: 0;
+  overflow: auto; }
+
+/* line 189, src/styles/jquery-ui-1.10.3.css */
+.ui-autocomplete {
+  position: absolute;
+  top: 0;
+  left: 0;
+  cursor: default; }
+
+/* line 195, src/styles/jquery-ui-1.10.3.css */
+.ui-button {
+  display: inline-block;
+  position: relative;
+  padding: 0;
+  line-height: normal;
+  margin-right: .1em;
+  cursor: pointer;
+  vertical-align: middle;
+  text-align: center;
+  overflow: visible;
+  /* removes extra width in IE */ }
+
+/* line 206, src/styles/jquery-ui-1.10.3.css */
+.ui-button,
+.ui-button:link,
+.ui-button:visited,
+.ui-button:hover,
+.ui-button:active {
+  text-decoration: none; }
+
+/* to make room for the icon, a width needs to be set here */
+/* line 214, src/styles/jquery-ui-1.10.3.css */
+.ui-button-icon-only {
+  width: 2.2em; }
+
+/* button elements seem to need a little more width */
+/* line 218, src/styles/jquery-ui-1.10.3.css */
+button.ui-button-icon-only {
+  width: 2.4em; }
+
+/* line 221, src/styles/jquery-ui-1.10.3.css */
+.ui-button-icons-only {
+  width: 3.4em; }
+
+/* line 224, src/styles/jquery-ui-1.10.3.css */
+button.ui-button-icons-only {
+  width: 3.7em; }
+
+/* button text element */
+/* line 229, src/styles/jquery-ui-1.10.3.css */
+.ui-button .ui-button-text {
+  display: block;
+  line-height: normal; }
+
+/* line 233, src/styles/jquery-ui-1.10.3.css */
+.ui-button-text-only .ui-button-text {
+  padding: .4em 1em; }
+
+/* line 236, src/styles/jquery-ui-1.10.3.css */
+.ui-button-icon-only .ui-button-text,
+.ui-button-icons-only .ui-button-text {
+  padding: .4em;
+  text-indent: -9999999px; }
+
+/* line 241, src/styles/jquery-ui-1.10.3.css */
+.ui-button-text-icon-primary .ui-button-text,
+.ui-button-text-icons .ui-button-text {
+  padding: .4em 1em .4em 2.1em; }
+
+/* line 245, src/styles/jquery-ui-1.10.3.css */
+.ui-button-text-icon-secondary .ui-button-text,
+.ui-button-text-icons .ui-button-text {
+  padding: .4em 2.1em .4em 1em; }
+
+/* line 249, src/styles/jquery-ui-1.10.3.css */
+.ui-button-text-icons .ui-button-text {
+  padding-left: 2.1em;
+  padding-right: 2.1em; }
+
+/* no icon support for input elements, provide padding by default */
+/* line 254, src/styles/jquery-ui-1.10.3.css */
+input.ui-button {
+  padding: .4em 1em; }
+
+/* button icon element(s) */
+/* line 259, src/styles/jquery-ui-1.10.3.css */
+.ui-button-icon-only .ui-icon,
+.ui-button-text-icon-primary .ui-icon,
+.ui-button-text-icon-secondary .ui-icon,
+.ui-button-text-icons .ui-icon,
+.ui-button-icons-only .ui-icon {
+  position: absolute;
+  top: 50%;
+  margin-top: -8px; }
+
+/* line 268, src/styles/jquery-ui-1.10.3.css */
+.ui-button-icon-only .ui-icon {
+  left: 50%;
+  margin-left: -8px; }
+
+/* line 272, src/styles/jquery-ui-1.10.3.css */
+.ui-button-text-icon-primary .ui-button-icon-primary,
+.ui-button-text-icons .ui-button-icon-primary,
+.ui-button-icons-only .ui-button-icon-primary {
+  left: .5em; }
+
+/* line 277, src/styles/jquery-ui-1.10.3.css */
+.ui-button-text-icon-secondary .ui-button-icon-secondary,
+.ui-button-text-icons .ui-button-icon-secondary,
+.ui-button-icons-only .ui-button-icon-secondary {
+  right: .5em; }
+
+/* button sets */
+/* line 284, src/styles/jquery-ui-1.10.3.css */
+.ui-buttonset {
+  margin-right: 7px; }
+
+/* line 287, src/styles/jquery-ui-1.10.3.css */
+.ui-buttonset .ui-button {
+  margin-left: 0;
+  margin-right: -.3em; }
+
+/* workarounds */
+/* reset extra padding in Firefox, see h5bp.com/l */
+/* line 294, src/styles/jquery-ui-1.10.3.css */
+input.ui-button::-moz-focus-inner,
+button.ui-button::-moz-focus-inner {
+  border: 0;
+  padding: 0; }
+
+/* line 299, src/styles/jquery-ui-1.10.3.css */
+.ui-datepicker {
+  width: 17em;
+  padding: .2em .2em 0;
+  display: none; }
+
+/* line 304, src/styles/jquery-ui-1.10.3.css */
+.ui-datepicker .ui-datepicker-header {
+  position: relative;
+  padding: .2em 0; }
+
+/* line 308, src/styles/jquery-ui-1.10.3.css */
+.ui-datepicker .ui-datepicker-prev,
+.ui-datepicker .ui-datepicker-next {
+  position: absolute;
+  top: 2px;
+  width: 1.8em;
+  height: 1.8em; }
+
+/* line 315, src/styles/jquery-ui-1.10.3.css */
+.ui-datepicker .ui-datepicker-prev-hover,
+.ui-datepicker .ui-datepicker-next-hover {
+  top: 1px; }
+
+/* line 319, src/styles/jquery-ui-1.10.3.css */
+.ui-datepicker .ui-datepicker-prev {
+  left: 2px; }
+
+/* line 322, src/styles/jquery-ui-1.10.3.css */
+.ui-datepicker .ui-datepicker-next {
+  right: 2px; }
+
+/* line 325, src/styles/jquery-ui-1.10.3.css */
+.ui-datepicker .ui-datepicker-prev-hover {
+  left: 1px; }
+
+/* line 328, src/styles/jquery-ui-1.10.3.css */
+.ui-datepicker .ui-datepicker-next-hover {
+  right: 1px; }
+
+/* line 331, src/styles/jquery-ui-1.10.3.css */
+.ui-datepicker .ui-datepicker-prev span,
+.ui-datepicker .ui-datepicker-next span {
+  display: block;
+  position: absolute;
+  left: 50%;
+  margin-left: -8px;
+  top: 50%;
+  margin-top: -8px; }
+
+/* line 340, src/styles/jquery-ui-1.10.3.css */
+.ui-datepicker .ui-datepicker-title {
+  margin: 0 2.3em;
+  line-height: 1.8em;
+  text-align: center; }
+
+/* line 345, src/styles/jquery-ui-1.10.3.css */
+.ui-datepicker .ui-datepicker-title select {
+  font-size: 1em;
+  margin: 1px 0; }
+
+/* line 349, src/styles/jquery-ui-1.10.3.css */
+.ui-datepicker select.ui-datepicker-month-year {
+  width: 100%; }
+
+/* line 352, src/styles/jquery-ui-1.10.3.css */
+.ui-datepicker select.ui-datepicker-month,
+.ui-datepicker select.ui-datepicker-year {
+  width: 49%; }
+
+/* line 356, src/styles/jquery-ui-1.10.3.css */
+.ui-datepicker table {
+  width: 100%;
+  font-size: .9em;
+  border-collapse: collapse;
+  margin: 0 0 .4em; }
+
+/* line 362, src/styles/jquery-ui-1.10.3.css */
+.ui-datepicker th {
+  padding: .7em .3em;
+  text-align: center;
+  font-weight: bold;
+  border: 0; }
+
+/* line 368, src/styles/jquery-ui-1.10.3.css */
+.ui-datepicker td {
+  border: 0;
+  padding: 1px; }
+
+/* line 372, src/styles/jquery-ui-1.10.3.css */
+.ui-datepicker td span,
+.ui-datepicker td a {
+  display: block;
+  padding: .2em;
+  text-align: right;
+  text-decoration: none; }
+
+/* line 379, src/styles/jquery-ui-1.10.3.css */
+.ui-datepicker .ui-datepicker-buttonpane {
+  background-image: none;
+  margin: .7em 0 0 0;
+  padding: 0 .2em;
+  border-left: 0;
+  border-right: 0;
+  border-bottom: 0; }
+
+/* line 387, src/styles/jquery-ui-1.10.3.css */
+.ui-datepicker .ui-datepicker-buttonpane button {
+  float: right;
+  margin: .5em .2em .4em;
+  cursor: pointer;
+  padding: .2em .6em .3em .6em;
+  width: auto;
+  overflow: visible; }
+
+/* line 395, src/styles/jquery-ui-1.10.3.css */
+.ui-datepicker .ui-datepicker-buttonpane button.ui-datepicker-current {
+  float: left; }
+
+/* with multiple calendars */
+/* line 400, src/styles/jquery-ui-1.10.3.css */
+.ui-datepicker.ui-datepicker-multi {
+  width: auto; }
+
+/* line 403, src/styles/jquery-ui-1.10.3.css */
+.ui-datepicker-multi .ui-datepicker-group {
+  float: left; }
+
+/* line 406, src/styles/jquery-ui-1.10.3.css */
+.ui-datepicker-multi .ui-datepicker-group table {
+  width: 95%;
+  margin: 0 auto .4em; }
+
+/* line 410, src/styles/jquery-ui-1.10.3.css */
+.ui-datepicker-multi-2 .ui-datepicker-group {
+  width: 50%; }
+
+/* line 413, src/styles/jquery-ui-1.10.3.css */
+.ui-datepicker-multi-3 .ui-datepicker-group {
+  width: 33.3%; }
+
+/* line 416, src/styles/jquery-ui-1.10.3.css */
+.ui-datepicker-multi-4 .ui-datepicker-group {
+  width: 25%; }
+
+/* line 419, src/styles/jquery-ui-1.10.3.css */
+.ui-datepicker-multi .ui-datepicker-group-last .ui-datepicker-header,
+.ui-datepicker-multi .ui-datepicker-group-middle .ui-datepicker-header {
+  border-left-width: 0; }
+
+/* line 423, src/styles/jquery-ui-1.10.3.css */
+.ui-datepicker-multi .ui-datepicker-buttonpane {
+  clear: left; }
+
+/* line 426, src/styles/jquery-ui-1.10.3.css */
+.ui-datepicker-row-break {
+  clear: both;
+  width: 100%;
+  font-size: 0; }
+
+/* RTL support */
+/* line 433, src/styles/jquery-ui-1.10.3.css */
+.ui-datepicker-rtl {
+  direction: rtl; }
+
+/* line 436, src/styles/jquery-ui-1.10.3.css */
+.ui-datepicker-rtl .ui-datepicker-prev {
+  right: 2px;
+  left: auto; }
+
+/* line 440, src/styles/jquery-ui-1.10.3.css */
+.ui-datepicker-rtl .ui-datepicker-next {
+  left: 2px;
+  right: auto; }
+
+/* line 444, src/styles/jquery-ui-1.10.3.css */
+.ui-datepicker-rtl .ui-datepicker-prev:hover {
+  right: 1px;
+  left: auto; }
+
+/* line 448, src/styles/jquery-ui-1.10.3.css */
+.ui-datepicker-rtl .ui-datepicker-next:hover {
+  left: 1px;
+  right: auto; }
+
+/* line 452, src/styles/jquery-ui-1.10.3.css */
+.ui-datepicker-rtl .ui-datepicker-buttonpane {
+  clear: right; }
+
+/* line 455, src/styles/jquery-ui-1.10.3.css */
+.ui-datepicker-rtl .ui-datepicker-buttonpane button {
+  float: left; }
+
+/* line 458, src/styles/jquery-ui-1.10.3.css */
+.ui-datepicker-rtl .ui-datepicker-buttonpane button.ui-datepicker-current,
+.ui-datepicker-rtl .ui-datepicker-group {
+  float: right; }
+
+/* line 462, src/styles/jquery-ui-1.10.3.css */
+.ui-datepicker-rtl .ui-datepicker-group-last .ui-datepicker-header,
+.ui-datepicker-rtl .ui-datepicker-group-middle .ui-datepicker-header {
+  border-right-width: 0;
+  border-left-width: 1px; }
+
+/* line 467, src/styles/jquery-ui-1.10.3.css */
+.ui-dialog {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: .2em;
+  outline: 0; }
+
+/* line 474, src/styles/jquery-ui-1.10.3.css */
+.ui-dialog .ui-dialog-titlebar {
+  padding: .4em 1em;
+  position: relative; }
+
+/* line 478, src/styles/jquery-ui-1.10.3.css */
+.ui-dialog .ui-dialog-title {
+  float: left;
+  margin: .1em 0;
+  white-space: nowrap;
+  width: 90%;
+  overflow: hidden;
+  text-overflow: ellipsis; }
+
+/* line 486, src/styles/jquery-ui-1.10.3.css */
+.ui-dialog .ui-dialog-titlebar-close {
+  position: absolute;
+  right: .3em;
+  top: 50%;
+  width: 21px;
+  margin: -10px 0 0 0;
+  padding: 1px;
+  height: 20px; }
+
+/* line 495, src/styles/jquery-ui-1.10.3.css */
+.ui-dialog .ui-dialog-content {
+  position: relative;
+  border: 0;
+  padding: .5em 1em;
+  background: none;
+  overflow: auto; }
+
+/* line 502, src/styles/jquery-ui-1.10.3.css */
+.ui-dialog .ui-dialog-buttonpane {
+  text-align: left;
+  border-width: 1px 0 0 0;
+  background-image: none;
+  margin-top: .5em;
+  padding: .3em 1em .5em .4em; }
+
+/* line 509, src/styles/jquery-ui-1.10.3.css */
+.ui-dialog .ui-dialog-buttonpane .ui-dialog-buttonset {
+  float: right; }
+
+/* line 512, src/styles/jquery-ui-1.10.3.css */
+.ui-dialog .ui-dialog-buttonpane button {
+  margin: .5em .4em .5em 0;
+  cursor: pointer; }
+
+/* line 516, src/styles/jquery-ui-1.10.3.css */
+.ui-dialog .ui-resizable-se {
+  width: 12px;
+  height: 12px;
+  right: -5px;
+  bottom: -5px;
+  background-position: 16px 16px; }
+
+/* line 523, src/styles/jquery-ui-1.10.3.css */
+.ui-draggable .ui-dialog-titlebar {
+  cursor: move; }
+
+/* line 526, src/styles/jquery-ui-1.10.3.css */
+.ui-menu {
+  list-style: none;
+  padding: 2px;
+  margin: 0;
+  display: block;
+  outline: none; }
+
+/* line 533, src/styles/jquery-ui-1.10.3.css */
+.ui-menu .ui-menu {
+  margin-top: -3px;
+  position: absolute; }
+
+/* line 537, src/styles/jquery-ui-1.10.3.css */
+.ui-menu .ui-menu-item {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  /* support: IE10, see #8844 */
+  list-style-image: url(data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7); }
+
+/* line 544, src/styles/jquery-ui-1.10.3.css */
+.ui-menu .ui-menu-divider {
+  margin: 5px -2px 5px -2px;
+  height: 0;
+  font-size: 0;
+  line-height: 0;
+  border-width: 1px 0 0 0; }
+
+/* line 551, src/styles/jquery-ui-1.10.3.css */
+.ui-menu .ui-menu-item a {
+  text-decoration: none;
+  display: block;
+  padding: 2px .4em;
+  line-height: 1.5;
+  min-height: 0;
+  /* support: IE7 */
+  font-weight: normal; }
+
+/* line 559, src/styles/jquery-ui-1.10.3.css */
+.ui-menu .ui-menu-item a.ui-state-focus,
+.ui-menu .ui-menu-item a.ui-state-active {
+  font-weight: normal;
+  margin: -1px; }
+
+/* line 565, src/styles/jquery-ui-1.10.3.css */
+.ui-menu .ui-state-disabled {
+  font-weight: normal;
+  margin: .4em 0 .2em;
+  line-height: 1.5; }
+
+/* line 570, src/styles/jquery-ui-1.10.3.css */
+.ui-menu .ui-state-disabled a {
+  cursor: default; }
+
+/* icon support */
+/* line 575, src/styles/jquery-ui-1.10.3.css */
+.ui-menu-icons {
+  position: relative; }
+
+/* line 578, src/styles/jquery-ui-1.10.3.css */
+.ui-menu-icons .ui-menu-item a {
+  position: relative;
+  padding-left: 2em; }
+
+/* left-aligned */
+/* line 584, src/styles/jquery-ui-1.10.3.css */
+.ui-menu .ui-icon {
+  position: absolute;
+  top: .2em;
+  left: .2em; }
+
+/* right-aligned */
+/* line 591, src/styles/jquery-ui-1.10.3.css */
+.ui-menu .ui-menu-icon {
+  position: static;
+  float: right; }
+
+/* line 595, src/styles/jquery-ui-1.10.3.css */
+.ui-progressbar {
+  height: 2em;
+  text-align: left;
+  overflow: hidden; }
+
+/* line 600, src/styles/jquery-ui-1.10.3.css */
+.ui-progressbar .ui-progressbar-value {
+  margin: -1px;
+  height: 100%; }
+
+/* line 604, src/styles/jquery-ui-1.10.3.css */
+.ui-progressbar .ui-progressbar-overlay {
+  background: url("images/animated-overlay.gif");
+  height: 100%;
+  filter: alpha(opacity=25);
+  opacity: 0.25; }
+
+/* line 610, src/styles/jquery-ui-1.10.3.css */
+.ui-progressbar-indeterminate .ui-progressbar-value {
+  background-image: none; }
+
+/* line 613, src/styles/jquery-ui-1.10.3.css */
+.ui-slider {
+  position: relative;
+  text-align: left; }
+
+/* line 617, src/styles/jquery-ui-1.10.3.css */
+.ui-slider .ui-slider-handle {
+  position: absolute;
+  z-index: 2;
+  width: 1.2em;
+  height: 1.2em;
+  cursor: default; }
+
+/* line 624, src/styles/jquery-ui-1.10.3.css */
+.ui-slider .ui-slider-range {
+  position: absolute;
+  z-index: 1;
+  font-size: .7em;
+  display: block;
+  border: 0;
+  background-position: 0 0; }
+
+/* For IE8 - See #6727 */
+/* line 634, src/styles/jquery-ui-1.10.3.css */
+.ui-slider.ui-state-disabled .ui-slider-handle,
+.ui-slider.ui-state-disabled .ui-slider-range {
+  -webkit-filter: inherit;
+          filter: inherit; }
+
+/* line 639, src/styles/jquery-ui-1.10.3.css */
+.ui-slider-horizontal {
+  height: .8em; }
+
+/* line 642, src/styles/jquery-ui-1.10.3.css */
+.ui-slider-horizontal .ui-slider-handle {
+  top: -.3em;
+  margin-left: -.6em; }
+
+/* line 646, src/styles/jquery-ui-1.10.3.css */
+.ui-slider-horizontal .ui-slider-range {
+  top: 0;
+  height: 100%; }
+
+/* line 650, src/styles/jquery-ui-1.10.3.css */
+.ui-slider-horizontal .ui-slider-range-min {
+  left: 0; }
+
+/* line 653, src/styles/jquery-ui-1.10.3.css */
+.ui-slider-horizontal .ui-slider-range-max {
+  right: 0; }
+
+/* line 657, src/styles/jquery-ui-1.10.3.css */
+.ui-slider-vertical {
+  width: .8em;
+  height: 100px; }
+
+/* line 661, src/styles/jquery-ui-1.10.3.css */
+.ui-slider-vertical .ui-slider-handle {
+  left: -.3em;
+  margin-left: 0;
+  margin-bottom: -.6em; }
+
+/* line 666, src/styles/jquery-ui-1.10.3.css */
+.ui-slider-vertical .ui-slider-range {
+  left: 0;
+  width: 100%; }
+
+/* line 670, src/styles/jquery-ui-1.10.3.css */
+.ui-slider-vertical .ui-slider-range-min {
+  bottom: 0; }
+
+/* line 673, src/styles/jquery-ui-1.10.3.css */
+.ui-slider-vertical .ui-slider-range-max {
+  top: 0; }
+
+/* line 676, src/styles/jquery-ui-1.10.3.css */
+.ui-spinner {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  padding: 0;
+  vertical-align: middle; }
+
+/* line 683, src/styles/jquery-ui-1.10.3.css */
+.ui-spinner-input {
+  border: none;
+  background: none;
+  color: inherit;
+  padding: 0;
+  margin: .2em 0;
+  vertical-align: middle;
+  margin-left: .4em;
+  margin-right: 22px; }
+
+/* line 693, src/styles/jquery-ui-1.10.3.css */
+.ui-spinner-button {
+  width: 16px;
+  height: 50%;
+  font-size: .5em;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  position: absolute;
+  cursor: default;
+  display: block;
+  overflow: hidden;
+  right: 0; }
+
+/* more specificity required here to overide default borders */
+/* line 707, src/styles/jquery-ui-1.10.3.css */
+.ui-spinner a.ui-spinner-button {
+  border-top: none;
+  border-bottom: none;
+  border-right: none; }
+
+/* vertical centre icon */
+/* line 713, src/styles/jquery-ui-1.10.3.css */
+.ui-spinner .ui-icon {
+  position: absolute;
+  margin-top: -8px;
+  top: 50%;
+  left: 0; }
+
+/* line 719, src/styles/jquery-ui-1.10.3.css */
+.ui-spinner-up {
+  top: 0; }
+
+/* line 722, src/styles/jquery-ui-1.10.3.css */
+.ui-spinner-down {
+  bottom: 0; }
+
+/* TR overrides */
+/* line 727, src/styles/jquery-ui-1.10.3.css */
+.ui-spinner .ui-icon-triangle-1-s {
+  /* need to fix icons sprite */
+  background-position: -65px -16px; }
+
+/* line 731, src/styles/jquery-ui-1.10.3.css */
+.ui-tabs {
+  position: relative;
+  /* position: relative prevents IE scroll bug (element with position: relative inside container with overflow: auto appear as "fixed") */
+  padding: .2em; }
+
+/* line 735, src/styles/jquery-ui-1.10.3.css */
+.ui-tabs .ui-tabs-nav {
+  margin: 0;
+  padding: .2em .2em 0; }
+
+/* line 739, src/styles/jquery-ui-1.10.3.css */
+.ui-tabs .ui-tabs-nav li {
+  list-style: none;
+  float: left;
+  position: relative;
+  top: 0;
+  margin: 1px .2em 0 0;
+  border-bottom-width: 0;
+  padding: 0;
+  white-space: nowrap; }
+
+/* line 749, src/styles/jquery-ui-1.10.3.css */
+.ui-tabs .ui-tabs-nav li a {
+  float: left;
+  padding: .5em 1em;
+  text-decoration: none; }
+
+/* line 754, src/styles/jquery-ui-1.10.3.css */
+.ui-tabs .ui-tabs-nav li.ui-tabs-active {
+  margin-bottom: -1px;
+  padding-bottom: 1px; }
+
+/* line 758, src/styles/jquery-ui-1.10.3.css */
+.ui-tabs .ui-tabs-nav li.ui-tabs-active a,
+.ui-tabs .ui-tabs-nav li.ui-state-disabled a,
+.ui-tabs .ui-tabs-nav li.ui-tabs-loading a {
+  cursor: text; }
+
+/* line 763, src/styles/jquery-ui-1.10.3.css */
+.ui-tabs .ui-tabs-nav li a,
+.ui-tabs-collapsible .ui-tabs-nav li.ui-tabs-active a {
+  cursor: pointer; }
+
+/* line 767, src/styles/jquery-ui-1.10.3.css */
+.ui-tabs .ui-tabs-panel {
+  display: block;
+  border-width: 0;
+  padding: 1em 1.4em;
+  background: none; }
+
+/* line 773, src/styles/jquery-ui-1.10.3.css */
+.ui-tooltip {
+  padding: 8px;
+  position: absolute;
+  z-index: 9999;
+  max-width: 300px;
+  -webkit-box-shadow: 0 0 5px #aaa;
+  box-shadow: 0 0 5px #aaa; }
+
+/* line 781, src/styles/jquery-ui-1.10.3.css */
+body .ui-tooltip {
+  border-width: 2px; }
+
+/* JQUERY UI THEME */
+/* line 789, src/styles/jquery-ui-1.10.3.css */
+.ui-datepicker {
+  background: #1D2939;
+  margin-top: 1px;
+  z-index: 100000;
+  border-radius: 2px;
+  width: 280px; }
+
+/* line 799, src/styles/jquery-ui-1.10.3.css */
+.ui-datepicker-title {
+  text-transform: uppercase;
+  font-family: 'LatoBold';
+  color: #1CAF9A; }
+
+/* line 805, src/styles/jquery-ui-1.10.3.css */
+.ui-datepicker th {
+  text-transform: uppercase;
+  font-family: 'LatoBold';
+  font-weight: normal;
+  font-size: 11px;
+  color: #fff; }
+
+/* line 813, src/styles/jquery-ui-1.10.3.css */
+.ui-datepicker td.ui-datepicker-today a {
+  background: rgba(255, 255, 255, 0.1); }
+
+/* line 817, src/styles/jquery-ui-1.10.3.css */
+.ui-datepicker td a {
+  color: #636E7B;
+  border-radius: 2px;
+  padding: 3px 5px;
+  -webkit-transition: all 0.2s ease-out 0s;
+  transition: all 0.2s ease-out 0s; }
+
+/* line 828, src/styles/jquery-ui-1.10.3.css */
+.ui-datepicker td a:hover {
+  background: #1CAF9A;
+  color: #fff; }
+
+/* line 833, src/styles/jquery-ui-1.10.3.css */
+.ui-datepicker-next,
+.ui-datepicker-prev {
+  -webkit-transition: all 0.2s ease-out 0s;
+  transition: all 0.2s ease-out 0s;
+  border-radius: 2px; }
+
+/* line 843, src/styles/jquery-ui-1.10.3.css */
+.ui-datepicker-next {
+  background: url(../images/calendar-arrow.png) no-repeat 10px 5px; }
+
+/* line 847, src/styles/jquery-ui-1.10.3.css */
+.ui-datepicker-next:hover {
+  top: 2px;
+  right: 2px;
+  background-color: #1CAF9A;
+  cursor: pointer; }
+
+/* line 854, src/styles/jquery-ui-1.10.3.css */
+.ui-datepicker-prev {
+  background: url(../images/calendar-arrow.png) no-repeat 8px -80px; }
+
+/* line 858, src/styles/jquery-ui-1.10.3.css */
+.ui-datepicker-prev:hover {
+  top: 2px;
+  left: 2px;
+  background-color: #1CAF9A;
+  cursor: pointer; }
+
+/* line 865, src/styles/jquery-ui-1.10.3.css */
+.ui-datepicker-buttonpane button {
+  border: 0;
+  background: #1CAF9A;
+  color: #fff;
+  border-radius: 2px;
+  padding: 7px 10px; }
+
+/* line 875, src/styles/jquery-ui-1.10.3.css */
+.ui-spinner {
+  border: 1px solid #ccc;
+  background: #fff;
+  border-radius: 2px;
+  overflow: hidden; }
+
+/* line 884, src/styles/jquery-ui-1.10.3.css */
+.ui-spinner-input {
+  margin: 0 30px 0 0;
+  padding: 10px; }
+
+/* line 889, src/styles/jquery-ui-1.10.3.css */
+.ui-spinner-button {
+  background-color: #E4E7EA;
+  border-left: 1px solid #ccc;
+  width: 32px;
+  background-repeat: no-repeat;
+  background-image: url(../images/dropdown-arrow.png);
+  cursor: pointer; }
+
+/* line 898, src/styles/jquery-ui-1.10.3.css */
+.ui-spinner-up {
+  background-position: 9px -41px;
+  border-bottom: 1px solid #ccc !important; }
+
+/* line 903, src/styles/jquery-ui-1.10.3.css */
+.ui-spinner-down {
+  background-position: 9px 6px; }
+
+/* line 907, src/styles/jquery-ui-1.10.3.css */
+.ui-spinner-button:hover {
+  background-color: #f3f3f3; }
+
+/* line 911, src/styles/jquery-ui-1.10.3.css */
+.ui-slider {
+  background: rgba(17, 18, 18, 0.1);
+  border-radius: 3px; }
+
+/* line 918, src/styles/jquery-ui-1.10.3.css */
+.ui-slider-horizontal {
+  height: 6px;
+  margin: 15px 0; }
+
+/* line 923, src/styles/jquery-ui-1.10.3.css */
+.ui-slider .ui-slider-handle {
+  background: #999;
+  border: 6px solid #fff;
+  width: 20px;
+  height: 20px;
+  border-radius: 50px;
+  top: -0.4em;
+  cursor: pointer;
+  -webkit-box-shadow: 0 0 2px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.4); }
+
+/* line 938, src/styles/jquery-ui-1.10.3.css */
+.ui-slider .ui-slider-handle:hover {
+  -webkit-box-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.5); }
+
+/* line 944, src/styles/jquery-ui-1.10.3.css */
+.ui-slider .ui-slider-range {
+  border-radius: 3px;
+  background: #999; }
+
+/* line 951, src/styles/jquery-ui-1.10.3.css */
+.slider-primary .ui-slider-range,
+.slider-primary .ui-slider-handle {
+  background-color: #428BCA; }
+
+/* line 956, src/styles/jquery-ui-1.10.3.css */
+.slider-success .ui-slider-range,
+.slider-success .ui-slider-handle {
+  background-color: #1CAF9A; }
+
+/* line 961, src/styles/jquery-ui-1.10.3.css */
+.slider-warning .ui-slider-range,
+.slider-warning .ui-slider-handle {
+  background-color: #F0AD4E; }
+
+/* line 966, src/styles/jquery-ui-1.10.3.css */
+.slider-danger .ui-slider-range,
+.slider-danger .ui-slider-handle {
+  background-color: #D9534F; }
+
+/* line 971, src/styles/jquery-ui-1.10.3.css */
+.slider-info .ui-slider-range,
+.slider-info .ui-slider-handle {
+  background-color: #5BC0DE; }
+
+/* line 976, src/styles/jquery-ui-1.10.3.css */
+.ui-slider-vertical {
+  width: 6px;
+  display: inline-block; }
+
+/* line 981, src/styles/jquery-ui-1.10.3.css */
+.ui-slider-vertical .ui-slider-handle {
+  top: auto;
+  left: -7px; }
+
+/*# sourceMappingURL=jquery-ui-1.10.3.css.map */

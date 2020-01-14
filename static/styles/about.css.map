@@ -1,0 +1,1 @@
+{"version":3,"sources":["about.css","about.scss"],"names":[],"mappings":"AAAA,mCAAmC;ACAnC;EACE,eAAc;EACd,6BAA4B,EAC7B","file":"about.css","sourcesContent":["/* line 1, src/styles/about.scss */\n.mymacro::after {\n  display: block;\n  content: 'about.scss works!'; }\n",".mymacro::after {\n  display: block;\n  content: 'about.scss works!';\n}\n"]}
