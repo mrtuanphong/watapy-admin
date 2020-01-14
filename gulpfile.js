@@ -22,7 +22,6 @@ const sourcemaps = require('gulp-sourcemaps');
 const webpack = require('webpack-stream');
 
 // gp-pages
-var gulp = require('gulp');
 var ghPages = require('gulp-gh-pages');
 
 // Local
