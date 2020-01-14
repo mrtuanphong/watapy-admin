@@ -5,10 +5,7 @@
   "license": "MIT",
   "author": "Michael Schwobe <mschwobe@gmail.com> (http://michaelschwobe.com)",
   "repository": "michaelschwobe/gulp-nunjucks-boilerplate",
-  "bugs": {
-    "url": "https://github.com/michaelschwobe/gulp-nunjucks-boilerplate/issues"
-  },
-  "homepage": "https://github.com/michaelschwobe/gulp-nunjucks-boilerplate#readme",
+  "homepage": "mrtuanphong.github.io/watapy-admin",
   "keywords": [
     "autoprefixer",
     "babel",
