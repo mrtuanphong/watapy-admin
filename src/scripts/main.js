@@ -13,13 +13,13 @@ $(document).ready(function() {
            sub.slideUp(200, function(){
               parent.removeClass('nav-active');
               jQuery('.mainpanel').css({height: ''});
-              adjustmainpanelheight();
+              //adjustmainpanelheight();
            });
          } else {         
             closeVisibleSubMenu();
             parent.addClass('nav-active');
             sub.slideDown(200, function(){
-               adjustmainpanelheight();
+               //adjustmainpanelheight();
             });
         }
      }
@@ -39,11 +39,11 @@ $(document).ready(function() {
   
   function adjustmainpanelheight() {
      // Adjust mainpanel height
-     var docHeight = jQuery(document).height();
-     if(docHeight > jQuery('.mainpanel').height())
-        jQuery('.mainpanel').height(docHeight);
+   //   var docHeight = jQuery(document).height();
+   //   if(docHeight > jQuery('.mainpanel').height())
+   //      jQuery('.mainpanel').height(docHeight);
   }
-  adjustmainpanelheight();
+  //adjustmainpanelheight();
   
   
   // Tooltip
@@ -114,7 +114,7 @@ $(document).ready(function() {
         else
            body.addClass('leftpanel-show');
         
-        adjustmainpanelheight();         
+        //adjustmainpanelheight();         
      }
 
   });

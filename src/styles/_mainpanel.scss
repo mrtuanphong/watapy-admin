@@ -4,8 +4,8 @@
 
 .mainpanel {
   margin-left:240px;
-  background:$sub-bg-color;
-  min-height:1000px;
+  //background:$sub-bg-color;
+  min-height: 100vh;
 }
 
 .pageheader {
@@ -22,37 +22,7 @@
     @include border-radius(50px);
   }
   h2 {
-    //font-size:28px;
-    color:$main-bg-color;
-    letter-spacing:-0.5px;
-    //margin:0;
-  }
-  .fa.fa-pencil {
-    padding:6px 9px;
-  }
-  .fa.fa-hand-o-up {
-    padding:6px 9px 6px 7px;
-  }
-  .fa-file-o {
-    padding:6px 10px;
-  }
-  .fa-user {
-    padding:6px 10px;
-  }
-  .fa-file-text {
-    padding:6px 10px;
-  }
-  .fa-map-marker {
-    padding:6px 12px;
-  }
-  .fa-dollar {
-    padding:6px 12px;
-  }
-  .fa-clock-o {
-    padding:6px 8px;
-  }
-  .breadcrumb {
-    background: none;
+    font-size: 24px;
   }
 }
 

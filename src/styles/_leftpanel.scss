@@ -7,21 +7,8 @@
   top: 0;
   left: 0;
   z-index: 100;
-  // .searchform {
-  //   display: none;
-  //   input {
-  //     padding: 10px;
-  //     height: auto;
-  //     width: 100%;
-  //     margin: 5px 0 20px 0;
-  //     @include border-radius(2px);
-  //   }
-  // }
-  // .searchform::after {
-  //   content: '';
-  //   display: block;
-  //   clear: both;
-  // }
+  background-color: $main-bg-color;
+  
   .userlogged {
     margin: 0;
     padding: 0;
@@ -56,7 +43,7 @@
 .sticky-leftpanel {
   position: fixed;
   height: 100%;
-  overflow-y: auto;
+  //overflow-y: auto;
 }
 
 .logopanel {
@@ -76,7 +63,8 @@
 }
 
 .leftpanelinner {
-  padding: 5px 15px;
+  padding: 10px;
+  overflow-y: auto;
 }
 
 

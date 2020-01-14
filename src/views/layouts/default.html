@@ -9,15 +9,16 @@
       {# HEADER --- #}
       {# {% include 'partials/header.html' %} #}
 
-      <nav class="leftpanel sticky-leftpanel">
-        {% include 'partials/nav.html' %}
+      <nav class="leftpanel sticky-leftpanel d-flex flex-column">
+        {% include 'partials/sidebar.html' %}
       </nav>
-      <main class="mainpanel">
+      <div class="mainpanel">
+        {% include 'partials/header.html' %}
         {% block content %}{% endblock %}
-      </main>
-      <aside class="rightpanel">
+      </div>
+      {# <aside class="rightpanel">
         Right...
-      </aside>
+      </aside> #}
 
       {# FOOTER: --- #}
       {# {% include 'partials/footer.html' %} #}
