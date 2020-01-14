@@ -21,6 +21,10 @@ const sass = require('gulp-sass');
 const sourcemaps = require('gulp-sourcemaps');
 const webpack = require('webpack-stream');
 
+// gp-pages
+var gulp = require('gulp');
+var ghPages = require('gulp-gh-pages');
+
 // Local
 const packageJson = require('./package.json');
 
@@ -349,4 +353,14 @@ gulp.task('default', callback => {
     // Development.
     runSequence('clean', compile, 'serve', 'watch', callback);
   }
+});
+
+// ------------------
+// gh-pages deploy
+// https://www.npmjs.com/package/gulp-gh-pages
+// ------------------
+
+gulp.task('deploy', function() {
+  return gulp.src('./build/**/*')
+    .pipe(ghPages());
 });
