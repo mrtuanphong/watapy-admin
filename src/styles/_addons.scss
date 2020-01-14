@@ -197,11 +197,12 @@
 }
 
 .stickyheader .headerbar {
-  position: fixed;
+  //position: fixed;
   top: 0;
   left: 240px;
-  width: 100%;
-  z-index: 100;
+  right: 0;
+  //width: 100%;
+  //z-index: 100;
   @include box-shadow(0 1px, rgba(0,0,0,0.05));
 }
 

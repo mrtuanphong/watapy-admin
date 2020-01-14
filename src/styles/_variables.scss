@@ -5,11 +5,11 @@ $font-family-sanserif:  "Roboto", Arial, sans-serif !default;
 $font-family-serif:     "Georgia", serif !default;
 $font-family-base:      $font-family-sanserif;
 
-$font-size-root:        16px !default; // for html{...}
-$font-size-base:        $font-size-root * 0.875 !default; // 14px for body{...}
+$font-size-base:        16px !default; // for html{...}
+$font-size-body:        $font-size-base * 0.875 !default; // 14px for body{...}
 $font-size-small:       $font-size-base * .75 !default; // 12px
-$font-size-large:       $font-size-root * 1.125 !default; // 18px
-$font-size-xlarge:       $font-size-root * 1.25 !default; // 20px
+$font-size-large:       $font-size-base * 1.125 !default; // 18px
+$font-size-xlarge:       $font-size-base * 1.25 !default; // 20px
 
 $line-height-base:      1.42857143; // ~20(px)
 

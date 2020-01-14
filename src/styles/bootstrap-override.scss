@@ -714,21 +714,22 @@ blockquote {
 }
 
 .dropdown-menu {
-  @include border-radius();
-  padding: 5px;
-  @include box-shadow(3px 3px 0, rgba(12,12,12,0.03));
-  li a {
-    @include border-radius(2px);
-    @include transition();
-  }
-  > li > a {
-    padding: 7px 10px;
-    color: #666666;
-  }
-  > li > a:hover {
-    background-color: #e7e7e7;
-    color: #333333;
-  }
+  font-size: $font-size-body;
+  // @include border-radius();
+  // padding: 5px;
+  // @include box-shadow(3px 3px 0, rgba(12,12,12,0.03));
+  // li a {
+  //   @include border-radius(2px);
+  //   @include transition();
+  // }
+  // > li > a {
+  //   padding: 7px 10px;
+  //   color: #666666;
+  // }
+  // > li > a:hover {
+  //   background-color: #e7e7e7;
+  //   color: #333333;
+  // }
 }
 
 .tooltip-inner {

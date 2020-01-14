@@ -47,17 +47,17 @@
 }
 
 .logopanel {
-  padding: 10px;
-  background: #fff;
-  h1 {
-    font-size: 30px;
-    font-weight: $font-weight-bold;
-    letter-spacing: -1.5px;
-    color: $main-bg-color;
-    line-height: 30px;
-    margin: 0;
-    span {
-      color: $success-color;
+  height: 50px;
+  .logo {
+    height: 32px;
+  }
+  .menutoggle {
+    font-size: $font-size-xlarge;
+    opacity: .5;
+    height: 2rem;
+    width: 2rem;
+    &:hover {
+      opacity: 1;
     }
   }
 }
