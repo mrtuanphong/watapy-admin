@@ -3,6 +3,7 @@
   set bank_accounts = [
     {
       "bank_name": "WATAPY",
+      "bank_id": "watapy",
       "balance": "69,605,631 WEC",
       "account_name": "",
       "account_number": "",
@@ -10,6 +11,7 @@
     },
     {
       "bank_name": "BIDV",
+      "bank_id": "bidv",
       "balance": "1.650.000 VND",
       "account_name": "Do Tuan Phong",
       "account_number": "001100888866",
@@ -17,6 +19,7 @@
     },
     {
       "bank_name": "VPBANK",
+      "bank_id": "vpbank",
       "balance": "620.000 VND",
       "account_name": "Do Tuan Phong",
       "account_number": "6666888800009999",
@@ -24,6 +27,7 @@
     },
     {
       "bank_name": "Techcombank",
+      "bank_id": "techcombank",
       "balance": "000.000 VND",
       "account_name": "Do Tuan Phong",
       "account_number": "000043215678",
@@ -39,17 +43,44 @@
       <h2 class="page-title my-3 mr-auto">{{ page.title }}</h2>
     </div>
 
-    <div class="contentpanel container-fluid position-relative py-3">
+    <div class="contentpanel container position-relative py-3">
       <div class="row">
         {% for bank_account in bank_accounts %}
+          <div class="col-md-6 col-xl-4 mb-3">
+            <div class="card bank-card position-relative">
+              <div class="card-body">
+                <div class="position-absolute" style="top:1rem;right:1rem">
+                  <div class="dropdown">
+                    <button class="btn btn-light btn-sm dropdown-toggle" type="button" data-toggle="dropdown">
+                      <i class="fa fa-angle-down"></i>
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-right">
+                      <a class="dropdown-item" href="#">Sửa thông tin</a>
+                      <a class="dropdown-item text-danger" href="#">Xóa ngân hàng này</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="media pb-0">
+                  <img src="{{ paths.root + paths.images }}/banks/{{ bank_account.bank_id }}.png" class="bank-card-logo mr-3" alt="{{ bank_account.bank_name }}"/>
+                  <div class="media-body">
+                    <div class="fontMedium bank-card-bank-name text-black-50">{{ bank_account.bank_name | upper }}</div>
+                    <div class="bank-card-name mt-2">{{ bank_account.account_name | upper }}</div>
+                    <div class="bank-card-number lineHeightReset">{{ bank_account.account_number }}</div>
+                    <div class="text600 bank-card-balance mt-3">{{ bank_account.balance }}</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        {% endfor %}
+
         <div class="col-lg-4 col-xl-3 mb-3">
-          <div class="card bank-card">
+          <div class="card">
             <div class="card-body">
-              {{ bank_account.bank_name }}
+              + Thêm tài khoản ngân hàng
             </div>
           </div>
         </div>
-        {% endfor %}
       </div>
     </div>
   </main>

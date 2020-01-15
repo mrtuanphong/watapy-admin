@@ -2,4 +2,16 @@
 
 .bank-card {
   height: 100%;
+  &-logo {
+    width: 30%;
+    height: 4rem;
+    border: 1px solid #eee;
+    border-radius: 4px;
+    padding: 4px;
+    object-fit: contain;
+  }
+  &-number {
+    letter-spacing: 2px;
+    //font-family: 'Courier New', Courier, monospace;
+  }
 }
