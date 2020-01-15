@@ -1,26 +1,12 @@
 {
-  "name": "gulp-nunjucks-boilerplate",
+  "name": "watapy-admin",
   "version": "2.1.0",
-  "description": "A scalable Gulp generated Nunjucks boilerplate.",
+  "description": "Watapy Admin System",
   "license": "MIT",
-  "author": "Michael Schwobe <mschwobe@gmail.com> (http://michaelschwobe.com)",
-  "repository": "michaelschwobe/gulp-nunjucks-boilerplate",
-  "homepage": "mrtuanphong.github.io/watapy-admin",
+  "author": "Peter Do",
+  "homepage": "http://mrtuanphong.github.io/watapy-admin",
   "keywords": [
-    "autoprefixer",
-    "babel",
-    "boilerplate",
-    "browser-sync",
-    "clean-css",
-    "front-end",
-    "gulp",
-    "imagemin",
-    "minimal",
-    "nunjucks",
-    "sass",
-    "scalable",
-    "skeleton",
-    "webpack"
+    "admin"
   ],
   "main": "gulpfile.js",
   "scripts": {
@@ -35,10 +21,7 @@
     "deploy": "gulp deploy"
   },
   "dependencies": {
-    "flexboxgrid": "^6.3.1",
-    "include-media": "^1.4.9",
-    "jquery": "^3.2.1",
-    "normalize.css": "^7.0.0"
+    "include-media": "^1.4.9"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",

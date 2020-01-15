@@ -1,16 +1,3 @@
-# gulp-nunjucks-boilerplate
-
-> A scalable [Gulp](http://gulpjs.com/) generated [Nunjucks](https://mozilla.github.io/nunjucks/) boilerplate.
-
-__Includes:__
-
-- Nunjucks/HTML compilation.  
-- Image optimization (imagemin).  
-- CSS/Sass processing and minification (sourcemaps, autoprefixer, clean-css).  
-- JavaScript bundling and minification (webpack, babel-minify).  
-- Delivery folder generation - clean and ready for distribution to staging, production, etc.  
-- Fully configurable build process.  
-
 ## Installation
 
 __Step 1:__ Add global packages to your computer.

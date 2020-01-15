@@ -5,7 +5,7 @@
   },
   "pages": {
     "dashboard": {
-      "title": "Tổng quan | Watapy Dashboard System",
+      "title": "Tổng quan",
       "description": "",
       "stylesheets": ["main"],
       "scripts": ["main"]

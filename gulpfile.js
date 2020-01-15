@@ -111,7 +111,7 @@ const pluginConfig = {
       isProd,
       version: packageJson.version,
       paths: {
-        root: isProd ? 'https://example.com' : '',
+        root: isProd ? packageJson.homepage : '',
         scripts: '/static/scripts',
         styles: '/static/styles',
         images: '/static/images',

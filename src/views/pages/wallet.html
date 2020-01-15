@@ -1,25 +1,56 @@
 {% extends 'layouts/default.html' %}
+{%
+  set bank_accounts = [
+    {
+      "bank_name": "WATAPY",
+      "balance": "69,605,631 WEC",
+      "account_name": "",
+      "account_number": "",
+      "exchange": "1 WEC - 1,000 VND"
+    },
+    {
+      "bank_name": "BIDV",
+      "balance": "1.650.000 VND",
+      "account_name": "Do Tuan Phong",
+      "account_number": "001100888866",
+      "exchange": ""
+    },
+    {
+      "bank_name": "VPBANK",
+      "balance": "620.000 VND",
+      "account_name": "Do Tuan Phong",
+      "account_number": "6666888800009999",
+      "exchange": ""
+    },
+    {
+      "bank_name": "Techcombank",
+      "balance": "000.000 VND",
+      "account_name": "Do Tuan Phong",
+      "account_number": "000043215678",
+      "exchange": ""
+    }
+  ]
+%}
 
 {% block content %}
   <!-- begin: main content of this page -->
   <main class="flex-grow-1">
     <div class="page-header container-fluid d-flex align-items-center position-relative">
-      <h2 class="page-title my-3 mr-auto">Ví của tôi</h2>
-      {# 
-      <div>
-        <button type="button" class="btn btn-primary">Primary</button>
-      </div>
-      <nav aria-label="breadcrumb">
-        <ol class="breadcrumb mt-2 mb-0 p-0">
-          <li class="breadcrumb-item"><a href="index.html">Bracket</a></li>
-          <li class="breadcrumb-item active">Dashboard</li>
-        </ol>
-      </nav> 
-      #}
+      <h2 class="page-title my-3 mr-auto">{{ page.title }}</h2>
     </div>
 
     <div class="contentpanel container-fluid position-relative py-3">
-      <p>Your content here...</p>
+      <div class="row">
+        {% for bank_account in bank_accounts %}
+        <div class="col-lg-4 col-xl-3 mb-3">
+          <div class="card bank-card">
+            <div class="card-body">
+              {{ bank_account.bank_name }}
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
     </div>
   </main>
   <!-- end: main content of this page -->
