@@ -10,10 +10,10 @@
     margin: auto;
     max-width: 1050px;
     position: relative;
-    background: $main-bg-color;
+    background: $sidebar-bg;
   }
   .rightpanel {
-    background: $main-bg-color;
+    background: $sidebar-bg;
   }
 }
 
@@ -125,7 +125,7 @@
 .dropdown-menu-head {
   background: #ffffff;
   .title {
-    background: $main-bg-color;
+    background: $sidebar-bg;
     color: #94989d;
     padding: 15px;
     text-transform: uppercase;
@@ -150,7 +150,7 @@
     right: 4px;
     top: 10px;
     line-height: 13px;
-    background-color: $danger-color;
+    background-color: $danger;
     @include border-radius(2px);
     padding: 2px 5px;
   }

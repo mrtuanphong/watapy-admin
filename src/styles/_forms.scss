@@ -61,23 +61,23 @@
 }
 
 .ckbox-primary input[type="checkbox"] :checked + label:before {
-  border-color:$primary-color;
-  background-color:$primary-color-hover;
+  border-color:$primary;
+  background-color:$primary-hover;
 }
 
 .ckbox-warning input[type="checkbox"] :checked + label:before {
-  border-color:$warning-color;
-  background-color:$warning-color-hover;
+  border-color:$warning;
+  background-color:$warning-hover;
 }
 
 .ckbox-success input[type="checkbox"] :checked + label:before {
-  border-color:$success-color;
-  background-color:$success-color-hover;
+  border-color:$success;
+  background-color:$success-hover;
 }
 
 .ckbox-danger input[type="checkbox"] :checked + label:before {
-  border-color:$danger-color;
-  background-color:$danger-color-hover;
+  border-color:$danger;
+  background-color:$danger-hover;
 }
 
 .rdio label:before {
@@ -119,35 +119,35 @@
 }
 
 .rdio-primary input[type="radio"] :checked + label:before {
-  border-color:$primary-color;
+  border-color:$primary;
 }
 
 .rdio-primary input[type="radio"] :checked + label::after {
-  background-color:$primary-color;
+  background-color:$primary;
 }
 
 .rdio-warning input[type="radio"] :checked + label:before {
-  border-color:$warning-color;
+  border-color:$warning;
 }
 
 .rdio-warning input[type="radio"] :checked + label::after {
-  background-color:$warning-color;
+  background-color:$warning;
 }
 
 .rdio-success input[type="radio"] :checked + label:before {
-  border-color:$success-color;
+  border-color:$success;
 }
 
 .rdio-success input[type="radio"] :checked + label::after {
-  background-color:$success-color;
+  background-color:$success;
 }
 
 .rdio-danger input[type="radio"] :checked + label:before {
-  border-color:$danger-color;
+  border-color:$danger;
 }
 
 .rdio-danger input[type="radio"] :checked + label::after {
-  background-color:$danger-color;
+  background-color:$danger;
 }
 
 pre {
@@ -160,7 +160,7 @@ pre {
 }
 
 label.error {
-  color:$danger-color;
+  color:$danger;
   margin-top:2px;
 }
 
@@ -169,7 +169,7 @@ label.error:empty {
 }
 
 .asterisk {
-  color:$danger-color;
+  color:$danger;
 }
 
 div.error {
@@ -188,7 +188,7 @@ div.error {
     top:-2px;
     left:0;
     font-size:16px;
-    color:$danger-color;
+    color:$danger;
     display:inline-block;
   }
 }
@@ -253,13 +253,13 @@ div.error {
   padding:10px;
   li a {
     @include border-radius(2px);
-    border-color:$primary-color;
-    background-color: $primary-color-hover;
+    border-color:$primary;
+    background-color: $primary-hover;
     color:#ffffff;
   }
   li a:hover {
-    background-color: $primary-color-hover;
-    border-color: $primary-color;
+    background-color: $primary-hover;
+    border-color: $primary;
   }
   li.disabled a {
     background:#eeeeee;
@@ -275,7 +275,7 @@ div.error {
 
 .basic-wizard .nav-disabled-click li {
   a:hover, a:active, a:focus {
-    background-color: $sub-bg-color;
+    background-color: $body-bg;
     opacity:0.75;
     color:#4a535e;
     cursor:default;

@@ -39,27 +39,27 @@
 }
 
 .table-primary thead tr th {
-  background-color: $primary-color;
+  background-color: $primary;
 }
 
 .table-success thead tr th {
-  background-color: $success-color;
+  background-color: $success;
 }
 
 .table-warning thead tr th {
-  background-color: $warning-color;
+  background-color: $warning;
 }
 
 .table-danger thead tr th {
-  background-color: $danger-color;
+  background-color: $danger;
 }
 
 .table-info thead tr th {
-  background-color: $info-color;
+  background-color: $info;
 }
 
 .table-dark thead tr th {
-  background-color: $main-bg-color;
+  background-color: $sidebar-bg;
 }
 
 .table.table-primary thead tr th,

@@ -1,0 +1,78 @@
+{% import "macros/modal.html" as modal %}
+
+{#---------------------------------------
+Set html content for the body:
+---------------------------------------#}
+{% set htmlBody %}
+<form id="form-bank-card-edit">
+  <!--
+  <div class="alert alert-danger alert-dismissible fade show" role="alert">
+    Có lỗi xảy ra, vui lòng thử lại!
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  -->
+
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="bank-name">Chọn ngân hàng</label>
+      <select id="bank-name" class="form-control" disabled>
+        <option value="2" selected>VPBank</option>
+      </select>
+    </div>
+    <div class="form-group col-md-6">
+      <label for="bank-branch">Chi nhánh</label>
+      <input type="text" class="form-control" id="bank-branch" value="Đông Đô">
+    </div>
+  </div>
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="bank-account-name">Tên chủ tài khoản</label>
+      <input type="text" class="form-control text-uppercase" id="bank-account-name" value="DO TUAN PHONG">
+      <div class="invalid-feedback">
+        Nhập họ tên chủ tài khoản
+      </div>
+    </div>
+    <div class="form-group col-md-6">
+      <label for="bank-account-number">Số tài khoản</label>
+      <input type="text" class="form-control" id="bank-account-number" value="6666888800009999">
+      <div class="invalid-feedback">
+        Nhập số tài khoản
+      </div>
+    </div>
+  </div>
+</form>
+{% endset %}
+
+{#---------------------------------------
+Set html content for the footer: 
+---------------------------------------#}
+{% set htmlFooter %}
+<div class="row w-100 align-items-center">
+  <div class="col">
+    <button class="btn btn-link text-danger" data-dismiss="modal" type="button">
+      <i class="fa fa-trash-o mr-2"></i>Xóa tài khoản
+    </button>
+  </div>
+  <div class="col-auto">
+    <button class="btn btn-light" data-dismiss="modal" type="button">Bỏ qua</button>
+    <button class="btn btn-primary" data-dismiss="modal" type="button">Cập nhật</button>
+  </div>
+</div>
+{% endset %}
+
+{#---------------------------------------
+Create the modal: 
+---------------------------------------#}
+{{ modal.return(
+    id = "bank-card-edit",
+    title = "Thông tin tài khoản",
+    body = htmlBody,
+    footer = htmlFooter
+) }}
+
+{# 
+    size = "sm",
+    closeButton = false
+ #}

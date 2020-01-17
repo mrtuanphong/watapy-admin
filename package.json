@@ -21,7 +21,10 @@
     "deploy": "gulp deploy"
   },
   "dependencies": {
-    "include-media": "^1.4.9"
+    "include-media": "^1.4.9",
+    "jquery": "1.9.1",
+    "popper.js": "^1.16.0",
+    "bootstrap": "4.4.1"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",

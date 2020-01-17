@@ -3,24 +3,24 @@
 
 .leftpanel {
   position: fixed;
-  width: 240px;
+  width: $sidebar-width;
   top: 0;
   left: 0;
   height: 100vh;
   z-index: 100;
-  background-color: $main-bg-color;
+  background-color: $sidebar-bg;
   transition: all 100ms ease;
 }
 
 .menutoggle {
-  font-size: $font-size-xlarge;
+  font-size: $font-size-lg;
   line-height: 1em;
   opacity: .5;
   height: 2rem;
   width: 2rem;
   margin-right: .5rem;
   cursor: pointer;
-  color: $main-bg-color;
+  color: $sidebar-bg;
   //@include transition();
 
   &:hover {
@@ -74,15 +74,15 @@
     background-repeat:no-repeat;
   }
   > li.nav-active > a:focus {
-    //color:$main-bg-color;
+    //color:$sidebar-bg;
   }
   > li.active {
     > a:hover, > a:focus {
-      background-color:$success-color;
+      background-color:$success;
       color:#ffffff;
     }
     > a {
-      background-color:$success-color;
+      background-color:$success;
       color:#ffffff;
       @include box-shadow(0 3px 0, rgba(0,0,0,0.2));
     }
@@ -113,7 +113,7 @@
     > li {
       > a:hover, > a:active, > a:focus {
         text-decoration:none;
-        color:$success-color;
+        color:$success;
       }
       > a {
         color:#94989d;
@@ -135,7 +135,7 @@
       }
     }
     > li.active > a {
-      color:$success-color;
+      color:$success;
     }
     ul {
       margin-left:12px;

@@ -3,18 +3,21 @@
 
 
 .mainpanel {
-  margin-left:240px;
-  //background:$sub-bg-color;
+  margin-left: $sidebar-width;
+  //background:$body-bg;
   min-height: 100vh;
   padding-top: 50px;
 }
 
 .page-header {
-  border-bottom: 1px solid rgba(#000, .05);
-  background-color: rgba(#fff, .3);
+  //border-bottom: 1px solid rgba(#000, .05);
+  //background-color: rgba(#fff, .3);
 }
 .page-title {
-  font-size: $font-size-xlarge;
+  //font-size: $font-size-lg;
+}
+.page-subtitle {
+
 }
 
 .contentpanel {

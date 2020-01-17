@@ -1,90 +1,93 @@
-/*! Main stylesheet */
-//------------------------------------------------------------------------------
-// Configuration (setup/settings: functions, mixins, variables)
-//------------------------------------------------------------------------------
-
 // include-media (vendor functions and mixins, MUST come before variables)
-@import 'include-media/dist/include-media';
+//@import 'include-media/dist/include-media';
 
-// Grid system.
-//@import 'flexboxgrid/dist/flexboxgrid';
+// ------------------------------------------------
+// BOOTSTRAP 4
+// ------------------------------------------------
 
-/* 
- *  ---------------------------------------
- *  ---------- TABLE OF CONTENTS ----------
- *  ---------------------------------------
- *  
- *  2.  RESET STYLES
- *  3.  HEADER PANEL
- *          3.1     HEADER LEFT
- *          3.2     HEADER RIGHT
- *  4.  LEFT PANEL
- *          4.1     NAVIGATION STYLES
- *          4.2     INFO SUMMARY
- *  5.  MAIN PANEL
- *          5.1     DASHBOARD
- *  6.  FORM STYLES
- *          6.1     FORM WIZARD STYLES
- *  7.  UI ELEMENTS
- *  8.  EMAIL
- *  9.  TABLES
- *  10. PAGES
- *          10.1    CALENDAR
- *          10.2    MEDIA MANAGER
- *          10.3    PROFILE
- *          10.4    BLOG LIST
- *          10.5    BLOG SINGLE
- *          10.6    PEOPLE DIRECTORY
- *          10.7    NOT FOUND PAGE
- *          10.8    SEARCH RESULTS
- *          10.9    INVOICE
- *          10.10   TIMELINE
- *          10.11   LOCKED SCREEN
- *          10.12   SIGN IN
- *          10.13   SIGN UP
- *  11. LEFT PANEL COLLAPSED
- *  12. RIGHT PANEL STYLES
- *  13. HORIZONTAL MENU
- *  14. FIXED WIDTH
- *  15. MODALS
- *  16. BUG TRACKER
- *  17. ADDITIONAL STYLES
- *          17.1    DROPDOWN
- *          17.2    ICON
- *          17.3    TIME PICKER
- *          17.4    COLOR PICKER
- *          17.5    STICKY HEADER
- *          17.6    CUSTOM STYLES
- *  18. MEDIA QUERIES
- *  
- */
+// Variables override:
+@import "variables-override"; 
+
+// Required:
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/mixins";
+
+// Optional:
+@import "bootstrap/scss/root";
+@import "bootstrap/scss/reboot";
+@import "bootstrap/scss/type";
+@import "bootstrap/scss/images";
+@import "bootstrap/scss/code";
+@import "bootstrap/scss/grid";
+@import "bootstrap/scss/tables";
+@import "bootstrap/scss/forms";
+@import "bootstrap/scss/buttons";
+@import "bootstrap/scss/transitions";
+@import "bootstrap/scss/dropdown";
+@import "bootstrap/scss/button-group";
+@import "bootstrap/scss/input-group";
+@import "bootstrap/scss/custom-forms";
+@import "bootstrap/scss/nav";
+@import "bootstrap/scss/navbar";
+@import "bootstrap/scss/card";
+@import "bootstrap/scss/breadcrumb";
+@import "bootstrap/scss/pagination";
+@import "bootstrap/scss/badge";
+@import "bootstrap/scss/jumbotron";
+@import "bootstrap/scss/alert";
+@import "bootstrap/scss/progress";
+@import "bootstrap/scss/media";
+@import "bootstrap/scss/list-group";
+@import "bootstrap/scss/close";
+@import "bootstrap/scss/toasts";
+@import "bootstrap/scss/modal";
+@import "bootstrap/scss/tooltip";
+@import "bootstrap/scss/popover";
+@import "bootstrap/scss/carousel";
+@import "bootstrap/scss/spinners";
+@import "bootstrap/scss/utilities";
+@import "bootstrap/scss/print";
 
 
-// Core
-@import "variables.scss";
-@import "mixins.scss";
+// ------------------------------------------------
+// APP SETTINGS
+// ------------------------------------------------
 
-// Reset
-@import "general.scss";
+@import "variables";
+@import "mixins";
 
-@import "utilities.scss";
 
-// Header Styles
-@import "headerpanel.scss";
+// ------------------------------------------------
+// BOOTSTRAP CUSTOM
+// ------------------------------------------------
 
-// Left Panel
-@import "leftpanel.scss";
+@import "bootstrap-custom";
 
-// Main Panels
-@import "mainpanel.scss";
-@import "forms.scss";
-@import "ui-elements.scss";
-//@import "email.scss";
-@import "table.scss";
-@import "pages.scss";
-@import "leftpanel-collapse.scss";
-//@import "rightpanel.scss";
-@import "horizontal-menu.scss";
-@import "bug-tracker.scss";
-@import "addons.scss";
-@import "media-queries.scss";
+
+// ------------------------------------------------
+// STYLES
+// ------------------------------------------------
+
+@import "general";
+@import "forms";
+@import "ui-elements";
+@import "table";
+
+@import "headerpanel";
+@import "leftpanel";
+@import "mainpanel";
+@import "leftpanel-collapse";
+
+// Utilities:
+@import "utilities";
+@import "addons";
+
+// Components:
+@import "components";
+
+// Pages:
+@import "pages";
+
+// Responsive:
+@import "media-queries";

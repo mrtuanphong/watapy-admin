@@ -17,7 +17,7 @@
 /***** 10.1 CALENDAR *****/
 
 .external-event {
-  background: $primary-color;
+  background: $primary;
   margin-bottom: 5px;
   padding: 6px 10px;
   color: #ffffff;
@@ -77,7 +77,7 @@
     }
     a.active {
       text-decoration: underline;
-      color: $primary-color;
+      color: $primary;
     }
   }
 }
@@ -184,7 +184,7 @@
       a:hover {
         color: #ffffff;
         text-decoration: none;
-        background: $primary-color;
+        background: $primary;
       }
     }
   }
@@ -445,7 +445,7 @@
   line-height: 24px;
   a {
     padding: 15px;
-    background: $main-bg-color;
+    background: $sidebar-bg;
     color: #dadfe6;
     display: block;
     @include border-radius(2px);
@@ -453,7 +453,7 @@
   }
   a:hover {
     text-decoration: none;
-    background: $main-bg-color;
+    background: $sidebar-bg;
   }
 }
 
@@ -468,24 +468,24 @@
 }
 
 .blog-quote .quote-primary a {
-  background-color: $primary-color;
+  background-color: $primary;
 }
 
 .blog-quote .quote-primary a:hover {
-  background-color: $primary-color;
+  background-color: $primary;
 }
 
 .blog-quote .quote-success a {
-  background-color: $success-color;
+  background-color: $success;
   color: #ffffff;
 }
 
 .blog-quote .quote-success a:hover {
-  background-color: $success-color;
+  background-color: $success;
 }
 
 .blog-quote .quote-danger a {
-  background-color: $danger-color;
+  background-color: $danger;
   color: #ffffff;
 }
 
@@ -632,7 +632,7 @@
     }
     a:hover {
       color: #ffffff;
-      background: $primary-color;
+      background: $primary;
       text-decoration: none;
       @include border-radius();
     }
@@ -704,7 +704,7 @@
 
 .person-name {
   margin: 0 0 5px 0;
-  color: $primary-color;
+  color: $primary;
 }
 
 

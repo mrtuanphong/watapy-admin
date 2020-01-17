@@ -1,7 +1,7 @@
 /********** 18. MEDIA QUERIES **********/
 /***************************************/
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 992px) {
   body {
     position: relative;
   }
@@ -36,7 +36,7 @@
   }
 
   .leftpanel-show .mainpanel {
-    margin-left: 240px;
+    margin-left: $sidebar-width;
   }
 
   .stickyheader .headerbar {
@@ -48,11 +48,11 @@
   }
 
   .stickyheader.leftpanel-show .headerbar {
-    left: 240px;
+    left: $sidebar-width;
   }
 
   .stickyheader.chat-relative-view .headerbar {
-    right: 240px;
+    right: $sidebar-width;
     left: auto;
   }
 
@@ -63,7 +63,7 @@
   .leftpanelinner {
     padding: 5px 10px;
     .searchform input {
-      background: $main-bg-color;
+      background: $sidebar-bg;
       border: 0;
     }
   }

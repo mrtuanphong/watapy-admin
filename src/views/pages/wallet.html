@@ -1,89 +1,130 @@
 {% extends 'layouts/default.html' %}
-{%
-  set bank_accounts = [
-    {
-      "bank_name": "WATAPY",
-      "bank_id": "watapy",
-      "balance": "69,605,631 WEC",
-      "account_name": "",
-      "account_number": "",
-      "exchange": "1 WEC - 1,000 VND"
-    },
-    {
-      "bank_name": "BIDV",
-      "bank_id": "bidv",
-      "balance": "1.650.000 VND",
-      "account_name": "Do Tuan Phong",
-      "account_number": "001100888866",
-      "exchange": ""
-    },
-    {
-      "bank_name": "VPBANK",
-      "bank_id": "vpbank",
-      "balance": "620.000 VND",
-      "account_name": "Do Tuan Phong",
-      "account_number": "6666888800009999",
-      "exchange": ""
-    },
-    {
-      "bank_name": "Techcombank",
-      "bank_id": "techcombank",
-      "balance": "000.000 VND",
-      "account_name": "Do Tuan Phong",
-      "account_number": "000043215678",
-      "exchange": ""
-    }
-  ]
-%}
+{% set bank_accounts = [
+  {
+    "bank_name": "WATAPY",
+    "bank_id": "watapy",
+    "balance": "69.605.631 <span class='text-200'>WEC</span class='text-200'>",
+    "account_name": "",
+    "account_number": "",
+    "exchange": "1 WEC = 1.000 VND"
+  }, {
+    "bank_name": "BIDV",
+    "bank_id": "bidv",
+    "balance": "1.650.000 <span class='text-200'>VND</span class='text-200'>",
+    "account_name": "Do Tuan Phong",
+    "account_number": "001100888866",
+    "exchange": ""
+  }, {
+    "bank_name": "VPBANK",
+    "bank_id": "vpbank",
+    "balance": "620.000 <span class='text-200'>VND</span class='text-200'>",
+    "account_name": "Do Tuan Phong",
+    "account_number": "6666888800009999",
+    "exchange": ""
+  }, {
+    "bank_name": "Techcombank",
+    "bank_id": "techcombank",
+    "balance": "000.000 <span class='text-200'>VND</span class='text-200'>",
+    "account_name": "Do Tuan Phong",
+    "account_number": "000043215678",
+    "exchange": ""
+  }
+] %}
 
 {% block content %}
   <!-- begin: main content of this page -->
   <main class="flex-grow-1">
-    <div class="page-header container-fluid d-flex align-items-center position-relative">
-      <h2 class="page-title my-3 mr-auto">{{ page.title }}</h2>
+    <div class="page-header pt-4 pb-5 px-lg-3">
+      <div class="container position-relative">
+        <div class="row align-items-center">
+          <div class="col-lg-8 col-xl-9">
+            <h2 class="page-title m-0 text-500 font-medium">{{ page.title }}</h2>
+            <div class="mt-1 text-black-50">Quản lý tài khoản ngân hàng và địa chỉ ví</div>
+          </div>
+          <div class="col-lg-4 col-xl-3 text-right mt-3 mt-lg-0">
+            <button class="btn btn-primary btn-block" data-toggle="modal" data-target="#modal-bank-card-add">
+              <i class="fa fa-plus"></i> Thêm tài khoản ngân hàng
+            </button>
+          </div>
+        </div>
+      </div>
     </div>
 
-    <div class="contentpanel container position-relative py-3">
-      <div class="row">
-        {% for bank_account in bank_accounts %}
-          <div class="col-md-6 col-xl-4 mb-3">
-            <div class="card bank-card position-relative">
-              <div class="card-body">
-                <div class="position-absolute" style="top:1rem;right:1rem">
-                  <div class="dropdown">
-                    <button class="btn btn-light btn-sm dropdown-toggle" type="button" data-toggle="dropdown">
-                      <i class="fa fa-angle-down"></i>
-                    </button>
-                    <div class="dropdown-menu dropdown-menu-right">
-                      <a class="dropdown-item" href="#">Sửa thông tin</a>
-                      <a class="dropdown-item text-danger" href="#">Xóa ngân hàng này</a>
+    <div class="contentpanel position-relative px-lg-3 pb-4">
+      <div class="container">
+        <!-- Bank accounts: -->
+        <section class="bank-card-list">
+          <div class="row">
+            {% for bank_account in bank_accounts %}
+              <div class="col-lg-6 col-xl-4 mb-3">
+                <div class="card bank-card h-100 position-relative">
+                  <div class="card-body">
+                    <div class="media pb-0">
+                      <div class="bank-card-logo mr-3">
+                        <img src="{{ paths.root + paths.images }}/banks/{{ bank_account.bank_id }}.png" class="img-fluid" alt="{{ bank_account.bank_name }}"/>
+                        {% if (bank_account.bank_name != 'WATAPY') %}
+                          <div class="bank-card-edit mt-3 mr-3 position-absolute">
+                            <button class="btn btn-outline-primary btn-sm btn-block" type="button" data-toggle="modal" data-target="#modal-bank-card-edit">
+                              <i class="fa fa-pencil"></i>
+                            </button>
+                          </div>
+                        {% endif %}
+                      </div>
+                      <div class="media-body">
+                        <div class="font-bold bank-card-bank-name text-muted">{{ bank_account.bank_name | upper }}</div>
+                        <div class="bank-card-name text-secondary mt-2">{{ bank_account.account_name | upper }}</div>
+                        <div class="bank-card-number text-secondary line-height-reset">{{ bank_account.account_number }}</div>
+                        <div class="text-600 bank-card-balance mt-3">{{ bank_account.balance | safe }}</div>
+                        {% if bank_account.exchange %}
+                          <div class="text100">{{ bank_account.exchange }}</div>
+                        {% endif %}
+                      </div>
                     </div>
                   </div>
                 </div>
-                <div class="media pb-0">
-                  <img src="{{ paths.root + paths.images }}/banks/{{ bank_account.bank_id }}.png" class="bank-card-logo mr-3" alt="{{ bank_account.bank_name }}"/>
-                  <div class="media-body">
-                    <div class="fontMedium bank-card-bank-name text-black-50">{{ bank_account.bank_name | upper }}</div>
-                    <div class="bank-card-name mt-2">{{ bank_account.account_name | upper }}</div>
-                    <div class="bank-card-number lineHeightReset">{{ bank_account.account_number }}</div>
-                    <div class="text600 bank-card-balance mt-3">{{ bank_account.balance }}</div>
-                  </div>
-                </div>
               </div>
-            </div>
-          </div>
-        {% endfor %}
+            {% endfor %}
 
-        <div class="col-lg-4 col-xl-3 mb-3">
-          <div class="card">
-            <div class="card-body">
-              + Thêm tài khoản ngân hàng
+          </div>
+          {# <div class="mb-3">
+            <button class="btn btn-light btn-block" data-toggle="modal" data-target="#modal-bank-card-add">+ Thêm tài khoản ngân hàng</button>
+          </div> #}
+        </section>
+
+        <!-- Wallet address: -->
+        <section class="card mt-4">
+          <div class="card-header">
+            <div class="text-300 text-uppercase font-medium">Địa chỉ ví</div>
+          </div>
+          <div class="card-body">
+            <p>Sử dụng đoạn mã dưới đây hoặc quét mã QR để thực hiện các giao dịch chuyển và nhận WEC.</p>
+
+            <div class="form-group">
+              <label class="font-medium">Mã địa chỉ ví:</label>
+              <input type="text" class="form-control" value="5a8a218bf3de34733059c3a87ab358c8bfc307a79669bc4758658466dc88db71" readonly/>
+            </div>
+
+            <div class="form-group">
+              <label class="font-medium">Mã QR:</label>
+              <p>
+                <img src="{{ paths.root + paths.images }}/wallet-qr.png" class="img-fluid wallet-qr" alt="Mã QR địa chỉ ví"/>
+              </p>
+              <a href="#" target="_blank">Tải về mã QR</a>
             </div>
           </div>
-        </div>
+        </section>
       </div>
     </div>
   </main>
   <!-- end: main content of this page -->
 
 {% endblock %}
+
+{# Import modals: #}
+{% block modals %}
+  {% include "partials/modals/bank-card-edit.html" %}
+  {% include "partials/modals/bank-card-add.html" %}
+  {% endblock%}
+
+  {% block scripts %}
+    {% endblock%}

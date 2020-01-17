@@ -1,0 +1,31 @@
+{% macro return (id = '', title = '', body = '', footer = '', size, closeButton = true, animation = true, form = false) %}
+  <div class="modal {% if animation %}fade{% endif %}" id="modal-{{id}}" tabindex="-1" role="dialog">
+    <div class="modal-dialog {% if size %}modal-{{size}}{% endif %}" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          {% if title %}
+            <h5 class="modal-title">{{title|safe}}</h5>
+          {% endif %}
+
+          {% if closeButton %}
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          {% endif %}
+        </div>
+
+        {# {% if body %} #}
+        <div class="modal-body">
+          {{body|safe}}
+        </div>
+        {# {% endif %} #}
+
+        {% if footer %}
+          <div class="modal-footer">
+            {{footer|safe}}
+          </div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+{% endmacro %}

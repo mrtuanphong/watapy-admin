@@ -1,11 +1,7 @@
-/********** 2. RESET STYLES **********/
-/*************************************/
-
 /* width */
 ::-webkit-scrollbar {
   width: 6px;
   height: 6px;
-  //background-color: #b0b0b0;
 }
 /* Track */
 ::-webkit-scrollbar-track {
@@ -19,24 +15,13 @@
 ::-webkit-scrollbar-thumb:hover {
   background: #555; 
 }
-
 ::-webkit-scrollbar-thumb:vertical {
-  //margin: 8px;
   -webkit-border-radius: 3px;
 }
-// ::-webkit-scrollbar-thumb:horizontal {
-//   margin: 0;
-//   -webkit-border-radius: 4px;
-// }
-// ::-webkit-scrollbar-thumb:vertical,
-// ::-webkit-scrollbar-thumb:horizontal {
-//   background-color:#444;
-// }
-// ::-webkit-scrollbar-button:end:increment,
-// ::-webkit-scrollbar-button:start:decrement {
-//   height: 8px;
-//   display: block;
-// }
+
+*:focus {
+  outline: none !important;
+}
 
 html,
 body,
@@ -44,55 +29,18 @@ body,
   min-height: 100vh;
 }
 
-html {
-  font-size: $font-size-base;
-}
-
 body {
-  background: $sub-bg-color;
-  color: $main-text-color;
-  font-family: $font-family-base;
-  font-size: $font-size-body;
-  line-height: $line-height-base;
+  
 }
 
 body.notfound,
 body.signin {
-  background: $sub-bg-color;
-}
-
-input,
-select,
-textarea {
-  font-family: $font-family-base;
-  color: $main-text-color;
+  background: $body-bg;
 }
 
 a:focus,
 a:active {
   outline: none;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5 {
-  font-family: $font-family-base;
-}
-
-strong {
-  font-weight: $font-weight-bold;
-}
-
-#preloader {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: $sub-bg-color;
-  z-index: 10000;
 }
 
 #status {

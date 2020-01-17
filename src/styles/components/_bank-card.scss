@@ -1,0 +1,34 @@
+.bank-card {
+  $this: &;
+
+  &-logo {
+    width: 30%;    
+    img {
+      //border-radius: 4px;
+      //padding: 4px;
+      width: 100%;
+      height: 4rem;
+      object-fit: contain;
+    }
+  }
+  &-number {
+    letter-spacing: 2px;
+  }
+  &-balance {
+    letter-spacing: -1px;
+  }
+
+  &-edit {
+    top: 0;
+    right: 0;
+    opacity: 0;
+    transition: .2s all ease-in-out;
+  }
+
+  &:hover {
+    border-color: #ddd;
+    #{$this}-edit {
+      opacity: 1;
+    }
+  }
+}

@@ -1,11 +1,11 @@
 <!doctype html>
-<html lang="en" class="no-js">
+<html lang="en">
   <head>
     {% include 'partials/head.html' %}
   </head>
   <body class="">
     {# PAGE WRAPPER: --- #}
-    <div class="page is-{{ page.id }}" id="top">
+    <div class="page is-{{ page.id }} text-200">
       {# HEADER --- #}
       {# {% include 'partials/header.html' %} #}
 
@@ -24,7 +24,12 @@
       {# {% include 'partials/footer.html' %} #}
     </div>
 
+    {% block modals %}{% endblock %}
+
     {# SCRIPTS: --- #}
     {% include 'partials/foot.html' %}
+
+    {% block scripts %}{% endblock %}
+
   </body>
 </html>

@@ -61,8 +61,14 @@
     "about-index": {
       "title": "(about title)",
       "description": "(about meta description)",
-      "stylesheets": ["main", "about"],
-      "scripts": ["main", "about"]
+      "stylesheets": ["main"],
+      "scripts": ["main"]
+    },
+    "modals": {
+      "title": "Modals",
+      "description": "",
+      "stylesheets": ["main"],
+      "scripts": ["main"]
     }
   },
   "menus": {
@@ -131,5 +137,11 @@
         "children": "Hỗ trợ"
       }
     ]
-  }
+  },
+  "modals": [
+    {
+      "id": "bank-card-add",
+      "title": "Card - Add"
+    }
+  ]
 }

@@ -1,0 +1,70 @@
+{% import "macros/modal.html" as modal %}
+
+{#---------------------------------------
+Set html content for the body:
+---------------------------------------#}
+{% set htmlBody %}
+<form id="form-bank-card-add">
+  <div class="alert alert-danger alert-dismissible fade show" role="alert">
+    Có lỗi xảy ra, vui lòng thử lại!
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="bank-name">Chọn ngân hàng</label>
+      <select id="bank-name" class="form-control">
+        <option selected>---</option>
+        <option value="1">Techcombank</option>
+        <option value="2">VPBank</option>
+        <option value="3">BIDV</option>
+      </select>
+    </div>
+    <div class="form-group col-md-6">
+      <label for="bank-branch">Chi nhánh</label>
+      <input type="text" class="form-control" id="bank-branch">
+    </div>
+  </div>
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="bank-account-name">Tên chủ tài khoản</label>
+      <input type="text" class="form-control text-uppercase is-invalid" id="bank-account-name" required>
+      <div class="invalid-feedback">
+        Nhập họ tên chủ tài khoản
+      </div>
+    </div>
+    <div class="form-group col-md-6">
+      <label for="bank-account-number">Số tài khoản</label>
+      <input type="text" class="form-control is-invalid" id="bank-account-number" required>
+      <div class="invalid-feedback">
+        Nhập số tài khoản
+      </div>
+    </div>
+  </div>
+</form>
+{% endset %}
+
+{#---------------------------------------
+Set html content for the footer: 
+---------------------------------------#}
+{% set htmlFooter %}
+<button class="btn btn-light" data-dismiss="modal" type="button">Bỏ qua</button>
+<button class="btn btn-primary" data-dismiss="modal" type="button">Thêm tài khoản</button>
+{% endset %}
+
+{#---------------------------------------
+Create the modal: 
+---------------------------------------#}
+{{ modal.return(
+    id = "bank-card-add",
+    title = "Thêm tài khoản ngân hàng",
+    body = htmlBody,
+    footer = htmlFooter
+) }}
+
+{# 
+    size = "sm",
+    closeButton = false
+ #}

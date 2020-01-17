@@ -69,6 +69,9 @@ const paths = {
     ],
     dest: `${dirs.output}/static/scripts`,
   },
+  data: {
+    src: `${dirs.entry}/views/data`,
+  }
 };
 
 // Plugin configurations.
@@ -185,7 +188,7 @@ gulp.task('public', () =>
 
 const getJSONFile = slug => {
   // Read Buffer from file.
-  const fileData = fs.readFileSync(`${paths.views.root}/${slug}.json`);
+  const fileData = fs.readFileSync(`${paths.data.src}/${slug}.json`);
   // Convert Buffer to JSON.
   return JSON.parse(fileData);
 };

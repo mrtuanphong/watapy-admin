@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    {% include 'partials/head.html' %}
+  </head>
+  <body>
+    <div class="page is-{{ page.id }} text-200">
+      {% block content %}{% endblock %}
+    </div>
+
+    {% block modals %}{% endblock %}
+
+    {% include 'partials/foot.html' %}
+    {% block scripts %}{% endblock %}
+  </body>
+</html>
