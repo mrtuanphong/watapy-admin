@@ -1,1 +1,0 @@
-{"version":3,"sources":["about.scss"],"names":[],"mappings":"AAAA,gBACE,QAAA,MACA,QAAA","file":"about.css","sourcesContent":[".mymacro::after {\n  display: block;\n  content: 'about.scss works!';\n}\n"]}
