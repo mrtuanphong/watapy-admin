@@ -3,25 +3,179 @@
 {% block content %}
   <!-- begin: main content of this page -->
   <main class="flex-grow-1">
-    <div class="page-header container-fluid d-flex align-items-center position-relative">
-      <h2 class="page-title my-3 mr-auto">Giao dịch</h2>
-      {# 
-      <div>
-        <button type="button" class="btn btn-primary">Primary</button>
+    <div class="page-header pt-4 pb-5 px-lg-3">
+      <div class="container position-relative">
+        <div class="row align-items-center">
+          <div class="col-lg-6 col-xl-6">
+            <h2 class="page-title m-0 text-500 font-medium">{{ page.title }}</h2>
+            <div class="mt-1 text-black-50">Quản lý giao dịch</div>
+          </div>
+          <div class="col-lg-6 col-xl-6 text-right mt-3 mt-lg-0">
+            <button class="btn btn-outline-secondary" data-toggle="modal" data-target="#modal-bank-card-add">
+              Chuyển tiền
+            </button>
+            <button class="btn btn-primary" data-toggle="modal" data-target="#modal-bank-card-add">
+              Rút tiền
+            </button>
+          </div>
+        </div>
       </div>
-      <nav aria-label="breadcrumb">
-        <ol class="breadcrumb mt-2 mb-0 p-0">
-          <li class="breadcrumb-item"><a href="index.html">Bracket</a></li>
-          <li class="breadcrumb-item active">Dashboard</li>
-        </ol>
-      </nav> 
-      #}
     </div>
 
-    <div class="contentpanel container-fluid position-relative py-3">
-      <p>Your content here...</p>
-    </div>
-  </main>
-  <!-- end: main content of this page -->
+    <div class="contentpanel position-relative px-lg-3 pb-4">
+      <div class="container-fluid">
 
-{% endblock %}
+        <div class="row">
+          <!-- So giao dich: -->
+          <div class="col-sm-6 col-lg-4 col-xl-3">
+            <div class="card text-white" style="background: #1d2939;">
+              <div class="card-body">
+                <div class="row align-items-center">
+                  <div class="col-auto">
+                    <i class="fa fa-exchange fa-3x text-white-50"></i>
+                  </div>
+                  <div class="col">
+                    <div class="text-100 text-uppercase text-white-50">Giao dịch tuần này</div>
+                    <div class="text-800 font-medium line-height-reset mt-1">64</div>
+                  </div>
+                </div>
+                <div class="row mt-3">
+                  <div class="col">
+                    <div class="text-100 text-uppercase text-white-50">Nhận</div>
+                    <div class="border-bottom" style="opacity: .3"></div>
+                    <div class="text-500 font-medium mt-1">28</div>
+                  </div>
+                  <div class="col">
+                    <div class="text-100 text-uppercase text-white-50">Chuyển & Rút</div>
+                    <div class="border-bottom" style="opacity: .3"></div>
+                    <div class="text-500 font-medium mt-1">36</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Thay doi Wec: -->
+          <div class="col-sm-6 col-lg-4 col-xl-3">
+            <div class="card text-white" style="background: #1d2939;">
+              <div class="card-body">
+                <div class="row align-items-center">
+                  <div class="col-auto">
+                    <i class="fa fa-line-chart fa-3x text-white-50"></i>
+                  </div>
+                  <div class="col">
+                    <div class="text-100 text-uppercase text-white-50">Thay đổi WEC hôm nay</div>
+                    <div class="text-800 font-medium line-height-reset mt-1">+690</div>
+                  </div>
+                </div>
+                <div class="row mt-3">
+                  <div class="col">
+                    <div class="text-100 text-uppercase text-white-50">Tuần này</div>
+                    <div class="border-bottom" style="opacity: .3"></div>
+                    <div class="text-500 font-medium mt-1">+7.8k</div>
+                  </div>
+                  <div class="col">
+                    <div class="text-100 text-uppercase text-white-50">Tháng này</div>
+                    <div class="border-bottom" style="opacity: .3"></div>
+                    <div class="text-500 font-medium mt-1">+40.6k</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <section class="card mt-4">
+          <div class="card-header d-flex">
+            <div class="text-300 text-uppercase font-medium">Danh sách giao dịch</div>
+            <div class="ml-auto">
+              <a href="#">
+                <i class="fa fa-download"></i> Xuất file Excel
+              </a>
+            </div>
+          </div>
+          <div class="card-body">
+            <div>
+              <form>
+                <div class="form-row align-items-end">
+                  <div class="col">
+                    <div class="form-group">
+                      <label>Loại giao dịch</label>
+                      <select class="form-control">
+                        <option>Tất cả</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="form-group">
+                      <label>Trạng thái</label>
+                      <select class="form-control">
+                        <option>Tất cả</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="form-group">
+                      <label>Từ ngày</label>
+                      <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Chọn ngày...">
+                        <div class="input-group-append">
+                          <button class="btn btn-outline-secondary" type="button">
+                            <i class="fa fa-calendar"></i>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="form-group">
+                      <label>Đến ngày</label>
+                      <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Chọn ngày...">
+                        <div class="input-group-append">
+                          <button class="btn btn-outline-secondary" type="button">
+                            <i class="fa fa-calendar"></i>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-auto">
+                    <button type="submit" class="btn btn-primary">Tìm kiếm</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+
+            <div class="table-responsive mt-5">
+              <table class="table table-striped">
+                <thead>
+                  <tr>
+                    <th scope="col">Ngày giao dịch</th>
+                    <th scope="col">Người nhận</th>
+                    <th scope="col">Loại giao dịch</th>
+                    <th scope="col">Trạng thái</th>
+                    <th scope="col">Giá trị giao dịch</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {% for item in range(1, 20) %}
+                    <tr>
+                      <td>16/01/2020</td>
+                      <td>KHÁCH HÀNG CẶP LỌC WATAPY</td>
+                      <td>Gửi tiền</td>
+                      <td>Hoàn thành</td>
+                      <td>-76123 WEC</td>
+                    </tr>
+                  {% endfor %}
+                </tbody>
+              </table>
+            </div>
+
+            {% include "partials/components/pagination.html" %}
+          </section>
+        </div>
+      </div>
+    </main>
+    <!-- end: main content of this page -->
+
+  {% endblock %}

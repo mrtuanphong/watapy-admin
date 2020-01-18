@@ -38,7 +38,7 @@ $(document).ready(function () {
   }
 
   // Tooltip
-  jQuery('.tooltips').tooltip({ container: 'body' });
+  jQuery('[data-toggle="tooltip"]').tooltip({ container: 'body' });
 
   // Popover
   jQuery('.popovers').popover();

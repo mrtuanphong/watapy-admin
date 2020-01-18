@@ -64,6 +64,12 @@
       "stylesheets": ["main"],
       "scripts": ["main"]
     },
+    "template": {
+      "title": "Template",
+      "description": "",
+      "stylesheets": ["main"],
+      "scripts": ["main"]
+    },
     "modals": {
       "title": "Modals",
       "description": "",
