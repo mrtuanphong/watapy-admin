@@ -46,8 +46,26 @@
       "stylesheets": ["main"],
       "scripts": ["main"]
     },
+    "users-add": {
+      "title": "Thêm người dùng mới",
+      "description": "",
+      "stylesheets": ["main"],
+      "scripts": ["main"]
+    },
+    "users-edit": {
+      "title": "Sửa thông tin người dùng",
+      "description": "",
+      "stylesheets": ["main"],
+      "scripts": ["main"]
+    },
     "banks": {
       "title": "Danh sách ngân hàng",
+      "description": "",
+      "stylesheets": ["main"],
+      "scripts": ["main"]
+    },
+    "banks-add": {
+      "title": "Thêm ngân hàng",
       "description": "",
       "stylesheets": ["main"],
       "scripts": ["main"]
@@ -117,24 +135,16 @@
         "children": "Tin tức"
       },
       {
-        "id": "settings",
-        "path": "#",
-        "icon": "fa-cog",
-        "children": "Thiết lập",
-        "sub": [
-          {
-            "id": "users",
-            "path": "/users.html",
-            "icon": "fa-caret-right",
-            "children": "Quản lý người dùng"
-          },
-          {
-            "id": "banks",
-            "path": "/banks.html",
-            "icon": "fa-caret-right",
-            "children": "Danh sách ngân hàng"
-          }
-        ]
+        "id": "users",
+        "path": "/users.html",
+        "icon": "fa-users",
+        "children": "Người dùng"
+      },
+      {
+        "id": "banks",
+        "path": "/banks.html",
+        "icon": "fa-bank",
+        "children": "Ngân hàng"
       },
       {
         "id": "support",
@@ -147,7 +157,19 @@
   "modals": [
     {
       "id": "bank-card-add",
-      "title": "Card - Add"
+      "title": "Tài khoản ngân hàng - Thêm mới"
+    },
+    {
+      "id": "bank-card-edit",
+      "title": "Tài khoản ngân hàng - Sửa"
+    },
+    {
+      "id": "banks-delete-confirmation",
+      "title": "Xác nhận xóa ngân hàng"
+    },
+    {
+      "id": "users-delete-confirmation",
+      "title": "Xác nhận xóa người dùng"
     }
   ]
 }

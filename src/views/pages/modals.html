@@ -9,7 +9,7 @@
       {% for modal in modals | reverse %}
         <div class="col-sm-6 col-md-3">
           <a href="modals.html#{{modal.id}}" title="{{modal.title}}" onclick="$('#modal-{{modal.id}}').modal();" class="card h-100">
-            <div class="card-body px-3 py-2">
+            <div class="card-body px-3 py-4">
               <div class="text-300 text-body">{{modal.title}}</div>
             </div>
           </a>

@@ -1,0 +1,31 @@
+{% import "macros/modal.html" as modal %}
+
+{#---------------------------------------
+Set html content for the body:
+---------------------------------------#}
+{% set htmlBody %}
+  <p>Bạn có chắc chắn muốn xóa ngân hàng này?</p>
+{% endset %}
+
+{#---------------------------------------
+Set html content for the footer: 
+---------------------------------------#}
+{% set htmlFooter %}
+  <button class="btn btn-outline-secondary" data-dismiss="modal" type="button">Bỏ qua</button>
+  <button class="btn btn-danger" data-dismiss="modal" type="button">Xóa ngân hàng</button>
+{% endset %}
+
+{#---------------------------------------
+Create the modal: 
+---------------------------------------#}
+{{ modal.return(
+    id = "banks-delete-confirmation",
+    title = "Xác nhận",
+    body = htmlBody,
+    footer = htmlFooter
+) }}
+
+{# 
+    size = "sm",
+    closeButton = false
+ #}

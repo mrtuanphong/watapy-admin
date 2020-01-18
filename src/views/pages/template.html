@@ -3,25 +3,33 @@
 {% block content %}
   <!-- begin: main content of this page -->
   <main class="flex-grow-1">
-    <div class="page-header pt-4 pb-5 px-lg-3">
-      <div class="container position-relative">
+    <div class="container-fluid">
+      <div class="page-header position-relative pt-4 pb-5 px-lg-3">
         <div class="row align-items-center">
-          <div class="col-lg-8 col-xl-9">
+          <div class="col-lg">
             <h2 class="page-title m-0 text-500 font-medium">{{ page.title }}</h2>
             <div class="mt-1 text-black-50">Subtitle here...</div>
           </div>
-          <div class="col-lg-4 col-xl-3 text-right mt-3 mt-lg-0">
-            <button class="btn btn-primary btn-block" data-toggle="modal" data-target="#modal-bank-card-add">
-              <i class="fa fa-plus"></i> Button
+          <div class="col-lg-auto mt-3 mt-lg-0">
+            <button class="btn btn-outline-secondary">
+              Secondary
+            </button>
+            <button class="btn btn-primary">
+              Primary
             </button>
           </div>
         </div>
       </div>
-    </div>
 
-    <div class="contentpanel position-relative px-lg-3 pb-4">
-      <div class="container">
-        <p>Your content here...</p>
+      <div class="contentpanel position-relative px-lg-3 pb-4">
+        <section class="card">
+          <div class="card-header">
+            <div class="text-300 text-uppercase font-medium">Titte</div>
+          </div>
+          <div class="card-body">
+            <p>Your content here...</p>
+          </div>
+        </div>
       </div>
     </div>
   </main>

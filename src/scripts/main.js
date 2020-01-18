@@ -38,35 +38,37 @@ $(document).ready(function () {
   }
 
   // Tooltip
-  jQuery('[data-toggle="tooltip"]').tooltip({ container: 'body' });
+  jQuery('[data-toggle="tooltip"]').tooltip({ 
+    container: 'body' 
+  });
 
   // Popover
-  jQuery('.popovers').popover();
-
-  // Close Button in Panels
-  jQuery('.panel .panel-close').click(function () {
-    jQuery(this).closest('.panel').fadeOut(200);
-    return false;
+  jQuery('[data-toggle="popover"]').popover({
+    html: true, 
+    container: 'body'
   });
 
-  // Form Toggles
-  jQuery('.toggle').toggles({ on: true });
+  // // Close Button in Panels
+  // jQuery('.panel .panel-close').click(function () {
+  //   jQuery(this).closest('.panel').fadeOut(200);
+  //   return false;
+  // });
 
-  // Minimize Button in Panels
-  jQuery('.minimize').click(function () {
-    var t = jQuery(this);
-    var p = t.closest('.panel');
-    if (!jQuery(this).hasClass('maximize')) {
-      p.find('.panel-body, .panel-footer').slideUp(200);
-      t.addClass('maximize');
-      t.html('&plus;');
-    } else {
-      p.find('.panel-body, .panel-footer').slideDown(200);
-      t.removeClass('maximize');
-      t.html('&minus;');
-    }
-    return false;
-  });
+  // // Minimize Button in Panels
+  // jQuery('.minimize').click(function () {
+  //   var t = jQuery(this);
+  //   var p = t.closest('.panel');
+  //   if (!jQuery(this).hasClass('maximize')) {
+  //     p.find('.panel-body, .panel-footer').slideUp(200);
+  //     t.addClass('maximize');
+  //     t.html('&plus;');
+  //   } else {
+  //     p.find('.panel-body, .panel-footer').slideDown(200);
+  //     t.removeClass('maximize');
+  //     t.html('&minus;');
+  //   }
+  //   return false;
+  // });
 
 
   // Add class everytime a mouse pointer hover over it
@@ -137,25 +139,22 @@ $(document).ready(function () {
     height: '30px',
     barColor: '#428BCA'
   });
-
   jQuery('#sidebar-chart2').sparkline([5, 7, 6, 9, 3, 4, 8], {
     type: 'bar',
     height: '30px',
     barColor: '#D9534F'
   });
-
   jQuery('#sidebar-chart3').sparkline([3, 2, 2, 3, 10, 9, 6], {
     type: 'bar',
     height: '30px',
     barColor: '#F0AD4E'
   });
-
   jQuery('#sidebar-chart4').sparkline([3, 8, 10], {
     type: 'pie',
     height: '30px',
     barColor: '#1CAF9A'
   });
-
+  
 });
 
 console.log('main.js works!');

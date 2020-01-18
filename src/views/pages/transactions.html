@@ -3,16 +3,16 @@
 {% block content %}
   <!-- begin: main content of this page -->
   <main class="flex-grow-1">
-    <div class="page-header pt-4 pb-5 px-lg-3">
-      <div class="container position-relative">
+    <div class="container-fluid">
+      <div class="page-header position-relative pt-4 pb-5 px-lg-3">
         <div class="row align-items-center">
-          <div class="col-lg-6 col-xl-6">
+          <div class="col-lg">
             <h2 class="page-title m-0 text-500 font-medium">{{ page.title }}</h2>
             <div class="mt-1 text-black-50">Quản lý giao dịch</div>
           </div>
-          <div class="col-lg-6 col-xl-6 text-right mt-3 mt-lg-0">
+          <div class="col-lg-auto mt-3 mt-lg-0">
             <button class="btn btn-outline-secondary" data-toggle="modal" data-target="#modal-bank-card-add">
-              Chuyển tiền
+              Chuyển WEC
             </button>
             <button class="btn btn-primary" data-toggle="modal" data-target="#modal-bank-card-add">
               Rút tiền
@@ -20,15 +20,13 @@
           </div>
         </div>
       </div>
-    </div>
 
-    <div class="contentpanel position-relative px-lg-3 pb-4">
-      <div class="container-fluid">
+      <div class="contentpanel position-relative px-lg-3 pb-4">
 
         <div class="row">
           <!-- So giao dich: -->
-          <div class="col-sm-6 col-lg-4 col-xl-3">
-            <div class="card text-white" style="background: #1d2939;">
+          <div class="col-sm-6 col-lg-4 col-xl-4">
+            <div class="card text-white bg-info mb-3">
               <div class="card-body">
                 <div class="row align-items-center">
                   <div class="col-auto">
@@ -41,12 +39,12 @@
                 </div>
                 <div class="row mt-3">
                   <div class="col">
-                    <div class="text-100 text-uppercase text-white-50">Nhận</div>
+                    <div class="text-100 text-uppercase text-white-50">Rút tiền</div>
                     <div class="border-bottom" style="opacity: .3"></div>
                     <div class="text-500 font-medium mt-1">28</div>
                   </div>
                   <div class="col">
-                    <div class="text-100 text-uppercase text-white-50">Chuyển & Rút</div>
+                    <div class="text-100 text-uppercase text-white-50">Chuyển & Nhận</div>
                     <div class="border-bottom" style="opacity: .3"></div>
                     <div class="text-500 font-medium mt-1">36</div>
                   </div>
@@ -55,8 +53,8 @@
             </div>
           </div>
           <!-- Thay doi Wec: -->
-          <div class="col-sm-6 col-lg-4 col-xl-3">
-            <div class="card text-white" style="background: #1d2939;">
+          <div class="col-sm-6 col-lg-4 col-xl-4">
+            <div class="card text-white bg-secondary mb-3" style="sssbackground: #1d2939;">
               <div class="card-body">
                 <div class="row align-items-center">
                   <div class="col-auto">
@@ -84,7 +82,7 @@
           </div>
         </div>
 
-        <section class="card mt-4">
+        <section class="card mt-2">
           <div class="card-header d-flex">
             <div class="text-300 text-uppercase font-medium">Danh sách giao dịch</div>
             <div class="ml-auto">
@@ -97,23 +95,30 @@
             <div>
               <form>
                 <div class="form-row align-items-end">
-                  <div class="col">
+                  <div class="col-lg-2">
                     <div class="form-group">
                       <label>Loại giao dịch</label>
                       <select class="form-control">
                         <option>Tất cả</option>
+                        <option>Chiết khấu</option>
+                        <option>Chuyển</option>
+                        <option>Nhận</option>
+                        <option>Rút tiền</option>
                       </select>
                     </div>
                   </div>
-                  <div class="col">
+                  <div class="col-lg-2">
                     <div class="form-group">
                       <label>Trạng thái</label>
                       <select class="form-control">
                         <option>Tất cả</option>
+                        <option>Hoàn thành</option>
+                        <option>Chờ xử lý</option>
+                        <option>Hủy bỏ</option>
                       </select>
                     </div>
                   </div>
-                  <div class="col">
+                  <div class="col-lg-3">
                     <div class="form-group">
                       <label>Từ ngày</label>
                       <div class="input-group">
@@ -126,7 +131,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="col">
+                  <div class="col-lg-3">
                     <div class="form-group">
                       <label>Đến ngày</label>
                       <div class="input-group">
@@ -139,43 +144,77 @@
                       </div>
                     </div>
                   </div>
-                  <div class="col-auto">
-                    <button type="submit" class="btn btn-primary">Tìm kiếm</button>
+                  <div class="col-lg-2">
+                    <div class="form-group">
+                      <button type="submit" class="btn btn-primary btn-blocksss">Tìm kiếm</button>
+                    </div>
                   </div>
                 </div>
               </form>
             </div>
 
             <div class="table-responsive mt-5">
-              <table class="table table-striped">
+              <table class="table table-hover">
                 <thead>
                   <tr>
                     <th scope="col">Ngày giao dịch</th>
-                    <th scope="col">Người nhận</th>
+                    <th scope="col">Người thực hiện</th>
                     <th scope="col">Loại giao dịch</th>
-                    <th scope="col">Trạng thái</th>
                     <th scope="col">Giá trị giao dịch</th>
+                    <th scope="col" class="text-right">Trạng thái</th>
                   </tr>
                 </thead>
                 <tbody>
-                  {% for item in range(1, 20) %}
+                  <!-- Rut tien: -->
+                  <tr>
+                    <td>16/01/2020 lúc 7:15</td>
+                    <td>Admin</td>
+                    <td><em><i class="fa fa-reply text-danger"></i> Rút tiền</em></td>
+                    <td><span class="text-danger">-76.123 WEC</span></td>
+                    <td class="text-right">
+                      <button type="button" class="btn btn-sm btn-warning" data-trigger="focus" data-toggle="popover" data-placement="left" title="Giao dịch Rút tiền" 
+                      data-content='<div class="row mx-sm-n1">
+                        <div class="col-sm-4 px-sm-1 text-muted">Số tiền:</div><div class="col-sm-8 px-sm-1 text-danger">-76.123 WEC</div>
+                        <div class="col-sm-4 px-sm-1 text-muted">Chủ thẻ:</div><div class="col-sm-8 px-sm-1 font-medium">Nguyễn Thị Xuân</div>
+                        <div class="col-sm-4 px-sm-1 text-muted">Số TK:</div><div class="col-sm-8 px-sm-1">19026671201019</div>
+                        <div class="col-sm-4 px-sm-1 text-muted">Ngân hàng:</div><div class="col-sm-8 px-sm-1">Techcombank - Tân Phú</div>
+                        <div class="col-sm-6 px-sm-1 mt-2 pt-2 border-top"><a href="#" class="btn btn-sm btn-outline-danger btn-block">Hủy GD</a></div>
+                        <div class="col-sm-6 px-sm-1 mt-2 pt-2 border-top"><a href="#" class="btn btn-sm btn-primary btn-block">Duyệt GD</a></div>
+                        </div>
+                        '>
+                        <i class="fa fa-clock-o"></i> Chờ xử lý
+                      </button>
+                    </td>
+                  </tr>
+                  {% for item in range(1, 10) %}
+                    <!-- Chiet khau: -->
                     <tr>
-                      <td>16/01/2020</td>
-                      <td>KHÁCH HÀNG CẶP LỌC WATAPY</td>
-                      <td>Gửi tiền</td>
-                      <td>Hoàn thành</td>
-                      <td>-76123 WEC</td>
-                    </tr>
+                      <td>16/01/2020 lúc 7:15</td>
+                      <td>Trần Việt</td>
+                      <td><em><i class="fa fa-handshake-o text-muted"></i> Chiết khấu</em></td>
+                      <td><span class="text-danger">-2.160 WEC</span></td>
+                      <td class="text-right">
+                        <button type="button" class="btn btn-sm btn-light" data-trigger="focus" data-toggle="popover" data-placement="left" title="Giao dịch Chiết khấu" 
+                        data-content='<div class="row mx-sm-n1">
+                          <div class="col-sm-4 px-sm-1 text-muted">Số tiền:</div><div class="col-sm-8 px-sm-1 text-danger">-76.123 WEC</div>
+                          <div class="col-sm-4 px-sm-1 text-muted">Người nhận:</div><div class="col-sm-8 px-sm-1 font-medium">Lê Thị Thu</div>                          
+                          </div>
+                          '>
+                          <span class="text-success"><i class="fa fa-check-circle"></i> Hoàn thành</span>
+                        </button>
+                      </td>
+                    </tr>                    
                   {% endfor %}
                 </tbody>
               </table>
             </div>
 
             {% include "partials/components/pagination.html" %}
-          </section>
-        </div>
+          </div>
+        </section>
       </div>
-    </main>
-    <!-- end: main content of this page -->
+    </div>
+  </main>
+  <!-- end: main content of this page -->
 
-  {% endblock %}
+{% endblock %}
