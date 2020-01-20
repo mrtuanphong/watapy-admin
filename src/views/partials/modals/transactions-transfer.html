@@ -1,0 +1,53 @@
+{% import "macros/modal.html" as modal %}
+
+{#---------------------------------------
+Set html content for the body:
+---------------------------------------#}
+{% set htmlBody %}
+<form id="form-bank-card-edit">
+  <!--
+  <div class="alert alert-danger alert-dismissible fade show" role="alert">
+    Có lỗi xảy ra, vui lòng thử lại!
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  -->
+  {# <div class="form-group">
+      <label for="transaction-type">Hình thức giao dịch</label>
+      <select id="transaction-type" class="form-control">
+        <option value="1" selected>Chuyển WEC</option>
+      </select>
+  </div> #}
+  <div class="form-group" id="transaction-wallet">
+    <label for="wallet-code">Địa chỉ ví nhận</label>
+    <input type="number" class="form-control" id="wallet-code" placeholder="Mã địa chỉ ví">
+  </div>
+
+  <div class="form-group">
+    <label for="wec-number">Số WEC cần chuyển</label>
+    <input type="number" class="form-control is-invalid" id="wec-number" >
+    <div class="invalid-feedback">
+      Nhập số WEC
+    </div>
+  </div>
+</form>
+{% endset %}
+
+{#---------------------------------------
+Set html content for the footer: 
+---------------------------------------#}
+{% set htmlFooter %}
+  <button class="btn btn-outline-secondary" data-dismiss="modal" type="button">Bỏ qua</button>
+  <button class="btn btn-primary" data-dismiss="modal" type="button">Thực hiện chuyển WEC</button>
+{% endset %}
+
+{#---------------------------------------
+Create the modal: 
+---------------------------------------#}
+{{ modal.return(
+    id = "transactions-transfer",
+    title = "Chuyển WEC",
+    body = htmlBody,
+    footer = htmlFooter
+) }}

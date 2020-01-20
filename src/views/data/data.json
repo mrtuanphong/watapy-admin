@@ -156,20 +156,28 @@
   },
   "modals": [
     {
-      "id": "bank-card-add",
+      "id": "banks-card-add",
       "title": "Tài khoản ngân hàng - Thêm mới"
     },
     {
-      "id": "bank-card-edit",
+      "id": "banks-card-edit",
       "title": "Tài khoản ngân hàng - Sửa"
     },
     {
       "id": "banks-delete-confirmation",
-      "title": "Xác nhận xóa ngân hàng"
+      "title": "Ngân hàng: Xác nhận xóa"
     },
     {
       "id": "users-delete-confirmation",
-      "title": "Xác nhận xóa người dùng"
+      "title": "Người dùng: Xác nhận xóa"
+    },
+    {
+      "id": "transactions-withdraw",
+      "title": "Giao dịch: Rút tiền"
+    },
+    {
+      "id": "transactions-transfer",
+      "title": "Giao dịch: Chuyển WEC"
     }
   ]
 }

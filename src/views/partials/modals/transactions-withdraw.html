@@ -1,0 +1,51 @@
+{% import "macros/modal.html" as modal %}
+
+{#---------------------------------------
+Set html content for the body:
+---------------------------------------#}
+{% set htmlBody %}
+<form id="form-bank-card-edit">
+  <!--
+  <div class="alert alert-danger alert-dismissible fade show" role="alert">
+    Có lỗi xảy ra, vui lòng thử lại!
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  -->
+  
+  <div class="form-group" id="transaction-bank">
+      <label for="bank-name">Chọn ngân hàng</label>
+      <select id="bank-name" class="form-control">
+        <option value="1">VPBank - Đông Đô</option>
+        <option value="2">Techcombank - Ba Đình</option>
+      </select>
+  </div>
+
+  <div class="form-group">
+    <label for="wec-number">Số WEC cần rút <span class="text-muted text-100">(1 WEC = 1.000 VND)</span></label>
+    <input type="number" class="form-control is-invalid" id="wec-number" >
+    <div class="invalid-feedback">
+      Nhập số WEC
+    </div>
+  </div>
+</form>
+{% endset %}
+
+{#---------------------------------------
+Set html content for the footer: 
+---------------------------------------#}
+{% set htmlFooter %}
+  <button class="btn btn-outline-secondary" data-dismiss="modal" type="button">Bỏ qua</button>
+  <button class="btn btn-primary" data-dismiss="modal" type="button">Thực hiện rút tiền</button>
+{% endset %}
+
+{#---------------------------------------
+Create the modal: 
+---------------------------------------#}
+{{ modal.return(
+    id = "transactions-withdraw",
+    title = "Rút tiền về tài khoản ngân hàng",
+    body = htmlBody,
+    footer = htmlFooter
+) }}

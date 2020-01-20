@@ -11,10 +11,10 @@
             <div class="mt-1 text-black-50">Quản lý giao dịch</div>
           </div>
           <div class="col-lg-auto mt-3 mt-lg-0">
-            <button class="btn btn-outline-secondary" data-toggle="modal" data-target="#modal-bank-card-add">
+            <button class="btn btn-outline-secondary" data-toggle="modal" data-target="#modal-transactions-transfer">
               Chuyển WEC
             </button>
-            <button class="btn btn-primary" data-toggle="modal" data-target="#modal-bank-card-add">
+            <button class="btn btn-primary" data-toggle="modal" data-target="#modal-transactions-withdraw">
               Rút tiền
             </button>
           </div>
@@ -217,4 +217,9 @@
   </main>
   <!-- end: main content of this page -->
 
+{% endblock %}
+
+{% block modals %}
+  {% include "partials/modals/transactions-transfer.html" %}
+  {% include "partials/modals/transactions-withdraw.html" %}
 {% endblock %}
