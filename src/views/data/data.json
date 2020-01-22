@@ -4,12 +4,6 @@
     "description": "(site meta description)"
   },
   "pages": {
-    "dashboard": {
-      "title": "Tổng quan",
-      "description": "",
-      "stylesheets": ["main"],
-      "scripts": ["main"]
-    },
     "wallet": {
       "title": "Ví của tôi",
       "description": "",
@@ -108,13 +102,7 @@
     }
   },
   "menus": {
-    "primary": [
-      {
-        "id": "dashboard",
-        "path": "/dashboard.html",
-        "icon": "fa-home",
-        "children": "Tổng quan"
-      },
+    "primary": [      
       {
         "id": "wallet",
         "path": "/wallet.html",

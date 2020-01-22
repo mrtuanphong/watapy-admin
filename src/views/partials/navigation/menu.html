@@ -28,7 +28,7 @@
           <ul class="children">
             {% for sub_item in item.sub %}
               <li>
-                <a href="{{ sub_item.path }}" class="py-2">
+                <a href="{{ paths.root + sub_item.path }}" class="py-2">
                   <i class="fa {{ sub_item.icon }}"></i>
                   <span>{{ sub_item.children }}</span>
                 </a>
