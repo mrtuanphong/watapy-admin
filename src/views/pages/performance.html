@@ -1,0 +1,144 @@
+{% extends 'layouts/default.html' %}
+
+{% block content %}
+  <!-- begin: main content of this page -->
+  <main class="flex-grow-1">
+    <div class="container">
+      <div class="page-header position-relative pt-4 pb-5 px-lg-3">
+        <div class="row align-items-center">
+          <div class="col-lg">
+            <h2 class="page-title m-0 text-500 font-medium">{{ page.title }}</h2>
+          </div>
+          <div class="col-lg-auto text-right mt-3 mt-lg-0"></div>
+        </div>
+      </div>
+
+      <div class="contentpanel position-relative px-lg-3 pb-4">
+        <section class="card">
+          <div class="card-header">
+            <div class="text-300 text-uppercase font-medium">Danh sách</div>
+          </div>
+          <div class="card-body">
+            <div>
+              <form>
+                <div class="form-row align-items-end">
+                  <div class="col-lg-2 col-xl-2">
+                    <div class="form-group">
+                      <label>Quyền người dùng</label>
+                      <select class="form-control">
+                        <option>Tất cả</option>
+                        <option value="1">Quản trị viên</option>
+                        <option value="2">Công ty</option>
+                        <option value="3">Trưởng Miền</option>
+                        <option value="4">Đại lý Tỉnh/Quận</option>
+                        <option value="7">Cửa hàng</option>
+                        <option value="8">Quản trị CTV</option>
+                        <option value="5">Cộng tác viên</option>
+                        <option value="6">Khách hàng</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-lg-3 col-xl-3">
+                    <div class="form-group">
+                      <label>Từ ngày</label>
+                      <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Chọn ngày...">
+                        <div class="input-group-append">
+                          <button class="btn btn-outline-secondary" type="button">
+                            <i class="fa fa-calendar"></i>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-3 col-xl-3">
+                    <div class="form-group">
+                      <label>Đến ngày</label>
+                      <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Chọn ngày...">
+                        <div class="input-group-append">
+                          <button class="btn btn-outline-secondary" type="button">
+                            <i class="fa fa-calendar"></i>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-2 col-xl-2">
+                    <div class="form-group">
+                      <label>Từ khóa</label>
+                      <input type="text" class="form-control" placeholder="Tên, hoặc số ĐT..."/>
+                    </div>
+                  </div>
+                  <div class="col-lg-2 col-xl-2">
+                    <div class="form-group">
+                      <button type="submit" class="btn btn-primary btn-block">Tìm</button>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+
+            <div class="table-responsive mt-4">
+              <table class="table table-hover">
+                <thead>
+                  <tr>
+                    <th scope="col">Tên người dùng</th>
+                    <th scope="col">Số đơn</th>
+                    <th scope="col">DT Quản lý</th>
+                    <th scope="col">DT CTV</th>
+                    <th scope="col">DT Quản trị CTV</th>
+                    <th scope="col">DT Đại lý</th>
+                    <th scope="col">DT Trưởng miền</th>
+                    <th scope="col">Cashback</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <a href="#" class="d-flex align-items-center" data-toggle="tooltip" title="Quản trị viên">
+                        <img src="{{ paths.root + paths.images }}/photos/user1.png" class="user-avatar rounded-circle float-left mr-2" alt="" width="32" height="32">
+                        <div>Admin</div>
+                      </a>
+                    </td>
+                    <td>12</td>
+                    <td>15.525.000đ</td>
+                    <td>2.433.000đ</td>
+                    <td>890.000đ</td>
+                    <td>32.525.000đ</td>
+                    <td>6.200.000đ</td>
+                    <td>24.990.000đ</td>
+                  </tr>
+                  {% for item in range(1, 15) %}
+                    <tr>
+                      <td>
+                        <a href="#" class="d-flex align-items-center" data-toggle="tooltip" title="Trưởng miền">
+                          <img src="{{ paths.root + paths.images }}/photos/user3.png" class="user-avatar rounded-circle float-left mr-2" alt="" width="32" height="32">
+                          <div>Lê Minh Hà</div>
+                        </a>
+                      </td>
+                      <td>2</td>
+                      <td>6.666.000đ</td>
+                      <td>2.222.000đ</td>
+                      <td>5.555.000đ</td>
+                      <td>20.202.000đ</td>
+                      <td>1.111.000đ</td>
+                      <td>8.888.000đ</td>
+                    </tr>
+                  {% endfor %}
+                </tbody>
+              </table>
+            </div>
+
+            {% include "partials/components/pagination.html" %}
+          </div>
+        </section>
+      </div>
+    </div>
+  </main>
+  <!-- end: main content of this page -->
+{% endblock %}
+
+{% block modals %}
+  {% include "partials/modals/users-delete-confirmation.html" %}
+{% endblock %}

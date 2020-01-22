@@ -55,8 +55,8 @@
   }
   > li.nav-parent {
     > a:hover, > a:active {
-      background-color: rgba(#ffffff, .1);
-      background-image:url(../images/plus.png);
+      //background-color: rgba(#ffffff, .1);
+      //background-image:url(../images/plus.png);
     }
     > a {
       background:transparent url(../images/plus-white.png) no-repeat 92% center;
@@ -67,11 +67,11 @@
   }
   > li.nav-active > a {
     background-color: rgba(#ffffff, .1);
-    background-image:url(../images/minus.png);
+    background-image:url(../images/minus-white.png);
   }
   > li.nav-active > a:hover {
-    background-image:url(../images/minus.png);
-    background-repeat:no-repeat;
+    //background-image:url(../images/minus.png);
+    //background-repeat:no-repeat;
   }
   > li.nav-active > a:focus {
     //color:$sidebar-bg;
@@ -88,13 +88,13 @@
     }
   }
   > li.nav-parent.active > a {
-    background-image:url(../images/plus.png);
+    background-image:url(../images/plus-white.png);
   }
   > li.nav-active.active > a {
-    background-image:url(../images/minus.png);
+    background-image:url(../images/minus-white.png);
   }
   > li.nav-active.active > a:hover {
-    background-image:url(../images/minus.png);
+    background-image:url(../images/minus-white.png);
   }
   li {
     .fa {

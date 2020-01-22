@@ -3,25 +3,150 @@
 {% block content %}
   <!-- begin: main content of this page -->
   <main class="flex-grow-1">
-    <div class="page-header container-fluid d-flex align-items-center position-relative">
-      <h2 class="page-title my-3 mr-auto">Báo cáo</h2>
-      {# 
-      <div>
-        <button type="button" class="btn btn-primary">Primary</button>
+    <div class="container-fluid">
+      <div class="page-header position-relative pt-4 pb-5 px-lg-3">
+        <div class="row align-items-center">
+          <div class="col-lg">
+            <h2 class="page-title m-0 text-500 font-medium">{{ page.title }}</h2>
+            {# <div class="mt-1 text-black-50">Subtitle here...</div> #}
+          </div>
+          <div class="col-lg-auto mt-3 mt-lg-0">
+            {# <button class="btn btn-outline-secondary">
+              Secondary
+            </button>
+            <button class="btn btn-primary">
+              Primary
+            </button> #}
+          </div>
+        </div>
       </div>
-      <nav aria-label="breadcrumb">
-        <ol class="breadcrumb mt-2 mb-0 p-0">
-          <li class="breadcrumb-item"><a href="index.html">Bracket</a></li>
-          <li class="breadcrumb-item active">Dashboard</li>
-        </ol>
-      </nav> 
-      #}
-    </div>
 
-    <div class="contentpanel container-fluid position-relative py-3">
-      <p>Your content here...</p>
+      <div class="contentpanel position-relative px-lg-3 pb-4">
+        <section class="card mb-3">
+          <div class="card-body">
+            <p>Your content here...</p>
+          </div>
+        </section>
+
+        <section class="card">
+          <div class="card-header">
+            <div class="text-300 text-uppercase font-medium">Doanh thu cá nhân</div>
+          </div>
+          <div class="card-body">
+            <div class="row">
+              <div class="col-lg-5">
+                {# <div class="text-300 mb-3">
+                  <strong>Tóm tắt</strong>
+                </div> #}
+                <div class="d-flex mb-3">
+                  <div class="text-500"><strong>5.024.000đ</strong></div>
+                  <div class="text-400 ml-auto">
+                    <span class="text-success"><i class="fa fa-long-arrow-up"></i> 23%</span>
+                  </div>
+                </div>
+                <table class="table border">
+                  <thead>
+                    <tr>
+                      <th>Nguồn</th>
+                      <th>Doanh thu</th>
+                      <th class="text-right">Tăng trưởng</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Cashback</td>
+                      <td>18.654.000đ</td>
+                      <td class="text-right">
+                        <span class="text-danger"><i class="fa fa-long-arrow-down"></i> 4.5%</span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Doanh thu quản lý CTV</td>
+                      <td>29.540.000đ</td>
+                      <td class="text-right">
+                        <span class="text-success"><i class="fa fa-long-arrow-up"></i> 28%</span>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="col-lg-7">
+                <div class="pl-lg-4">
+                  {# <div class="text-300 mb-3">
+                    <strong>Biểu đồ</strong>
+                  </div> #}
+                  <canvas id="chart-1" width="400" height="200"></canvas>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </section>
+      </div>
     </div>
   </main>
   <!-- end: main content of this page -->
 
+{% endblock %}
+
+{% block scripts %}
+  <script>
+    var ctx = document
+      .getElementById('chart-1')
+      .getContext('2d');
+    var myChart = new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: [
+          'Red',
+          'Blue',
+          'Yellow',
+          'Green',
+          'Purple',
+          'Orange'
+        ],
+        datasets: [
+          {
+            label: '# of Votes',
+            data: [
+              12,
+              19,
+              3,
+              5,
+              2,
+              3
+            ],
+            backgroundColor: [
+              'rgba(255, 99, 132, 0.2)',
+              'rgba(54, 162, 235, 0.2)',
+              'rgba(255, 206, 86, 0.2)',
+              'rgba(75, 192, 192, 0.2)',
+              'rgba(153, 102, 255, 0.2)',
+              'rgba(255, 159, 64, 0.2)'
+            ],
+            borderColor: [
+              'rgba(255, 99, 132, 1)',
+              'rgba(54, 162, 235, 1)',
+              'rgba(255, 206, 86, 1)',
+              'rgba(75, 192, 192, 1)',
+              'rgba(153, 102, 255, 1)',
+              'rgba(255, 159, 64, 1)'
+            ],
+            borderWidth: 1
+          }
+        ]
+      },
+      options: {
+        scales: {
+          yAxes: [
+            {
+              ticks: {
+                beginAtZero: true
+              }
+            }
+          ]
+        }
+      }
+    });
+  </script>
 {% endblock %}

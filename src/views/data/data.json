@@ -23,7 +23,13 @@
       "scripts": ["main"]
     },
     "reports": {
-      "title": "Báo cáo",
+      "title": "Thống kê tài chính",
+      "description": "",
+      "stylesheets": ["main"],
+      "scripts": ["main"]
+    },
+    "performance": {
+      "title": "Hiệu quả thành viên",
       "description": "",
       "stylesheets": ["main"],
       "scripts": ["main"]
@@ -66,6 +72,12 @@
     },
     "banks-add": {
       "title": "Thêm ngân hàng",
+      "description": "",
+      "stylesheets": ["main"],
+      "scripts": ["main"]
+    },
+    "banks-edit": {
+      "title": "Sửa ngân hàng",
       "description": "",
       "stylesheets": ["main"],
       "scripts": ["main"]
@@ -118,9 +130,23 @@
       },
       {
         "id": "reports",
-        "path": "/reports.html",
+        "path": "",
         "icon": "fa-pie-chart",
-        "children": "Báo cáo"
+        "children": "Báo cáo",
+        "sub": [
+          {
+            "id": "reports",
+            "path": "/reports.html",
+            "icon": "fa-caret-right",
+            "children": "Thống kê tài chính"
+          },
+          {
+            "id": "performance",
+            "path": "/performance.html",
+            "icon": "fa-caret-right",
+            "children": "Hiệu quả thành viên"
+          }
+        ]
       },
       {
         "id": "offers",
