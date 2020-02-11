@@ -94,6 +94,18 @@
       "stylesheets": ["main"],
       "scripts": ["main"]
     },
+    "login": {
+      "title": "Đăng nhập",
+      "description": "",
+      "stylesheets": ["main"],
+      "scripts": ["main"]
+    },
+    "signup": {
+      "title": "Đăng ký",
+      "description": "",
+      "stylesheets": ["main"],
+      "scripts": ["main"]
+    },
     "about-index": {
       "title": "(about title)",
       "description": "(about meta description)",

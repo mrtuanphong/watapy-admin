@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    {% include 'partials/head.html' %}
+  </head>
+  <body class="">
+    {# PAGE WRAPPER: --- #}
+    <div class="page is-{{ page.id }} text-200">
+      <main class="d-flex flex-column" style="min-height:100vh">
+        {% block content %}{% endblock %}
+      </main>
+    </div>
+
+    {# SCRIPTS: --- #}
+    {% include 'partials/foot.html' %}
+
+    {% block scripts %}{% endblock %}
+
+  </body>
+</html>

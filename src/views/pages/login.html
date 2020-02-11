@@ -1,0 +1,70 @@
+{% extends 'layouts/blank.html' %}
+
+{% block content %}
+
+  <div class="container flex-grow-1">
+    <div class="row">
+      <div class="col-md-6 offset-md-3 col-xl-4 offset-xl-4">
+        <div class="my-5 text-center">
+          <img src="{{ paths.root + paths.images }}/logo-original.png" srcset="{{ paths.root + paths.images }}/logo-original.png 1x, {{ paths.root + paths.images }}/logo-original@2x.png 2x" class="img-fluid" alt="Watapy">
+        </div>
+        <section class="card mb-3 text-300">
+          <div class="card-body p-4">
+            <h1 class="text-600 font-medium mb-4 text-center">Đăng nhập</h1>
+            <!--
+            <div class="alert alert-danger fade show" role="alert">
+              Cần phải nhập mật khẩu.
+            </div>
+            -->
+
+            <form method="get" action="wallet.html">
+              {# <p class="mt5 mb20">Login to access your account.</p> #}
+              <div class="form-group">
+                <label>Tài khoản</label>
+                <input type="text" class="form-control" placeholder="">
+              </div>
+              <div class="form-group">
+                <div>
+                  <label>Mật khẩu</label>
+                  <div class="text-200 float-right">
+                    <a href="#">Quên mật khẩu?</a>
+                  </div>
+                </div>
+                <input type="password" class="form-control" placeholder="" />
+                <!-- Invalid style: -->
+                <!--<input type="password" class="form-control is-invalid" placeholder="Mật khẩu" />-->
+                
+              </div>
+
+              <button class="btn btn-primary btn-block mt-4">Đăng Nhập</button>
+            </form>
+
+            <div>
+              <div class="d-flex align-items-center my-3">
+                <div class="flex-grow-1"><hr /></div>
+                <div class="px-2 text-muted text-200">Hoặc kết nối</div>
+                <div class="flex-grow-1"><hr /></div>
+              </div>
+              <div class="row">
+                <div class="col">
+                  <button class="btn btn-outline-facebook btn-block"><i class="fa fa-facebook mr-2"></i> Facebook</button>
+                </div>
+                <div class="col">
+                  <button class="btn btn-outline-google btn-block"><i class="fa fa-google mr-2"></i> Google</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <p class="text-center text-300">Chưa có tài khoản? <a href="signup.html">Đăng ký mới</a>
+        </p>
+      </div>
+      <!-- /col -->
+    </div>
+    <!-- /row -->
+  </div>
+  <!-- /container -->
+
+  <p class="u-text100 text-center text-muted mt-5">© 2020. Bản quyền thuộc về Watapy</p>
+
+{% endblock %}

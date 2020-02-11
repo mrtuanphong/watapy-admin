@@ -1,3 +1,22 @@
+/* SNS Buttons */
+
+.btn-outline-facebook {
+  border-color: #4267B2;
+  color: #4267B2;
+  &:hover {
+    color: #fff;
+    background-color: #4267B2;;
+  }
+}
+
+.btn-outline-google {
+  border-color: #DB4437;
+  color: #DB4437;
+  &:hover {
+    color: #fff;
+    background-color: #DB4437;
+  }
+}
 
 
 /********** 14. FIXED WIDTH **********/

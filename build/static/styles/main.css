@@ -12727,48 +12727,67 @@ p {
 .line-height-small {
   line-height: 1.2; }
 
+/* SNS Buttons */
+/* line 3, src/styles/_addons.scss */
+.btn-outline-facebook {
+  border-color: #4267B2;
+  color: #4267B2; }
+  /* line 6, src/styles/_addons.scss */
+  .btn-outline-facebook:hover {
+    color: #fff;
+    background-color: #4267B2; }
+
+/* line 12, src/styles/_addons.scss */
+.btn-outline-google {
+  border-color: #DB4437;
+  color: #DB4437; }
+  /* line 15, src/styles/_addons.scss */
+  .btn-outline-google:hover {
+    color: #fff;
+    background-color: #DB4437; }
+
 /********** 14. FIXED WIDTH **********/
 /*************************************/
-/* line 7, src/styles/_addons.scss */
+/* line 26, src/styles/_addons.scss */
 .fixed {
   background: #c9cccf; }
-  /* line 9, src/styles/_addons.scss */
+  /* line 28, src/styles/_addons.scss */
   .fixed section {
     margin: auto;
     max-width: 1050px;
     position: relative;
     background: #1d2939; }
-  /* line 15, src/styles/_addons.scss */
+  /* line 34, src/styles/_addons.scss */
   .fixed .rightpanel {
     background: #1d2939; }
 
-/* line 20, src/styles/_addons.scss */
+/* line 39, src/styles/_addons.scss */
 .fixed-noleft .leftpanel {
   display: none; }
 
-/* line 24, src/styles/_addons.scss */
+/* line 43, src/styles/_addons.scss */
 .fixed-noleft .mainpanel {
   margin-left: 0; }
 
-/* line 28, src/styles/_addons.scss */
+/* line 47, src/styles/_addons.scss */
 .fixed-noleft .menutoggle {
   display: none; }
 
-/* line 32, src/styles/_addons.scss */
+/* line 51, src/styles/_addons.scss */
 .fixed-noleft.chat-view .headerbar {
   margin-left: 0; }
 
-/* line 36, src/styles/_addons.scss */
+/* line 55, src/styles/_addons.scss */
 .fixed-noleft.chat-view .logopanel {
   display: block; }
 
 /********** 15. MODALS **********/
 /********************************/
-/* line 45, src/styles/_addons.scss */
+/* line 64, src/styles/_addons.scss */
 .bs-example-modal-panel .modal-content {
   background: none; }
 
-/* line 49, src/styles/_addons.scss */
+/* line 68, src/styles/_addons.scss */
 .modal-photo-viewer {
   margin-top: 0;
   margin-bottom: 0;
@@ -12776,62 +12795,62 @@ p {
   left: 50%;
   width: auto;
   position: absolute; }
-  /* line 56, src/styles/_addons.scss */
+  /* line 75, src/styles/_addons.scss */
   .modal-photo-viewer .modal-content {
     position: relative;
     width: 900px;
     height: 600px;
     margin-left: -50%;
     margin-top: -300px; }
-  /* line 63, src/styles/_addons.scss */
+  /* line 82, src/styles/_addons.scss */
   .modal-photo-viewer .modal-photo-left {
     padding: 0;
     background: #000000; }
-  /* line 67, src/styles/_addons.scss */
+  /* line 86, src/styles/_addons.scss */
   .modal-photo-viewer .modal-photo-right {
     padding: 0; }
-  /* line 70, src/styles/_addons.scss */
+  /* line 89, src/styles/_addons.scss */
   .modal-photo-viewer .modal-photo {
     top: 50%;
     position: relative; }
-  /* line 74, src/styles/_addons.scss */
+  /* line 93, src/styles/_addons.scss */
   .modal-photo-viewer .row {
     margin-left: 0;
     margin-right: 0; }
-  /* line 78, src/styles/_addons.scss */
+  /* line 97, src/styles/_addons.scss */
   .modal-photo-viewer .img-responsive {
     max-height: 600px;
     margin: auto; }
 
-/* line 84, src/styles/_addons.scss */
+/* line 103, src/styles/_addons.scss */
 .media-details {
   padding: 20px; }
-  /* line 86, src/styles/_addons.scss */
+  /* line 105, src/styles/_addons.scss */
   .media-details .categ {
     font-size: 11px; }
-  /* line 89, src/styles/_addons.scss */
+  /* line 108, src/styles/_addons.scss */
   .media-details .media-title {
     margin: 0;
     margin-bottom: 10px;
     color: #333333;
     font-size: 20px; }
-  /* line 95, src/styles/_addons.scss */
+  /* line 114, src/styles/_addons.scss */
   .media-details p {
     font-size: 13px; }
-  /* line 98, src/styles/_addons.scss */
+  /* line 117, src/styles/_addons.scss */
   .media-details .details {
     margin-top: 20px; }
-    /* line 100, src/styles/_addons.scss */
+    /* line 119, src/styles/_addons.scss */
     .media-details .details h4 {
       font-size: 12px;
       color: #333333;
       text-transform: uppercase;
       font-weight: 700; }
-  /* line 107, src/styles/_addons.scss */
+  /* line 126, src/styles/_addons.scss */
   .media-details .table {
     -webkit-box-shadow: none;
     box-shadow: none; }
-    /* line 109, src/styles/_addons.scss */
+    /* line 128, src/styles/_addons.scss */
     .media-details .table tr td {
       padding: 3px 0;
       font-size: 13px;
@@ -12840,10 +12859,10 @@ p {
 /********** 17. ADDITIONAL STYLES **********/
 /*******************************************/
 /***** 17.1 DROPDOWN *****/
-/* line 125, src/styles/_addons.scss */
+/* line 144, src/styles/_addons.scss */
 .dropdown-menu-head {
   background: #ffffff; }
-  /* line 127, src/styles/_addons.scss */
+  /* line 146, src/styles/_addons.scss */
   .dropdown-menu-head .title {
     background: #1d2939;
     color: #94989d;
@@ -12853,13 +12872,13 @@ p {
     margin: 0; }
 
 /***** 17.2 ICON *****/
-/* line 141, src/styles/_addons.scss */
+/* line 160, src/styles/_addons.scss */
 .tp-icon {
   padding: 10px 20px;
   line-height: 20px;
   border-color: #dddddd;
   position: relative; }
-  /* line 146, src/styles/_addons.scss */
+  /* line 165, src/styles/_addons.scss */
   .tp-icon .badge {
     position: absolute;
     font-size: 10px;
@@ -12872,117 +12891,117 @@ p {
     padding: 2px 5px; }
 
 /***** 17.3 TIME PICKER *****/
-/* line 162, src/styles/_addons.scss */
+/* line 181, src/styles/_addons.scss */
 .bootstrap-timepicker-widget.dropdown-menu {
   width: 230px; }
 
 /***** 17.6 CUSTOM STYLES *****/
-/* line 168, src/styles/_addons.scss */
+/* line 187, src/styles/_addons.scss */
 .mb5 {
   margin-bottom: 5px; }
 
-/* line 172, src/styles/_addons.scss */
+/* line 191, src/styles/_addons.scss */
 .mb10 {
   margin-bottom: 10px; }
 
-/* line 176, src/styles/_addons.scss */
+/* line 195, src/styles/_addons.scss */
 .mb15 {
   margin-bottom: 15px; }
 
-/* line 180, src/styles/_addons.scss */
+/* line 199, src/styles/_addons.scss */
 .mb20 {
   margin-bottom: 20px; }
 
-/* line 184, src/styles/_addons.scss */
+/* line 203, src/styles/_addons.scss */
 .mb30 {
   margin-bottom: 30px; }
 
-/* line 188, src/styles/_addons.scss */
+/* line 207, src/styles/_addons.scss */
 .mb40 {
   margin-bottom: 40px; }
 
-/* line 192, src/styles/_addons.scss */
+/* line 211, src/styles/_addons.scss */
 .mr5 {
   margin-right: 5px; }
 
-/* line 196, src/styles/_addons.scss */
+/* line 215, src/styles/_addons.scss */
 .mr10 {
   margin-right: 10px; }
 
-/* line 200, src/styles/_addons.scss */
+/* line 219, src/styles/_addons.scss */
 .mr20 {
   margin-right: 20px; }
 
-/* line 204, src/styles/_addons.scss */
+/* line 223, src/styles/_addons.scss */
 .mr30 {
   margin-right: 30px; }
 
-/* line 208, src/styles/_addons.scss */
+/* line 227, src/styles/_addons.scss */
 .mt5 {
   margin-top: 5px; }
 
-/* line 212, src/styles/_addons.scss */
+/* line 231, src/styles/_addons.scss */
 .mt10 {
   margin-top: 10px; }
 
-/* line 216, src/styles/_addons.scss */
+/* line 235, src/styles/_addons.scss */
 .nomargin {
   margin: 0; }
 
-/* line 220, src/styles/_addons.scss */
+/* line 239, src/styles/_addons.scss */
 .noshadow {
   -webkit-box-shadow: none;
   box-shadow: none; }
 
-/* line 224, src/styles/_addons.scss */
+/* line 243, src/styles/_addons.scss */
 .border-right-0 {
   border-right: 0; }
 
-/* line 228, src/styles/_addons.scss */
+/* line 247, src/styles/_addons.scss */
 .border-left-0 {
   border-left: 0; }
 
-/* line 232, src/styles/_addons.scss */
+/* line 251, src/styles/_addons.scss */
 .nopadding {
   padding: 0 !important; }
 
-/* line 236, src/styles/_addons.scss */
+/* line 255, src/styles/_addons.scss */
 .padding-top-0 {
   padding-top: 0; }
 
-/* line 240, src/styles/_addons.scss */
+/* line 259, src/styles/_addons.scss */
 .padding5 {
   padding: 5px; }
 
-/* line 244, src/styles/_addons.scss */
+/* line 263, src/styles/_addons.scss */
 .padding10 {
   padding: 10px; }
 
-/* line 248, src/styles/_addons.scss */
+/* line 267, src/styles/_addons.scss */
 .serif {
   font-family: "Georgia", serif; }
 
-/* line 252, src/styles/_addons.scss */
+/* line 271, src/styles/_addons.scss */
 .italic {
   font-style: italic; }
 
-/* line 256, src/styles/_addons.scss */
+/* line 275, src/styles/_addons.scss */
 .dark {
   color: #333; }
 
-/* line 260, src/styles/_addons.scss */
+/* line 279, src/styles/_addons.scss */
 .width100p {
   width: 100%; }
 
-/* line 264, src/styles/_addons.scss */
+/* line 283, src/styles/_addons.scss */
 .width20 {
   width: 20px; }
 
-/* line 268, src/styles/_addons.scss */
+/* line 287, src/styles/_addons.scss */
 .width30 {
   width: 30px; }
 
-/* line 272, src/styles/_addons.scss */
+/* line 291, src/styles/_addons.scss */
 .inblock {
   display: inline-block; }
 
