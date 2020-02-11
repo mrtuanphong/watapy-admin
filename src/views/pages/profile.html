@@ -1,0 +1,161 @@
+{% extends 'layouts/default.html' %}
+
+{% block content %}
+  <!-- begin: main content of this page -->
+  <main class="flex-grow-1">
+    <div class="container">
+      <div class="page-header position-relative pt-4 pb-5 px-lg-3">
+        <div class="row align-items-center">
+          <div class="col-lg">
+            <h2 class="page-title m-0 text-500 font-medium">{{ page.title }}</h2>
+          </div>
+          <div class="col-lg-auto mt-3 mt-lg-0">
+            {# <a href="{{ paths.root }}/users.html" class="btn btn-outline-secondary">
+              Bỏ qua
+            </a> #}
+            <button class="btn btn-primary">
+              Lưu thông tin
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="contentpanel position-relative px-lg-3 pb-4">
+        <form>
+          <div class="row">
+
+            <!-- Left: -->
+            <div class="col-md-4 col-lg-3">
+              <section class="card mb-4">
+                {# <div class="card-header">
+                  <div class="text-300 text-uppercase font-medium">Logo</div>
+                </div> #}
+                <div class="card-body">
+                  <div class="form-group">
+                    <div class="d-flex align-items-center justify-content-center">
+                      <img src="{{ paths.root }}/static/images/avatar-placeholder.png" class="img-fluid">
+                    </div>
+                  </div>
+                  <div>
+                    <label class="btn btn-sm btn-outline-secondary btn-block">
+                      Chọn ảnh đại diện... <input type="file" hidden="">
+                    </label>
+                  </div>
+                </div>
+                <div class="list-group list-group-flush border-top">
+                  <a href="{{ paths.root }}/profile.html" class="list-group-item list-group-item-action active">
+                    <i class="fa fa-info-circle"></i> Thông tin cá nhân
+                  </a>
+                  <a href="{{ paths.root }}/change-password.html" class="list-group-item list-group-item-action">
+                    <i class="fa fa-key"></i> Đổi mật khẩu
+                  </a>
+                </div>
+              </section>
+            </div>
+
+            <!-- Right: -->
+            <div class="col-md-8 col-lg-9">
+              <section class="card h-100">
+                <div class="card-header">
+                  <div class="text-300 text-uppercase font-medium">Thông tin cá nhân</div>
+                </div>
+                <div class="card-body">
+
+                  <div class="row">
+                    <div class="col-lg-6">
+                      <div class="form-group">
+                        <label>Họ và tên</label>
+                        <input type="text" class="form-control" value="Lê Minh Hà"/>
+                        <div class="invalid-feedback">
+                          Nhập họ và tên
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-6">
+                      <div class="form-group">
+                        <label>Email</label>
+                        <input type="text" class="form-control" value="hale@gmail.com"/>
+                        <div class="invalid-feedback">
+                          Email không hợp lệ
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-6">
+                      <div class="form-group">
+                        <label>Số điện thoại <span class="text-muted">(tài khoản đăng nhập)</span></label>
+                        <input type="text" class="form-control" value="0982997991" disabled />
+                        <div class="invalid-feedback">
+                          Nhập số điện thoại
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-6">
+                      <div class="form-group">
+                        <label class="font-medium">Link giới thiệu</label>
+                        <div class="input-group mb-3">
+                          <input type="text" class="form-control" value="https://watapy.com/hale" disabled />
+                          <div class="input-group-append">
+                            <button class="btn btn-outline-secondary" type="button" data-toggle="tooltip" data-placement="top" title="" data-original-title="Sao chép link giới thiệu"><i class="fa fa-copy"></i></button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div>
+                    <label>Địa chỉ liên lạc</label>
+                  </div>
+                  <div class="row">
+                    <div class="col-lg-4">
+                      <div class="form-group">
+                        <select class="form-control">
+                          <option disabled>- Chọn tỉnh/TP -</option>
+                          <option selected>Hà Nội</option>
+                          <option>TP Hồ Chí Minh</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="col-lg-4">
+                      <div class="form-group">
+                        <select class="form-control">
+                          <option disabled>- Chọn quận/huyện -</option>
+                          <option selected>Thanh Xuân</option>
+                          <option>Tây Hồ</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="col-lg-4">
+                      <div class="form-group">
+                        <select class="form-control">
+                          <option disabled>- Chọn phường/xã -</option>
+                          <option selected>Thanh Xuân Trung</option>
+                          <option>Nhân Chính</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="col-lg-12">
+                      <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Số nhà, xóm/ngõ,..." value="Số 345 Nguyễn Trãi"/>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+              </section>
+            </div>
+
+          </div>
+        </form>
+      </div>
+    </div>
+  </main>
+  <!-- end: main content of this page -->
+{% endblock %}
+
+{% block modals %}
+  {% include "partials/modals/users-delete-confirmation.html" %}
+{% endblock %}
+
+{% block scripts %}
+  <scripts></scripts>
+{% endblock %}

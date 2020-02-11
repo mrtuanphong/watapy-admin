@@ -82,6 +82,18 @@
       "stylesheets": ["main"],
       "scripts": ["main"]
     },
+    "profile": {
+      "title": "Thông tin tài khoản",
+      "description": "",
+      "stylesheets": ["main"],
+      "scripts": ["main"]
+    },
+    "change-password": {
+      "title": "Thông tin tài khoản",
+      "description": "",
+      "stylesheets": ["main"],
+      "scripts": ["main"]
+    },
     "about-index": {
       "title": "(about title)",
       "description": "(about meta description)",
