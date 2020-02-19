@@ -10,74 +10,26 @@
             <h2 class="page-title m-0 text-500 font-medium">{{ page.title }}</h2>
             {# <div class="mt-1 text-black-50">Subtitle here...</div> #}
           </div>
-          <div class="col-lg-auto mt-3 mt-lg-0"></div>
+          <div class="col-lg-auto mt-3 mt-lg-0">
+            <!-- filter:-->
+            <form>
+              <div class="d-flex align-items-center">
+                <div>Chọn ngày:</div>
+                <div class="mx-2 mb-2 mb-lg-0">
+                  <input type="text" class="form-control" id="reportrange" placeholder="Chọn ngày..." style="min-width:210px" />
+                </div>
+                <div class=" mb-2 mb-lg-0">
+                  <button type="submit" class="btn btn-primary btn-block">Xem</button>
+                </div>
+              </div>
+            </form>        
+          </div>
         </div>
       </div>
       
       <div class="contentpanel position-relative px-lg-3 pb-4">
-        <!-- filter:-->
-        <section class="card mb-3">
-          <div class="card-header">
-            <div class="text-300 text-uppercase font-medium">Lọc báo cáo</div>
-          </div>
-          <div class="card-body">
-            <form>
-              <div class="form-row align-items-center">
-                <div class="col-lg-3">
-                  <div class="form-group">
-                    <label>Chọn nhanh</label>
-                    <select class="form-control">
-                      <option selected value="0">- Lựa chọn -</option>
-                      <option value="">Hôm nay</option>
-                      <option value="">Tuần này</option>
-                      <option value="">Tháng này</option>
-                    </select>
-                  </div>
-                </div>
-                <div class="col-lg-1">
-                  <div class="d-flex flex-column justify-content-center align-items-center" style="opacity:.65">
-                    <span class="d-none d-lg-block text-black-50">|</span>
-                    <span class="">Hoặc</span>
-                    <span class="d-none d-lg-block text-black-50">|</span>
-                  </div>
-                </div>
-                <div class="col-lg-3">
-                  <div class="form-group">
-                    <label>Từ ngày</label>
-                    <div class="input-group">
-                      <input type="text" class="form-control" placeholder="Chọn ngày...">
-                      <div class="input-group-append">
-                        <button class="btn btn-outline-secondary" type="button">
-                          <i class="fa fa-calendar"></i>
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-lg-3">
-                  <div class="form-group">
-                    <label>Đến ngày</label>
-                    <div class="input-group">
-                      <input type="text" class="form-control" placeholder="Chọn ngày...">
-                      <div class="input-group-append">
-                        <button class="btn btn-outline-secondary" type="button">
-                          <i class="fa fa-calendar"></i>
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-lg-2">
-                  <div class="form-group">
-                    <label class="d-none d-lg-block">&nbsp;</label>
-                    <button type="submit" class="btn btn-primary btn-block">Xem</button>
-                  </div>
-                </div>
-              </div>
-            </form>
-          </div>
-        </section>
-        
+
+        <!-- Doanh thu cá nhân: -->
         <section class="card mb-3">
           <div class="card-header">
             <div class="text-300 text-uppercase font-medium">Doanh thu cá nhân</div>
@@ -86,30 +38,30 @@
             <div class="row">
               <div class="col-lg-5">
                 <div class="d-flex mb-3">
-                  <div class="text-500"><strong>5.024.000đ</strong></div>
-                  <div class="text-400 ml-auto">
-                    <span class="text-success"><i class="fa fa-long-arrow-up"></i> 23%</span>
+                  <div class="text-700 font-medium">5.024.000 <span class="text-300">₫</span></div>
+                  <div class="text-500 ml-auto">
+                    <span class="badge badge-pill badge-primary"><i class="fa fa-long-arrow-up"></i> 23%</span>
                   </div>
                 </div>
-                <table class="table border">
+                <table class="table border text-muted">
                   <thead>
                     <tr>
                       <th>Nguồn</th>
-                      <th>Doanh thu</th>
+                      <th class="text-right">Doanh thu</th>
                       <th class="text-right">Tăng trưởng</th>
                     </tr>
                   </thead>
                   <tbody>
                     <tr>
                       <td>Cashback</td>
-                      <td>18.654.000đ</td>
+                      <td class="text-right">4.440.000₫</td>
                       <td class="text-right">
                         <span class="text-danger"><i class="fa fa-long-arrow-down"></i> 4.5%</span>
                       </td>
                     </tr>
                     <tr>
                       <td>Doanh thu quản lý CTV</td>
-                      <td>29.540.000đ</td>
+                      <td class="text-right">654.000₫</td>
                       <td class="text-right">
                         <span class="text-success"><i class="fa fa-long-arrow-up"></i> 28%</span>
                       </td>
@@ -126,6 +78,7 @@
           </div>
         </section>
 
+        <!-- Doanh thu hệ thống: -->
         <section class="card mb-3">
           <div class="card-header">
             <div class="text-300 text-uppercase font-medium">Doanh thu hệ thống</div>
@@ -134,30 +87,44 @@
             <div class="row">
               <div class="col-lg-5">
                 <div class="d-flex mb-3">
-                  <div class="text-500"><strong>5.024.000đ</strong></div>
+                  <div class="text-700 font-medium">124.766.000 <span class="text-300">₫</span></div>
                   <div class="text-400 ml-auto">
-                    <span class="text-success"><i class="fa fa-long-arrow-up"></i> 23%</span>
+                    <span class="badge badge-pill badge-danger"><i class="fa fa-long-arrow-down"></i> 8%</span>
                   </div>
                 </div>
-                <table class="table border">
+                <table class="table border text-muted">
                   <thead>
                     <tr>
                       <th>Nguồn</th>
-                      <th>Doanh thu</th>
+                      <th class="text-right">Doanh thu</th>
                       <th class="text-right">Tăng trưởng</th>
                     </tr>
                   </thead>
                   <tbody>
                     <tr>
-                      <td>Cashback</td>
-                      <td>18.654.000đ</td>
+                      <td>Doanh thu miền</td>
+                      <td class="text-right">18.654.000 ₫</td>
                       <td class="text-right">
-                        <span class="text-danger"><i class="fa fa-long-arrow-down"></i> 4.5%</span>
+                        <span class="text-success"><i class="fa fa-long-arrow-up"></i> 4.5%</span>
                       </td>
                     </tr>
                     <tr>
-                      <td>Doanh thu quản lý CTV</td>
-                      <td>29.540.000đ</td>
+                      <td>Doanh thu Đại lý</td>
+                      <td class="text-right">29.540.000 ₫</td>
+                      <td class="text-right">
+                        <span class="text-success"><i class="fa fa-long-arrow-up"></i> 28%</span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Doanh thu Cộng tác viên</td>
+                      <td class="text-right">29.540.000 ₫</td>
+                      <td class="text-right">
+                        <span class="text-danger"><i class="fa fa-long-arrow-down"></i> 2%</span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Doanh thu quản trị</td>
+                      <td class="text-right">29.540.000 ₫</td>
                       <td class="text-right">
                         <span class="text-success"><i class="fa fa-long-arrow-up"></i> 28%</span>
                       </td>
@@ -174,31 +141,163 @@
           </div>
         </section>
 
-        <div class="row">
-          <div class="col-lg-4">
-            <section class="card mb-3 h-100">
-              <div class="card-header">
-                <div class="text-300 text-uppercase font-medium">Doanh thu miền</div>
-              </div>
-              <div class="card-body">{content}</div>
-            </section>
+        <!-- Doanh thu miền: -->
+        <section class="card mb-3">
+          <div class="card-header">
+            <div class="text-300 text-uppercase font-medium">Doanh thu miền</div>
           </div>
-          <div class="col-lg-4">
+          <div class="card-body">
+            <div class="row">
+              <div class="col-lg-5">
+                <div class="d-flex mb-3">
+                  <div class="text-700 font-medium">45.024.000 <span class="text-300">₫</span></div>
+                  <div class="text-500 ml-auto">
+                    <span class="badge badge-pill badge-primary"><i class="fa fa-long-arrow-up"></i> 23%</span>
+                  </div>
+                </div>
+                <table class="table border text-muted">
+                  <thead>
+                    <tr>
+                      <th>Miền</th>
+                      <th class="text-right">Doanh thu</th>
+                      <th class="text-right">Tăng trưởng</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Bắc</td>
+                      <td class="text-right">18.654.000 ₫</td>
+                      <td class="text-right">
+                        <span class="text-danger"><i class="fa fa-long-arrow-down"></i> 4.5%</span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Trung</td>
+                      <td class="text-right">29.540.000 ₫</td>
+                      <td class="text-right">
+                        <span class="text-success"><i class="fa fa-long-arrow-up"></i> 28%</span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Nam</td>
+                      <td class="text-right">29.540.000 ₫</td>
+                      <td class="text-right">
+                        <span class="text-success"><i class="fa fa-long-arrow-up"></i> 28%</span>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="col-lg-7">
+                <div class="pl-lg-4 mt-4 mt-lg-0">
+                  <canvas id="chart-4" width="400" height="200"></canvas>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <div class="row">
+          <!-- Đơn hàng: -->
+          <div class="col-lg-6">
             <section class="card mb-3 h-100">
               <div class="card-header">
                 <div class="text-300 text-uppercase font-medium">Đơn hàng</div>
               </div>
-              <div class="card-body">{content}</div>
+              <div class="card-body">
+                <div class="d-flex mb-3">
+                  <div class="text-1000 font-medium">86</div>
+                  <div class="text-500 ml-auto">
+                    <span class="badge badge-pill badge-primary"><i class="fa fa-long-arrow-up"></i> 15%</span>
+                  </div>
+                </div>
+                <div class="mt-4 mt-lg-0">
+                  <canvas id="chart-5" width="400" height="200"></canvas>
+                </div>
+              </div>
             </section>
           </div>
-          <div class="col-lg-4">
+          
+          <!-- Thành viên: -->
+          <div class="col-lg-6">
             <section class="card mb-3 h-100">
               <div class="card-header">
                 <div class="text-300 text-uppercase font-medium">Thành viên</div>
               </div>
               <div class="card-body">
-                {content}
-                <a href="{{ paths.root }}/users.html">Xem danh sách</a>
+                <div class="d-flex mb-3">
+                  <div class="text-1000 font-medium">64</div>
+                  <div class="text-500 ml-auto">
+                    <span class="badge badge-pill badge-primary"><i class="fa fa-long-arrow-up"></i> 22%</span>
+                  </div>
+                </div>
+                <table class="table border text-muted">
+                  <thead>
+                    <tr>
+                      <th>Quyền</th>
+                      <th>Số lượng</th>
+                      <th class="text-right">Tăng trưởng</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Quản trị viên</td>
+                      <td>0</td>
+                      <td class="text-right">
+                        <span>0%</span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Công ty</td>
+                      <td>4</td>
+                      <td class="text-right">
+                        <span class="text-success"><i class="fa fa-long-arrow-up"></i> 10%</span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Trưởng Miền</td>
+                      <td>6</td>
+                      <td class="text-right">
+                        <span class="text-success"><i class="fa fa-long-arrow-up"></i> 10%</span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Đại lý Tỉnh/Quận</td>
+                      <td>6</td>
+                      <td class="text-right">
+                        <span class="text-success"><i class="fa fa-long-arrow-up"></i> 10%</span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Cửa hàng</td>
+                      <td>6</td>
+                      <td class="text-right">
+                        <span class="text-success"><i class="fa fa-long-arrow-up"></i> 10%</span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Quản trị CTV</td>
+                      <td>1</td>
+                      <td class="text-right">
+                        <span class="text-danger"><i class="fa fa-long-arrow-down"></i> 5%</span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Cộng tác viên</td>
+                      <td>6</td>
+                      <td class="text-right">
+                        <span class="text-success"><i class="fa fa-long-arrow-up"></i> 10%</span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Khách hàng</td>
+                      <td>6</td>
+                      <td class="text-right">
+                        <span class="text-success"><i class="fa fa-long-arrow-up"></i> 10%</span>
+                      </td>
+                    </tr>
+                  </tbody>                
+                </table>
               </div>
             </section>          
           </div>
@@ -213,82 +312,32 @@
 
 {% block scripts %}
   <script>
-    //chart 1:
-    var chart1 = document.getElementById('chart-1').getContext('2d');
-    var myChart = new Chart(chart1, {
-      type: 'bar',
-      data: {
-        labels: [
-          'Red',
-          'Blue',
-          'Yellow',
-          'Green',
-          'Purple',
-          'Orange'
-        ],
-        datasets: [
-          {
-            label: '# of Votes',
-            data: [
-              12,
-              19,
-              3,
-              5,
-              2,
-              3
-            ],
-            backgroundColor: [
-              'rgba(255, 99, 132, 0.2)',
-              'rgba(54, 162, 235, 0.2)',
-              'rgba(255, 206, 86, 0.2)',
-              'rgba(75, 192, 192, 0.2)',
-              'rgba(153, 102, 255, 0.2)',
-              'rgba(255, 159, 64, 0.2)'
-            ],
-            borderColor: [
-              'rgba(255, 99, 132, 1)',
-              'rgba(54, 162, 235, 1)',
-              'rgba(255, 206, 86, 1)',
-              'rgba(75, 192, 192, 1)',
-              'rgba(153, 102, 255, 1)',
-              'rgba(255, 159, 64, 1)'
-            ],
-            borderWidth: 1
-          }
-        ]
-      },
-      options: {
-        scales: {
-          yAxes: [
-            {
-              ticks: {
-                beginAtZero: true
-              }
-            }
-          ]
-        }
+    $(function() {
+      var start = moment().startOf('month');
+      var end = moment().endOf('month');
+
+      function cb(start, end) {
+          $('#reportrange').val(start.format('DD/MM/YYYY') + ' - ' + end.format('DD/MM/YYYY'));
       }
-    });
 
-    //chart 2:
-    var chart2 = document.getElementById('chart-2').getContext('2d');
-    var chart = new Chart(chart2, {
-      // The type of chart we want to create
-      type: 'line',
+      $('#reportrange').daterangepicker({
+          startDate: start,
+          endDate: end,
+          opens: 'left',
+          ranges: {
+            'Today': [moment(), moment()],
+            'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
+            'Last 7 Days': [moment().subtract(6, 'days'), moment()],
+            'Last 30 Days': [moment().subtract(29, 'days'), moment()],
+            'This Month': [moment().startOf('month'), moment().endOf('month')],
+            'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
+          },
+          locale: {
+            format: 'DD/MM/YYYY'
+          }
+      }, cb);
 
-      // The data for our dataset
-      data: {
-          labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
-          datasets: [{
-              label: 'My First dataset',
-              backgroundColor: 'rgb(255, 99, 132)',
-              borderColor: 'rgb(255, 99, 132)',
-              data: [0, 10, 5, 2, 20, 30, 45]
-          }]
-      },
-
-      // Configuration options go here
-      options: {}
+      cb(start, end);
     });
   </script>
 {% endblock %}

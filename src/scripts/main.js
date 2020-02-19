@@ -154,6 +154,12 @@ $(document).ready(function () {
     height: '30px',
     barColor: '#1CAF9A'
   });
+
+  // date range picker:
+  $('.daterangepicker-single').daterangepicker({
+    "singleDatePicker": true
+  });
+  $('.daterangepicker-multiple').daterangepicker();
   
 });
 

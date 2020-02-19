@@ -20,7 +20,7 @@
       "title": "Thống kê tài chính",
       "description": "",
       "stylesheets": ["main"],
-      "scripts": ["main"]
+      "scripts": ["main", "reports"]
     },
     "performance": {
       "title": "Hiệu quả thành viên",
