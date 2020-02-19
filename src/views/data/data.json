@@ -17,12 +17,18 @@
       "scripts": ["main"]
     },
     "reports": {
-      "title": "Thống kê tài chính",
+      "title": "Báo cáo thống kê",
       "description": "",
       "stylesheets": ["main"],
       "scripts": ["main", "reports"]
     },
     "performance": {
+      "title": "Hiệu quả thành viên",
+      "description": "",
+      "stylesheets": ["main"],
+      "scripts": ["main"]
+    },
+    "performance-detail": {
       "title": "Hiệu quả thành viên",
       "description": "",
       "stylesheets": ["main"],
@@ -150,7 +156,7 @@
             "id": "reports",
             "path": "/reports.html",
             "icon": "fa-caret-right",
-            "children": "Thống kê tài chính"
+            "children": "Báo cáo thống kê"
           },
           {
             "id": "performance",

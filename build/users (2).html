@@ -5,7 +5,7 @@
   <meta http-equiv="x-ua-compatible" content="ie=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <title>Hiệu quả thành viên</title>
+  <title>Quản lý người dùng</title>
   <meta name="description" content="(site meta description)" />
   <link rel="shortcut icon" type="image/png" href="/favicon-16x16.png">
 
@@ -19,7 +19,7 @@
   </head>
   <body class="">
     
-    <div class="page is-performance text-200">
+    <div class="page is-users text-200">
       
       
 
@@ -104,7 +104,7 @@
         
       </li>
       <li class="nav-item ">
-        <a class="nav-link d-flex align-items-center py-2 " href="/users.html">
+        <a class="nav-link d-flex align-items-center py-2 active" href="/users.html">
           <i class="fa fa-users"></i>
           <span class="flex-grow-1">
             Người dùng
@@ -246,22 +246,26 @@
       <div class="page-header position-relative pt-4 pb-5 px-lg-3">
         <div class="row align-items-center">
           <div class="col-lg">
-            <h2 class="page-title m-0 text-500 font-medium">Hiệu quả thành viên</h2>
+            <h2 class="page-title m-0 text-500 font-medium">Quản lý người dùng</h2>
           </div>
-          <div class="col-lg-auto text-right mt-3 mt-lg-0"></div>
+          <div class="col-lg-auto text-right mt-3 mt-lg-0">
+            <a href="/users-add.html" class="btn btn-primary">
+              Thêm người dùng
+            </a>
+          </div>
         </div>
       </div>
 
       <div class="contentpanel position-relative px-lg-3 pb-4">
         <section class="card">
           <div class="card-header">
-            <div class="text-300 text-uppercase font-medium">Danh sách</div>
+            <div class="text-300 text-uppercase font-medium">Danh sách người dùng</div>
           </div>
           <div class="card-body">
             <div>
               <form>
                 <div class="form-row align-items-end">
-                  <div class="col-lg-2 col-xl-2">
+                  <div class="col-lg-3 col-xl-3">
                     <div class="form-group">
                       <label>Quyền người dùng</label>
                       <select class="form-control">
@@ -279,34 +283,18 @@
                   </div>
                   <div class="col-lg-3 col-xl-3">
                     <div class="form-group">
-                      <label>Từ ngày</label>
-                      <div class="input-group">
-                        <input type="text" class="form-control" placeholder="Chọn ngày...">
-                        <div class="input-group-append">
-                          <button class="btn btn-outline-secondary" type="button">
-                            <i class="fa fa-calendar"></i>
-                          </button>
-                        </div>
-                      </div>
+                      <label>Trạng thái</label>
+                      <select class="form-control">
+                        <option>Tất cả</option>
+                        <option value="1">Hoạt động</option>
+                        <option value="2">Đã khóa</option>
+                      </select>
                     </div>
                   </div>
-                  <div class="col-lg-3 col-xl-3">
-                    <div class="form-group">
-                      <label>Đến ngày</label>
-                      <div class="input-group">
-                        <input type="text" class="form-control" placeholder="Chọn ngày...">
-                        <div class="input-group-append">
-                          <button class="btn btn-outline-secondary" type="button">
-                            <i class="fa fa-calendar"></i>
-                          </button>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-lg-2 col-xl-2">
+                  <div class="col-lg-4 col-xl-4">
                     <div class="form-group">
                       <label>Từ khóa</label>
-                      <input type="text" class="form-control" placeholder="Tên, hoặc số ĐT..."/>
+                      <input type="text" class="form-control" placeholder="Tên, số ĐT hoặc email..."/>
                     </div>
                   </div>
                   <div class="col-lg-2 col-xl-2">
@@ -322,241 +310,281 @@
               <table class="table table-hover">
                 <thead>
                   <tr>
+                    <th scope="col">Phân quyền</th>
                     <th scope="col">Tên người dùng</th>
-                    <th scope="col">Số đơn</th>
-                    <th scope="col">DT Quản lý</th>
-                    <th scope="col">DT CTV</th>
-                    <th scope="col">DT Quản trị CTV</th>
-                    <th scope="col">DT Đại lý</th>
-                    <th scope="col">DT Trưởng miền</th>
-                    <th scope="col">Cashback</th>
+                    <th scope="col">Điện thoại</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Ngày đăng ký</th>
+                    <th scope="col" width="90">Trạng thái</th>
+                    <th scope="col" width="160">&nbsp;</th>
                   </tr>
                 </thead>
                 <tbody>
-                  <tr>
-                    <td>
-                      <a href="#" class="d-flex align-items-center" data-toggle="tooltip" title="Quản trị viên">
+                    <tr>
+                      <td>Khách hàng</td>
+                      <td>
                         <img src="/static/images/photos/user1.png" class="user-avatar rounded-circle float-left mr-2" alt="" width="32" height="32">
-                        <div>Admin</div>
-                      </a>
-                    </td>
-                    <td>12</td>
-                    <td>15.525.000đ</td>
-                    <td>2.433.000đ</td>
-                    <td>890.000đ</td>
-                    <td>32.525.000đ</td>
-                    <td>6.200.000đ</td>
-                    <td>24.990.000đ</td>
-                  </tr>
-                    <tr>
-                      <td>
-                        <a href="#" class="d-flex align-items-center" data-toggle="tooltip" title="Trưởng miền">
-                          <img src="/static/images/photos/user3.png" class="user-avatar rounded-circle float-left mr-2" alt="" width="32" height="32">
-                          <div>Lê Minh Hà</div>
-                        </a>
+                        <div>Trần Minh Trí</div>
                       </td>
-                      <td>2</td>
-                      <td>6.666.000đ</td>
-                      <td>2.222.000đ</td>
-                      <td>5.555.000đ</td>
-                      <td>20.202.000đ</td>
-                      <td>1.111.000đ</td>
-                      <td>8.888.000đ</td>
+                      <td>0982997991</td>
+                      <td>minhtri@gmail.com</td>
+                      <td>28/11/2019</td>
+                      <td><span class="badge badge-success">Hoạt động</span></td>
+                      <td class="text-right">
+                        <a href="/users-edit.html" class="btn btn-sm btn-outline-primary">
+                          <i class="fa fa-edit"></i> Sửa
+                        </a>
+                        <button class="btn btn-sm btn-outline-danger ml-1" data-toggle="modal" data-target="#modal-users-delete-confirmation">
+                          <i class="fa fa-trash"></i> Xóa
+                        </button>
+                      </td>
                     </tr>
                     <tr>
+                      <td>Khách hàng</td>
                       <td>
-                        <a href="#" class="d-flex align-items-center" data-toggle="tooltip" title="Trưởng miền">
-                          <img src="/static/images/photos/user3.png" class="user-avatar rounded-circle float-left mr-2" alt="" width="32" height="32">
-                          <div>Lê Minh Hà</div>
-                        </a>
+                        <img src="/static/images/photos/user1.png" class="user-avatar rounded-circle float-left mr-2" alt="" width="32" height="32">
+                        <div>Trần Minh Trí</div>
                       </td>
-                      <td>2</td>
-                      <td>6.666.000đ</td>
-                      <td>2.222.000đ</td>
-                      <td>5.555.000đ</td>
-                      <td>20.202.000đ</td>
-                      <td>1.111.000đ</td>
-                      <td>8.888.000đ</td>
+                      <td>0982997991</td>
+                      <td>minhtri@gmail.com</td>
+                      <td>28/11/2019</td>
+                      <td><span class="badge badge-success">Hoạt động</span></td>
+                      <td class="text-right">
+                        <a href="/users-edit.html" class="btn btn-sm btn-outline-primary">
+                          <i class="fa fa-edit"></i> Sửa
+                        </a>
+                        <button class="btn btn-sm btn-outline-danger ml-1" data-toggle="modal" data-target="#modal-users-delete-confirmation">
+                          <i class="fa fa-trash"></i> Xóa
+                        </button>
+                      </td>
                     </tr>
                     <tr>
+                      <td>Khách hàng</td>
                       <td>
-                        <a href="#" class="d-flex align-items-center" data-toggle="tooltip" title="Trưởng miền">
-                          <img src="/static/images/photos/user3.png" class="user-avatar rounded-circle float-left mr-2" alt="" width="32" height="32">
-                          <div>Lê Minh Hà</div>
-                        </a>
+                        <img src="/static/images/photos/user1.png" class="user-avatar rounded-circle float-left mr-2" alt="" width="32" height="32">
+                        <div>Trần Minh Trí</div>
                       </td>
-                      <td>2</td>
-                      <td>6.666.000đ</td>
-                      <td>2.222.000đ</td>
-                      <td>5.555.000đ</td>
-                      <td>20.202.000đ</td>
-                      <td>1.111.000đ</td>
-                      <td>8.888.000đ</td>
+                      <td>0982997991</td>
+                      <td>minhtri@gmail.com</td>
+                      <td>28/11/2019</td>
+                      <td><span class="badge badge-success">Hoạt động</span></td>
+                      <td class="text-right">
+                        <a href="/users-edit.html" class="btn btn-sm btn-outline-primary">
+                          <i class="fa fa-edit"></i> Sửa
+                        </a>
+                        <button class="btn btn-sm btn-outline-danger ml-1" data-toggle="modal" data-target="#modal-users-delete-confirmation">
+                          <i class="fa fa-trash"></i> Xóa
+                        </button>
+                      </td>
                     </tr>
                     <tr>
+                      <td>Khách hàng</td>
                       <td>
-                        <a href="#" class="d-flex align-items-center" data-toggle="tooltip" title="Trưởng miền">
-                          <img src="/static/images/photos/user3.png" class="user-avatar rounded-circle float-left mr-2" alt="" width="32" height="32">
-                          <div>Lê Minh Hà</div>
-                        </a>
+                        <img src="/static/images/photos/user1.png" class="user-avatar rounded-circle float-left mr-2" alt="" width="32" height="32">
+                        <div>Trần Minh Trí</div>
                       </td>
-                      <td>2</td>
-                      <td>6.666.000đ</td>
-                      <td>2.222.000đ</td>
-                      <td>5.555.000đ</td>
-                      <td>20.202.000đ</td>
-                      <td>1.111.000đ</td>
-                      <td>8.888.000đ</td>
+                      <td>0982997991</td>
+                      <td>minhtri@gmail.com</td>
+                      <td>28/11/2019</td>
+                      <td><span class="badge badge-success">Hoạt động</span></td>
+                      <td class="text-right">
+                        <a href="/users-edit.html" class="btn btn-sm btn-outline-primary">
+                          <i class="fa fa-edit"></i> Sửa
+                        </a>
+                        <button class="btn btn-sm btn-outline-danger ml-1" data-toggle="modal" data-target="#modal-users-delete-confirmation">
+                          <i class="fa fa-trash"></i> Xóa
+                        </button>
+                      </td>
                     </tr>
                     <tr>
+                      <td>Khách hàng</td>
                       <td>
-                        <a href="#" class="d-flex align-items-center" data-toggle="tooltip" title="Trưởng miền">
-                          <img src="/static/images/photos/user3.png" class="user-avatar rounded-circle float-left mr-2" alt="" width="32" height="32">
-                          <div>Lê Minh Hà</div>
-                        </a>
+                        <img src="/static/images/photos/user1.png" class="user-avatar rounded-circle float-left mr-2" alt="" width="32" height="32">
+                        <div>Trần Minh Trí</div>
                       </td>
-                      <td>2</td>
-                      <td>6.666.000đ</td>
-                      <td>2.222.000đ</td>
-                      <td>5.555.000đ</td>
-                      <td>20.202.000đ</td>
-                      <td>1.111.000đ</td>
-                      <td>8.888.000đ</td>
+                      <td>0982997991</td>
+                      <td>minhtri@gmail.com</td>
+                      <td>28/11/2019</td>
+                      <td><span class="badge badge-success">Hoạt động</span></td>
+                      <td class="text-right">
+                        <a href="/users-edit.html" class="btn btn-sm btn-outline-primary">
+                          <i class="fa fa-edit"></i> Sửa
+                        </a>
+                        <button class="btn btn-sm btn-outline-danger ml-1" data-toggle="modal" data-target="#modal-users-delete-confirmation">
+                          <i class="fa fa-trash"></i> Xóa
+                        </button>
+                      </td>
                     </tr>
                     <tr>
+                      <td>Khách hàng</td>
                       <td>
-                        <a href="#" class="d-flex align-items-center" data-toggle="tooltip" title="Trưởng miền">
-                          <img src="/static/images/photos/user3.png" class="user-avatar rounded-circle float-left mr-2" alt="" width="32" height="32">
-                          <div>Lê Minh Hà</div>
-                        </a>
+                        <img src="/static/images/photos/user1.png" class="user-avatar rounded-circle float-left mr-2" alt="" width="32" height="32">
+                        <div>Trần Minh Trí</div>
                       </td>
-                      <td>2</td>
-                      <td>6.666.000đ</td>
-                      <td>2.222.000đ</td>
-                      <td>5.555.000đ</td>
-                      <td>20.202.000đ</td>
-                      <td>1.111.000đ</td>
-                      <td>8.888.000đ</td>
+                      <td>0982997991</td>
+                      <td>minhtri@gmail.com</td>
+                      <td>28/11/2019</td>
+                      <td><span class="badge badge-success">Hoạt động</span></td>
+                      <td class="text-right">
+                        <a href="/users-edit.html" class="btn btn-sm btn-outline-primary">
+                          <i class="fa fa-edit"></i> Sửa
+                        </a>
+                        <button class="btn btn-sm btn-outline-danger ml-1" data-toggle="modal" data-target="#modal-users-delete-confirmation">
+                          <i class="fa fa-trash"></i> Xóa
+                        </button>
+                      </td>
                     </tr>
                     <tr>
+                      <td>Khách hàng</td>
                       <td>
-                        <a href="#" class="d-flex align-items-center" data-toggle="tooltip" title="Trưởng miền">
-                          <img src="/static/images/photos/user3.png" class="user-avatar rounded-circle float-left mr-2" alt="" width="32" height="32">
-                          <div>Lê Minh Hà</div>
-                        </a>
+                        <img src="/static/images/photos/user1.png" class="user-avatar rounded-circle float-left mr-2" alt="" width="32" height="32">
+                        <div>Trần Minh Trí</div>
                       </td>
-                      <td>2</td>
-                      <td>6.666.000đ</td>
-                      <td>2.222.000đ</td>
-                      <td>5.555.000đ</td>
-                      <td>20.202.000đ</td>
-                      <td>1.111.000đ</td>
-                      <td>8.888.000đ</td>
+                      <td>0982997991</td>
+                      <td>minhtri@gmail.com</td>
+                      <td>28/11/2019</td>
+                      <td><span class="badge badge-success">Hoạt động</span></td>
+                      <td class="text-right">
+                        <a href="/users-edit.html" class="btn btn-sm btn-outline-primary">
+                          <i class="fa fa-edit"></i> Sửa
+                        </a>
+                        <button class="btn btn-sm btn-outline-danger ml-1" data-toggle="modal" data-target="#modal-users-delete-confirmation">
+                          <i class="fa fa-trash"></i> Xóa
+                        </button>
+                      </td>
                     </tr>
                     <tr>
+                      <td>Khách hàng</td>
                       <td>
-                        <a href="#" class="d-flex align-items-center" data-toggle="tooltip" title="Trưởng miền">
-                          <img src="/static/images/photos/user3.png" class="user-avatar rounded-circle float-left mr-2" alt="" width="32" height="32">
-                          <div>Lê Minh Hà</div>
-                        </a>
+                        <img src="/static/images/photos/user1.png" class="user-avatar rounded-circle float-left mr-2" alt="" width="32" height="32">
+                        <div>Trần Minh Trí</div>
                       </td>
-                      <td>2</td>
-                      <td>6.666.000đ</td>
-                      <td>2.222.000đ</td>
-                      <td>5.555.000đ</td>
-                      <td>20.202.000đ</td>
-                      <td>1.111.000đ</td>
-                      <td>8.888.000đ</td>
+                      <td>0982997991</td>
+                      <td>minhtri@gmail.com</td>
+                      <td>28/11/2019</td>
+                      <td><span class="badge badge-success">Hoạt động</span></td>
+                      <td class="text-right">
+                        <a href="/users-edit.html" class="btn btn-sm btn-outline-primary">
+                          <i class="fa fa-edit"></i> Sửa
+                        </a>
+                        <button class="btn btn-sm btn-outline-danger ml-1" data-toggle="modal" data-target="#modal-users-delete-confirmation">
+                          <i class="fa fa-trash"></i> Xóa
+                        </button>
+                      </td>
                     </tr>
                     <tr>
+                      <td>Khách hàng</td>
                       <td>
-                        <a href="#" class="d-flex align-items-center" data-toggle="tooltip" title="Trưởng miền">
-                          <img src="/static/images/photos/user3.png" class="user-avatar rounded-circle float-left mr-2" alt="" width="32" height="32">
-                          <div>Lê Minh Hà</div>
-                        </a>
+                        <img src="/static/images/photos/user1.png" class="user-avatar rounded-circle float-left mr-2" alt="" width="32" height="32">
+                        <div>Trần Minh Trí</div>
                       </td>
-                      <td>2</td>
-                      <td>6.666.000đ</td>
-                      <td>2.222.000đ</td>
-                      <td>5.555.000đ</td>
-                      <td>20.202.000đ</td>
-                      <td>1.111.000đ</td>
-                      <td>8.888.000đ</td>
+                      <td>0982997991</td>
+                      <td>minhtri@gmail.com</td>
+                      <td>28/11/2019</td>
+                      <td><span class="badge badge-success">Hoạt động</span></td>
+                      <td class="text-right">
+                        <a href="/users-edit.html" class="btn btn-sm btn-outline-primary">
+                          <i class="fa fa-edit"></i> Sửa
+                        </a>
+                        <button class="btn btn-sm btn-outline-danger ml-1" data-toggle="modal" data-target="#modal-users-delete-confirmation">
+                          <i class="fa fa-trash"></i> Xóa
+                        </button>
+                      </td>
                     </tr>
                     <tr>
+                      <td>Khách hàng</td>
                       <td>
-                        <a href="#" class="d-flex align-items-center" data-toggle="tooltip" title="Trưởng miền">
-                          <img src="/static/images/photos/user3.png" class="user-avatar rounded-circle float-left mr-2" alt="" width="32" height="32">
-                          <div>Lê Minh Hà</div>
-                        </a>
+                        <img src="/static/images/photos/user1.png" class="user-avatar rounded-circle float-left mr-2" alt="" width="32" height="32">
+                        <div>Trần Minh Trí</div>
                       </td>
-                      <td>2</td>
-                      <td>6.666.000đ</td>
-                      <td>2.222.000đ</td>
-                      <td>5.555.000đ</td>
-                      <td>20.202.000đ</td>
-                      <td>1.111.000đ</td>
-                      <td>8.888.000đ</td>
+                      <td>0982997991</td>
+                      <td>minhtri@gmail.com</td>
+                      <td>28/11/2019</td>
+                      <td><span class="badge badge-success">Hoạt động</span></td>
+                      <td class="text-right">
+                        <a href="/users-edit.html" class="btn btn-sm btn-outline-primary">
+                          <i class="fa fa-edit"></i> Sửa
+                        </a>
+                        <button class="btn btn-sm btn-outline-danger ml-1" data-toggle="modal" data-target="#modal-users-delete-confirmation">
+                          <i class="fa fa-trash"></i> Xóa
+                        </button>
+                      </td>
                     </tr>
                     <tr>
+                      <td>Khách hàng</td>
                       <td>
-                        <a href="#" class="d-flex align-items-center" data-toggle="tooltip" title="Trưởng miền">
-                          <img src="/static/images/photos/user3.png" class="user-avatar rounded-circle float-left mr-2" alt="" width="32" height="32">
-                          <div>Lê Minh Hà</div>
-                        </a>
+                        <img src="/static/images/photos/user1.png" class="user-avatar rounded-circle float-left mr-2" alt="" width="32" height="32">
+                        <div>Trần Minh Trí</div>
                       </td>
-                      <td>2</td>
-                      <td>6.666.000đ</td>
-                      <td>2.222.000đ</td>
-                      <td>5.555.000đ</td>
-                      <td>20.202.000đ</td>
-                      <td>1.111.000đ</td>
-                      <td>8.888.000đ</td>
+                      <td>0982997991</td>
+                      <td>minhtri@gmail.com</td>
+                      <td>28/11/2019</td>
+                      <td><span class="badge badge-success">Hoạt động</span></td>
+                      <td class="text-right">
+                        <a href="/users-edit.html" class="btn btn-sm btn-outline-primary">
+                          <i class="fa fa-edit"></i> Sửa
+                        </a>
+                        <button class="btn btn-sm btn-outline-danger ml-1" data-toggle="modal" data-target="#modal-users-delete-confirmation">
+                          <i class="fa fa-trash"></i> Xóa
+                        </button>
+                      </td>
                     </tr>
                     <tr>
+                      <td>Khách hàng</td>
                       <td>
-                        <a href="#" class="d-flex align-items-center" data-toggle="tooltip" title="Trưởng miền">
-                          <img src="/static/images/photos/user3.png" class="user-avatar rounded-circle float-left mr-2" alt="" width="32" height="32">
-                          <div>Lê Minh Hà</div>
-                        </a>
+                        <img src="/static/images/photos/user1.png" class="user-avatar rounded-circle float-left mr-2" alt="" width="32" height="32">
+                        <div>Trần Minh Trí</div>
                       </td>
-                      <td>2</td>
-                      <td>6.666.000đ</td>
-                      <td>2.222.000đ</td>
-                      <td>5.555.000đ</td>
-                      <td>20.202.000đ</td>
-                      <td>1.111.000đ</td>
-                      <td>8.888.000đ</td>
+                      <td>0982997991</td>
+                      <td>minhtri@gmail.com</td>
+                      <td>28/11/2019</td>
+                      <td><span class="badge badge-success">Hoạt động</span></td>
+                      <td class="text-right">
+                        <a href="/users-edit.html" class="btn btn-sm btn-outline-primary">
+                          <i class="fa fa-edit"></i> Sửa
+                        </a>
+                        <button class="btn btn-sm btn-outline-danger ml-1" data-toggle="modal" data-target="#modal-users-delete-confirmation">
+                          <i class="fa fa-trash"></i> Xóa
+                        </button>
+                      </td>
                     </tr>
                     <tr>
+                      <td>Khách hàng</td>
                       <td>
-                        <a href="#" class="d-flex align-items-center" data-toggle="tooltip" title="Trưởng miền">
-                          <img src="/static/images/photos/user3.png" class="user-avatar rounded-circle float-left mr-2" alt="" width="32" height="32">
-                          <div>Lê Minh Hà</div>
-                        </a>
+                        <img src="/static/images/photos/user1.png" class="user-avatar rounded-circle float-left mr-2" alt="" width="32" height="32">
+                        <div>Trần Minh Trí</div>
                       </td>
-                      <td>2</td>
-                      <td>6.666.000đ</td>
-                      <td>2.222.000đ</td>
-                      <td>5.555.000đ</td>
-                      <td>20.202.000đ</td>
-                      <td>1.111.000đ</td>
-                      <td>8.888.000đ</td>
+                      <td>0982997991</td>
+                      <td>minhtri@gmail.com</td>
+                      <td>28/11/2019</td>
+                      <td><span class="badge badge-success">Hoạt động</span></td>
+                      <td class="text-right">
+                        <a href="/users-edit.html" class="btn btn-sm btn-outline-primary">
+                          <i class="fa fa-edit"></i> Sửa
+                        </a>
+                        <button class="btn btn-sm btn-outline-danger ml-1" data-toggle="modal" data-target="#modal-users-delete-confirmation">
+                          <i class="fa fa-trash"></i> Xóa
+                        </button>
+                      </td>
                     </tr>
                     <tr>
+                      <td>Khách hàng</td>
                       <td>
-                        <a href="#" class="d-flex align-items-center" data-toggle="tooltip" title="Trưởng miền">
-                          <img src="/static/images/photos/user3.png" class="user-avatar rounded-circle float-left mr-2" alt="" width="32" height="32">
-                          <div>Lê Minh Hà</div>
-                        </a>
+                        <img src="/static/images/photos/user1.png" class="user-avatar rounded-circle float-left mr-2" alt="" width="32" height="32">
+                        <div>Trần Minh Trí</div>
                       </td>
-                      <td>2</td>
-                      <td>6.666.000đ</td>
-                      <td>2.222.000đ</td>
-                      <td>5.555.000đ</td>
-                      <td>20.202.000đ</td>
-                      <td>1.111.000đ</td>
-                      <td>8.888.000đ</td>
+                      <td>0982997991</td>
+                      <td>minhtri@gmail.com</td>
+                      <td>28/11/2019</td>
+                      <td><span class="badge badge-success">Hoạt động</span></td>
+                      <td class="text-right">
+                        <a href="/users-edit.html" class="btn btn-sm btn-outline-primary">
+                          <i class="fa fa-edit"></i> Sửa
+                        </a>
+                        <button class="btn btn-sm btn-outline-danger ml-1" data-toggle="modal" data-target="#modal-users-delete-confirmation">
+                          <i class="fa fa-trash"></i> Xóa
+                        </button>
+                      </td>
                     </tr>
                 </tbody>
               </table>
