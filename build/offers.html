@@ -5,7 +5,7 @@
   <meta http-equiv="x-ua-compatible" content="ie=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <title>Hiệu quả thành viên</title>
+  <title>Danh sách Offer</title>
   <meta name="description" content="(site meta description)" />
   <link rel="shortcut icon" type="image/png" href="/favicon-16x16.png">
 
@@ -19,7 +19,7 @@
   </head>
   <body class="">
     
-    <div class="page is-performance-detail text-200">
+    <div class="page is-offers text-200">
       
       
 
@@ -84,7 +84,7 @@
         
       </li>
       <li class="nav-item nav-parent">
-        <a class="nav-link d-flex align-items-center py-2 " href="">
+        <a class="nav-link d-flex align-items-center py-2 active" href="">
           <i class="fa fa-link"></i>
           <span class="flex-grow-1">
             Offers
@@ -260,271 +260,298 @@
       <div class="page-header position-relative pt-4 pb-5 px-lg-3">
         <div class="row align-items-center">
           <div class="col-lg">
-            <h2 class="page-title m-0 text-500 font-medium">Hiệu quả thành viên</h2>
+            <h2 class="page-title m-0 text-500 font-medium">Danh sách Offer</h2>
           </div>
           <div class="col-lg-auto text-right mt-3 mt-lg-0"></div>
         </div>
       </div>
 
       <div class="contentpanel position-relative px-lg-3 pb-4">
-
-        <section>
-          <div class="alert alert-info">
-            <div class="d-flex align-items-center">
-              <i class="fa fa-info-circle fa-lg mr-3"></i>
-              <div class="mr-3">Đang xem báo cáo chi tiết hiệu quả của thành viên - <strong>Phuc Chien Luoc</strong></div>
-              <a href="/performance.html" class="text-danger ml-auto" data-toggle="tooltip" data-placement="top" title="Quay về danh sách ban đầu"><u>Hủy xem</u></a>
-            </div>
+        <section class="card mb-3">
+          <div class="card-body">
+            <form>
+              <div class="form-row align-items-end">
+                <div class="col-lg-4 col-xl-4">
+                  <div class="form-group mb-lg-0">
+                    <label>Từ khóa</label>
+                    <input type="text" class="form-control" placeholder="Nhập tên sản phẩm"/>
+                  </div>
+                </div>
+                <div class="col-lg-3 col-xl-3">
+                  <div class="form-group mb-lg-0">
+                    <label>Danh mục</label>
+                    <select class="form-control">
+                      <option>Tất cả</option>
+                      <option value="1">Máy lọc nước</option>
+                      <option value="6">Danh mục ABC</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-lg-2 col-xl-2">
+                  <div class="form-group mb-lg-0">
+                    <button type="submit" class="btn btn-primary btn-block">Tìm</button>
+                  </div>
+                </div>
+              </div>
+            </form>
           </div>
         </section>
-
         
-
         <section class="card">
-          <div class="card-header">
-            <div class="text-300 text-uppercase font-medium">Danh sách</div>
-          </div>
+          
           <div class="card-body">
+            <div class="alert alert-warning" role="alert">
+              Không tìm thấy kết quả nào phù hợp. Vui lòng thử lại!
+            </div>
             <div class="table-responsive">
               <table class="table table-hover">
                 <thead>
                   <tr>
-                    <th scope="col">Tên người dùng</th>
-                    <th scope="col">Số đơn</th>
-                    <th scope="col">DT Quản lý</th>
-                    <th scope="col">DT CTV</th>
-                    <th scope="col">DT Quản trị CTV</th>
-                    <th scope="col">DT Đại lý</th>
-                    <th scope="col">DT Trưởng miền</th>
-                    <th scope="col">Cashback</th>
+                    <th scope="col">&nbsp;</th>
+                    <th scope="col">Tên sản phẩm</th>
+                    <th scope="col">Danh mục</th>
+                    <th scope="col">Giá bán</th>
+                    <th scope="col">&nbsp;</th>
                   </tr>
                 </thead>
                 <tbody>
-                  <tr>
-                    <td>
-                      <!-- Không có danh sách con thì không link nữa. Bỏ 'href' hoặc thay <a> bằng <span>: -->
-                      <a class="d-flex align-items-center" data-toggle="tooltip" title="Quản trị viên">
-                        <img src="/static/images/photos/user1.png" class="user-avatar rounded-circle float-left mr-2" alt="" width="32" height="32">
-                        <div>Trần Văn Sơn</div>
-                      </a>
-                    </td>
-                    <td>12</td>
-                    <td>15.525.000đ</td>
-                    <td>2.433.000đ</td>
-                    <td>890.000đ</td>
-                    <td>32.525.000đ</td>
-                    <td>6.200.000đ</td>
-                    <td>24.990.000đ</td>
-                  </tr>
                     <tr>
-                      <td>
-                        <a href="#" class="d-flex align-items-center" data-toggle="tooltip" title="Trưởng miền">
-                          <img src="/static/images/photos/user5.png" class="user-avatar rounded-circle float-left mr-2" alt="" width="32" height="32">
-                          <div>Phạm Thu Hằng</div>
+                      <td width="64">
+                        <a href="/offers-detail.html">
+                          <img src="/static/images/products/product-1.png" alt="" width="64" height="64" />
                         </a>
                       </td>
-                      <td>2</td>
-                      <td>6.666.000đ</td>
-                      <td>2.222.000đ</td>
-                      <td>5.555.000đ</td>
-                      <td>20.202.000đ</td>
-                      <td>1.111.000đ</td>
-                      <td>8.888.000đ</td>
+                      <td>
+                        <div><a href="/offers-detail.html">Máy Tạo Nước ION Kiềm Tươi OH- Model EH501</a></div>
+                        <span class="badge badge-pill badge-danger">HOT</span>
+                        <span class="badge badge-pill badge-warning">NEW</span>
+                      </td>
+                      <td>Máy lọc nước</td>
+                      <td>62.000.000đ</td>
+                      <td class="text-right">
+                        <a href="/offers-detail.html" class="btn btn-primary btn-sm" title="">Lấy link</a>
+                      </td>
                     </tr>
                     <tr>
-                      <td>
-                        <a href="#" class="d-flex align-items-center" data-toggle="tooltip" title="Trưởng miền">
-                          <img src="/static/images/photos/user5.png" class="user-avatar rounded-circle float-left mr-2" alt="" width="32" height="32">
-                          <div>Phạm Thu Hằng</div>
+                      <td width="64">
+                        <a href="/offers-detail.html">
+                          <img src="/static/images/products/product-1.png" alt="" width="64" height="64" />
                         </a>
                       </td>
-                      <td>2</td>
-                      <td>6.666.000đ</td>
-                      <td>2.222.000đ</td>
-                      <td>5.555.000đ</td>
-                      <td>20.202.000đ</td>
-                      <td>1.111.000đ</td>
-                      <td>8.888.000đ</td>
+                      <td>
+                        <div><a href="/offers-detail.html">Máy Tạo Nước ION Kiềm Tươi OH- Model EH501</a></div>
+                        <span class="badge badge-pill badge-danger">HOT</span>
+                        <span class="badge badge-pill badge-warning">NEW</span>
+                      </td>
+                      <td>Máy lọc nước</td>
+                      <td>62.000.000đ</td>
+                      <td class="text-right">
+                        <a href="/offers-detail.html" class="btn btn-primary btn-sm" title="">Lấy link</a>
+                      </td>
                     </tr>
                     <tr>
-                      <td>
-                        <a href="#" class="d-flex align-items-center" data-toggle="tooltip" title="Trưởng miền">
-                          <img src="/static/images/photos/user5.png" class="user-avatar rounded-circle float-left mr-2" alt="" width="32" height="32">
-                          <div>Phạm Thu Hằng</div>
+                      <td width="64">
+                        <a href="/offers-detail.html">
+                          <img src="/static/images/products/product-1.png" alt="" width="64" height="64" />
                         </a>
                       </td>
-                      <td>2</td>
-                      <td>6.666.000đ</td>
-                      <td>2.222.000đ</td>
-                      <td>5.555.000đ</td>
-                      <td>20.202.000đ</td>
-                      <td>1.111.000đ</td>
-                      <td>8.888.000đ</td>
+                      <td>
+                        <div><a href="/offers-detail.html">Máy Tạo Nước ION Kiềm Tươi OH- Model EH501</a></div>
+                        <span class="badge badge-pill badge-danger">HOT</span>
+                        <span class="badge badge-pill badge-warning">NEW</span>
+                      </td>
+                      <td>Máy lọc nước</td>
+                      <td>62.000.000đ</td>
+                      <td class="text-right">
+                        <a href="/offers-detail.html" class="btn btn-primary btn-sm" title="">Lấy link</a>
+                      </td>
                     </tr>
                     <tr>
-                      <td>
-                        <a href="#" class="d-flex align-items-center" data-toggle="tooltip" title="Trưởng miền">
-                          <img src="/static/images/photos/user5.png" class="user-avatar rounded-circle float-left mr-2" alt="" width="32" height="32">
-                          <div>Phạm Thu Hằng</div>
+                      <td width="64">
+                        <a href="/offers-detail.html">
+                          <img src="/static/images/products/product-1.png" alt="" width="64" height="64" />
                         </a>
                       </td>
-                      <td>2</td>
-                      <td>6.666.000đ</td>
-                      <td>2.222.000đ</td>
-                      <td>5.555.000đ</td>
-                      <td>20.202.000đ</td>
-                      <td>1.111.000đ</td>
-                      <td>8.888.000đ</td>
+                      <td>
+                        <div><a href="/offers-detail.html">Máy Tạo Nước ION Kiềm Tươi OH- Model EH501</a></div>
+                        <span class="badge badge-pill badge-danger">HOT</span>
+                        <span class="badge badge-pill badge-warning">NEW</span>
+                      </td>
+                      <td>Máy lọc nước</td>
+                      <td>62.000.000đ</td>
+                      <td class="text-right">
+                        <a href="/offers-detail.html" class="btn btn-primary btn-sm" title="">Lấy link</a>
+                      </td>
                     </tr>
                     <tr>
-                      <td>
-                        <a href="#" class="d-flex align-items-center" data-toggle="tooltip" title="Trưởng miền">
-                          <img src="/static/images/photos/user5.png" class="user-avatar rounded-circle float-left mr-2" alt="" width="32" height="32">
-                          <div>Phạm Thu Hằng</div>
+                      <td width="64">
+                        <a href="/offers-detail.html">
+                          <img src="/static/images/products/product-1.png" alt="" width="64" height="64" />
                         </a>
                       </td>
-                      <td>2</td>
-                      <td>6.666.000đ</td>
-                      <td>2.222.000đ</td>
-                      <td>5.555.000đ</td>
-                      <td>20.202.000đ</td>
-                      <td>1.111.000đ</td>
-                      <td>8.888.000đ</td>
+                      <td>
+                        <div><a href="/offers-detail.html">Máy Tạo Nước ION Kiềm Tươi OH- Model EH501</a></div>
+                        <span class="badge badge-pill badge-danger">HOT</span>
+                        <span class="badge badge-pill badge-warning">NEW</span>
+                      </td>
+                      <td>Máy lọc nước</td>
+                      <td>62.000.000đ</td>
+                      <td class="text-right">
+                        <a href="/offers-detail.html" class="btn btn-primary btn-sm" title="">Lấy link</a>
+                      </td>
                     </tr>
                     <tr>
-                      <td>
-                        <a href="#" class="d-flex align-items-center" data-toggle="tooltip" title="Trưởng miền">
-                          <img src="/static/images/photos/user5.png" class="user-avatar rounded-circle float-left mr-2" alt="" width="32" height="32">
-                          <div>Phạm Thu Hằng</div>
+                      <td width="64">
+                        <a href="/offers-detail.html">
+                          <img src="/static/images/products/product-1.png" alt="" width="64" height="64" />
                         </a>
                       </td>
-                      <td>2</td>
-                      <td>6.666.000đ</td>
-                      <td>2.222.000đ</td>
-                      <td>5.555.000đ</td>
-                      <td>20.202.000đ</td>
-                      <td>1.111.000đ</td>
-                      <td>8.888.000đ</td>
+                      <td>
+                        <div><a href="/offers-detail.html">Máy Tạo Nước ION Kiềm Tươi OH- Model EH501</a></div>
+                        <span class="badge badge-pill badge-danger">HOT</span>
+                        <span class="badge badge-pill badge-warning">NEW</span>
+                      </td>
+                      <td>Máy lọc nước</td>
+                      <td>62.000.000đ</td>
+                      <td class="text-right">
+                        <a href="/offers-detail.html" class="btn btn-primary btn-sm" title="">Lấy link</a>
+                      </td>
                     </tr>
                     <tr>
-                      <td>
-                        <a href="#" class="d-flex align-items-center" data-toggle="tooltip" title="Trưởng miền">
-                          <img src="/static/images/photos/user5.png" class="user-avatar rounded-circle float-left mr-2" alt="" width="32" height="32">
-                          <div>Phạm Thu Hằng</div>
+                      <td width="64">
+                        <a href="/offers-detail.html">
+                          <img src="/static/images/products/product-1.png" alt="" width="64" height="64" />
                         </a>
                       </td>
-                      <td>2</td>
-                      <td>6.666.000đ</td>
-                      <td>2.222.000đ</td>
-                      <td>5.555.000đ</td>
-                      <td>20.202.000đ</td>
-                      <td>1.111.000đ</td>
-                      <td>8.888.000đ</td>
+                      <td>
+                        <div><a href="/offers-detail.html">Máy Tạo Nước ION Kiềm Tươi OH- Model EH501</a></div>
+                        <span class="badge badge-pill badge-danger">HOT</span>
+                        <span class="badge badge-pill badge-warning">NEW</span>
+                      </td>
+                      <td>Máy lọc nước</td>
+                      <td>62.000.000đ</td>
+                      <td class="text-right">
+                        <a href="/offers-detail.html" class="btn btn-primary btn-sm" title="">Lấy link</a>
+                      </td>
                     </tr>
                     <tr>
-                      <td>
-                        <a href="#" class="d-flex align-items-center" data-toggle="tooltip" title="Trưởng miền">
-                          <img src="/static/images/photos/user5.png" class="user-avatar rounded-circle float-left mr-2" alt="" width="32" height="32">
-                          <div>Phạm Thu Hằng</div>
+                      <td width="64">
+                        <a href="/offers-detail.html">
+                          <img src="/static/images/products/product-1.png" alt="" width="64" height="64" />
                         </a>
                       </td>
-                      <td>2</td>
-                      <td>6.666.000đ</td>
-                      <td>2.222.000đ</td>
-                      <td>5.555.000đ</td>
-                      <td>20.202.000đ</td>
-                      <td>1.111.000đ</td>
-                      <td>8.888.000đ</td>
+                      <td>
+                        <div><a href="/offers-detail.html">Máy Tạo Nước ION Kiềm Tươi OH- Model EH501</a></div>
+                        <span class="badge badge-pill badge-danger">HOT</span>
+                        <span class="badge badge-pill badge-warning">NEW</span>
+                      </td>
+                      <td>Máy lọc nước</td>
+                      <td>62.000.000đ</td>
+                      <td class="text-right">
+                        <a href="/offers-detail.html" class="btn btn-primary btn-sm" title="">Lấy link</a>
+                      </td>
                     </tr>
                     <tr>
-                      <td>
-                        <a href="#" class="d-flex align-items-center" data-toggle="tooltip" title="Trưởng miền">
-                          <img src="/static/images/photos/user5.png" class="user-avatar rounded-circle float-left mr-2" alt="" width="32" height="32">
-                          <div>Phạm Thu Hằng</div>
+                      <td width="64">
+                        <a href="/offers-detail.html">
+                          <img src="/static/images/products/product-1.png" alt="" width="64" height="64" />
                         </a>
                       </td>
-                      <td>2</td>
-                      <td>6.666.000đ</td>
-                      <td>2.222.000đ</td>
-                      <td>5.555.000đ</td>
-                      <td>20.202.000đ</td>
-                      <td>1.111.000đ</td>
-                      <td>8.888.000đ</td>
+                      <td>
+                        <div><a href="/offers-detail.html">Máy Tạo Nước ION Kiềm Tươi OH- Model EH501</a></div>
+                        <span class="badge badge-pill badge-danger">HOT</span>
+                        <span class="badge badge-pill badge-warning">NEW</span>
+                      </td>
+                      <td>Máy lọc nước</td>
+                      <td>62.000.000đ</td>
+                      <td class="text-right">
+                        <a href="/offers-detail.html" class="btn btn-primary btn-sm" title="">Lấy link</a>
+                      </td>
                     </tr>
                     <tr>
-                      <td>
-                        <a href="#" class="d-flex align-items-center" data-toggle="tooltip" title="Trưởng miền">
-                          <img src="/static/images/photos/user5.png" class="user-avatar rounded-circle float-left mr-2" alt="" width="32" height="32">
-                          <div>Phạm Thu Hằng</div>
+                      <td width="64">
+                        <a href="/offers-detail.html">
+                          <img src="/static/images/products/product-1.png" alt="" width="64" height="64" />
                         </a>
                       </td>
-                      <td>2</td>
-                      <td>6.666.000đ</td>
-                      <td>2.222.000đ</td>
-                      <td>5.555.000đ</td>
-                      <td>20.202.000đ</td>
-                      <td>1.111.000đ</td>
-                      <td>8.888.000đ</td>
+                      <td>
+                        <div><a href="/offers-detail.html">Máy Tạo Nước ION Kiềm Tươi OH- Model EH501</a></div>
+                        <span class="badge badge-pill badge-danger">HOT</span>
+                        <span class="badge badge-pill badge-warning">NEW</span>
+                      </td>
+                      <td>Máy lọc nước</td>
+                      <td>62.000.000đ</td>
+                      <td class="text-right">
+                        <a href="/offers-detail.html" class="btn btn-primary btn-sm" title="">Lấy link</a>
+                      </td>
                     </tr>
                     <tr>
-                      <td>
-                        <a href="#" class="d-flex align-items-center" data-toggle="tooltip" title="Trưởng miền">
-                          <img src="/static/images/photos/user5.png" class="user-avatar rounded-circle float-left mr-2" alt="" width="32" height="32">
-                          <div>Phạm Thu Hằng</div>
+                      <td width="64">
+                        <a href="/offers-detail.html">
+                          <img src="/static/images/products/product-1.png" alt="" width="64" height="64" />
                         </a>
                       </td>
-                      <td>2</td>
-                      <td>6.666.000đ</td>
-                      <td>2.222.000đ</td>
-                      <td>5.555.000đ</td>
-                      <td>20.202.000đ</td>
-                      <td>1.111.000đ</td>
-                      <td>8.888.000đ</td>
+                      <td>
+                        <div><a href="/offers-detail.html">Máy Tạo Nước ION Kiềm Tươi OH- Model EH501</a></div>
+                        <span class="badge badge-pill badge-danger">HOT</span>
+                        <span class="badge badge-pill badge-warning">NEW</span>
+                      </td>
+                      <td>Máy lọc nước</td>
+                      <td>62.000.000đ</td>
+                      <td class="text-right">
+                        <a href="/offers-detail.html" class="btn btn-primary btn-sm" title="">Lấy link</a>
+                      </td>
                     </tr>
                     <tr>
-                      <td>
-                        <a href="#" class="d-flex align-items-center" data-toggle="tooltip" title="Trưởng miền">
-                          <img src="/static/images/photos/user5.png" class="user-avatar rounded-circle float-left mr-2" alt="" width="32" height="32">
-                          <div>Phạm Thu Hằng</div>
+                      <td width="64">
+                        <a href="/offers-detail.html">
+                          <img src="/static/images/products/product-1.png" alt="" width="64" height="64" />
                         </a>
                       </td>
-                      <td>2</td>
-                      <td>6.666.000đ</td>
-                      <td>2.222.000đ</td>
-                      <td>5.555.000đ</td>
-                      <td>20.202.000đ</td>
-                      <td>1.111.000đ</td>
-                      <td>8.888.000đ</td>
+                      <td>
+                        <div><a href="/offers-detail.html">Máy Tạo Nước ION Kiềm Tươi OH- Model EH501</a></div>
+                        <span class="badge badge-pill badge-danger">HOT</span>
+                        <span class="badge badge-pill badge-warning">NEW</span>
+                      </td>
+                      <td>Máy lọc nước</td>
+                      <td>62.000.000đ</td>
+                      <td class="text-right">
+                        <a href="/offers-detail.html" class="btn btn-primary btn-sm" title="">Lấy link</a>
+                      </td>
                     </tr>
                     <tr>
-                      <td>
-                        <a href="#" class="d-flex align-items-center" data-toggle="tooltip" title="Trưởng miền">
-                          <img src="/static/images/photos/user5.png" class="user-avatar rounded-circle float-left mr-2" alt="" width="32" height="32">
-                          <div>Phạm Thu Hằng</div>
+                      <td width="64">
+                        <a href="/offers-detail.html">
+                          <img src="/static/images/products/product-1.png" alt="" width="64" height="64" />
                         </a>
                       </td>
-                      <td>2</td>
-                      <td>6.666.000đ</td>
-                      <td>2.222.000đ</td>
-                      <td>5.555.000đ</td>
-                      <td>20.202.000đ</td>
-                      <td>1.111.000đ</td>
-                      <td>8.888.000đ</td>
+                      <td>
+                        <div><a href="/offers-detail.html">Máy Tạo Nước ION Kiềm Tươi OH- Model EH501</a></div>
+                        <span class="badge badge-pill badge-danger">HOT</span>
+                        <span class="badge badge-pill badge-warning">NEW</span>
+                      </td>
+                      <td>Máy lọc nước</td>
+                      <td>62.000.000đ</td>
+                      <td class="text-right">
+                        <a href="/offers-detail.html" class="btn btn-primary btn-sm" title="">Lấy link</a>
+                      </td>
                     </tr>
                     <tr>
-                      <td>
-                        <a href="#" class="d-flex align-items-center" data-toggle="tooltip" title="Trưởng miền">
-                          <img src="/static/images/photos/user5.png" class="user-avatar rounded-circle float-left mr-2" alt="" width="32" height="32">
-                          <div>Phạm Thu Hằng</div>
+                      <td width="64">
+                        <a href="/offers-detail.html">
+                          <img src="/static/images/products/product-1.png" alt="" width="64" height="64" />
                         </a>
                       </td>
-                      <td>2</td>
-                      <td>6.666.000đ</td>
-                      <td>2.222.000đ</td>
-                      <td>5.555.000đ</td>
-                      <td>20.202.000đ</td>
-                      <td>1.111.000đ</td>
-                      <td>8.888.000đ</td>
+                      <td>
+                        <div><a href="/offers-detail.html">Máy Tạo Nước ION Kiềm Tươi OH- Model EH501</a></div>
+                        <span class="badge badge-pill badge-danger">HOT</span>
+                        <span class="badge badge-pill badge-warning">NEW</span>
+                      </td>
+                      <td>Máy lọc nước</td>
+                      <td>62.000.000đ</td>
+                      <td class="text-right">
+                        <a href="/offers-detail.html" class="btn btn-primary btn-sm" title="">Lấy link</a>
+                      </td>
                     </tr>
                 </tbody>
               </table>
@@ -557,44 +584,18 @@
   </div>
 </div>          </div>
         </section>
+
       </div>
     </div>
   </main>
   <!-- end: main content of this page -->
+
       </div>
       
 
       
       
     </div>
-
-  <div class="modal fade" id="modal-users-delete-confirmation" tabindex="-1" role="dialog">
-    <div class="modal-dialog " role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-            <h5 class="modal-title">Xác nhận</h5>
-
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-        </div>
-
-        
-        <div class="modal-body">
-            <p>Bạn có chắc chắn muốn xóa tài khoản này?</p>
-
-        </div>
-        
-
-          <div class="modal-footer">
-              <button class="btn btn-outline-secondary" data-dismiss="modal" type="button">Bỏ qua</button>
-  <button class="btn btn-danger" data-dismiss="modal" type="button">Xóa tài khoản</button>
-
-          </div>
-      </div>
-    </div>
-  </div>
-
 
 
     

@@ -5,7 +5,7 @@
   <meta http-equiv="x-ua-compatible" content="ie=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <title>Thông tin tài khoản</title>
+  <title>Ví của tôi</title>
   <meta name="description" content="(site meta description)" />
   <link rel="shortcut icon" type="image/png" href="/favicon-16x16.png">
 
@@ -19,7 +19,7 @@
   </head>
   <body class="">
     
-    <div class="page is-change-password text-200">
+    <div class="page is-wallet text-200">
       
       
 
@@ -39,7 +39,7 @@
   </div>
   <ul class="nav nav-pills flex-column nav-stacked nav-bracket">
       <li class="nav-item ">
-        <a class="nav-link d-flex align-items-center py-2 " href="/wallet.html">
+        <a class="nav-link d-flex align-items-center py-2 active" href="/wallet.html">
           <i class="fa fa-credit-card"></i>
           <span class="flex-grow-1">
             Ví của tôi
@@ -257,104 +257,141 @@
   <!-- /header -->  <!-- begin: main content of this page -->
   <main class="flex-grow-1">
     <div class="container">
-      <div class="page-header position-relative pt-4 pb-5 px-lg-3">
+      <div class="page-header position-relative py-4 pb-5 px-lg-3">
         <div class="row align-items-center">
           <div class="col-lg">
-            <h2 class="page-title m-0 text-500 font-medium">Thông tin tài khoản</h2>
+            <h2 class="page-title m-0 text-500 font-medium">Ví của tôi</h2>
+            <div class="mt-1 text-black-50">Quản lý tài khoản ngân hàng và địa chỉ ví</div>
           </div>
           <div class="col-lg-auto mt-3 mt-lg-0">
-            <a href="/profile.html" class="btn btn-outline-secondary">
-              Bỏ qua
-            </a>
-            <button class="btn btn-primary">
-              Lưu thông tin
+            <button class="btn btn-primary" data-toggle="modal" data-target="#modal-bank-card-add">
+              Thêm TK ngân hàng
             </button>
           </div>
         </div>
       </div>
 
       <div class="contentpanel position-relative px-lg-3 pb-4">
-        <form>
+        <!-- Bank accounts: -->
+        <section class="bank-card-list">
           <div class="row">
-
-            <!-- Left: -->
-            <div class="col-md-4 col-xl-3">
-              <section class="card mb-4">
-                
-                <div class="card-body">
-                  <div class="form-group">
-                    <div class="d-flex align-items-center justify-content-center">
-                      <img src="/static/images/avatar-placeholder.png" class="img-fluid">
-                    </div>
-                  </div>
-                  <div>
-                    <label class="btn btn-sm btn-light btn-block">
-                      Chọn ảnh... <input type="file" hidden="">
-                    </label>
-                  </div>
-                </div>
-                <div class="list-group list-group-flush border-top">
-                  <a href="/profile.html" class="list-group-item list-group-item-action">
-                    <i class="fa fa-info-circle"></i> Thông tin cá nhân
-                  </a>
-                  <a href="/change-password.html" class="list-group-item list-group-item-action active">
-                    <i class="fa fa-key"></i> Đổi mật khẩu
-                  </a>
-                </div>
-              </section>
-            </div>
-
-            <!-- Right: -->
-            <div class="col-md-8 col-xl-9">
-              <section class="card h-100">
-                <div class="card-header">
-                  <div class="text-300 text-uppercase font-medium">Đổi mật khẩu</div>
-                </div>
-                <div class="card-body">
-                  <div class="alert alert-success alert-dismissible fade show" role="alert">
-                    Thay đổi mật khẩu thành công!
-                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                      <span aria-hidden="true">&times;</span>
-                    </button>
-                  </div>
-                  <div class="alert alert-danger fade show" role="alert">
-                    <ul class="mb-0 pl-3">
-                      <li>Cần nhập đủ thông tin</li>
-                      <li>Mật khẩu hiện tại chưa chính xác</li>
-                      <li>Xác nhận mật khẩu mới chưa chính xác</li>
-                    </ul>
-                  </div>
-                  <div class="row">
-                    <div class="col-lg-12">
-                      <div class="form-group">
-                        <label>Mật khẩu hiện tại</label>
-                        <input type="password" class="form-control is-invalid" value=""/>
-                        
+              <div class="col-lg-6 col-xl-4 mb-3">
+                <div class="card bank-card h-100 position-relative">
+                  <div class="card-body">
+                    <div class="media pb-0">
+                      <div class="bank-card-logo mr-3">
+                        <img src="/static/images/banks/watapy.png" class="img-fluid" alt="WATAPY"/>
                       </div>
-                    </div>
-                    <div class="col-lg-12">
-                      <div class="form-group">
-                        <label>Mật khẩu mới</label>
-                        <input type="password" class="form-control is-invalid" value=""/>
-                        
-                      </div>
-                    </div>
-                    <div class="col-lg-12">
-                      <div class="form-group">
-                        <label>Xác nhận mật khẩu mới</label>
-                        <input type="password" class="form-control is-invalid" value=""/>
-                        
+                      <div class="media-body">
+                        <div class="font-bold bank-card-bank-name text-muted">WATAPY</div>
+                        <div class="bank-card-name text-secondary mt-2"></div>
+                        <div class="bank-card-number text-secondary line-height-reset"></div>
+                        <div class="text-600 bank-card-balance mt-3">69.605.631 <span class='text-200'>WEC</span class='text-200'></div>
+                          <div class="text100">1 WEC = 1.000 VND</div>
                       </div>
                     </div>
                   </div>
-
                 </div>
-              </section>
-            </div>
+              </div>
+              <div class="col-lg-6 col-xl-4 mb-3">
+                <div class="card bank-card h-100 position-relative">
+                  <div class="card-body">
+                    <div class="media pb-0">
+                      <div class="bank-card-logo mr-3">
+                        <img src="/static/images/banks/bidv.png" class="img-fluid" alt="BIDV"/>
+                          <div class="bank-card-edit mt-3 mr-3 position-absolute">
+                            <button class="btn btn-outline-primary btn-sm btn-block" type="button" data-toggle="modal" data-target="#modal-bank-card-edit">
+                              <i class="fa fa-pencil"></i>
+                            </button>
+                          </div>
+                      </div>
+                      <div class="media-body">
+                        <div class="font-bold bank-card-bank-name text-muted">BIDV</div>
+                        <div class="bank-card-name text-secondary mt-2">DO TUAN PHONG</div>
+                        <div class="bank-card-number text-secondary line-height-reset">001100888866</div>
+                        <div class="text-600 bank-card-balance mt-3">1.650.000 <span class='text-200'>VND</span class='text-200'></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-6 col-xl-4 mb-3">
+                <div class="card bank-card h-100 position-relative">
+                  <div class="card-body">
+                    <div class="media pb-0">
+                      <div class="bank-card-logo mr-3">
+                        <img src="/static/images/banks/vpbank.png" class="img-fluid" alt="VPBANK"/>
+                          <div class="bank-card-edit mt-3 mr-3 position-absolute">
+                            <button class="btn btn-outline-primary btn-sm btn-block" type="button" data-toggle="modal" data-target="#modal-bank-card-edit">
+                              <i class="fa fa-pencil"></i>
+                            </button>
+                          </div>
+                      </div>
+                      <div class="media-body">
+                        <div class="font-bold bank-card-bank-name text-muted">VPBANK</div>
+                        <div class="bank-card-name text-secondary mt-2">DO TUAN PHONG</div>
+                        <div class="bank-card-number text-secondary line-height-reset">6666888800009999</div>
+                        <div class="text-600 bank-card-balance mt-3">620.000 <span class='text-200'>VND</span class='text-200'></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-6 col-xl-4 mb-3">
+                <div class="card bank-card h-100 position-relative">
+                  <div class="card-body">
+                    <div class="media pb-0">
+                      <div class="bank-card-logo mr-3">
+                        <img src="/static/images/banks/techcombank.png" class="img-fluid" alt="Techcombank"/>
+                          <div class="bank-card-edit mt-3 mr-3 position-absolute">
+                            <button class="btn btn-outline-primary btn-sm btn-block" type="button" data-toggle="modal" data-target="#modal-bank-card-edit">
+                              <i class="fa fa-pencil"></i>
+                            </button>
+                          </div>
+                      </div>
+                      <div class="media-body">
+                        <div class="font-bold bank-card-bank-name text-muted">TECHCOMBANK</div>
+                        <div class="bank-card-name text-secondary mt-2">DO TUAN PHONG</div>
+                        <div class="bank-card-number text-secondary line-height-reset">000043215678</div>
+                        <div class="text-600 bank-card-balance mt-3">000.000 <span class='text-200'>VND</span class='text-200'></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
 
           </div>
-        </form>
+        </section>
+
+        <!-- Wallet address: -->
+        <section class="card mt-4">
+          <div class="card-header">
+            <div class="text-300 text-uppercase font-medium">Địa chỉ ví</div>
+          </div>
+          <div class="card-body">
+            <p>Sử dụng đoạn mã dưới đây hoặc quét mã QR để thực hiện các giao dịch chuyển và nhận WEC.</p>
+
+            <div class="form-group">
+              <label class="font-medium">Mã địa chỉ ví:</label>
+              <div class="input-group mb-3">
+                <input type="text" class="form-control" value="5a8a218bf3de34733059c3a87ab358c8bfc307a79669bc4758658466dc88db71" readonly/>
+                <div class="input-group-append">
+                  <button class="btn btn-outline-secondary" type="button" data-toggle="tooltip" data-placement="top" title="Sao chép mã địa chỉ ví">Sao chép mã</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="font-medium">Mã QR:</label>
+              <p>
+                <img src="/static/images/wallet-qr.png" class="img-fluid wallet-qr" alt="Mã QR địa chỉ ví"/>
+              </p>
+              <a href="#" target="_blank">Tải về mã QR</a>
+            </div>
+          </div>
+        </section>
       </div>
+      
     </div>
   </main>
   <!-- end: main content of this page -->
@@ -365,11 +402,11 @@
       
     </div>
 
-  <div class="modal fade" id="modal-users-delete-confirmation" tabindex="-1" role="dialog">
+  <div class="modal fade" id="modal-bank-card-edit" tabindex="-1" role="dialog">
     <div class="modal-dialog " role="document">
       <div class="modal-content">
         <div class="modal-header">
-            <h5 class="modal-title">Xác nhận</h5>
+            <h5 class="modal-title">Thông tin tài khoản</h5>
 
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
@@ -378,14 +415,128 @@
 
         
         <div class="modal-body">
-            <p>Bạn có chắc chắn muốn xóa tài khoản này?</p>
+          <form id="form-bank-card-edit">
+  <!--
+  <div class="alert alert-danger alert-dismissible fade show" role="alert">
+    Có lỗi xảy ra, vui lòng thử lại!
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  -->
+
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="bank-name">Chọn ngân hàng</label>
+      <select id="bank-name" class="form-control" disabled>
+        <option value="2" selected>VPBank</option>
+      </select>
+    </div>
+    <div class="form-group col-md-6">
+      <label for="bank-branch">Chi nhánh</label>
+      <input type="text" class="form-control" id="bank-branch" value="Đông Đô">
+    </div>
+  </div>
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="bank-account-name">Tên chủ tài khoản</label>
+      <input type="text" class="form-control text-uppercase" id="bank-account-name" value="DO TUAN PHONG">
+      <div class="invalid-feedback">
+        Nhập họ tên chủ tài khoản
+      </div>
+    </div>
+    <div class="form-group col-md-6">
+      <label for="bank-account-number">Số tài khoản</label>
+      <input type="text" class="form-control" id="bank-account-number" value="6666888800009999">
+      <div class="invalid-feedback">
+        Nhập số tài khoản
+      </div>
+    </div>
+  </div>
+</form>
 
         </div>
         
 
           <div class="modal-footer">
-              <button class="btn btn-outline-secondary" data-dismiss="modal" type="button">Bỏ qua</button>
-  <button class="btn btn-danger" data-dismiss="modal" type="button">Xóa tài khoản</button>
+            <div class="row w-100 align-items-center">
+  <div class="col">
+    <button class="btn btn-link text-danger" data-dismiss="modal" type="button">
+      <i class="fa fa-trash-o mr-2"></i>Xóa tài khoản ngân hàng
+    </button>
+  </div>
+  <div class="col-auto">
+    <button class="btn btn-outline-secondary" data-dismiss="modal" type="button">Bỏ qua</button>
+    <button class="btn btn-primary" data-dismiss="modal" type="button">Cập nhật</button>
+  </div>
+</div>
+
+          </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="modal fade" id="modal-bank-card-add" tabindex="-1" role="dialog">
+    <div class="modal-dialog " role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-title">Thêm tài khoản ngân hàng</h5>
+
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+
+        
+        <div class="modal-body">
+          <form id="form-bank-card-add">
+  <div class="alert alert-danger alert-dismissible fade show" role="alert">
+    Có lỗi xảy ra, vui lòng thử lại!
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="bank-name">Chọn ngân hàng</label>
+      <select id="bank-name" class="form-control">
+        <option selected>---</option>
+        <option value="1">Techcombank</option>
+        <option value="2">VPBank</option>
+        <option value="3">BIDV</option>
+      </select>
+    </div>
+    <div class="form-group col-md-6">
+      <label for="bank-branch">Chi nhánh</label>
+      <input type="text" class="form-control" id="bank-branch">
+    </div>
+  </div>
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="bank-account-name">Tên chủ tài khoản</label>
+      <input type="text" class="form-control text-uppercase is-invalid" id="bank-account-name" required>
+      <div class="invalid-feedback">
+        Nhập họ tên chủ tài khoản
+      </div>
+    </div>
+    <div class="form-group col-md-6">
+      <label for="bank-account-number">Số tài khoản</label>
+      <input type="text" class="form-control is-invalid" id="bank-account-number" required>
+      <div class="invalid-feedback">
+        Nhập số tài khoản
+      </div>
+    </div>
+  </div>
+</form>
+
+        </div>
+        
+
+          <div class="modal-footer">
+            <button class="btn btn-outline-secondary" data-dismiss="modal" type="button">Bỏ qua</button>
+<button class="btn btn-primary" data-dismiss="modal" type="button">Thêm tài khoản</button>
 
           </div>
       </div>
@@ -406,7 +557,6 @@
   <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>    <script src="/static/scripts/main.js?ver=2.1.0"></script>
 
-  <scripts></scripts>
 
   </body>
 </html>

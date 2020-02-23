@@ -5,7 +5,7 @@
   <meta http-equiv="x-ua-compatible" content="ie=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <title>Thêm ngân hàng</title>
+  <title>Báo cáo thống kê</title>
   <meta name="description" content="(site meta description)" />
   <link rel="shortcut icon" type="image/png" href="/favicon-16x16.png">
 
@@ -19,7 +19,7 @@
   </head>
   <body class="">
     
-    <div class="page is-banks-add text-200">
+    <div class="page is-reports text-200">
       
       
 
@@ -60,7 +60,7 @@
         
       </li>
       <li class="nav-item nav-parent">
-        <a class="nav-link d-flex align-items-center py-2 " href="">
+        <a class="nav-link d-flex align-items-center py-2 active" href="">
           <i class="fa fa-pie-chart"></i>
           <span class="flex-grow-1">
             Báo cáo
@@ -256,93 +256,181 @@
   
   <!-- /header -->  <!-- begin: main content of this page -->
   <main class="flex-grow-1">
-    <div class="container">
+    <div class="container-fluid">
       <div class="page-header position-relative pt-4 pb-5 px-lg-3">
         <div class="row align-items-center">
           <div class="col-lg">
-            <h2 class="page-title m-0 text-500 font-medium">Thêm ngân hàng</h2>
+            <h2 class="page-title m-0 text-500 font-medium">Báo cáo thống kê</h2>
+            
           </div>
           <div class="col-lg-auto mt-3 mt-lg-0">
-            <a href="/banks.html" class="btn btn-outline-secondary">
-              Bỏ qua
-            </a>
-            <button class="btn btn-primary">
-              Lưu thông tin
-            </button>
+            <!-- filter:-->
+            <form>
+              <div class="d-flex align-items-center">
+                <div>Chọn ngày:</div>
+                <div class="mx-2 mb-2 mb-lg-0">
+                  <input type="text" class="form-control" id="reportrange" placeholder="Chọn ngày..." style="min-width:210px"/>
+                </div>
+                <div class=" mb-2 mb-lg-0">
+                  <button type="submit" class="btn btn-primary btn-block">Xem</button>
+                </div>
+              </div>
+            </form>
           </div>
         </div>
       </div>
 
       <div class="contentpanel position-relative px-lg-3 pb-4">
-        <form>
-          <div class="row">
-            <div class="col-lg-8">
-              <section class="card mb-3">
-                <div class="card-header">
-                  <div class="text-300 text-uppercase font-medium">Thông tin ngân hàng</div>
+
+        <!-- Doanh thu cá nhân: -->
+        <section class="card mb-3">
+          <div class="card-header">
+            <div class="text-300 text-uppercase font-medium">Doanh thu cá nhân</div>
+          </div>
+          <div class="card-body">
+            <div class="row">
+              <div class="col-xl-4">
+                <div class="d-flex mb-3 align-items-center">
+                  <span class="text-700 font-medium">5.024.000</span>
+                  <span class="text-300 ml-1">₫</span>
+                  <span class="badge badge-pill badge-primary font-normal ml-3">
+                    <i class="fa fa-long-arrow-up"></i> 23%</span>
                 </div>
-                <div class="card-body">
-                  <div class="form-group">
-                    <label>Mã ngân hàng</label>
-                    <input type="text" class="form-control" placeholder="Ví dụ: ICBV"/>
-                  </div>
-                  <div class="form-group">
-                    <label>Tên giao dịch</label>
-                    <input type="text" class="form-control is-invalid" placeholder="Ví dụ: Vietinbank"/>
-                    <div class="invalid-feedback">
-                      Nhập tên giao dịch
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <label>Tên đầy đủ</label>
-                    <input type="text" class="form-control" placeholder="Ví dụ: Ngân Hàng TMCP Công Thương Việt Nam"/>
-                  </div>
-                  <div class="form-group">
-                    <label>Màu chủ đạo</label>
-                    <input type="text" class="form-control" placeholder="Ví dụ: #707bcc"/>
-                  </div>
-                  <div class="form-group">
-                    <label>Trạng thái</label>
-                    <div>
-                      <div class="custom-control custom-radio custom-control-inline">
-                        <input type="radio" id="bank-active" name="bank-status" class="custom-control-input" checked>
-                        <label class="custom-control-label" for="bank-active">Hoạt động</label>
-                      </div>
-                      <div class="custom-control custom-radio custom-control-inline">
-                        <input type="radio" id="bank-inactive" name="bank-status" class="custom-control-input">
-                        <label class="custom-control-label" for="bank-inactive">Ngừng hoạt động</label>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </section>
-            </div>
-            <div class="col-lg-4">
-              <section class="card mb-3">
-                <div class="card-header">
-                  <div class="text-300 text-uppercase font-medium">Logo</div>
-                </div>
-                <div class="card-body">
-                  <div class="form-group">
-                    <div class="border rounded p-3 d-flex align-items-center justify-content-center" style="border-style:dashed !important; min-height:100px">
-                      <div>
-                        <img src="/static/images/banks/logo-placeholder.jpg" class="img-fluid"/>
-                      </div>
-                    </div>
-                  </div>
-                  <div>
-                    <label class="btn btn-sm btn-outline-secondary btn-block">
-                        Chọn ảnh... <input type="file" hidden />
-                    </label>
-                  </div>
+                <table class="table border text-muted">
+                  <thead>
+                    <tr>
+                      <th>Nguồn</th>
+                      <th class="text-right">Doanh thu</th>
+                      <th class="text-right">Tăng trưởng</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Cashback</td>
+                      <td class="text-right">4.440.000₫</td>
+                      <td class="text-right">
+                        <span class="text-danger">
+                          <i class="fa fa-long-arrow-down"></i> 4.5%</span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>DT quản lý CTV</td>
+                      <td class="text-right">654.000₫</td>
+                      <td class="text-right">
+                        <span class="text-success">
+                          <i class="fa fa-long-arrow-up"></i> 28%</span>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="col-xl-8">
+                <div class="pl-lg-4 mt-4 mt-lg-0">
+                  <canvas id="chart-1" width="1000" height="400"></canvas>
                 </div>
               </div>
             </div>
           </div>
-        </form>
+        </section>
+
+        <!-- Doanh thu hệ thống: -->
+        <section class="card mb-3">
+          <div class="card-header">
+            <div class="text-300 text-uppercase font-medium">Doanh thu hệ thống</div>
+          </div>
+          <div class="card-body">
+            <div class="row">
+              <div class="col-xl-4">
+                <div class="d-flex mb-3 align-items-center">
+                  <span class="text-700 font-medium">124.766.000</span>
+                  <span class="text-300 ml-1">₫</span>
+                  <span class="badge badge-pill badge-danger ml-3">
+                    <i class="fa fa-long-arrow-down"></i> 8%</span>
+                </div>
+                <table class="table border text-muted">
+                  <thead>
+                    <tr>
+                      <th>Nguồn</th>
+                      <th class="text-right">Doanh thu</th>
+                      <th class="text-right">Tăng trưởng</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Bắc</td>
+                      <td class="text-right">18.654.000 ₫</td>
+                      <td class="text-right">
+                        <span class="text-danger">
+                          <i class="fa fa-long-arrow-down"></i> 4.5%</span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Trung</td>
+                      <td class="text-right">29.540.000 ₫</td>
+                      <td class="text-right">
+                        <span class="text-success">
+                          <i class="fa fa-long-arrow-up"></i> 28%</span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Nam</td>
+                      <td class="text-right">29.540.000 ₫</td>
+                      <td class="text-right">
+                        <span class="text-success">
+                          <i class="fa fa-long-arrow-up"></i> 28%</span>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="col-xl-8">
+                <div class="pl-lg-4 mt-4 mt-lg-0">
+                  <canvas id="chart-2" width="400" height="200"></canvas>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Đơn hàng: -->
+        <section class="card mb-3 h-100">
+          <div class="card-header">
+            <div class="text-300 text-uppercase font-medium">Số đơn hàng</div>
+          </div>
+          <div class="card-body">
+            <div class="d-flex mb-3 align-items-center">
+              <span class="text-700 font-medium">86</span>
+              <span class="text-300 ml-1 text-muted">đơn</span>
+              <span class="badge badge-pill badge-primary font-normal ml-3"><i class="fa fa-long-arrow-up"></i> 15%</span>
+            </div>
+            <div class="mt-4 mt-lg-0">
+              <canvas id="chart-4" width="1000" height="200"></canvas>
+            </div>
+          </div>
+        </section>
+
+        <!-- Thành viên: -->
+        <section class="card mb-3">
+          <div class="card-header">
+            <div class="text-300 text-uppercase font-medium">Thành viên mới</div>
+          </div>
+          <div class="card-body">
+            <div class="d-flex mb-3 align-items-center">
+              <span class="text-700 font-medium">64</span>
+              <span class="text-300 ml-1 text-muted">đăng ký mới</span>
+              <span class="badge badge-pill badge-primary font-normal ml-3"><i class="fa fa-long-arrow-up"></i> 23%</span>
+            </div>
+            
+            <div class="pl-lg-4 mt-4 mt-lg-0">
+              <canvas id="chart-3" width="1000" height="200"></canvas>
+            </div>
+          </div>
+        </section>
+
       </div>
-    </main>
-    <!-- end: main content of this page -->
+    </div>
+  </main>
+  <!-- end: main content of this page -->
 
       </div>
       
@@ -363,8 +451,9 @@
   <!-- daterangepicker: -->
   <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>    <script src="/static/scripts/main.js?ver=2.1.0"></script>
+    <script src="/static/scripts/reports.js?ver=2.1.0"></script>
 
-    <scripts></scripts>
+  <script></script>
 
   </body>
 </html>

@@ -14131,16 +14131,9 @@ p {
   /* line 9, src/styles/_media-queries.scss */
   .leftpanel {
     display: none; }
-  /* line 13, src/styles/_media-queries.scss */
-  .mainpanel {
-    margin-left: 0;
-    width: 100%; }
   /* line 18, src/styles/_media-queries.scss */
   .leftpanel-collapsed .leftpanel {
     display: none; }
-  /* line 22, src/styles/_media-queries.scss */
-  .leftpanel-collapsed .mainpanel {
-    margin-left: 0; }
   /* line 26, src/styles/_media-queries.scss */
   .leftpanel-collapsed .headerbar {
     margin-left: 0; }

@@ -19,7 +19,7 @@
   </head>
   <body class="">
     
-    <div class="page is-performance-detail text-200">
+    <div class="page is-performance text-200">
       
       
 
@@ -267,24 +267,50 @@
       </div>
 
       <div class="contentpanel position-relative px-lg-3 pb-4">
-
-        <section>
-          <div class="alert alert-info">
-            <div class="d-flex align-items-center">
-              <i class="fa fa-info-circle fa-lg mr-3"></i>
-              <div class="mr-3">Đang xem báo cáo chi tiết hiệu quả của thành viên - <strong>Phuc Chien Luoc</strong></div>
-              <a href="/performance.html" class="text-danger ml-auto" data-toggle="tooltip" data-placement="top" title="Quay về danh sách ban đầu"><u>Hủy xem</u></a>
-            </div>
+        <section class="card mb-3">
+          <div class="card-body">
+            <form>
+              <div class="form-row align-items-end">
+                <div class="col-lg-3 col-xl-3">
+                  <div class="form-group mb-lg-0">
+                    <label>Quyền người dùng</label>
+                    <select class="form-control">
+                      <option>Tất cả</option>
+                      <option value="1">Quản trị viên</option>
+                      <option value="2">Công ty</option>
+                      <option value="3">Trưởng Miền</option>
+                      <option value="4">Đại lý Tỉnh/Quận</option>
+                      <option value="7">Cửa hàng</option>
+                      <option value="8">Quản trị CTV</option>
+                      <option value="5">Cộng tác viên</option>
+                      <option value="6">Khách hàng</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-lg-3 col-xl-3">
+                  <div class="form-group mb-lg-0">
+                    <label>Từ khóa</label>
+                    <input type="text" class="form-control" placeholder="Tên hoặc số điện thoại"/>
+                  </div>
+                </div>
+                <div class="col-lg-2 col-xl-2">
+                  <div class="form-group mb-lg-0">
+                    <button type="submit" class="btn btn-primary btn-block">Tìm</button>
+                  </div>
+                </div>
+              </div>
+            </form>
           </div>
         </section>
-
-        
 
         <section class="card">
           <div class="card-header">
             <div class="text-300 text-uppercase font-medium">Danh sách</div>
           </div>
           <div class="card-body">
+            <div class="alert alert-warning" role="alert">
+              Không tìm thấy kết quả nào phù hợp. Vui lòng thử lại!
+            </div>
             <div class="table-responsive">
               <table class="table table-hover">
                 <thead>
@@ -302,10 +328,9 @@
                 <tbody>
                   <tr>
                     <td>
-                      <!-- Không có danh sách con thì không link nữa. Bỏ 'href' hoặc thay <a> bằng <span>: -->
-                      <a class="d-flex align-items-center" data-toggle="tooltip" title="Quản trị viên">
+                      <a href="/performance-detail.html" class="d-flex align-items-center" data-toggle="tooltip" title="Quản trị viên">
                         <img src="/static/images/photos/user1.png" class="user-avatar rounded-circle float-left mr-2" alt="" width="32" height="32">
-                        <div>Trần Văn Sơn</div>
+                        <div>Admin</div>
                       </a>
                     </td>
                     <td>12</td>
@@ -318,9 +343,9 @@
                   </tr>
                     <tr>
                       <td>
-                        <a href="#" class="d-flex align-items-center" data-toggle="tooltip" title="Trưởng miền">
-                          <img src="/static/images/photos/user5.png" class="user-avatar rounded-circle float-left mr-2" alt="" width="32" height="32">
-                          <div>Phạm Thu Hằng</div>
+                        <a href="/performance-detail.html" class="d-flex align-items-center" data-toggle="tooltip" title="Trưởng miền">
+                          <img src="/static/images/photos/user3.png" class="user-avatar rounded-circle float-left mr-2" alt="" width="32" height="32">
+                          <div>Lê Minh Hà</div>
                         </a>
                       </td>
                       <td>2</td>
@@ -333,9 +358,9 @@
                     </tr>
                     <tr>
                       <td>
-                        <a href="#" class="d-flex align-items-center" data-toggle="tooltip" title="Trưởng miền">
-                          <img src="/static/images/photos/user5.png" class="user-avatar rounded-circle float-left mr-2" alt="" width="32" height="32">
-                          <div>Phạm Thu Hằng</div>
+                        <a href="/performance-detail.html" class="d-flex align-items-center" data-toggle="tooltip" title="Trưởng miền">
+                          <img src="/static/images/photos/user3.png" class="user-avatar rounded-circle float-left mr-2" alt="" width="32" height="32">
+                          <div>Lê Minh Hà</div>
                         </a>
                       </td>
                       <td>2</td>
@@ -348,9 +373,9 @@
                     </tr>
                     <tr>
                       <td>
-                        <a href="#" class="d-flex align-items-center" data-toggle="tooltip" title="Trưởng miền">
-                          <img src="/static/images/photos/user5.png" class="user-avatar rounded-circle float-left mr-2" alt="" width="32" height="32">
-                          <div>Phạm Thu Hằng</div>
+                        <a href="/performance-detail.html" class="d-flex align-items-center" data-toggle="tooltip" title="Trưởng miền">
+                          <img src="/static/images/photos/user3.png" class="user-avatar rounded-circle float-left mr-2" alt="" width="32" height="32">
+                          <div>Lê Minh Hà</div>
                         </a>
                       </td>
                       <td>2</td>
@@ -363,9 +388,9 @@
                     </tr>
                     <tr>
                       <td>
-                        <a href="#" class="d-flex align-items-center" data-toggle="tooltip" title="Trưởng miền">
-                          <img src="/static/images/photos/user5.png" class="user-avatar rounded-circle float-left mr-2" alt="" width="32" height="32">
-                          <div>Phạm Thu Hằng</div>
+                        <a href="/performance-detail.html" class="d-flex align-items-center" data-toggle="tooltip" title="Trưởng miền">
+                          <img src="/static/images/photos/user3.png" class="user-avatar rounded-circle float-left mr-2" alt="" width="32" height="32">
+                          <div>Lê Minh Hà</div>
                         </a>
                       </td>
                       <td>2</td>
@@ -378,9 +403,9 @@
                     </tr>
                     <tr>
                       <td>
-                        <a href="#" class="d-flex align-items-center" data-toggle="tooltip" title="Trưởng miền">
-                          <img src="/static/images/photos/user5.png" class="user-avatar rounded-circle float-left mr-2" alt="" width="32" height="32">
-                          <div>Phạm Thu Hằng</div>
+                        <a href="/performance-detail.html" class="d-flex align-items-center" data-toggle="tooltip" title="Trưởng miền">
+                          <img src="/static/images/photos/user3.png" class="user-avatar rounded-circle float-left mr-2" alt="" width="32" height="32">
+                          <div>Lê Minh Hà</div>
                         </a>
                       </td>
                       <td>2</td>
@@ -393,9 +418,9 @@
                     </tr>
                     <tr>
                       <td>
-                        <a href="#" class="d-flex align-items-center" data-toggle="tooltip" title="Trưởng miền">
-                          <img src="/static/images/photos/user5.png" class="user-avatar rounded-circle float-left mr-2" alt="" width="32" height="32">
-                          <div>Phạm Thu Hằng</div>
+                        <a href="/performance-detail.html" class="d-flex align-items-center" data-toggle="tooltip" title="Trưởng miền">
+                          <img src="/static/images/photos/user3.png" class="user-avatar rounded-circle float-left mr-2" alt="" width="32" height="32">
+                          <div>Lê Minh Hà</div>
                         </a>
                       </td>
                       <td>2</td>
@@ -408,9 +433,9 @@
                     </tr>
                     <tr>
                       <td>
-                        <a href="#" class="d-flex align-items-center" data-toggle="tooltip" title="Trưởng miền">
-                          <img src="/static/images/photos/user5.png" class="user-avatar rounded-circle float-left mr-2" alt="" width="32" height="32">
-                          <div>Phạm Thu Hằng</div>
+                        <a href="/performance-detail.html" class="d-flex align-items-center" data-toggle="tooltip" title="Trưởng miền">
+                          <img src="/static/images/photos/user3.png" class="user-avatar rounded-circle float-left mr-2" alt="" width="32" height="32">
+                          <div>Lê Minh Hà</div>
                         </a>
                       </td>
                       <td>2</td>
@@ -423,9 +448,9 @@
                     </tr>
                     <tr>
                       <td>
-                        <a href="#" class="d-flex align-items-center" data-toggle="tooltip" title="Trưởng miền">
-                          <img src="/static/images/photos/user5.png" class="user-avatar rounded-circle float-left mr-2" alt="" width="32" height="32">
-                          <div>Phạm Thu Hằng</div>
+                        <a href="/performance-detail.html" class="d-flex align-items-center" data-toggle="tooltip" title="Trưởng miền">
+                          <img src="/static/images/photos/user3.png" class="user-avatar rounded-circle float-left mr-2" alt="" width="32" height="32">
+                          <div>Lê Minh Hà</div>
                         </a>
                       </td>
                       <td>2</td>
@@ -438,9 +463,9 @@
                     </tr>
                     <tr>
                       <td>
-                        <a href="#" class="d-flex align-items-center" data-toggle="tooltip" title="Trưởng miền">
-                          <img src="/static/images/photos/user5.png" class="user-avatar rounded-circle float-left mr-2" alt="" width="32" height="32">
-                          <div>Phạm Thu Hằng</div>
+                        <a href="/performance-detail.html" class="d-flex align-items-center" data-toggle="tooltip" title="Trưởng miền">
+                          <img src="/static/images/photos/user3.png" class="user-avatar rounded-circle float-left mr-2" alt="" width="32" height="32">
+                          <div>Lê Minh Hà</div>
                         </a>
                       </td>
                       <td>2</td>
@@ -453,9 +478,9 @@
                     </tr>
                     <tr>
                       <td>
-                        <a href="#" class="d-flex align-items-center" data-toggle="tooltip" title="Trưởng miền">
-                          <img src="/static/images/photos/user5.png" class="user-avatar rounded-circle float-left mr-2" alt="" width="32" height="32">
-                          <div>Phạm Thu Hằng</div>
+                        <a href="/performance-detail.html" class="d-flex align-items-center" data-toggle="tooltip" title="Trưởng miền">
+                          <img src="/static/images/photos/user3.png" class="user-avatar rounded-circle float-left mr-2" alt="" width="32" height="32">
+                          <div>Lê Minh Hà</div>
                         </a>
                       </td>
                       <td>2</td>
@@ -468,9 +493,9 @@
                     </tr>
                     <tr>
                       <td>
-                        <a href="#" class="d-flex align-items-center" data-toggle="tooltip" title="Trưởng miền">
-                          <img src="/static/images/photos/user5.png" class="user-avatar rounded-circle float-left mr-2" alt="" width="32" height="32">
-                          <div>Phạm Thu Hằng</div>
+                        <a href="/performance-detail.html" class="d-flex align-items-center" data-toggle="tooltip" title="Trưởng miền">
+                          <img src="/static/images/photos/user3.png" class="user-avatar rounded-circle float-left mr-2" alt="" width="32" height="32">
+                          <div>Lê Minh Hà</div>
                         </a>
                       </td>
                       <td>2</td>
@@ -483,9 +508,9 @@
                     </tr>
                     <tr>
                       <td>
-                        <a href="#" class="d-flex align-items-center" data-toggle="tooltip" title="Trưởng miền">
-                          <img src="/static/images/photos/user5.png" class="user-avatar rounded-circle float-left mr-2" alt="" width="32" height="32">
-                          <div>Phạm Thu Hằng</div>
+                        <a href="/performance-detail.html" class="d-flex align-items-center" data-toggle="tooltip" title="Trưởng miền">
+                          <img src="/static/images/photos/user3.png" class="user-avatar rounded-circle float-left mr-2" alt="" width="32" height="32">
+                          <div>Lê Minh Hà</div>
                         </a>
                       </td>
                       <td>2</td>
@@ -498,9 +523,9 @@
                     </tr>
                     <tr>
                       <td>
-                        <a href="#" class="d-flex align-items-center" data-toggle="tooltip" title="Trưởng miền">
-                          <img src="/static/images/photos/user5.png" class="user-avatar rounded-circle float-left mr-2" alt="" width="32" height="32">
-                          <div>Phạm Thu Hằng</div>
+                        <a href="/performance-detail.html" class="d-flex align-items-center" data-toggle="tooltip" title="Trưởng miền">
+                          <img src="/static/images/photos/user3.png" class="user-avatar rounded-circle float-left mr-2" alt="" width="32" height="32">
+                          <div>Lê Minh Hà</div>
                         </a>
                       </td>
                       <td>2</td>
@@ -513,9 +538,9 @@
                     </tr>
                     <tr>
                       <td>
-                        <a href="#" class="d-flex align-items-center" data-toggle="tooltip" title="Trưởng miền">
-                          <img src="/static/images/photos/user5.png" class="user-avatar rounded-circle float-left mr-2" alt="" width="32" height="32">
-                          <div>Phạm Thu Hằng</div>
+                        <a href="/performance-detail.html" class="d-flex align-items-center" data-toggle="tooltip" title="Trưởng miền">
+                          <img src="/static/images/photos/user3.png" class="user-avatar rounded-circle float-left mr-2" alt="" width="32" height="32">
+                          <div>Lê Minh Hà</div>
                         </a>
                       </td>
                       <td>2</td>

@@ -1,0 +1,58 @@
+{% extends 'layouts/default.html' %}
+
+{% block content %}
+  <!-- begin: main content of this page -->
+  <main class="flex-grow-1">
+    <div class="container">
+      <div class="page-header position-relative pt-4 pb-5 px-lg-3">
+        <div class="row align-items-center">
+          <div class="col-lg">
+            <h2 class="page-title m-0 text-500 font-medium">{{ page.title }}</h2>
+          </div>
+          <div class="col-lg-auto text-right mt-3 mt-lg-0"></div>
+        </div>
+      </div>
+
+      <div class="contentpanel position-relative px-lg-3 pb-4">
+        <section class="card mb-3">
+          <div class="card-body">
+            <form>
+              <div class="form-row align-items-end">
+                <div class="col-lg-3 col-xl-3">
+                  <div class="form-group mb-lg-0">
+                    <label>Quyền người dùng</label>
+                    <select class="form-control">
+                      <option>Tất cả</option>
+                      <option value="1">Quản trị viên</option>
+                      <option value="2">Công ty</option>
+                      <option value="3">Trưởng Miền</option>
+                      <option value="4">Đại lý Tỉnh/Quận</option>
+                      <option value="7">Cửa hàng</option>
+                      <option value="8">Quản trị CTV</option>
+                      <option value="5">Cộng tác viên</option>
+                      <option value="6">Khách hàng</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-lg-3 col-xl-3">
+                  <div class="form-group mb-lg-0">
+                    <label>Từ khóa</label>
+                    <input type="text" class="form-control" placeholder="Tên hoặc số điện thoại"/>
+                  </div>
+                </div>
+                <div class="col-lg-2 col-xl-2">
+                  <div class="form-group mb-lg-0">
+                    <button type="submit" class="btn btn-primary btn-block">Tìm</button>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </section>
+
+      </div>
+    </div>
+  </main>
+  <!-- end: main content of this page -->
+
+{% endblock %}

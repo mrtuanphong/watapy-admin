@@ -1,0 +1,82 @@
+{% extends 'layouts/default.html' %}
+
+{% block content %}
+  <!-- begin: main content of this page -->
+  <main class="flex-grow-1">
+    <div class="container">
+      <div class="page-header position-relative pt-4 pb-5 px-lg-3">
+        <div class="row align-items-center">
+          <div class="col-lg">
+            <h2 class="page-title m-0 text-500 font-medium">{{ page.title }}</h2>
+          </div>
+          <div class="col-lg-auto text-right mt-3 mt-lg-0"></div>
+        </div>
+      </div>
+
+      <div class="contentpanel position-relative px-lg-3 pb-4">
+        <div class="row">
+          <!-- Left: -->
+          <div class="col-md-4 col-xl-3">
+            <section class="card mb-4">
+              {# <div class="card-header">
+                <div class="text-300 text-uppercase font-medium">Logo</div>
+              </div> #}
+              <div class="card-body">
+                <div class="form-group">
+                  <div class="d-flex align-items-center justify-content-center">
+                    <img src="{{ paths.root + paths.images }}/products/product-1.png" class="img-fluid">
+                  </div>
+                </div>
+                <div class="text-300">Máy Tạo Nước ION Kiềm Tươi OH- Model EH501</div>
+              </div>
+              <div class="list-group list-group-flush border-top">
+                <div class="list-group-item">
+                  Offer ID: id_210394
+                </div>
+                <div class="list-group-item">
+                  Giá chia sẻ: <strong>52.600.000đ</strong>
+                </div>
+              </div>
+            </section>
+          </div>
+
+          <!-- Right: -->
+          <div class="col-md-8 col-xl-9">
+            <section class="card h-100">
+              <div class="card-header">
+                <!-- Nav tabs -->
+                <ul class="nav nav-tabs card-header-tabs" id="myTab" role="tablist">
+                  <li class="nav-item">
+                    <a class="nav-link active" id="share-tab" data-toggle="tab" href="#share" role="tab" aria-controls="home" aria-selected="true">Tạo link chia sẻ</a>
+                  </li>
+                  <!--
+                  <li class="nav-item">
+                    <a class="nav-link" id="form-tab" data-toggle="tab" href="#form" role="tab" aria-controls="profile" aria-selected="false">Tạo form đặt hàng</a>
+                  </li>
+                  -->
+                </ul>
+              </div>
+              <div class="card-body">
+                <!-- Tab panes -->
+                <div class="tab-content p-0">
+                  <div class="tab-pane active" id="share" role="tabpanel">
+                    123243
+                  </div>
+                  <!--
+                  <div class="tab-pane" id="form" role="tabpanel">
+                    dfsdf
+                  </div>
+                  -->
+                </div>
+              </div>
+
+            </section>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </main>
+  <!-- end: main content of this page -->
+
+{% endblock %}

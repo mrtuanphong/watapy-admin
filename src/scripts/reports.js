@@ -3,8 +3,8 @@
 
 $(function() {
   // Set default values to the last 7 days:
-  var start = moment().subtract(6, 'days');
-  var end = moment();
+  var start = moment().startOf('month');
+  var end = moment().endOf('month');
 
   // Show the content:
   function cb(start, end) {
@@ -44,27 +44,30 @@ var myChart = new Chart(chart1, {
     labels: ['14-02', '15-02', '16-02', '17-02', '18-02', '19-02', '20-02'],
     datasets: [
       {
-        label: 'DT cá nhân',
+        label: 'Cashback',
         data: [12,19,3,5,2,3,8],
         backgroundColor: [
-          'rgba(54, 162, 235, 0.2)',
-          'rgba(54, 162, 235, 0.2)',
-          'rgba(54, 162, 235, 0.2)',
-          'rgba(54, 162, 235, 0.2)',
-          'rgba(54, 162, 235, 0.2)',
-          'rgba(54, 162, 235, 0.2)',
-          'rgba(54, 162, 235, 0.2)'
-        ],
-        borderColor: [
-          'rgba(54, 162, 235, 1)',
-          'rgba(54, 162, 235, 1)',
-          'rgba(54, 162, 235, 1)',
-          'rgba(54, 162, 235, 1)',
-          'rgba(54, 162, 235, 1)',
-          'rgba(54, 162, 235, 1)',
-          'rgba(54, 162, 235, 1)'
-        ],
-        borderWidth: 2
+          '#36A2EB',
+          '#36A2EB',
+          '#36A2EB',
+          '#36A2EB',
+          '#36A2EB',
+          '#36A2EB',
+          '#36A2EB'
+        ]
+      },
+      {
+        label: 'DT quản lý CTV',
+        data: [4,9,12,6,1,4,6],
+        backgroundColor: [
+          '#01E0C5',
+          '#01E0C5',
+          '#01E0C5',
+          '#01E0C5',
+          '#01E0C5',
+          '#01E0C5',
+          '#01E0C5'
+        ]
       }
     ]
   },
@@ -93,13 +96,29 @@ var chart = new Chart(chart2, {
   // The data for our dataset
   data: {
     labels: ['14-02', '15-02', '16-02', '17-02', '18-02', '19-02', '20-02'],
-    datasets: [{
-      label: 'DT hệ thống',
-      backgroundColor: '#ff6384',
-      borderColor: '#ff6384',
-      data: [16000000, 20500000, 15080000, 24000000, 21500000, 17000000, 19000000],
-      fill: false
-    }]
+    datasets: [
+      {
+        label: 'DT miền Bắc',
+        backgroundColor: '#ff6384',
+        borderColor: '#ff6384',
+        data: [16000000, 20500000, 15080000, 24000000, 21500000, 17000000, 19000000],
+        fill: false
+      },
+      {
+        label: 'DT miền Trung',
+        backgroundColor: '#4CC0C0',
+        borderColor: '#4CC0C0',
+        data: [4000000, 3000000, 5080000, 6000000, 3500000, 3000000, 4000000],
+        fill: false
+      },
+      {
+        label: 'DT miền Nam',
+        backgroundColor: '#5A4B7B',
+        borderColor: '#5A4B7B',
+        data: [9000000, 23000000, 15080000, 11000000, 600000, 12000000, 8000000],
+        fill: false
+      }
+    ]
   },
 
   // Configuration options go here
@@ -108,7 +127,7 @@ var chart = new Chart(chart2, {
       yAxes : [{
           ticks : {
               beginAtZero : true,
-              suggestedMax: 50000000
+              suggestedMax: 30000000
           }   
       }]
     }
@@ -116,23 +135,22 @@ var chart = new Chart(chart2, {
 });
 
 
-// Chart 3 (Doanh thu mien):
+// Chart 3 (Thanh vien moi):
 // =====================================
 
 var chart3 = document.getElementById('chart-3').getContext('2d');
 var chart = new Chart(chart3, {
   // The type of chart we want to create
   type: 'line',
-  //fillColor: undefined,
 
   // The data for our dataset
   data: {
     labels: ['14-02', '15-02', '16-02', '17-02', '18-02', '19-02', '20-02'],
     datasets: [{
-      label: 'DT miền',
-      backgroundColor: '#4CC0C0',
-      borderColor: '#4CC0C0',
-      data: [4000000, 3000000, 5080000, 6000000, 3500000, 3000000, 4000000],
+      label: 'Thành viên mới',
+      backgroundColor: '#ff6384',
+      borderColor: '#ff6384',
+      data: [3, 6, 5, 9, 12, 15, 20],
       fill: false
     }]
   },
@@ -143,7 +161,7 @@ var chart = new Chart(chart3, {
       yAxes : [{
           ticks : {
               beginAtZero : true,
-              suggestedMax: 10000000
+              suggestedMax: 30
           }   
       }]
     }
@@ -151,7 +169,7 @@ var chart = new Chart(chart3, {
 });
 
 
-// Chart 3 (Don hang):
+// Chart 4 (Don hang):
 // =====================================
 
 var chart4 = document.getElementById('chart-4').getContext('2d');

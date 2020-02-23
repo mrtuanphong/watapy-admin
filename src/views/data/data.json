@@ -35,7 +35,19 @@
       "scripts": ["main"]
     },
     "offers": {
-      "title": "Offers",
+      "title": "Danh sách Offer",
+      "description": "",
+      "stylesheets": ["main"],
+      "scripts": ["main"]
+    },
+    "offers-approved": {
+      "title": "Offer của tôi",
+      "description": "",
+      "stylesheets": ["main"],
+      "scripts": ["main"]
+    },
+    "offers-detail": {
+      "title": "Chi tiết Offer",
       "description": "",
       "stylesheets": ["main"],
       "scripts": ["main"]
@@ -168,9 +180,23 @@
       },
       {
         "id": "offers",
-        "path": "/offers.html",
+        "path": "",
         "icon": "fa-link",
-        "children": "Offers"
+        "children": "Offers",
+        "sub": [
+          {
+            "id": "offers",
+            "path": "/offers.html",
+            "icon": "fa-caret-right",
+            "children": "Danh sách Offer"
+          },
+          {
+            "id": "offers-approved",
+            "path": "/offers-approved.html",
+            "icon": "fa-caret-right",
+            "children": "Offer được duyệt"
+          }
+        ]
       },
       {
         "id": "news",
