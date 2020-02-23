@@ -144,20 +144,7 @@
     }
   },
   "menus": {
-    "primary": [      
-      {
-        "id": "wallet",
-        "path": "/wallet.html",
-        "icon": "fa-credit-card",
-        "children": "Ví của tôi"
-      },
-      {
-        "id": "transactions",
-        "path": "/transactions.html",
-        "icon": "fa-exchange",
-        "children": "Giao dịch",
-        "badge": "new"
-      },
+    "primary": [
       {
         "id": "reports",
         "path": "",
@@ -177,6 +164,19 @@
             "children": "Hiệu quả thành viên"
           }
         ]
+      },   
+      {
+        "id": "wallet",
+        "path": "/wallet.html",
+        "icon": "fa-credit-card",
+        "children": "Ví của tôi"
+      },
+      {
+        "id": "transactions",
+        "path": "/transactions.html",
+        "icon": "fa-exchange",
+        "children": "Giao dịch",
+        "badge": "new"
       },
       {
         "id": "offers",
