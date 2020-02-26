@@ -5,7 +5,7 @@
   <meta http-equiv="x-ua-compatible" content="ie=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <title>Sửa ngân hàng</title>
+  <title>Offer của tôi</title>
   <meta name="description" content="(site meta description)" />
   <link rel="shortcut icon" type="image/png" href="/favicon-16x16.png">
 
@@ -19,7 +19,7 @@
   </head>
   <body class="">
     
-    <div class="page is-banks-edit text-200">
+    <div class="page is-offers-my-offers text-200">
       
       
 
@@ -260,89 +260,178 @@
       <div class="page-header position-relative pt-4 pb-5 px-lg-3">
         <div class="row align-items-center">
           <div class="col-lg">
-            <h2 class="page-title m-0 text-500 font-medium">Sửa ngân hàng</h2>
+            <h2 class="page-title m-0 text-500 font-medium">Offer của tôi</h2>
           </div>
-          <div class="col-lg-auto mt-3 mt-lg-0">
-            <a href="/banks.html" class="btn btn-outline-secondary">
-              Bỏ qua
-            </a>
-            <button class="btn btn-primary">
-              Lưu thông tin
-            </button>
-          </div>
+          <div class="col-lg-auto text-right mt-3 mt-lg-0"></div>
         </div>
       </div>
 
       <div class="contentpanel position-relative px-lg-3 pb-4">
-        <form>
-          <div class="row">
-            <div class="col-lg-8">
-              <section class="card mb-3">
-                <div class="card-header">
-                  <div class="text-300 text-uppercase font-medium">Thông tin ngân hàng</div>
-                </div>
-                <div class="card-body">
-                  <div class="form-group">
-                    <label>Mã ngân hàng</label>
-                    <input type="text" class="form-control" placeholder="Ví dụ: ICBV" value="VPBANK" />
-                  </div>
-                  <div class="form-group">
-                    <label>Tên giao dịch</label>
-                    <input type="text" class="form-control" placeholder="Ví dụ: Vietinbank" value="VP Bank" />
-                    <div class="invalid-feedback">
-                      Nhập tên giao dịch
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <label>Tên đầy đủ</label>
-                    <input type="text" class="form-control" placeholder="Ví dụ: Ngân Hàng TMCP Công Thương Việt Nam" value="Ngân hàng Việt Nam Thịnh Vượng" />
-                  </div>
-                  <div class="form-group">
-                    <label>Màu chủ đạo</label>
-                    <input type="text" class="form-control" placeholder="Ví dụ: #707bcc" value="#707bcc"/>
-                  </div>
-                  <div class="form-group">
-                    <label>Trạng thái</label>
-                    <div>
-                      <div class="custom-control custom-radio custom-control-inline">
-                        <input type="radio" id="bank-active" name="bank-status" class="custom-control-input" checked>
-                        <label class="custom-control-label" for="bank-active">Hoạt động</label>
-                      </div>
-                      <div class="custom-control custom-radio custom-control-inline">
-                        <input type="radio" id="bank-inactive" name="bank-status" class="custom-control-input">
-                        <label class="custom-control-label" for="bank-inactive">Ngừng hoạt động</label>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </section>
-            </div>
-            <div class="col-lg-4">
-              <section class="card mb-3">
-                <div class="card-header">
-                  <div class="text-300 text-uppercase font-medium">Logo</div>
-                </div>
-                <div class="card-body">
-                  <div class="form-group">
-                    <div class="border rounded p-3 d-flex align-items-center justify-content-center" style="border-style:dashed !important; min-height:100px">
-                      <div>
-                        <img src="/static/images/banks/vpbank.png" class="img-fluid"/>
-                      </div>
-                    </div>
-                  </div>
-                  <div>
-                    <label class="btn btn-sm btn-outline-secondary btn-block">
-                        Chọn ảnh... <input type="file" hidden />
-                    </label>
-                  </div>
-                </div>
+        
+
+        <section class="card">
+          <div class="card-header">
+            <div class="row align-items-center">
+              <div class="col-lg">
+                <div class="text-300 text-uppercase font-medium">Danh sách</div>
+              </div>
+              <div class="col-lg-auto mt-3 mt-lg-0">
+                <select class="form-control form-control-sm">
+                  <option selected>Tất cả</option>
+                  <option value="1">Được duyệt</option>
+                  <option value="2">Đang chờ duyệt</option>
+                </select>
               </div>
             </div>
           </div>
-        </form>
+          <div class="card-body">
+            <div class="alert alert-warning" role="alert">
+              Bạn chưa có offer nào.
+            </div>           
+
+            <div class="table-responsive">
+              <table class="table table-hover text-right">
+                <thead>
+                  <tr>
+                    <th scope="col" class="text-left" width="160">Offer</th>
+                    <th scope="col" data-toggle="tooltip" title="Unique Clicks">Click</th>
+                    <th scope="col" width="110">Conversions</th>
+                    <th scope="col" data-toggle="tooltip" title="Conversions / Clicks">CVR</th>
+                    <th scope="col" width="170">Success Conversions</th>
+                    <th scope="col" data-toggle="tooltip" title="Success Conversions / Clicks">Success CVR</th>
+                    <th scope="col">Pending Payout</th>
+                    <th scope="col">Success Payout</th>
+                    <th scope="col" data-toggle="tooltip" title="Success Payout / Clicks">eCPC</th>
+                  </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                      <td class="text-nowrap text-left">
+                        <a href="/offers-detail.html" target="_blank" title="Xem offer này ở của sổ mới">watapy-oh-eh501</a>
+                      </td>
+                      <td class="text-nowrap">100</td>
+                      <td class="text-nowrap">15</td>
+                      <td class="text-nowrap">1,5%</td>
+                      <td class="text-nowrap">0</td>
+                      <td class="text-nowrap">0</td>
+                      <td class="text-nowrap">0 ₫</td>
+                      <td class="text-nowrap">0 ₫</td>
+                      <td class="text-nowrap">0 ₫</td>
+                    </tr>
+                    <tr>
+                      <td class="text-nowrap text-left">
+                        <a href="/offers-detail.html" target="_blank" title="Xem offer này ở của sổ mới">watapy-oh-eh501</a>
+                      </td>
+                      <td class="text-nowrap">100</td>
+                      <td class="text-nowrap">15</td>
+                      <td class="text-nowrap">1,5%</td>
+                      <td class="text-nowrap">0</td>
+                      <td class="text-nowrap">0</td>
+                      <td class="text-nowrap">0 ₫</td>
+                      <td class="text-nowrap">0 ₫</td>
+                      <td class="text-nowrap">0 ₫</td>
+                    </tr>
+                    <tr>
+                      <td class="text-nowrap text-left">
+                        <a href="/offers-detail.html" target="_blank" title="Xem offer này ở của sổ mới">watapy-oh-eh501</a>
+                      </td>
+                      <td class="text-nowrap">100</td>
+                      <td class="text-nowrap">15</td>
+                      <td class="text-nowrap">1,5%</td>
+                      <td class="text-nowrap">0</td>
+                      <td class="text-nowrap">0</td>
+                      <td class="text-nowrap">0 ₫</td>
+                      <td class="text-nowrap">0 ₫</td>
+                      <td class="text-nowrap">0 ₫</td>
+                    </tr>
+                    <tr>
+                      <td class="text-nowrap text-left">
+                        <a href="/offers-detail.html" target="_blank" title="Xem offer này ở của sổ mới">watapy-oh-eh501</a>
+                      </td>
+                      <td class="text-nowrap">100</td>
+                      <td class="text-nowrap">15</td>
+                      <td class="text-nowrap">1,5%</td>
+                      <td class="text-nowrap">0</td>
+                      <td class="text-nowrap">0</td>
+                      <td class="text-nowrap">0 ₫</td>
+                      <td class="text-nowrap">0 ₫</td>
+                      <td class="text-nowrap">0 ₫</td>
+                    </tr>
+                    <tr>
+                      <td class="text-nowrap text-left">
+                        <a href="/offers-detail.html" target="_blank" title="Xem offer này ở của sổ mới">watapy-oh-eh501</a>
+                      </td>
+                      <td class="text-nowrap">100</td>
+                      <td class="text-nowrap">15</td>
+                      <td class="text-nowrap">1,5%</td>
+                      <td class="text-nowrap">0</td>
+                      <td class="text-nowrap">0</td>
+                      <td class="text-nowrap">0 ₫</td>
+                      <td class="text-nowrap">0 ₫</td>
+                      <td class="text-nowrap">0 ₫</td>
+                    </tr>
+                    <tr>
+                      <td class="text-nowrap text-left">
+                        <a href="/offers-detail.html" target="_blank" title="Xem offer này ở của sổ mới">watapy-oh-eh501</a>
+                      </td>
+                      <td class="text-nowrap">100</td>
+                      <td class="text-nowrap">15</td>
+                      <td class="text-nowrap">1,5%</td>
+                      <td class="text-nowrap">0</td>
+                      <td class="text-nowrap">0</td>
+                      <td class="text-nowrap">0 ₫</td>
+                      <td class="text-nowrap">0 ₫</td>
+                      <td class="text-nowrap">0 ₫</td>
+                    </tr>
+                    <tr>
+                      <td class="text-nowrap text-left">
+                        <a href="/offers-detail.html" target="_blank" title="Xem offer này ở của sổ mới">watapy-oh-eh501</a>
+                      </td>
+                      <td class="text-nowrap">100</td>
+                      <td class="text-nowrap">15</td>
+                      <td class="text-nowrap">1,5%</td>
+                      <td class="text-nowrap">0</td>
+                      <td class="text-nowrap">0</td>
+                      <td class="text-nowrap">0 ₫</td>
+                      <td class="text-nowrap">0 ₫</td>
+                      <td class="text-nowrap">0 ₫</td>
+                    </tr>
+                </tbody>
+              </table>
+            </div>
+
+<div class="row mt-3">
+  <div class="col text-secondary">
+    Hiện thị 40 - 60 trong tổng số 120
+  </div>
+  <div class="col-auto">
+    <nav aria-label="...">
+      <ul class="pagination">
+        <li class="page-item disabled">
+          <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Trước</a>
+        </li>
+        <li class="page-item">
+          <a class="page-link" href="#">1</a>
+        </li>
+        <li class="page-item active" aria-current="page">
+          <a class="page-link" href="#">2 <span class="sr-only">(hiện tại)</span></a>
+        </li>
+        <li class="page-item">
+          <a class="page-link" href="#">3</a>
+        </li>
+        <li class="page-item">
+          <a class="page-link" href="#">Sau</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</div>          </div>
+        </section>
+
       </div>
-    </main>
-    <!-- end: main content of this page -->
+    </div>
+  </main>
+  <!-- end: main content of this page -->
 
       </div>
       
@@ -364,7 +453,6 @@
   <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>    <script src="/static/scripts/main.js?ver=2.1.0"></script>
 
-    <scripts></scripts>
 
   </body>
 </html>

@@ -1,0 +1,125 @@
+{% extends 'layouts/default.html' %}
+
+{% block content %}
+  <!-- begin: main content of this page -->
+  <main class="flex-grow-1">
+    <div class="container">
+      <div class="page-header position-relative pt-4 pb-5 px-lg-3">
+        <div class="row align-items-center">
+          <div class="col-lg">
+            <h2 class="page-title m-0 text-500 font-medium">{{ page.title }}</h2>
+          </div>
+          <div class="col-lg-auto mt-3 mt-lg-0">
+            <a href="{{ paths.root }}/offers.html" class="btn btn-outline-secondary">
+              Bỏ qua
+            </a>
+            <button class="btn btn-primary">
+              Lưu thông tin
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="contentpanel position-relative px-lg-3 pb-4">
+        <form>
+          <div class="row">
+            <div class="col-lg-8">
+              <section class="card mb-3">
+                <div class="card-header">
+                  <div class="text-300 text-uppercase font-medium">Thông tin</div>
+                </div>
+                <div class="card-body">
+                  <div class="form-group">
+                    <label>Tên offer</label>
+                    <input type="text" class="form-control" value="Máy Tạo Nước ION Kiềm Tươi OH- Model EH501"/>
+                  </div>
+                  <div class="row">
+                    <div class="col-lg-6">
+                      <div class="form-group">
+                        <label>Offer ID</label>
+                        <input type="text" class="form-control is-invalid" value="watapy-oh-eh501"/>
+                        <div class="invalid-feedback">
+                          Thông tin bắt buộc
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-lg-6">
+                      <div class="form-group">
+                        <label>Danh mục</label>
+                        <select class="form-control">
+                          <option disabled>- Chọn một danh mục -</option>
+                          <option value="1" selected>Máy lọc nước</option>
+                          <option value="2">Mỹ phẩm</option>
+                          <option value="3">Thời trang</option>
+                        </select>
+                      </div>  
+                    </div>
+                    <div class="col-lg-6">
+                      <div class="form-group">
+                        <label>Tag</label>
+                        <select class="form-control">
+                          <option selected>- Không chọn tag -</option>
+                          <option value="1">New</option>
+                          <option value="2" selected>Hot</option>
+                          <option value="3">Tạm dừng</option>
+                        </select>
+                      </div>  
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-lg-6">
+                      <div class="form-group">
+                        <label>Giá chia sẻ 1 SP (₫)</label>
+                        <input type="text" class="form-control" value="52600000" />
+                      </div>  
+                    </div>
+                    <div class="col-lg-6">
+                      <div class="form-group">
+                        <label>Giá chia sẻ 2 SP (₫)</label>
+                        <input type="text" class="form-control" value="30200000" />
+                      </div>  
+                    </div>
+                  </div>
+                  
+                  <div class="form-group">
+                    <label>Mô tả</label>
+                    <textarea class="form-control" rows="4">Nước ION kiềm tươi OH- (nước điện giải) là một loại nước được sản xuất bằng công nghệ điện phân. Tương tự loại nước tồn tại trong cơ thể sống có các tính chất đặc trưng như giàu vi khoáng, kiềm tính, giàu chất chống ô xy hóa và gồm các cụm phân tử nước được chia nhỏ.</textarea>
+                  </div>
+                </div>
+              </section>
+            </div>
+            <div class="col-lg-4">
+              <section class="card mb-3">
+                <div class="card-header">
+                  <div class="text-300 text-uppercase font-medium">Ảnh đại diện</div>
+                </div>
+                <div class="card-body">
+                  <div class="form-group">
+                    <div class="border rounded p-3 d-flex align-items-center justify-content-center" style="border-style:dashed !important; min-height:100px">
+                      <div>
+                        <img src="{{ paths.root + paths.images }}/no-photo.jpg" class="img-fluid"/>
+                      </div>
+                    </div>
+                  </div>
+                  <div>
+                    <label class="btn btn-sm btn-outline-secondary btn-block">
+                        Chọn ảnh... <input type="file" hidden />
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </main>
+    <!-- end: main content of this page -->
+
+  {% endblock %}
+
+  {% block scripts %}
+    <scripts></scripts>
+  {% endblock %}

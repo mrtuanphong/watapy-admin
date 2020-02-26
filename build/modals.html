@@ -25,6 +25,20 @@
     </div>
     <div class="row">
         <div class="col-sm-6 col-md-3 mb-3">
+          <a href="modals.html#news-delete-confirmation" title="Tin tức: Xác nhận xóa" onclick="$('#modal-news-delete-confirmation').modal();" class="card h-100">
+            <div class="card-body px-3 py-4">
+              <div class="text-300 text-body">Tin tức: Xác nhận xóa</div>
+            </div>
+          </a>
+        </div>
+        <div class="col-sm-6 col-md-3 mb-3">
+          <a href="modals.html#offers-delete-confirmation" title="Offers: Xác nhận xóa" onclick="$('#modal-offers-delete-confirmation').modal();" class="card h-100">
+            <div class="card-body px-3 py-4">
+              <div class="text-300 text-body">Offers: Xác nhận xóa</div>
+            </div>
+          </a>
+        </div>
+        <div class="col-sm-6 col-md-3 mb-3">
           <a href="modals.html#transactions-transfer" title="Giao dịch: Chuyển WEC" onclick="$('#modal-transactions-transfer').modal();" class="card h-100">
             <div class="card-body px-3 py-4">
               <div class="text-300 text-body">Giao dịch: Chuyển WEC</div>
@@ -370,6 +384,62 @@
       </div>
     </div>
   </div>
+  <div class="modal fade" id="modal-offers-delete-confirmation" tabindex="-1" role="dialog">
+    <div class="modal-dialog " role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-title">Xác nhận</h5>
+
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+
+        
+        <div class="modal-body">
+            <p>Bạn có chắc chắn muốn xóa Offer này?</p>
+
+        </div>
+        
+
+          <div class="modal-footer">
+              <button class="btn btn-outline-secondary" data-dismiss="modal" type="button">Bỏ qua</button>
+  <button class="btn btn-danger" data-dismiss="modal" type="button">Xóa Offer</button>
+
+          </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="modal fade" id="modal-news-delete-confirmation" tabindex="-1" role="dialog">
+    <div class="modal-dialog " role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-title">Xác nhận</h5>
+
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+
+        
+        <div class="modal-body">
+            <p>Bạn có chắc chắn muốn xóa bài tin này?</p>
+
+        </div>
+        
+
+          <div class="modal-footer">
+              <button class="btn btn-outline-secondary" data-dismiss="modal" type="button">Bỏ qua</button>
+  <button class="btn btn-danger" data-dismiss="modal" type="button">Xóa bài tin</button>
+
+          </div>
+      </div>
+    </div>
+  </div>
+
+
 
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>

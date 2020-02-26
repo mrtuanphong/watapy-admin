@@ -9,7 +9,11 @@
           <div class="col-lg">
             <h2 class="page-title m-0 text-500 font-medium">{{ page.title }}</h2>
           </div>
-          <div class="col-lg-auto text-right mt-3 mt-lg-0"></div>
+          <div class="col-lg-auto text-right mt-3 mt-lg-0">
+            <a href="{{ paths.root }}/offers-add.html" class="btn btn-primary">
+              Tạo Offer
+            </a>
+          </div>
         </div>
       </div>
 
@@ -45,9 +49,9 @@
         </section>
         
         <section class="card">
-          {# <div class="card-header">
+          <div class="card-header">
             <div class="text-300 text-uppercase font-medium">Danh sách</div>
-          </div> #}
+          </div>
           <div class="card-body">
             <div class="alert alert-warning" role="alert">
               Không tìm thấy kết quả nào phù hợp. Vui lòng thử lại!
@@ -59,7 +63,7 @@
                     <th scope="col">&nbsp;</th>
                     <th scope="col">Tên sản phẩm</th>
                     <th scope="col">Danh mục</th>
-                    <th scope="col">Giá bán</th>
+                    <th scope="col">Giá chia sẻ</th>
                     <th scope="col">&nbsp;</th>
                   </tr>
                 </thead>
@@ -77,8 +81,16 @@
                         <span class="badge badge-pill badge-warning">NEW</span>
                       </td>
                       <td>Máy lọc nước</td>
-                      <td>62.000.000đ</td>
+                      <td>
+                        <span class="text-muted">1SP:</span> 62.000.000 ₫<br />
+                        <span class="text-muted">2SP:</span> 30.200.000 ₫
+                      </td>
                       <td class="text-right">
+                        <!-- Chỉ hiện link sửa/xóa cho quản trị viên: -->
+                        <a href="{{ paths.root }}/offers-edit.html" class="btn btn-outline-primary btn-sm" title=""><i class="fa fa-edit"></i></a>
+                        <button class="btn btn-sm btn-outline-danger mr-2" data-toggle="modal" data-target="#modal-offers-delete-confirmation">
+                          <i class="fa fa-trash"></i>
+                        </button>
                         <a href="{{ paths.root }}/offers-detail.html" class="btn btn-primary btn-sm" title="">Lấy link</a>
                       </td>
                     </tr>
@@ -96,4 +108,8 @@
   </main>
   <!-- end: main content of this page -->
 
+{% endblock %}
+
+{% block modals %}
+  {% include "partials/modals/offers-delete-confirmation.html" %}
 {% endblock %}

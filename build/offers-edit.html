@@ -5,7 +5,7 @@
   <meta http-equiv="x-ua-compatible" content="ie=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <title>Sửa ngân hàng</title>
+  <title>Sửa Offer</title>
   <meta name="description" content="(site meta description)" />
   <link rel="shortcut icon" type="image/png" href="/favicon-16x16.png">
 
@@ -19,7 +19,7 @@
   </head>
   <body class="">
     
-    <div class="page is-banks-edit text-200">
+    <div class="page is-offers-edit text-200">
       
       
 
@@ -260,10 +260,10 @@
       <div class="page-header position-relative pt-4 pb-5 px-lg-3">
         <div class="row align-items-center">
           <div class="col-lg">
-            <h2 class="page-title m-0 text-500 font-medium">Sửa ngân hàng</h2>
+            <h2 class="page-title m-0 text-500 font-medium">Sửa Offer</h2>
           </div>
           <div class="col-lg-auto mt-3 mt-lg-0">
-            <a href="/banks.html" class="btn btn-outline-secondary">
+            <a href="/offers.html" class="btn btn-outline-secondary">
               Bỏ qua
             </a>
             <button class="btn btn-primary">
@@ -279,40 +279,67 @@
             <div class="col-lg-8">
               <section class="card mb-3">
                 <div class="card-header">
-                  <div class="text-300 text-uppercase font-medium">Thông tin ngân hàng</div>
+                  <div class="text-300 text-uppercase font-medium">Thông tin</div>
                 </div>
                 <div class="card-body">
                   <div class="form-group">
-                    <label>Mã ngân hàng</label>
-                    <input type="text" class="form-control" placeholder="Ví dụ: ICBV" value="VPBANK" />
+                    <label>Tên offer</label>
+                    <input type="text" class="form-control" value="Máy Tạo Nước ION Kiềm Tươi OH- Model EH501"/>
                   </div>
-                  <div class="form-group">
-                    <label>Tên giao dịch</label>
-                    <input type="text" class="form-control" placeholder="Ví dụ: Vietinbank" value="VP Bank" />
-                    <div class="invalid-feedback">
-                      Nhập tên giao dịch
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <label>Tên đầy đủ</label>
-                    <input type="text" class="form-control" placeholder="Ví dụ: Ngân Hàng TMCP Công Thương Việt Nam" value="Ngân hàng Việt Nam Thịnh Vượng" />
-                  </div>
-                  <div class="form-group">
-                    <label>Màu chủ đạo</label>
-                    <input type="text" class="form-control" placeholder="Ví dụ: #707bcc" value="#707bcc"/>
-                  </div>
-                  <div class="form-group">
-                    <label>Trạng thái</label>
-                    <div>
-                      <div class="custom-control custom-radio custom-control-inline">
-                        <input type="radio" id="bank-active" name="bank-status" class="custom-control-input" checked>
-                        <label class="custom-control-label" for="bank-active">Hoạt động</label>
-                      </div>
-                      <div class="custom-control custom-radio custom-control-inline">
-                        <input type="radio" id="bank-inactive" name="bank-status" class="custom-control-input">
-                        <label class="custom-control-label" for="bank-inactive">Ngừng hoạt động</label>
+                  <div class="row">
+                    <div class="col-lg-6">
+                      <div class="form-group">
+                        <label>Offer ID</label>
+                        <input type="text" class="form-control is-invalid" value="watapy-oh-eh501"/>
+                        <div class="invalid-feedback">
+                          Thông tin bắt buộc
+                        </div>
                       </div>
                     </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-lg-6">
+                      <div class="form-group">
+                        <label>Danh mục</label>
+                        <select class="form-control">
+                          <option disabled>- Chọn một danh mục -</option>
+                          <option value="1" selected>Máy lọc nước</option>
+                          <option value="2">Mỹ phẩm</option>
+                          <option value="3">Thời trang</option>
+                        </select>
+                      </div>  
+                    </div>
+                    <div class="col-lg-6">
+                      <div class="form-group">
+                        <label>Tag</label>
+                        <select class="form-control">
+                          <option selected>- Không chọn tag -</option>
+                          <option value="1">New</option>
+                          <option value="2" selected>Hot</option>
+                          <option value="3">Tạm dừng</option>
+                        </select>
+                      </div>  
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-lg-6">
+                      <div class="form-group">
+                        <label>Giá chia sẻ 1 SP (₫)</label>
+                        <input type="text" class="form-control" value="52600000" />
+                      </div>  
+                    </div>
+                    <div class="col-lg-6">
+                      <div class="form-group">
+                        <label>Giá chia sẻ 2 SP (₫)</label>
+                        <input type="text" class="form-control" value="30200000" />
+                      </div>  
+                    </div>
+                  </div>
+                  
+                  <div class="form-group">
+                    <label>Mô tả</label>
+                    <textarea class="form-control" rows="4">Nước ION kiềm tươi OH- (nước điện giải) là một loại nước được sản xuất bằng công nghệ điện phân. Tương tự loại nước tồn tại trong cơ thể sống có các tính chất đặc trưng như giàu vi khoáng, kiềm tính, giàu chất chống ô xy hóa và gồm các cụm phân tử nước được chia nhỏ.</textarea>
                   </div>
                 </div>
               </section>
@@ -320,13 +347,13 @@
             <div class="col-lg-4">
               <section class="card mb-3">
                 <div class="card-header">
-                  <div class="text-300 text-uppercase font-medium">Logo</div>
+                  <div class="text-300 text-uppercase font-medium">Ảnh đại diện</div>
                 </div>
                 <div class="card-body">
                   <div class="form-group">
                     <div class="border rounded p-3 d-flex align-items-center justify-content-center" style="border-style:dashed !important; min-height:100px">
                       <div>
-                        <img src="/static/images/banks/vpbank.png" class="img-fluid"/>
+                        <img src="/static/images/no-photo.jpg" class="img-fluid"/>
                       </div>
                     </div>
                   </div>

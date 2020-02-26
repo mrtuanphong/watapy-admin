@@ -40,7 +40,19 @@
       "stylesheets": ["main"],
       "scripts": ["main"]
     },
-    "offers-approved": {
+    "offers-add": {
+      "title": "Tạo Offer",
+      "description": "",
+      "stylesheets": ["main"],
+      "scripts": ["main"]
+    },
+    "offers-edit": {
+      "title": "Sửa Offer",
+      "description": "",
+      "stylesheets": ["main"],
+      "scripts": ["main"]
+    },
+    "offers-my-offers": {
       "title": "Offer của tôi",
       "description": "",
       "stylesheets": ["main"],
@@ -191,10 +203,10 @@
             "children": "Danh sách Offer"
           },
           {
-            "id": "offers-approved",
-            "path": "/offers-approved.html",
+            "id": "offers-my-offers",
+            "path": "/offers-my-offers.html",
             "icon": "fa-caret-right",
-            "children": "Offer được duyệt"
+            "children": "Offer của tôi"
           }
         ]
       },
@@ -248,6 +260,14 @@
     {
       "id": "transactions-transfer",
       "title": "Giao dịch: Chuyển WEC"
+    },
+    {
+      "id": "offers-delete-confirmation",
+      "title": "Offers: Xác nhận xóa"
+    },
+    {
+      "id": "news-delete-confirmation",
+      "title": "Tin tức: Xác nhận xóa"
     }
   ]
 }

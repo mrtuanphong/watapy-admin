@@ -77,7 +77,7 @@
                     <th scope="col">Email</th>
                     <th scope="col">Ngày đăng ký</th>
                     <th scope="col" width="90">Trạng thái</th>
-                    <th scope="col" width="160">&nbsp;</th>
+                    <th scope="col" width="100">&nbsp;</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -93,11 +93,11 @@
                       <td>28/11/2019</td>
                       <td><span class="badge badge-success">Hoạt động</span></td>
                       <td class="text-right">
-                        <a href="{{ paths.root }}/users-edit.html" class="btn btn-sm btn-outline-primary">
-                          <i class="fa fa-edit"></i> Sửa
+                        <a href="{{ paths.root }}/users-edit.html" class="btn btn-sm btn-outline-primary" title="Sửa">
+                          <i class="fa fa-edit"></i>
                         </a>
-                        <button class="btn btn-sm btn-outline-danger ml-1" data-toggle="modal" data-target="#modal-users-delete-confirmation">
-                          <i class="fa fa-trash"></i> Xóa
+                        <button class="btn btn-sm btn-outline-danger ml-1" data-toggle="modal" data-target="#modal-users-delete-confirmation" title="Xóa tài khoản">
+                          <i class="fa fa-trash"></i>
                         </button>
                       </td>
                     </tr>

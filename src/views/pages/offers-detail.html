@@ -9,45 +9,58 @@
           <div class="col-lg">
             <h2 class="page-title m-0 text-500 font-medium">{{ page.title }}</h2>
           </div>
-          <div class="col-lg-auto text-right mt-3 mt-lg-0"></div>
+          <div class="col-lg-auto text-right mt-3 mt-lg-0">
+            {# <a href="{{ paths.root }}/offers.html" class="btn btn-outline-secondary">
+              Danh sách Offer
+            </a> #}
+          </div>
         </div>
       </div>
 
       <div class="contentpanel position-relative px-lg-3 pb-4">
         <div class="row">
           <!-- Left: -->
-          <div class="col-md-4 col-xl-3">
+          <div class="col-md-4">
             <section class="card mb-4">
               {# <div class="card-header">
-                <div class="text-300 text-uppercase font-medium">Logo</div>
+                <div class="text-300 text-uppercase font-medium">Thông tin sản phẩm</div>
               </div> #}
-              <div class="card-body">
-                <div class="form-group">
-                  <div class="d-flex align-items-center justify-content-center">
-                    <img src="{{ paths.root + paths.images }}/products/product-1.png" class="img-fluid">
+              <div class="list-group list-group-flush">
+                <div class="list-group-item">
+                  <div class="form-group">
+                    <div class="d-flex align-items-center justify-content-center">
+                      <img src="{{ paths.root + paths.images }}/products/product-1.png" class="img-fluid">
+                    </div>
                   </div>
-                </div>
-                <div class="text-300">Máy Tạo Nước ION Kiềm Tươi OH- Model EH501</div>
-              </div>
-              <div class="list-group list-group-flush border-top">
+                  <div class="text-300 font-bold">Máy Tạo Nước ION Kiềm Tươi OH- Model EH501</div>
+                </div>              
                 <div class="list-group-item">
-                  Offer ID: id_210394
+                  <span class="text-muted">Offer ID:</span> watapy-oh-eh501
                 </div>
                 <div class="list-group-item">
-                  Giá chia sẻ: <strong>52.600.000đ</strong>
+                  <span class="text-muted">Giá chia sẻ 1SP:</span>
+                  <strong class="d-inline-block">52.600.000 ₫</strong><br/>
+                  <span class="text-muted">Giá chia sẻ 2SP:</span>
+                  <strong class="d-inline-block">30.200.000 ₫</strong>
+                </div>
+                <div class="list-group-item">
+                  <span class="text-muted">Danh mục:</span> Máy lọc nước
+                </div>
+                <div class="list-group-item">
+                  <span class="text-muted">Mô tả:</span> Nước ION kiềm tươi OH- (nước điện giải) là một loại nước được sản xuất bằng công nghệ điện phân. Tương tự loại nước tồn tại trong cơ thể sống có các tính chất đặc trưng như giàu vi khoáng, kiềm tính, giàu chất chống ô xy hóa và gồm các cụm phân tử nước được chia nhỏ.
                 </div>
               </div>
             </section>
           </div>
 
           <!-- Right: -->
-          <div class="col-md-8 col-xl-9">
-            <section class="card h-100">
+          <div class="col-md-8">
+            <section class="card">
               <div class="card-header">
                 <!-- Nav tabs -->
                 <ul class="nav nav-tabs card-header-tabs" id="myTab" role="tablist">
                   <li class="nav-item">
-                    <a class="nav-link active" id="share-tab" data-toggle="tab" href="#share" role="tab" aria-controls="home" aria-selected="true">Tạo link chia sẻ</a>
+                    <a class="nav-link active" id="share-tab" data-toggle="tab" href="#share" role="tab" aria-controls="home" aria-selected="true">TẠO LINK CHIA SẺ</a>
                   </li>
                   <!--
                   <li class="nav-item">
@@ -60,7 +73,78 @@
                 <!-- Tab panes -->
                 <div class="tab-content p-0">
                   <div class="tab-pane active" id="share" role="tabpanel">
-                    123243
+                    <div class="form-group">
+                      <label class="font-medium">Tracking link:</label>
+                      <input type="text" class="form-control text-200 mb-2" value="http://domain.com/0XgFW6jxQ5LaaevmVykY?aff_sub1=demo_value" readonly />                    
+                      <div class="form-group d-flex align-items-center">
+                        <button class="btn btn-primary btn-sm" type="button" onclick="$(this).next().toggle();">Sao chép</button>
+                        <div>
+                          <span class="text-success ml-3"><i class="fa fa-check-circle"></i> Đã sao chép link!</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <hr />
+
+                    <div class="row">
+                      <div class="col-lg-6">
+                        <div class="form-group">
+                          <label class="font-medium">Pre Landing Page:</label>
+                          <div class="custom-control custom-radio">
+                            <input type="radio" id="pre_landing_page_1" name="pre-landing-page" class="custom-control-input" checked />
+                            <label class="custom-control-label" for="pre_landing_page_1">No Pre Landing Page</label>
+                          </div>
+                          <div class="custom-control custom-radio">
+                            <input type="radio" id="pre_landing_page_2" name="pre-landing-page" class="custom-control-input" />
+                            <label class="custom-control-label" for="pre_landing_page_2">Báo Mới News</label>
+                            <a href="https://muahangnhanh.live/herbalstomaxcare-vn/baomoi/?click_id={clickId}&aff_sub1={aff_sub1}&aff_sub2={aff_sub2}&aff_sub3={aff_sub3}&aff_sub4={aff_sub4}&aff_sub5={aff_sub5}#forward" target="_blank" title="Xem thử" class="text-dark ml-1"><i class="fa fa-external-link"></i></a>
+                          </div>
+                          <div class="custom-control custom-radio">
+                            <input type="radio" id="pre_landing_page_3" name="pre-landing-page" class="custom-control-input" />
+                            <label class="custom-control-label" for="pre_landing_page_3">Sức khỏe Blog</label>
+                            <a href="https://muahangnhanh.live/herbalstomaxcare-vn/suckhoe/?click_id={clickId}&aff_sub1={aff_sub1}&aff_sub2={aff_sub2}&aff_sub3={aff_sub3}&aff_sub4={aff_sub4}&aff_sub5={aff_sub5}" target="_blank" title="Xem thử" class="text-dark ml-1"><i class="fa fa-external-link"></i></a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-6">
+                        <div class="form-group">
+                          <label class="font-medium">Landing Page:</label>
+                          <div class="custom-control custom-radio">
+                            <input type="radio" id="landing_page_1" name="landing-page" class="custom-control-input" checked />
+                            <label class="custom-control-label" for="landing_page_1">Default</label>
+                            <a href="http://zxc.world/stomaxcare-vn/loancat543" target="_blank" title="Xem thử" class="text-dark ml-1"><i class="fa fa-external-link"></i></a>
+                          </div>
+                          <div class="custom-control custom-radio">
+                            <input type="radio" id="landing_page_2" name="landing-page" class="custom-control-input" />
+                            <label class="custom-control-label" for="landing_page_2">Kichmen 2</label>
+                            <a href="https://a-kichmen-vn.fastbuy.biz/?click_id={clickId}&aff_sub1={aff_sub1}&aff_sub2={aff_sub2}&aff_sub3={aff_sub3}&aff_sub4={aff_sub4}&aff_sub5={aff_sub5}" target="_blank" title="Xem thử" class="text-dark ml-1"><i class="fa fa-external-link"></i></a>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="col-lg-12">
+                        <div class="text-muted">
+                          <i class="fa fa-info-circle"></i> <i>Lưu ý: Các link "Xem thử &nbsp;<i class="fa fa-external-link"></i>" ở trên chỉ được dùng để minh họa, hãy sao chép đúng tracking link của bạn ở phía trên để quảng cáo.</i>
+                        </div>
+                      </div>
+                    </div>
+
+                    <hr />
+
+                    <div class="form-group">
+                      <label class="font-medium">Tracking Parameters (Tùy chọn):</label>
+                      <div class="form-row">
+                        <div class="col-md-6">
+                          <input type="text" class="form-control mb-2" value="demo_value" placeholder="aff_sub1" />
+                          <input type="text" class="form-control mb-2" value="" placeholder="aff_sub2" />
+                          <input type="text" class="form-control mb-2" value="" placeholder="aff_sub3" />
+                          <input type="text" class="form-control mb-2" value="" placeholder="aff_sub4" />
+                          <input type="text" class="form-control mb-2" value="" placeholder="aff_sub5" />
+                        </div>
+                      </div>
+                    </div><!-- /form-group-->
+                    
+
                   </div>
                   <!--
                   <div class="tab-pane" id="form" role="tabpanel">

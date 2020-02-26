@@ -38,27 +38,6 @@
     <small><strong>Danh mục</strong></small>
   </div>
   <ul class="nav nav-pills flex-column nav-stacked nav-bracket">
-      <li class="nav-item ">
-        <a class="nav-link d-flex align-items-center py-2 " href="/wallet.html">
-          <i class="fa fa-credit-card"></i>
-          <span class="flex-grow-1">
-            Ví của tôi
-          </span>
-        </a>
-        
-        
-      </li>
-      <li class="nav-item ">
-        <a class="nav-link d-flex align-items-center py-2 " href="/transactions.html">
-          <i class="fa fa-exchange"></i>
-          <span class="flex-grow-1">
-            Giao dịch
-              <span class="pull-right badge badge-success">new</span>
-          </span>
-        </a>
-        
-        
-      </li>
       <li class="nav-item nav-parent">
         <a class="nav-link d-flex align-items-center py-2 " href="">
           <i class="fa fa-pie-chart"></i>
@@ -83,6 +62,27 @@
           </ul>
         
       </li>
+      <li class="nav-item ">
+        <a class="nav-link d-flex align-items-center py-2 " href="/wallet.html">
+          <i class="fa fa-credit-card"></i>
+          <span class="flex-grow-1">
+            Ví của tôi
+          </span>
+        </a>
+        
+        
+      </li>
+      <li class="nav-item ">
+        <a class="nav-link d-flex align-items-center py-2 " href="/transactions.html">
+          <i class="fa fa-exchange"></i>
+          <span class="flex-grow-1">
+            Giao dịch
+              <span class="pull-right badge badge-success">new</span>
+          </span>
+        </a>
+        
+        
+      </li>
       <li class="nav-item nav-parent">
         <a class="nav-link d-flex align-items-center py-2 " href="">
           <i class="fa fa-link"></i>
@@ -99,9 +99,9 @@
                 </a>
               </li>
               <li>
-                <a href="/offers-approved.html" class="py-2">
+                <a href="/offers-my-offers.html" class="py-2">
                   <i class="fa fa-caret-right"></i>
-                  <span>Offer được duyệt</span>
+                  <span>Offer của tôi</span>
                 </a>
               </li>
           </ul>
@@ -256,13 +256,466 @@
   
   <!-- /header -->  <!-- begin: main content of this page -->
   <main class="flex-grow-1">
-    <div class="page-header container-fluid d-flex align-items-center position-relative">
-      <h2 class="page-title my-3 mr-auto">Tin tức</h2>
-      
-    </div>
+    <div class="container">
+      <div class="page-header position-relative pt-4 pb-5 px-lg-3">
+        <div class="row align-items-center">
+          <div class="col-lg">
+            <h2 class="page-title m-0 text-500 font-medium">Tin tức</h2>
+          </div>
+          <div class="col-lg-auto text-right mt-3 mt-lg-0">
+            <a href="/news-add.html" class="btn btn-primary">
+              Tạo bài mới
+            </a>
+          </div>
+        </div>
+      </div>
 
-    <div class="contentpanel container-fluid position-relative py-3">
-      <p>Your content here...</p>
+      <div class="contentpanel position-relative px-lg-3 pb-4">
+        <section class="card mb-3">
+          <div class="card-body">
+            <form>
+              <div class="form-row align-items-end">
+                <div class="col-lg-4 col-xl-4">
+                  <div class="form-group mb-lg-0">
+                    <label>Từ khóa</label>
+                    <input type="text" class="form-control" placeholder="Nhập từ khóa"/>
+                  </div>
+                </div>
+                <div class="col-lg-3 col-xl-3">
+                  <div class="form-group mb-lg-0">
+                    <label>Danh mục</label>
+                    <select class="form-control">
+                      <option>Tất cả</option>
+                      <option value="6">Chuyên gia tư vấn</option>
+                      <option value="1">Sức khỏe</option>
+                      <option value="6">Làm đẹp</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-lg-3 col-xl-3">
+                  <div class="form-group mb-lg-0">
+                    <label>Trạng thái</label>
+                    <select class="form-control">
+                      <option>Tất cả</option>
+                      <option value="6">Đã xuất bản</option>
+                      <option value="1">Chờ duyệt</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-lg-2 col-xl-2">
+                  <div class="form-group mb-lg-0">
+                    <button type="submit" class="btn btn-primary btn-block">Tìm</button>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </section>
+        
+        <section class="card">
+          <div class="card-header">
+            <div class="text-300 text-uppercase font-medium">Danh sách</div>
+          </div>
+          <div class="card-body">
+            <div class="alert alert-warning" role="alert">
+              Không tìm thấy kết quả nào phù hợp. Vui lòng thử lại!
+            </div>
+            <div class="table-responsive">
+              <table class="table table-hover">
+                <thead>
+                  <tr>
+                    <th scope="col">&nbsp;</th>
+                    <th scope="col">Tiêu đề</th>
+                    <th scope="col">Danh mục</th>
+                    <th scope="col">Ngày tạo</th>
+                    <th scope="col">Trạng thái</th>
+                    <th scope="col">&nbsp;</th>
+                  </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                      <td width="32">
+                        <a href="/offers-detail.html">
+                          <img src="/static/images/no-photo.jpg" alt="" width="32" />
+                        </a>
+                      </td>
+                      <td>
+                        Việt Nam tăng 30 ca nghi nhiễm trong một ngày
+                      </td>
+                      <td>Sức khỏe</td>
+                      <td>
+                        26/2/2020, 08:03
+                      </td>
+                      <td>
+                        <span class="badge badge-success">Đã xuất bản</span><br />
+                        <span class="badge badge-warning">Chờ duyệt</span>
+                      </td>
+                      <td class="text-right">
+                        <a href="https://vnexpress.net/thoi-su/vnexpress-tron-19-tuoi-4060294.html" target="_blank" title="Xem thử" class="btn btn-outline-primary btn-sm"><i class="fa fa-external-link"></i></a>
+                        <a href="/news-edit.html" class="btn btn-outline-primary btn-sm" title="Sửa bài"><i class="fa fa-edit"></i></a>
+                        <button class="btn btn-sm btn-outline-danger ml-2" data-toggle="modal" data-target="#modal-news-delete-confirmation" title="Xóa bài">
+                          <i class="fa fa-trash"></i>
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td width="32">
+                        <a href="/offers-detail.html">
+                          <img src="/static/images/no-photo.jpg" alt="" width="32" />
+                        </a>
+                      </td>
+                      <td>
+                        Việt Nam tăng 30 ca nghi nhiễm trong một ngày
+                      </td>
+                      <td>Sức khỏe</td>
+                      <td>
+                        26/2/2020, 08:03
+                      </td>
+                      <td>
+                        <span class="badge badge-success">Đã xuất bản</span><br />
+                        <span class="badge badge-warning">Chờ duyệt</span>
+                      </td>
+                      <td class="text-right">
+                        <a href="https://vnexpress.net/thoi-su/vnexpress-tron-19-tuoi-4060294.html" target="_blank" title="Xem thử" class="btn btn-outline-primary btn-sm"><i class="fa fa-external-link"></i></a>
+                        <a href="/news-edit.html" class="btn btn-outline-primary btn-sm" title="Sửa bài"><i class="fa fa-edit"></i></a>
+                        <button class="btn btn-sm btn-outline-danger ml-2" data-toggle="modal" data-target="#modal-news-delete-confirmation" title="Xóa bài">
+                          <i class="fa fa-trash"></i>
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td width="32">
+                        <a href="/offers-detail.html">
+                          <img src="/static/images/no-photo.jpg" alt="" width="32" />
+                        </a>
+                      </td>
+                      <td>
+                        Việt Nam tăng 30 ca nghi nhiễm trong một ngày
+                      </td>
+                      <td>Sức khỏe</td>
+                      <td>
+                        26/2/2020, 08:03
+                      </td>
+                      <td>
+                        <span class="badge badge-success">Đã xuất bản</span><br />
+                        <span class="badge badge-warning">Chờ duyệt</span>
+                      </td>
+                      <td class="text-right">
+                        <a href="https://vnexpress.net/thoi-su/vnexpress-tron-19-tuoi-4060294.html" target="_blank" title="Xem thử" class="btn btn-outline-primary btn-sm"><i class="fa fa-external-link"></i></a>
+                        <a href="/news-edit.html" class="btn btn-outline-primary btn-sm" title="Sửa bài"><i class="fa fa-edit"></i></a>
+                        <button class="btn btn-sm btn-outline-danger ml-2" data-toggle="modal" data-target="#modal-news-delete-confirmation" title="Xóa bài">
+                          <i class="fa fa-trash"></i>
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td width="32">
+                        <a href="/offers-detail.html">
+                          <img src="/static/images/no-photo.jpg" alt="" width="32" />
+                        </a>
+                      </td>
+                      <td>
+                        Việt Nam tăng 30 ca nghi nhiễm trong một ngày
+                      </td>
+                      <td>Sức khỏe</td>
+                      <td>
+                        26/2/2020, 08:03
+                      </td>
+                      <td>
+                        <span class="badge badge-success">Đã xuất bản</span><br />
+                        <span class="badge badge-warning">Chờ duyệt</span>
+                      </td>
+                      <td class="text-right">
+                        <a href="https://vnexpress.net/thoi-su/vnexpress-tron-19-tuoi-4060294.html" target="_blank" title="Xem thử" class="btn btn-outline-primary btn-sm"><i class="fa fa-external-link"></i></a>
+                        <a href="/news-edit.html" class="btn btn-outline-primary btn-sm" title="Sửa bài"><i class="fa fa-edit"></i></a>
+                        <button class="btn btn-sm btn-outline-danger ml-2" data-toggle="modal" data-target="#modal-news-delete-confirmation" title="Xóa bài">
+                          <i class="fa fa-trash"></i>
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td width="32">
+                        <a href="/offers-detail.html">
+                          <img src="/static/images/no-photo.jpg" alt="" width="32" />
+                        </a>
+                      </td>
+                      <td>
+                        Việt Nam tăng 30 ca nghi nhiễm trong một ngày
+                      </td>
+                      <td>Sức khỏe</td>
+                      <td>
+                        26/2/2020, 08:03
+                      </td>
+                      <td>
+                        <span class="badge badge-success">Đã xuất bản</span><br />
+                        <span class="badge badge-warning">Chờ duyệt</span>
+                      </td>
+                      <td class="text-right">
+                        <a href="https://vnexpress.net/thoi-su/vnexpress-tron-19-tuoi-4060294.html" target="_blank" title="Xem thử" class="btn btn-outline-primary btn-sm"><i class="fa fa-external-link"></i></a>
+                        <a href="/news-edit.html" class="btn btn-outline-primary btn-sm" title="Sửa bài"><i class="fa fa-edit"></i></a>
+                        <button class="btn btn-sm btn-outline-danger ml-2" data-toggle="modal" data-target="#modal-news-delete-confirmation" title="Xóa bài">
+                          <i class="fa fa-trash"></i>
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td width="32">
+                        <a href="/offers-detail.html">
+                          <img src="/static/images/no-photo.jpg" alt="" width="32" />
+                        </a>
+                      </td>
+                      <td>
+                        Việt Nam tăng 30 ca nghi nhiễm trong một ngày
+                      </td>
+                      <td>Sức khỏe</td>
+                      <td>
+                        26/2/2020, 08:03
+                      </td>
+                      <td>
+                        <span class="badge badge-success">Đã xuất bản</span><br />
+                        <span class="badge badge-warning">Chờ duyệt</span>
+                      </td>
+                      <td class="text-right">
+                        <a href="https://vnexpress.net/thoi-su/vnexpress-tron-19-tuoi-4060294.html" target="_blank" title="Xem thử" class="btn btn-outline-primary btn-sm"><i class="fa fa-external-link"></i></a>
+                        <a href="/news-edit.html" class="btn btn-outline-primary btn-sm" title="Sửa bài"><i class="fa fa-edit"></i></a>
+                        <button class="btn btn-sm btn-outline-danger ml-2" data-toggle="modal" data-target="#modal-news-delete-confirmation" title="Xóa bài">
+                          <i class="fa fa-trash"></i>
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td width="32">
+                        <a href="/offers-detail.html">
+                          <img src="/static/images/no-photo.jpg" alt="" width="32" />
+                        </a>
+                      </td>
+                      <td>
+                        Việt Nam tăng 30 ca nghi nhiễm trong một ngày
+                      </td>
+                      <td>Sức khỏe</td>
+                      <td>
+                        26/2/2020, 08:03
+                      </td>
+                      <td>
+                        <span class="badge badge-success">Đã xuất bản</span><br />
+                        <span class="badge badge-warning">Chờ duyệt</span>
+                      </td>
+                      <td class="text-right">
+                        <a href="https://vnexpress.net/thoi-su/vnexpress-tron-19-tuoi-4060294.html" target="_blank" title="Xem thử" class="btn btn-outline-primary btn-sm"><i class="fa fa-external-link"></i></a>
+                        <a href="/news-edit.html" class="btn btn-outline-primary btn-sm" title="Sửa bài"><i class="fa fa-edit"></i></a>
+                        <button class="btn btn-sm btn-outline-danger ml-2" data-toggle="modal" data-target="#modal-news-delete-confirmation" title="Xóa bài">
+                          <i class="fa fa-trash"></i>
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td width="32">
+                        <a href="/offers-detail.html">
+                          <img src="/static/images/no-photo.jpg" alt="" width="32" />
+                        </a>
+                      </td>
+                      <td>
+                        Việt Nam tăng 30 ca nghi nhiễm trong một ngày
+                      </td>
+                      <td>Sức khỏe</td>
+                      <td>
+                        26/2/2020, 08:03
+                      </td>
+                      <td>
+                        <span class="badge badge-success">Đã xuất bản</span><br />
+                        <span class="badge badge-warning">Chờ duyệt</span>
+                      </td>
+                      <td class="text-right">
+                        <a href="https://vnexpress.net/thoi-su/vnexpress-tron-19-tuoi-4060294.html" target="_blank" title="Xem thử" class="btn btn-outline-primary btn-sm"><i class="fa fa-external-link"></i></a>
+                        <a href="/news-edit.html" class="btn btn-outline-primary btn-sm" title="Sửa bài"><i class="fa fa-edit"></i></a>
+                        <button class="btn btn-sm btn-outline-danger ml-2" data-toggle="modal" data-target="#modal-news-delete-confirmation" title="Xóa bài">
+                          <i class="fa fa-trash"></i>
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td width="32">
+                        <a href="/offers-detail.html">
+                          <img src="/static/images/no-photo.jpg" alt="" width="32" />
+                        </a>
+                      </td>
+                      <td>
+                        Việt Nam tăng 30 ca nghi nhiễm trong một ngày
+                      </td>
+                      <td>Sức khỏe</td>
+                      <td>
+                        26/2/2020, 08:03
+                      </td>
+                      <td>
+                        <span class="badge badge-success">Đã xuất bản</span><br />
+                        <span class="badge badge-warning">Chờ duyệt</span>
+                      </td>
+                      <td class="text-right">
+                        <a href="https://vnexpress.net/thoi-su/vnexpress-tron-19-tuoi-4060294.html" target="_blank" title="Xem thử" class="btn btn-outline-primary btn-sm"><i class="fa fa-external-link"></i></a>
+                        <a href="/news-edit.html" class="btn btn-outline-primary btn-sm" title="Sửa bài"><i class="fa fa-edit"></i></a>
+                        <button class="btn btn-sm btn-outline-danger ml-2" data-toggle="modal" data-target="#modal-news-delete-confirmation" title="Xóa bài">
+                          <i class="fa fa-trash"></i>
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td width="32">
+                        <a href="/offers-detail.html">
+                          <img src="/static/images/no-photo.jpg" alt="" width="32" />
+                        </a>
+                      </td>
+                      <td>
+                        Việt Nam tăng 30 ca nghi nhiễm trong một ngày
+                      </td>
+                      <td>Sức khỏe</td>
+                      <td>
+                        26/2/2020, 08:03
+                      </td>
+                      <td>
+                        <span class="badge badge-success">Đã xuất bản</span><br />
+                        <span class="badge badge-warning">Chờ duyệt</span>
+                      </td>
+                      <td class="text-right">
+                        <a href="https://vnexpress.net/thoi-su/vnexpress-tron-19-tuoi-4060294.html" target="_blank" title="Xem thử" class="btn btn-outline-primary btn-sm"><i class="fa fa-external-link"></i></a>
+                        <a href="/news-edit.html" class="btn btn-outline-primary btn-sm" title="Sửa bài"><i class="fa fa-edit"></i></a>
+                        <button class="btn btn-sm btn-outline-danger ml-2" data-toggle="modal" data-target="#modal-news-delete-confirmation" title="Xóa bài">
+                          <i class="fa fa-trash"></i>
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td width="32">
+                        <a href="/offers-detail.html">
+                          <img src="/static/images/no-photo.jpg" alt="" width="32" />
+                        </a>
+                      </td>
+                      <td>
+                        Việt Nam tăng 30 ca nghi nhiễm trong một ngày
+                      </td>
+                      <td>Sức khỏe</td>
+                      <td>
+                        26/2/2020, 08:03
+                      </td>
+                      <td>
+                        <span class="badge badge-success">Đã xuất bản</span><br />
+                        <span class="badge badge-warning">Chờ duyệt</span>
+                      </td>
+                      <td class="text-right">
+                        <a href="https://vnexpress.net/thoi-su/vnexpress-tron-19-tuoi-4060294.html" target="_blank" title="Xem thử" class="btn btn-outline-primary btn-sm"><i class="fa fa-external-link"></i></a>
+                        <a href="/news-edit.html" class="btn btn-outline-primary btn-sm" title="Sửa bài"><i class="fa fa-edit"></i></a>
+                        <button class="btn btn-sm btn-outline-danger ml-2" data-toggle="modal" data-target="#modal-news-delete-confirmation" title="Xóa bài">
+                          <i class="fa fa-trash"></i>
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td width="32">
+                        <a href="/offers-detail.html">
+                          <img src="/static/images/no-photo.jpg" alt="" width="32" />
+                        </a>
+                      </td>
+                      <td>
+                        Việt Nam tăng 30 ca nghi nhiễm trong một ngày
+                      </td>
+                      <td>Sức khỏe</td>
+                      <td>
+                        26/2/2020, 08:03
+                      </td>
+                      <td>
+                        <span class="badge badge-success">Đã xuất bản</span><br />
+                        <span class="badge badge-warning">Chờ duyệt</span>
+                      </td>
+                      <td class="text-right">
+                        <a href="https://vnexpress.net/thoi-su/vnexpress-tron-19-tuoi-4060294.html" target="_blank" title="Xem thử" class="btn btn-outline-primary btn-sm"><i class="fa fa-external-link"></i></a>
+                        <a href="/news-edit.html" class="btn btn-outline-primary btn-sm" title="Sửa bài"><i class="fa fa-edit"></i></a>
+                        <button class="btn btn-sm btn-outline-danger ml-2" data-toggle="modal" data-target="#modal-news-delete-confirmation" title="Xóa bài">
+                          <i class="fa fa-trash"></i>
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td width="32">
+                        <a href="/offers-detail.html">
+                          <img src="/static/images/no-photo.jpg" alt="" width="32" />
+                        </a>
+                      </td>
+                      <td>
+                        Việt Nam tăng 30 ca nghi nhiễm trong một ngày
+                      </td>
+                      <td>Sức khỏe</td>
+                      <td>
+                        26/2/2020, 08:03
+                      </td>
+                      <td>
+                        <span class="badge badge-success">Đã xuất bản</span><br />
+                        <span class="badge badge-warning">Chờ duyệt</span>
+                      </td>
+                      <td class="text-right">
+                        <a href="https://vnexpress.net/thoi-su/vnexpress-tron-19-tuoi-4060294.html" target="_blank" title="Xem thử" class="btn btn-outline-primary btn-sm"><i class="fa fa-external-link"></i></a>
+                        <a href="/news-edit.html" class="btn btn-outline-primary btn-sm" title="Sửa bài"><i class="fa fa-edit"></i></a>
+                        <button class="btn btn-sm btn-outline-danger ml-2" data-toggle="modal" data-target="#modal-news-delete-confirmation" title="Xóa bài">
+                          <i class="fa fa-trash"></i>
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td width="32">
+                        <a href="/offers-detail.html">
+                          <img src="/static/images/no-photo.jpg" alt="" width="32" />
+                        </a>
+                      </td>
+                      <td>
+                        Việt Nam tăng 30 ca nghi nhiễm trong một ngày
+                      </td>
+                      <td>Sức khỏe</td>
+                      <td>
+                        26/2/2020, 08:03
+                      </td>
+                      <td>
+                        <span class="badge badge-success">Đã xuất bản</span><br />
+                        <span class="badge badge-warning">Chờ duyệt</span>
+                      </td>
+                      <td class="text-right">
+                        <a href="https://vnexpress.net/thoi-su/vnexpress-tron-19-tuoi-4060294.html" target="_blank" title="Xem thử" class="btn btn-outline-primary btn-sm"><i class="fa fa-external-link"></i></a>
+                        <a href="/news-edit.html" class="btn btn-outline-primary btn-sm" title="Sửa bài"><i class="fa fa-edit"></i></a>
+                        <button class="btn btn-sm btn-outline-danger ml-2" data-toggle="modal" data-target="#modal-news-delete-confirmation" title="Xóa bài">
+                          <i class="fa fa-trash"></i>
+                        </button>
+                      </td>
+                    </tr>
+                </tbody>
+              </table>
+            </div>
+
+<div class="row mt-3">
+  <div class="col text-secondary">
+    Hiện thị 40 - 60 trong tổng số 120
+  </div>
+  <div class="col-auto">
+    <nav aria-label="...">
+      <ul class="pagination">
+        <li class="page-item disabled">
+          <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Trước</a>
+        </li>
+        <li class="page-item">
+          <a class="page-link" href="#">1</a>
+        </li>
+        <li class="page-item active" aria-current="page">
+          <a class="page-link" href="#">2 <span class="sr-only">(hiện tại)</span></a>
+        </li>
+        <li class="page-item">
+          <a class="page-link" href="#">3</a>
+        </li>
+        <li class="page-item">
+          <a class="page-link" href="#">Sau</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</div>          </div>
+        </section>
+
+      </div>
     </div>
   </main>
   <!-- end: main content of this page -->
@@ -273,6 +726,34 @@
       
       
     </div>
+
+  <div class="modal fade" id="modal-news-delete-confirmation" tabindex="-1" role="dialog">
+    <div class="modal-dialog " role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-title">Xác nhận</h5>
+
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+
+        
+        <div class="modal-body">
+            <p>Bạn có chắc chắn muốn xóa bài tin này?</p>
+
+        </div>
+        
+
+          <div class="modal-footer">
+              <button class="btn btn-outline-secondary" data-dismiss="modal" type="button">Bỏ qua</button>
+  <button class="btn btn-danger" data-dismiss="modal" type="button">Xóa bài tin</button>
+
+          </div>
+      </div>
+    </div>
+  </div>
+
 
 
     

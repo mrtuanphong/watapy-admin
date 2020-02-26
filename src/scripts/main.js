@@ -39,7 +39,7 @@ $(document).ready(function () {
 
   // Tooltip
   jQuery('[data-toggle="tooltip"]').tooltip({ 
-    container: 'body' 
+    container: 'body'
   });
 
   // Popover
