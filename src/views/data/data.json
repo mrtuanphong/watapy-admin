@@ -58,6 +58,12 @@
       "stylesheets": ["main"],
       "scripts": ["main"]
     },
+    "offers-report": {
+      "title": "Báo cáo hiệu quả",
+      "description": "",
+      "stylesheets": ["main"],
+      "scripts": ["main"]
+    },
     "offers-detail": {
       "title": "Chi tiết Offer",
       "description": "",
@@ -207,14 +213,14 @@
             "path": "/offers-my-offers.html",
             "icon": "fa-caret-right",
             "children": "Offer của tôi"
+          },
+          {
+            "id": "offers-report",
+            "path": "/offers-report.html",
+            "icon": "fa-caret-right",
+            "children": "Báo cáo hiệu quả"
           }
         ]
-      },
-      {
-        "id": "news",
-        "path": "/news.html",
-        "icon": "fa-newspaper-o",
-        "children": "Tin tức"
       },
       {
         "id": "users",

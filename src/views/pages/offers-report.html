@@ -1,0 +1,111 @@
+{% extends 'layouts/default.html' %}
+
+{% block content %}
+  <!-- begin: main content of this page -->
+  <main class="flex-grow-1">
+    <div class="container">
+      <div class="page-header position-relative pt-4 pb-5 px-lg-3">
+        <div class="row align-items-center">
+          <div class="col-lg">
+            <h2 class="page-title m-0 text-500 font-medium">{{ page.title }}</h2>
+          </div>
+          <div class="col-lg-auto text-right mt-3 mt-lg-0"></div>
+        </div>
+      </div>
+
+      <div class="contentpanel position-relative px-lg-3 pb-4">
+        {# <section class="card mb-3">
+          <div class="card-body">
+            <form>
+              <div class="form-row align-items-end">
+                <div class="col-lg-4 col-xl-4">
+                  <div class="form-group mb-lg-0">
+                    <label>Từ khóa</label>
+                    <input type="text" class="form-control" placeholder="Nhập tên sản phẩm"/>
+                  </div>
+                </div>
+                <div class="col-lg-3 col-xl-3">
+                  <div class="form-group mb-lg-0">
+                    <label>Danh mục</label>
+                    <select class="form-control">
+                      <option>Tất cả</option>
+                      <option value="1">Máy lọc nước</option>
+                      <option value="6">Danh mục ABC</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-lg-2 col-xl-2">
+                  <div class="form-group mb-lg-0">
+                    <button type="submit" class="btn btn-primary btn-block">Tìm</button>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </section> #}
+
+        <section class="card">
+          <div class="card-header">
+            <div class="row align-items-center">
+              <div class="col-lg">
+                <div class="text-300 text-uppercase font-medium">Danh sách</div>
+              </div>
+              <div class="col-lg-auto mt-3 mt-lg-0">
+                <select class="form-control form-control-sm">
+                  <option selected>Tất cả</option>
+                  <option value="1">Được duyệt</option>
+                  <option value="2">Đang chờ duyệt</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="alert alert-warning" role="alert">
+              Bạn chưa có offer nào.
+            </div>           
+
+            <div class="table-responsive">
+              <table class="table table-hover text-right">
+                <thead>
+                  <tr>
+                    <th scope="col" class="text-left" width="160">Offer</th>
+                    <th scope="col" data-toggle="tooltip" title="Unique Clicks">Click</th>
+                    <th scope="col" width="110">Conversions</th>
+                    <th scope="col" data-toggle="tooltip" title="Conversions / Clicks">CVR</th>
+                    <th scope="col" width="170">Success Conversions</th>
+                    <th scope="col" data-toggle="tooltip" title="Success Conversions / Clicks">Success CVR</th>
+                    <th scope="col">Pending Payout</th>
+                    <th scope="col">Success Payout</th>
+                    <th scope="col" data-toggle="tooltip" title="Success Payout / Clicks">eCPC</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {% for item in range(1, 8) %}
+                    <tr>
+                      <td class="text-nowrap text-left">
+                        <a href="{{ paths.root }}/offers-detail.html" target="_blank" title="Xem offer này ở của sổ mới">watapy-oh-eh501</a>
+                      </td>
+                      <td class="text-nowrap">100</td>
+                      <td class="text-nowrap">15</td>
+                      <td class="text-nowrap">1,5%</td>
+                      <td class="text-nowrap">0</td>
+                      <td class="text-nowrap">0</td>
+                      <td class="text-nowrap">0 ₫</td>
+                      <td class="text-nowrap">0 ₫</td>
+                      <td class="text-nowrap">0 ₫</td>
+                    </tr>
+                  {% endfor %}
+                </tbody>
+              </table>
+            </div>
+
+            {% include "partials/components/pagination.html" %}
+          </div>
+        </section>
+
+      </div>
+    </div>
+  </main>
+  <!-- end: main content of this page -->
+
+{% endblock %}
