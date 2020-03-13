@@ -58,8 +58,14 @@
       "stylesheets": ["main"],
       "scripts": ["main"]
     },
-    "offers-report": {
+    "offers-performance": {
       "title": "Báo cáo hiệu quả",
+      "description": "",
+      "stylesheets": ["main"],
+      "scripts": ["main"]
+    },
+    "offers-report": {
+      "title": "Báo cáo chi tiết",
       "description": "",
       "stylesheets": ["main"],
       "scripts": ["main"]
@@ -114,6 +120,12 @@
     },
     "support": {
       "title": "Hỗ trợ",
+      "description": "",
+      "stylesheets": ["main"],
+      "scripts": ["main"]
+    },
+    "referral": {
+      "title": "Link giới thiệu",
       "description": "",
       "stylesheets": ["main"],
       "scripts": ["main"]
@@ -215,10 +227,16 @@
             "children": "Offer của tôi"
           },
           {
+            "id": "offers-performance",
+            "path": "/offers-performance.html",
+            "icon": "fa-caret-right",
+            "children": "Báo cáo hiệu quả"
+          },
+          {
             "id": "offers-report",
             "path": "/offers-report.html",
             "icon": "fa-caret-right",
-            "children": "Báo cáo hiệu quả"
+            "children": "Báo cáo chi tiết"
           }
         ]
       },
@@ -233,6 +251,12 @@
         "path": "/banks.html",
         "icon": "fa-bank",
         "children": "Ngân hàng"
+      },
+      {
+        "id": "referral",
+        "path": "/referral.html",
+        "icon": "fa-share-alt",
+        "children": "Giới thiệu"
       },
       {
         "id": "support",

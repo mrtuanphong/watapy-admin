@@ -5,7 +5,7 @@
   <meta http-equiv="x-ua-compatible" content="ie=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <title>Thêm ngân hàng</title>
+  <title>Báo cáo hiệu quả</title>
   <meta name="description" content="(site meta description)" />
   <link rel="shortcut icon" type="image/png" href="/favicon-16x16.png">
 
@@ -19,7 +19,7 @@
   </head>
   <body class="">
     
-    <div class="page is-banks-add text-200">
+    <div class="page is-offers-performance text-200">
       
       
 
@@ -268,93 +268,191 @@
   
   <!-- /header -->  <!-- begin: main content of this page -->
   <main class="flex-grow-1">
-    <div class="container">
+    <div class="container-fluid">
       <div class="page-header position-relative pt-4 pb-5 px-lg-3">
         <div class="row align-items-center">
           <div class="col-lg">
-            <h2 class="page-title m-0 text-500 font-medium">Thêm ngân hàng</h2>
+            <h2 class="page-title m-0 text-500 font-medium">Báo cáo hiệu quả</h2>
           </div>
-          <div class="col-lg-auto mt-3 mt-lg-0">
-            <a href="/banks.html" class="btn btn-outline-secondary">
-              Bỏ qua
-            </a>
-            <button class="btn btn-primary">
-              Lưu thông tin
-            </button>
+          <div class="col-lg-auto text-right mt-3 mt-lg-0">
+            <!-- filter:-->
+            <form>
+              <div class="d-flex align-items-center">
+                <div>Chọn ngày:</div>
+                <div class="mx-2 mb-2 mb-lg-0">
+                  <input type="text" class="form-control" id="reportrange" placeholder="Chọn ngày..." style="min-width:210px"/>
+                </div>
+                <div class=" mb-2 mb-lg-0">
+                  <button type="submit" class="btn btn-primary btn-block">Xem</button>
+                </div>
+              </div>
+            </form>
           </div>
         </div>
       </div>
 
       <div class="contentpanel position-relative px-lg-3 pb-4">
-        <form>
-          <div class="row">
-            <div class="col-lg-8">
-              <section class="card mb-3">
-                <div class="card-header">
-                  <div class="text-300 text-uppercase font-medium">Thông tin ngân hàng</div>
-                </div>
-                <div class="card-body">
-                  <div class="form-group">
-                    <label>Mã ngân hàng</label>
-                    <input type="text" class="form-control" placeholder="Ví dụ: ICBV"/>
-                  </div>
-                  <div class="form-group">
-                    <label>Tên giao dịch</label>
-                    <input type="text" class="form-control is-invalid" placeholder="Ví dụ: Vietinbank"/>
-                    <div class="invalid-feedback">
-                      Nhập tên giao dịch
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <label>Tên đầy đủ</label>
-                    <input type="text" class="form-control" placeholder="Ví dụ: Ngân Hàng TMCP Công Thương Việt Nam"/>
-                  </div>
-                  <div class="form-group">
-                    <label>Màu chủ đạo</label>
-                    <input type="text" class="form-control" placeholder="Ví dụ: #707bcc"/>
-                  </div>
-                  <div class="form-group">
-                    <label>Trạng thái</label>
-                    <div>
-                      <div class="custom-control custom-radio custom-control-inline">
-                        <input type="radio" id="bank-active" name="bank-status" class="custom-control-input" checked>
-                        <label class="custom-control-label" for="bank-active">Hoạt động</label>
-                      </div>
-                      <div class="custom-control custom-radio custom-control-inline">
-                        <input type="radio" id="bank-inactive" name="bank-status" class="custom-control-input">
-                        <label class="custom-control-label" for="bank-inactive">Ngừng hoạt động</label>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </section>
-            </div>
-            <div class="col-lg-4">
-              <section class="card mb-3">
-                <div class="card-header">
-                  <div class="text-300 text-uppercase font-medium">Logo</div>
-                </div>
-                <div class="card-body">
-                  <div class="form-group">
-                    <div class="border rounded p-3 d-flex align-items-center justify-content-center" style="border-style:dashed !important; min-height:100px">
-                      <div>
-                        <img src="/static/images/banks/logo-placeholder.jpg" class="img-fluid"/>
-                      </div>
-                    </div>
-                  </div>
-                  <div>
-                    <label class="btn btn-sm btn-outline-secondary btn-block">
-                        Chọn ảnh... <input type="file" hidden />
-                    </label>
-                  </div>
-                </div>
+        <!-- Chart: -->
+        <section class="card mb-3">
+          <div class="card-body">
+            <canvas id="chart-1" width="100" height="25"></canvas>
+          </div>
+        </section>
+
+        <!-- List: -->
+        <section class="card">
+          <div class="card-header">
+            <div class="row align-items-center">
+              <div class="col-lg">
+                <div class="text-300 text-uppercase font-medium">Danh sách</div>
               </div>
+              <div class="col-lg-auto mt-3 mt-lg-0"></div>
             </div>
           </div>
-        </form>
+          <div class="card-body">
+            <div class="table-responsive">
+              <table class="table table-hover text-right">
+                <thead>
+                  <tr>
+                    <th scope="col" class="text-left" width="160">Offer</th>
+                    <th scope="col" data-toggle="tooltip" title="Unique Clicks">Click</th>
+                    <th scope="col" width="110">Conversions</th>
+                    <th scope="col" data-toggle="tooltip" title="Conversions / Clicks">CVR</th>
+                    <th scope="col" width="170">Success Conversions</th>
+                    <th scope="col" data-toggle="tooltip" title="Success Conversions / Clicks">Success CVR</th>
+                    <th scope="col">Pending Payout</th>
+                    <th scope="col">Success Payout</th>
+                    <th scope="col" data-toggle="tooltip" title="Success Payout / Clicks">eCPC</th>
+                  </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                      <td class="text-nowrap text-left">
+                        <a href="/offers-detail.html" target="_blank" title="Xem offer này ở của sổ mới">watapy-oh-eh501</a>
+                      </td>
+                      <td class="text-nowrap">100</td>
+                      <td class="text-nowrap">15</td>
+                      <td class="text-nowrap">1,5%</td>
+                      <td class="text-nowrap">0</td>
+                      <td class="text-nowrap">0</td>
+                      <td class="text-nowrap">0 ₫</td>
+                      <td class="text-nowrap">0 ₫</td>
+                      <td class="text-nowrap">0 ₫</td>
+                    </tr>
+                    <tr>
+                      <td class="text-nowrap text-left">
+                        <a href="/offers-detail.html" target="_blank" title="Xem offer này ở của sổ mới">watapy-oh-eh501</a>
+                      </td>
+                      <td class="text-nowrap">100</td>
+                      <td class="text-nowrap">15</td>
+                      <td class="text-nowrap">1,5%</td>
+                      <td class="text-nowrap">0</td>
+                      <td class="text-nowrap">0</td>
+                      <td class="text-nowrap">0 ₫</td>
+                      <td class="text-nowrap">0 ₫</td>
+                      <td class="text-nowrap">0 ₫</td>
+                    </tr>
+                    <tr>
+                      <td class="text-nowrap text-left">
+                        <a href="/offers-detail.html" target="_blank" title="Xem offer này ở của sổ mới">watapy-oh-eh501</a>
+                      </td>
+                      <td class="text-nowrap">100</td>
+                      <td class="text-nowrap">15</td>
+                      <td class="text-nowrap">1,5%</td>
+                      <td class="text-nowrap">0</td>
+                      <td class="text-nowrap">0</td>
+                      <td class="text-nowrap">0 ₫</td>
+                      <td class="text-nowrap">0 ₫</td>
+                      <td class="text-nowrap">0 ₫</td>
+                    </tr>
+                    <tr>
+                      <td class="text-nowrap text-left">
+                        <a href="/offers-detail.html" target="_blank" title="Xem offer này ở của sổ mới">watapy-oh-eh501</a>
+                      </td>
+                      <td class="text-nowrap">100</td>
+                      <td class="text-nowrap">15</td>
+                      <td class="text-nowrap">1,5%</td>
+                      <td class="text-nowrap">0</td>
+                      <td class="text-nowrap">0</td>
+                      <td class="text-nowrap">0 ₫</td>
+                      <td class="text-nowrap">0 ₫</td>
+                      <td class="text-nowrap">0 ₫</td>
+                    </tr>
+                    <tr>
+                      <td class="text-nowrap text-left">
+                        <a href="/offers-detail.html" target="_blank" title="Xem offer này ở của sổ mới">watapy-oh-eh501</a>
+                      </td>
+                      <td class="text-nowrap">100</td>
+                      <td class="text-nowrap">15</td>
+                      <td class="text-nowrap">1,5%</td>
+                      <td class="text-nowrap">0</td>
+                      <td class="text-nowrap">0</td>
+                      <td class="text-nowrap">0 ₫</td>
+                      <td class="text-nowrap">0 ₫</td>
+                      <td class="text-nowrap">0 ₫</td>
+                    </tr>
+                    <tr>
+                      <td class="text-nowrap text-left">
+                        <a href="/offers-detail.html" target="_blank" title="Xem offer này ở của sổ mới">watapy-oh-eh501</a>
+                      </td>
+                      <td class="text-nowrap">100</td>
+                      <td class="text-nowrap">15</td>
+                      <td class="text-nowrap">1,5%</td>
+                      <td class="text-nowrap">0</td>
+                      <td class="text-nowrap">0</td>
+                      <td class="text-nowrap">0 ₫</td>
+                      <td class="text-nowrap">0 ₫</td>
+                      <td class="text-nowrap">0 ₫</td>
+                    </tr>
+                    <tr>
+                      <td class="text-nowrap text-left">
+                        <a href="/offers-detail.html" target="_blank" title="Xem offer này ở của sổ mới">watapy-oh-eh501</a>
+                      </td>
+                      <td class="text-nowrap">100</td>
+                      <td class="text-nowrap">15</td>
+                      <td class="text-nowrap">1,5%</td>
+                      <td class="text-nowrap">0</td>
+                      <td class="text-nowrap">0</td>
+                      <td class="text-nowrap">0 ₫</td>
+                      <td class="text-nowrap">0 ₫</td>
+                      <td class="text-nowrap">0 ₫</td>
+                    </tr>
+                </tbody>
+              </table>
+            </div>
+
+<div class="row mt-3">
+  <div class="col text-secondary">
+    Hiện thị 40 - 60 trong tổng số 120
+  </div>
+  <div class="col-auto">
+    <nav aria-label="...">
+      <ul class="pagination">
+        <li class="page-item disabled">
+          <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Trước</a>
+        </li>
+        <li class="page-item">
+          <a class="page-link" href="#">1</a>
+        </li>
+        <li class="page-item active" aria-current="page">
+          <a class="page-link" href="#">2 <span class="sr-only">(hiện tại)</span></a>
+        </li>
+        <li class="page-item">
+          <a class="page-link" href="#">3</a>
+        </li>
+        <li class="page-item">
+          <a class="page-link" href="#">Sau</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</div>          </div>
+        </section>
+
       </div>
-    </main>
-    <!-- end: main content of this page -->
+    </div>
+  </main>
+  <!-- end: main content of this page -->
 
       </div>
       
@@ -376,7 +474,92 @@
   <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>    <script src="/static/scripts/main.js?ver=2.1.0"></script>
 
-    <scripts></scripts>
+  <script>
+    // Calendar:
+    // =====================================
+
+    $(function() {
+      // Set default values to the last 7 days:
+      var start = moment().startOf('month');
+      var end = moment().endOf('month');
+
+      // Show the content:
+      function cb(start, end) {
+          $('#reportrange').val(start.format('DD/MM/YYYY') + ' - ' + end.format('DD/MM/YYYY'));
+      }
+
+      // Setup for picking dates:
+      $('#reportrange').daterangepicker({
+          startDate: start,
+          endDate: end,
+          opens: 'left',
+          ranges: {
+            'Hôm nay': [moment(), moment()],
+            'Hôm qua': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
+            '7 ngày trước': [moment().subtract(6, 'days'), moment()],
+            '30 ngày trước': [moment().subtract(29, 'days'), moment()],
+            'Tháng này': [moment().startOf('month'), moment().endOf('month')],
+            'Tháng trước': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
+          },
+          locale: {
+            format: 'DD/MM/YYYY'
+          }
+      }, cb);
+
+      cb(start, end);
+    });
+
+
+// Bieu do
+// =====================================
+
+var chart1 = document.getElementById('chart-1').getContext('2d');
+var chart = new Chart(chart1, {
+  // The type of chart we want to create
+  type: 'line',
+  //fillColor: undefined,
+
+  // The data for our dataset
+  data: {
+    labels: ['14-02', '15-02', '16-02', '17-02', '18-02', '19-02', '20-02'],
+    datasets: [
+      {
+        label: 'Click',
+        backgroundColor: '#ff6384',
+        borderColor: '#ff6384',
+        data: [22, 55, 22, 23, 70, 97, 84],
+        fill: false
+      },
+      {
+        label: 'Conversion',
+        backgroundColor: '#4CC0C0',
+        borderColor: '#4CC0C0',
+        data: [20, 40, 3, 18, 12, 50, 66],
+        fill: false
+      },
+      {
+        label: 'Revenue (triệu đồng)',
+        backgroundColor: '#5A4B7B',
+        borderColor: '#5A4B7B',
+        data: [0.4, 0.6, 2, 2, 2.5, 0.68, 0.2],
+        fill: false
+      }
+    ]
+  },
+
+  // Configuration options go here
+  options: {
+    scales : {
+      yAxes : [{
+          ticks : {
+              beginAtZero : true,
+              //suggestedMax: 1000
+          }   
+      }]
+    }
+  }
+});
+  </script>
 
   </body>
 </html>

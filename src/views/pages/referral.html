@@ -1,0 +1,169 @@
+{% extends 'layouts/default.html' %}
+
+{% block content %}
+  <!-- begin: main content of this page -->
+  <main class="flex-grow-1">
+    <div class="container">
+      <div class="page-header position-relative pt-4 pb-5 px-lg-3">
+        <div class="row align-items-center">
+          <div class="col-lg">
+            <h2 class="page-title m-0 text-500 font-medium">{{ page.title }}</h2>
+          </div>
+          <div class="col-lg-auto mt-3 mt-lg-0"></div>
+        </div>
+      </div>
+
+      <div class="contentpanel position-relative px-lg-3 pb-4">
+        <div class="row">
+          <div class="col-lg-12">
+            <section class="card mb-4">
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-lg-6">
+                    <div class="form-group">
+                      <label class="font-medium">Link giới thiệu của bạn</label>
+                      <div class="input-group mb-3">
+                        <input type="text" class="form-control" value="https://watapy.com/hale" disabled/>
+                        <div class="input-group-append">
+                          <button class="btn btn-outline-secondary" type="button">
+                            COPY
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-6 col-xl-4 mb-3">
+                          Đã giới thiệu:<br /><span class="badge badge-pill badge-danger text-100" style="line-height:1">348</span>
+                        </div>
+                        <div class="col-lg-6 col-xl-4 mb-3">
+                          Đã kích hoạt:<br /><span class="badge badge-pill badge-success text-100" style="line-height:1">84</span>
+                        </div>
+                        <div class="col-lg-6 col-xl-4 mb-3">
+                          Tổng hoa hồng:<br /><strong class="text-success">22.450.000 ₫</strong>
+                        </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-5 offset-lg-1">
+                    Chia sẻ link giới thiệu đăng ký tài khoản mới, bạn nhận được<br />
+                    + Nhận 5% doanh thu của Pub đã đăng ký qua link giới thiệu của bạn trong 90 ngày đầu<br />
+                    + Nhận 3% doanh thu của Pub đã đăng ký qua link giới thiệu của bạn trong 90 ngày tiếp theo
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+
+          <div class="col-lg-12">
+            <section class="card mb-3">
+              <div class="card-header text-300 text-uppercase font-medium">
+                Tài khoản bạn đã giới thiệu
+              </div>
+              <div class="card-body">
+                <div class="d-flex justify-content-lg-end mb-3">
+                  <!-- filter:-->
+                  <form>
+                    <div class="d-flex align-items-center">
+                      <div>Chọn ngày:</div>
+                      <div class="mx-2 mb-2 mb-lg-0">
+                        <input type="text" class="form-control" id="reportrange" placeholder="Chọn ngày..." style="min-width:210px"/>
+                      </div>
+                      <div class=" mb-2 mb-lg-0">
+                        <button type="submit" class="btn btn-primary btn-block">Xem</button>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+
+                <div class="table-responsive">
+                  <table class="table">
+                    <thead>
+                      <tr>
+                        <th scope="col">Tên người dùng</th>
+                        <th scope="col">Điện thoại</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Ngày đăng ký</th>
+                        <th scope="col">Hoa hồng</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {% for item in range(1, 8) %}
+                        <tr>
+                          <td>Trần Minh Trí</td>
+                          <td>0982997991</td>
+                          <td>minhtri@gmail.com	</td>
+                          <td>2020-02-01 09:37:44</td>
+                          <td>240.000 ₫</td>
+                        </tr>
+                      {% endfor %}
+                    </tbody>
+                  </table>
+                </div>
+
+                {% include "partials/components/pagination.html" %}
+
+              </div>              
+            </section>
+          </div>
+
+        </div>
+      </main>
+      <!-- end: main content of this page -->
+    {% endblock %}
+
+{% block scripts %}
+  <script>
+    // Calendar:
+    // =====================================
+
+    $(function () {
+      // Set default values to the last 7 days:
+      var start = moment().startOf('month');
+      var end = moment().endOf('month');
+
+      // Show the content:
+      function cb(start, end) {
+        $('#reportrange').val(start.format('DD/MM/YYYY') + ' - ' + end.format('DD/MM/YYYY'));
+      }
+
+      // Setup for picking dates:
+      $('#reportrange').daterangepicker({
+        startDate: start,
+        endDate: end,
+        opens: 'left',
+        ranges: {
+          'Hôm nay': [
+            moment(), moment()
+          ],
+          'Hôm qua': [
+            moment().subtract(1, 'days'),
+            moment().subtract(1, 'days')
+          ],
+          '7 ngày trước': [
+            moment().subtract(6, 'days'),
+            moment()
+          ],
+          '30 ngày trước': [
+            moment().subtract(29, 'days'),
+            moment()
+          ],
+          'Tháng này': [
+            moment().startOf('month'), moment().endOf('month')
+          ],
+          'Tháng trước': [
+            moment()
+              .subtract(1, 'month')
+              .startOf('month'),
+            moment()
+              .subtract(1, 'month')
+              .endOf('month')
+          ]
+        },
+        locale: {
+          format: 'DD/MM/YYYY'
+        }
+      }, cb);
+
+      cb(start, end);
+    });
+  </script>
+{% endblock %}
