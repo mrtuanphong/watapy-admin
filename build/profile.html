@@ -323,43 +323,11 @@
                 <div class="card-body">
 
                   <div class="row">
-                    <div class="col-lg-6">
+                    <div class="col-lg-12">
                       <div class="form-group">
                         <label>Họ và tên</label>
                         <input type="text" class="form-control" value="Lê Minh Hà"/>
-                        <div class="invalid-feedback">
-                          Thông tin bắt buộc
-                        </div>
                       </div>
-                    </div>
-                    <div class="col-lg-6">
-                      <div class="form-group">
-                        <label>Email</label>
-                        <input type="text" class="form-control" value="hale@gmail.com"/>
-                        <div class="invalid-feedback">
-                          Email không hợp lệ
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-lg-6">
-                      <div class="form-group">
-                        <label>Ngày sinh <span class="text-muted">(ngày/tháng/năm)</span></label>
-                        <input type="text" class="form-control" value="23/12/1983" placeholder="Ví dụ: 31/12/2000" />
-                        <div class="invalid-feedback">
-                          Thông tin bắt buộc
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-lg-6">
-                      <div class="form-group">
-                        <label>CMTND/Thẻ căn cước</label>
-                        <input type="text" class="form-control" value="0123456789" />
-                        <div class="invalid-feedback">
-                          Thông tin bắt buộc
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-lg-6">
                       <div class="form-group">
                         <label>Số điện thoại <span class="text-muted">(tài khoản đăng nhập)</span></label>
                         <input type="text" class="form-control" value="0982997991" disabled />
@@ -367,58 +335,94 @@
                           Thông tin bắt buộc
                         </div>
                       </div>
+                      <div class="form-group">
+                        <label>Email</label>
+                        <input type="text" class="form-control" value="hale@gmail.com"/>
+                        <div class="invalid-feedback">
+                          Email không hợp lệ
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label>Địa chỉ liên lạc</label>
+                        <select class="form-control">
+                          <option disabled>- Chọn khu vực -</option>
+                          <option>Miền Bắc</option>
+                          <option>Miền Trung</option>
+                          <option>Miền Nam</option>
+                          <option selected>Khác</option>
+                        </select>
+                      </div>
                     </div>
+                  </div>
+
+                </div>
+                <div class="card-body border-top">
+                  <h4 class="h6 mb-3 d-flex align-content-center">
+                    <span><span class="badge badge-warning badge-pill mr-2">Lưu ý</span></span>
+                    <span>Thông tin dưới đây bắt buộc phải có khi thanh toán:</span>
+                  </h4>
+                  <div class="row">
                     <div class="col-lg-6">
                       <div class="form-group">
-                        <label class="font-medium">Link giới thiệu</label>
-                        <div class="input-group mb-3">
-                          <input type="text" class="form-control" value="https://watapy.com/hale" disabled />
-                          <div class="input-group-append">
-                            <button class="btn btn-outline-secondary" type="button" data-toggle="tooltip" data-placement="top" title="" data-original-title="Sao chép link giới thiệu"><i class="fa fa-copy"></i></button>
-                          </div>
+                        <label>CMTND/Thẻ căn cước/Hộ chiếu</label>
+                        <input type="text" class="form-control" value="0123456789" />
+                        <div class="invalid-feedback">
+                          Thông tin bắt buộc
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label>Họ và tên</label>
+                        <input type="text" class="form-control" value="Lê Minh Hà"/>
+                      </div>
+                      <div class="form-group">
+                        <label>Ngày sinh <span class="text-muted">(ngày/tháng/năm)</span></label>
+                        <input type="text" class="form-control" value="23/12/1983" placeholder="" />
+                        <div class="invalid-feedback">
+                          Thông tin bắt buộc
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label>Nơi cấp</label>
+                        <input type="text" class="form-control" value="Hà Nội"/>
+                        <div class="invalid-feedback">
+                          Thông tin bắt buộc
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label>Ngày cấp <span class="text-muted">(ngày/tháng/năm)</span></label>
+                        <input type="text" class="form-control is-invalid" value="37/11/2000" placeholder="" />
+                        <div class="invalid-feedback">
+                          Định dạng ngày không phù hợp
                         </div>
                       </div>
                     </div>
-                  </div>
-
-                  <div>
-                    <label>Địa chỉ liên lạc</label>
+                    <div class="col-lg-6">
+                    </div>
                   </div>
                   <div class="row">
-                    <div class="col-lg-4">
-                      <div class="form-group">
-                        <select class="form-control">
-                          <option disabled>- Chọn tỉnh/TP -</option>
-                          <option selected>Hà Nội</option>
-                          <option>TP Hồ Chí Minh</option>
-                        </select>
+                    <div class="col-lg-6">
+                      <div class="d-flex align-items-center">
+                        <label class="mr-3">Ảnh mặt trước</label>
+                        <label class="btn btn-sm btn-outline-primary">
+                          Chọn ảnh... <input type="file" hidden="">
+                        </label>
+                      </div>
+                      <div>
+                        <img src="/static/images/no-photo.jpg" class="img-fluid" />
                       </div>
                     </div>
-                    <div class="col-lg-4">
-                      <div class="form-group">
-                        <select class="form-control">
-                          <option disabled>- Chọn quận/huyện -</option>
-                          <option selected>Thanh Xuân</option>
-                          <option>Tây Hồ</option>
-                        </select>
+                    <div class="col-lg-6">
+                      <div class="d-flex align-items-center">
+                        <label class="mr-3">Ảnh mặt sau</label>
+                        <label class="btn btn-sm btn-outline-primary">
+                          Chọn ảnh... <input type="file" hidden="">
+                        </label>
                       </div>
-                    </div>
-                    <div class="col-lg-4">
-                      <div class="form-group">
-                        <select class="form-control">
-                          <option disabled>- Chọn phường/xã -</option>
-                          <option selected>Thanh Xuân Trung</option>
-                          <option>Nhân Chính</option>
-                        </select>
-                      </div>
-                    </div>
-                    <div class="col-lg-12">
-                      <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Số nhà, xóm/ngõ,..." value="Số 345 Nguyễn Trãi"/>
+                      <div>
+                        <img src="/static/images/no-photo.jpg" class="img-fluid" />
                       </div>
                     </div>
                   </div>
-
                 </div>
               </section>
             </div>
