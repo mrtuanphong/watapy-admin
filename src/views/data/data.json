@@ -154,12 +154,6 @@
       "stylesheets": ["main"],
       "scripts": ["main"]
     },
-    "about-index": {
-      "title": "(about title)",
-      "description": "(about meta description)",
-      "stylesheets": ["main"],
-      "scripts": ["main"]
-    },
     "template": {
       "title": "Template",
       "description": "",
