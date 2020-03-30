@@ -401,7 +401,7 @@
             </div>
 
             <div class="col-lg-4">
-              <section class="card h-100">
+              <section class="card">
                 <div class="card-header">
                   <div class="text-300 text-uppercase font-medium">Nâng cao</div>
                 </div>
@@ -410,7 +410,7 @@
                     <label>Trạng thái</label>
                     <div>
                       <div class="custom-control custom-radio custom-control-inline">
-                        <input type="radio" id="acc-active" name="acc-status" class="custom-control-input">
+                        <input type="radio" id="acc-active" name="acc-status" checked class="custom-control-input">
                         <label class="custom-control-label" for="acc-active">Hoạt động</label>
                       </div>
                       <div class="custom-control custom-radio custom-control-inline">
@@ -426,25 +426,81 @@
                   <div class="form-group">
                     <label>Phân quyền</label>
                     <select class="form-control">
-                      <option selected disabled>- Chọn quyền -</option>
+                      <option disabled>- Chọn quyền -</option>
                       <option value="1">Quản trị viên</option>
                       <option value="2">Công ty</option>
                       <option value="3">Trưởng Miền</option>
-                      <option value="4">Đại lý Tỉnh/Quận</option>
+                      <option value="4" selected>Đại lý Tỉnh/Quận</option>
                       <option value="7">Cửa hàng</option>
                       <option value="8">Quản trị CTV</option>
                       <option value="5">Cộng tác viên</option>
                       <option value="6">Khách hàng</option>
                     </select>
                   </div>
-                  <div class="form-group mb-0">
+                  <div class="form-group">
                     <label>Khu vực</label>
                     <select class="form-control">
-                      <option selected disabled>- Chọn khu vực -</option>
-                      <option>Miền Bắc</option>
+                      <option disabled>- Chọn khu vực -</option>
+                      <option selected>Miền Bắc</option>
                       <option>Miền Trung</option>
                       <option>Miền Nam</option>
                     </select>
+                  </div>
+
+                  <div class="mt-4" style="display:block">
+                    <h4 class="text-300 mt-4"><strong>Thêm khu vực quản lý:</strong></h4>
+                    <div class="alert alert-info p-3 border-0">
+                      <div class="form-group mb-2">
+                        <select class="form-control form-control-sm">
+                          <option disabled>- Chọn Tỉnh/Thành phố -</option>
+                          <option selected>Thành Phố Hà Nội</option>
+                          <option>Bắc Giang</option>
+                          <option>Buôn Mê Thuột</option>
+                        </select>
+                      </div>
+                      <div class="form-group mb-2">
+                        <select class="form-control form-control-sm">
+                          <option disabled>- Chọn Quận/Huyện -</option>
+                          <option>Hà Đông</option>
+                          <option selected>Ba Đình</option>
+                          <option>Cầu Giấy</option>
+                        </select>
+                      </div>
+                      <div class="form-group mb-0">
+                        <button class="btn btn-primary btn-sm btn-block" type="button">
+                          Thêm
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="mt-4" style="display:block">
+                    <h4 class="text-300"><strong>Khu vực đã chọn:</strong></h4>
+                    <table class="table mb-0">
+                      <tbody>
+                        <tr>
+                          <td class="px-0">Thành Phố Hà Nội</td>
+                          <td>Hà Đông</td>
+                          <td class="px-0 text-right">
+                            <button class="btn btn-sm btn-outline-danger" type="button">Xóa</button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="px-0">Thành Phố Hà Nội</td>
+                          <td>Cầu Giấy</td>
+                          <td class="px-0 text-right">
+                            <button class="btn btn-sm btn-outline-danger" type="button">Xóa</button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="px-0">Hải Phòng</td>
+                          <td>Lê Chân</td>
+                          <td class="px-0 text-right">
+                            <button class="btn btn-sm btn-outline-danger" type="button">Xóa</button>
+                          </td>
+                        </tr>
+                      </tbody>
+                    <table>
                   </div>
                 </div>
               </section>
