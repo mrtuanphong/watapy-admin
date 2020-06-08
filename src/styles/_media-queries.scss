@@ -2,9 +2,9 @@
 /***************************************/
 
 @media screen and (max-width: 992px) {
-  body {
-    position: relative;
-  }
+  // body {
+  //   position: relative;
+  // }
 
   .leftpanel {
     display: none;
@@ -27,17 +27,17 @@
     margin-left: 0;
   }
 
-  .leftpanel-show section {
-    overflow-x: hidden;
-  }
+  // .leftpanel-show section {
+  //   overflow-x: hidden;
+  // }
 
-  .leftpanel-show .leftpanel {
-    display: block;
-  }
+  // .leftpanel-show .leftpanel {
+  //   display: block;
+  // }
 
-  .leftpanel-show .mainpanel {
-    margin-left: $sidebar-width;
-  }
+  // .leftpanel-show .mainpanel {
+  //   margin-left: $sidebar-width;
+  // }
 
   .stickyheader .headerbar {
     left: 0;
@@ -47,9 +47,9 @@
     margin-right: 0;
   }
 
-  .stickyheader.leftpanel-show .headerbar {
-    left: $sidebar-width;
-  }
+  // .stickyheader.leftpanel-show .headerbar {
+  //   left: $sidebar-width;
+  // }
 
   .stickyheader.chat-relative-view .headerbar {
     right: $sidebar-width;

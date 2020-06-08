@@ -48,29 +48,6 @@ $(document).ready(function () {
     container: 'body'
   });
 
-  // // Close Button in Panels
-  // jQuery('.panel .panel-close').click(function () {
-  //   jQuery(this).closest('.panel').fadeOut(200);
-  //   return false;
-  // });
-
-  // // Minimize Button in Panels
-  // jQuery('.minimize').click(function () {
-  //   var t = jQuery(this);
-  //   var p = t.closest('.panel');
-  //   if (!jQuery(this).hasClass('maximize')) {
-  //     p.find('.panel-body, .panel-footer').slideUp(200);
-  //     t.addClass('maximize');
-  //     t.html('&plus;');
-  //   } else {
-  //     p.find('.panel-body, .panel-footer').slideDown(200);
-  //     t.removeClass('maximize');
-  //     t.html('&minus;');
-  //   }
-  //   return false;
-  // });
-
-
   // Add class everytime a mouse pointer hover over it
   jQuery('.nav-bracket > li').hover(function () {
     jQuery(this).addClass('nav-hover');
@@ -78,54 +55,36 @@ $(document).ready(function () {
     jQuery(this).removeClass('nav-hover');
   });
 
-
-  // Menu Toggle
-  jQuery('.menutoggle').click(function () {
+  // Menu Toggle:
+  function menuToggle() {
     var body = jQuery('body');
-    var bodypos = body.css('position');
-
-    if (bodypos != 'relative') {
-
-      if (!body.hasClass('leftpanel-collapsed')) {
-        body.addClass('leftpanel-collapsed');
-        jQuery('.nav-bracket ul').attr('style', '');
-
-        jQuery(this).addClass('menu-collapsed');
-
-      } else {
-        body.removeClass('leftpanel-collapsed chat-view');
-        jQuery('.nav-bracket li.active ul').css({ display: 'block' });
-
-        jQuery(this).removeClass('menu-collapsed');
-
-      }
+    if (!body.hasClass('leftpanel-collapsed')) {
+      body.addClass('leftpanel-collapsed');
+      jQuery('.nav-bracket ul').attr('style', '');
+      jQuery(this).addClass('menu-collapsed');
     } else {
-
-      if (body.hasClass('leftpanel-show'))
-        body.removeClass('leftpanel-show');
-      else
-        body.addClass('leftpanel-show');         
+      body.removeClass('leftpanel-collapsed');
+      jQuery('.nav-bracket li.active ul').css({ display: 'block' });
+      jQuery('.menutoggle').removeClass('menu-collapsed');
     }
-  });
+  }
 
+  // Check if the screen width < 1024px then hide the left menu by default:
+  if ($(window).width() < 1024){
+    menuToggle();
+  }
+
+  jQuery('.menutoggle').click(function () {
+    menuToggle()
+  });
 
   jQuery(window).resize(function () {
 
-    //  if(jQuery('body').css('position') == 'relative') {
-
-    //     //jQuery('body').removeClass('leftpanel-collapsed chat-view');
-
-    //  } else {
-
-    //     jQuery('body').removeClass('chat-relative-view');         
-    //     jQuery('body').css({left: '', marginRight: ''});
-    //  }
   });
 
   // Check if leftpanel is collapsed
   if (jQuery('body').hasClass('leftpanel-collapsed'))
     jQuery('.nav-bracket .children').css({ display: '' });
-
 
   // Handles form inside of dropdown 
   jQuery('.dropdown-menu').find('form').click(function (e) {
