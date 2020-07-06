@@ -1,1 +1,467 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta http-equiv="x-ua-compatible" content="ie=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Modals</title><meta name="description" content="(site meta description)"><link rel="shortcut icon" type="image/png" href="https://cleandesign.studio/watapy-admin/favicon-16x16.png"><link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap&subset=vietnamese" rel="stylesheet"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css"><link rel="stylesheet" href="https://cleandesign.studio/watapy-admin/static/styles/main.css?ver=2.1.0"></head><body><div class="page is-modals text-200"><div class="container flex-grow-1"><div class="text-center u-marginVertical-3"><h2>Modals</h2></div><div class="row"><div class="col-sm-6 col-md-3 mb-3"><a href="modals.html#news-delete-confirmation" title="Tin tức: Xác nhận xóa" onclick='$("#modal-news-delete-confirmation").modal()' class="card h-100"><div class="card-body px-3 py-4"><div class="text-300 text-body">Tin tức: Xác nhận xóa</div></div></a></div><div class="col-sm-6 col-md-3 mb-3"><a href="modals.html#offers-delete-confirmation" title="Offers: Xác nhận xóa" onclick='$("#modal-offers-delete-confirmation").modal()' class="card h-100"><div class="card-body px-3 py-4"><div class="text-300 text-body">Offers: Xác nhận xóa</div></div></a></div><div class="col-sm-6 col-md-3 mb-3"><a href="modals.html#transactions-transfer" title="Giao dịch: Chuyển WEC" onclick='$("#modal-transactions-transfer").modal()' class="card h-100"><div class="card-body px-3 py-4"><div class="text-300 text-body">Giao dịch: Chuyển WEC</div></div></a></div><div class="col-sm-6 col-md-3 mb-3"><a href="modals.html#transactions-withdraw" title="Giao dịch: Rút tiền" onclick='$("#modal-transactions-withdraw").modal()' class="card h-100"><div class="card-body px-3 py-4"><div class="text-300 text-body">Giao dịch: Rút tiền</div></div></a></div><div class="col-sm-6 col-md-3 mb-3"><a href="modals.html#users-delete-confirmation" title="Người dùng: Xác nhận xóa" onclick='$("#modal-users-delete-confirmation").modal()' class="card h-100"><div class="card-body px-3 py-4"><div class="text-300 text-body">Người dùng: Xác nhận xóa</div></div></a></div><div class="col-sm-6 col-md-3 mb-3"><a href="modals.html#banks-delete-confirmation" title="Ngân hàng: Xác nhận xóa" onclick='$("#modal-banks-delete-confirmation").modal()' class="card h-100"><div class="card-body px-3 py-4"><div class="text-300 text-body">Ngân hàng: Xác nhận xóa</div></div></a></div><div class="col-sm-6 col-md-3 mb-3"><a href="modals.html#banks-card-edit" title="Tài khoản ngân hàng - Sửa" onclick='$("#modal-banks-card-edit").modal()' class="card h-100"><div class="card-body px-3 py-4"><div class="text-300 text-body">Tài khoản ngân hàng - Sửa</div></div></a></div><div class="col-sm-6 col-md-3 mb-3"><a href="modals.html#banks-card-add" title="Tài khoản ngân hàng - Thêm mới" onclick='$("#modal-banks-card-add").modal()' class="card h-100"><div class="card-body px-3 py-4"><div class="text-300 text-body">Tài khoản ngân hàng - Thêm mới</div></div></a></div></div></div></div><div class="modal fade" id="modal-bank-card-add" tabindex="-1" role="dialog"><div class="modal-dialog" role="document"><div class="modal-content"><div class="modal-header"><h5 class="modal-title">Thêm tài khoản ngân hàng</h5><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button></div><div class="modal-body"><form id="form-bank-card-add"><div class="alert alert-danger alert-dismissible fade show" role="alert">Có lỗi xảy ra, vui lòng thử lại! <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></div><div class="form-row"><div class="form-group col-md-6"><label for="bank-name">Chọn ngân hàng</label> <select id="bank-name" class="form-control"><option selected="selected">---</option><option value="1">Techcombank</option><option value="2">VPBank</option><option value="3">BIDV</option></select></div><div class="form-group col-md-6"><label for="bank-branch">Chi nhánh</label> <input type="text" class="form-control" id="bank-branch"></div></div><div class="form-row"><div class="form-group col-md-6"><label for="bank-account-name">Tên chủ tài khoản</label> <input type="text" class="form-control text-uppercase is-invalid" id="bank-account-name" required><div class="invalid-feedback">Nhập họ tên chủ tài khoản</div></div><div class="form-group col-md-6"><label for="bank-account-number">Số tài khoản</label> <input type="text" class="form-control is-invalid" id="bank-account-number" required><div class="invalid-feedback">Nhập số tài khoản</div></div></div></form></div><div class="modal-footer"><button class="btn btn-outline-secondary" data-dismiss="modal" type="button">Bỏ qua</button> <button class="btn btn-primary" data-dismiss="modal" type="button">Thêm tài khoản</button></div></div></div></div><div class="modal fade" id="modal-bank-card-edit" tabindex="-1" role="dialog"><div class="modal-dialog" role="document"><div class="modal-content"><div class="modal-header"><h5 class="modal-title">Thông tin tài khoản</h5><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button></div><div class="modal-body"><form id="form-bank-card-edit"><div class="form-row"><div class="form-group col-md-6"><label for="bank-name">Chọn ngân hàng</label> <select id="bank-name" class="form-control" disabled="disabled"><option value="2" selected="selected">VPBank</option></select></div><div class="form-group col-md-6"><label for="bank-branch">Chi nhánh</label> <input type="text" class="form-control" id="bank-branch" value="Đông Đô"></div></div><div class="form-row"><div class="form-group col-md-6"><label for="bank-account-name">Tên chủ tài khoản</label> <input type="text" class="form-control text-uppercase" id="bank-account-name" value="DO TUAN PHONG"><div class="invalid-feedback">Nhập họ tên chủ tài khoản</div></div><div class="form-group col-md-6"><label for="bank-account-number">Số tài khoản</label> <input type="text" class="form-control" id="bank-account-number" value="6666888800009999"><div class="invalid-feedback">Nhập số tài khoản</div></div></div></form></div><div class="modal-footer"><div class="row w-100 align-items-center"><div class="col"><button class="btn btn-link text-danger" data-dismiss="modal" type="button"><i class="fa fa-trash-o mr-2"></i>Xóa tài khoản ngân hàng</button></div><div class="col-auto"><button class="btn btn-outline-secondary" data-dismiss="modal" type="button">Bỏ qua</button> <button class="btn btn-primary" data-dismiss="modal" type="button">Cập nhật</button></div></div></div></div></div></div><div class="modal fade" id="modal-banks-delete-confirmation" tabindex="-1" role="dialog"><div class="modal-dialog" role="document"><div class="modal-content"><div class="modal-header"><h5 class="modal-title">Xác nhận</h5><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button></div><div class="modal-body"><p>Bạn có chắc chắn muốn xóa ngân hàng này?</p></div><div class="modal-footer"><button class="btn btn-outline-secondary" data-dismiss="modal" type="button">Bỏ qua</button> <button class="btn btn-danger" data-dismiss="modal" type="button">Xóa ngân hàng</button></div></div></div></div><div class="modal fade" id="modal-users-delete-confirmation" tabindex="-1" role="dialog"><div class="modal-dialog" role="document"><div class="modal-content"><div class="modal-header"><h5 class="modal-title">Xác nhận</h5><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button></div><div class="modal-body"><p>Bạn có chắc chắn muốn xóa tài khoản này?</p></div><div class="modal-footer"><button class="btn btn-outline-secondary" data-dismiss="modal" type="button">Bỏ qua</button> <button class="btn btn-danger" data-dismiss="modal" type="button">Xóa tài khoản</button></div></div></div></div><div class="modal fade" id="modal-transactions-withdraw" tabindex="-1" role="dialog"><div class="modal-dialog" role="document"><div class="modal-content"><div class="modal-header"><h5 class="modal-title">Rút tiền về tài khoản ngân hàng</h5><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button></div><div class="modal-body"><p class="text-100 text-muted mb-4"><i class="fa fa-info-circle"></i> Lưu ý: Các khoản tiền rút sẽ được thực hiện vào ngày 15 và 30 hàng tháng</p><div class="alert alert-danger fade show" role="alert"><p>Để rút tiền, bạn cần cung cấp đầy đủ thông tin về CMTND, Thẻ căn cước hoặc Hộ chiếu của bạn.</p><p><a href="https://cleandesign.studio/watapy-admin/profile.html" class="btn btn-primary">Bổ sung ngay tại đây</a></p></div><form id="form-bank-card-edit"><div class="form-group" id="transaction-bank"><label for="bank-name">Chọn ngân hàng</label> <select id="bank-name" class="form-control"><option value="1">VPBank - Đông Đô</option><option value="2">Techcombank - Ba Đình</option></select></div><div class="form-group"><label for="wec-number">Số WEC cần rút <span class="text-muted text-100">(1 WEC = 1.000 ₫)</span></label> <input type="number" class="form-control is-invalid" id="wec-number"><div class="invalid-feedback">Nhập số WEC</div></div></form></div><div class="modal-footer"><button class="btn btn-outline-secondary" data-dismiss="modal" type="button">Bỏ qua</button> <button class="btn btn-primary" data-dismiss="modal" type="button">Thực hiện rút tiền</button></div></div></div></div><div class="modal fade" id="modal-transactions-transfer" tabindex="-1" role="dialog"><div class="modal-dialog" role="document"><div class="modal-content"><div class="modal-header"><h5 class="modal-title">Chuyển WEC</h5><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button></div><div class="modal-body"><form id="form-bank-card-edit"><div class="form-group" id="transaction-wallet"><label for="wallet-code">Địa chỉ ví nhận</label> <input type="number" class="form-control" id="wallet-code" placeholder="Mã địa chỉ ví"></div><div class="form-group"><label for="wec-number">Số WEC cần chuyển</label> <input type="number" class="form-control is-invalid" id="wec-number"><div class="invalid-feedback">Nhập số WEC</div></div></form></div><div class="modal-footer"><button class="btn btn-outline-secondary" data-dismiss="modal" type="button">Bỏ qua</button> <button class="btn btn-primary" data-dismiss="modal" type="button">Thực hiện chuyển WEC</button></div></div></div></div><div class="modal fade" id="modal-offers-delete-confirmation" tabindex="-1" role="dialog"><div class="modal-dialog" role="document"><div class="modal-content"><div class="modal-header"><h5 class="modal-title">Xác nhận</h5><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button></div><div class="modal-body"><p>Bạn có chắc chắn muốn xóa Offer này?</p></div><div class="modal-footer"><button class="btn btn-outline-secondary" data-dismiss="modal" type="button">Bỏ qua</button> <button class="btn btn-danger" data-dismiss="modal" type="button">Xóa Offer</button></div></div></div></div><div class="modal fade" id="modal-news-delete-confirmation" tabindex="-1" role="dialog"><div class="modal-dialog" role="document"><div class="modal-content"><div class="modal-header"><h5 class="modal-title">Xác nhận</h5><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button></div><div class="modal-body"><p>Bạn có chắc chắn muốn xóa bài tin này?</p></div><div class="modal-footer"><button class="btn btn-outline-secondary" data-dismiss="modal" type="button">Bỏ qua</button> <button class="btn btn-danger" data-dismiss="modal" type="button">Xóa bài tin</button></div></div></div></div><script src="https://code.jquery.com/jquery-3.4.1.min.js"></script><script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script><script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-sparklines/2.1.2/jquery.sparkline.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script><script src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script><script src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script><script src="https://cleandesign.studio/watapy-admin/static/scripts/main.js?ver=2.1.0"></script><script>$(window).on("load",function(){if(location.hash&&location.hash.length){var o=decodeURIComponent(location.hash.substr(1));$("#modal-"+o).modal()}})</script></body></html>
+<!doctype html>
+<html lang="en">
+  <head>
+<meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Modals</title>
+  <meta name="description" content="(site meta description)" />
+  <link rel="shortcut icon" type="image/png" href="/favicon-16x16.png">
+
+  <!-- third party css: -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap&subset=vietnamese" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.css" />
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+  
+  <!-- /third party css -->    <link rel="stylesheet" href="/static/styles/main.css?ver=2.1.0" />
+  </head>
+  <body>
+    <div class="page is-modals text-200">
+  <div class="container flex-grow-1">
+    <div class="text-center u-marginVertical-3">
+      <h2>Modals</h2>
+    </div>
+    <div class="row">
+        <div class="col-sm-6 col-md-3 mb-3">
+          <a href="modals.html#news-delete-confirmation" title="Tin tức: Xác nhận xóa" onclick="$('#modal-news-delete-confirmation').modal();" class="card h-100">
+            <div class="card-body px-3 py-4">
+              <div class="text-300 text-body">Tin tức: Xác nhận xóa</div>
+            </div>
+          </a>
+        </div>
+        <div class="col-sm-6 col-md-3 mb-3">
+          <a href="modals.html#offers-delete-confirmation" title="Offers: Xác nhận xóa" onclick="$('#modal-offers-delete-confirmation').modal();" class="card h-100">
+            <div class="card-body px-3 py-4">
+              <div class="text-300 text-body">Offers: Xác nhận xóa</div>
+            </div>
+          </a>
+        </div>
+        <div class="col-sm-6 col-md-3 mb-3">
+          <a href="modals.html#transactions-transfer" title="Giao dịch: Chuyển WEC" onclick="$('#modal-transactions-transfer').modal();" class="card h-100">
+            <div class="card-body px-3 py-4">
+              <div class="text-300 text-body">Giao dịch: Chuyển WEC</div>
+            </div>
+          </a>
+        </div>
+        <div class="col-sm-6 col-md-3 mb-3">
+          <a href="modals.html#transactions-withdraw" title="Giao dịch: Rút tiền" onclick="$('#modal-transactions-withdraw').modal();" class="card h-100">
+            <div class="card-body px-3 py-4">
+              <div class="text-300 text-body">Giao dịch: Rút tiền</div>
+            </div>
+          </a>
+        </div>
+        <div class="col-sm-6 col-md-3 mb-3">
+          <a href="modals.html#users-delete-confirmation" title="Người dùng: Xác nhận xóa" onclick="$('#modal-users-delete-confirmation').modal();" class="card h-100">
+            <div class="card-body px-3 py-4">
+              <div class="text-300 text-body">Người dùng: Xác nhận xóa</div>
+            </div>
+          </a>
+        </div>
+        <div class="col-sm-6 col-md-3 mb-3">
+          <a href="modals.html#banks-delete-confirmation" title="Ngân hàng: Xác nhận xóa" onclick="$('#modal-banks-delete-confirmation').modal();" class="card h-100">
+            <div class="card-body px-3 py-4">
+              <div class="text-300 text-body">Ngân hàng: Xác nhận xóa</div>
+            </div>
+          </a>
+        </div>
+        <div class="col-sm-6 col-md-3 mb-3">
+          <a href="modals.html#banks-card-edit" title="Tài khoản ngân hàng - Sửa" onclick="$('#modal-banks-card-edit').modal();" class="card h-100">
+            <div class="card-body px-3 py-4">
+              <div class="text-300 text-body">Tài khoản ngân hàng - Sửa</div>
+            </div>
+          </a>
+        </div>
+        <div class="col-sm-6 col-md-3 mb-3">
+          <a href="modals.html#banks-card-add" title="Tài khoản ngân hàng - Thêm mới" onclick="$('#modal-banks-card-add').modal();" class="card h-100">
+            <div class="card-body px-3 py-4">
+              <div class="text-300 text-body">Tài khoản ngân hàng - Thêm mới</div>
+            </div>
+          </a>
+        </div>
+    </div>
+  </div>
+    </div>
+
+  <div class="modal fade" id="modal-bank-card-add" tabindex="-1" role="dialog">
+    <div class="modal-dialog " role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-title">Thêm tài khoản ngân hàng</h5>
+
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+
+        
+        <div class="modal-body">
+          <form id="form-bank-card-add">
+  <div class="alert alert-danger alert-dismissible fade show" role="alert">
+    Có lỗi xảy ra, vui lòng thử lại!
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="bank-name">Chọn ngân hàng</label>
+      <select id="bank-name" class="form-control">
+        <option selected>---</option>
+        <option value="1">Techcombank</option>
+        <option value="2">VPBank</option>
+        <option value="3">BIDV</option>
+      </select>
+    </div>
+    <div class="form-group col-md-6">
+      <label for="bank-branch">Chi nhánh</label>
+      <input type="text" class="form-control" id="bank-branch">
+    </div>
+  </div>
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="bank-account-name">Tên chủ tài khoản</label>
+      <input type="text" class="form-control text-uppercase is-invalid" id="bank-account-name" required>
+      <div class="invalid-feedback">
+        Nhập họ tên chủ tài khoản
+      </div>
+    </div>
+    <div class="form-group col-md-6">
+      <label for="bank-account-number">Số tài khoản</label>
+      <input type="text" class="form-control is-invalid" id="bank-account-number" required>
+      <div class="invalid-feedback">
+        Nhập số tài khoản
+      </div>
+    </div>
+  </div>
+</form>
+
+        </div>
+        
+
+          <div class="modal-footer">
+            <button class="btn btn-outline-secondary" data-dismiss="modal" type="button">Bỏ qua</button>
+<button class="btn btn-primary" data-dismiss="modal" type="button">Thêm tài khoản</button>
+
+          </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="modal fade" id="modal-bank-card-edit" tabindex="-1" role="dialog">
+    <div class="modal-dialog " role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-title">Thông tin tài khoản</h5>
+
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+
+        
+        <div class="modal-body">
+          <form id="form-bank-card-edit">
+  <!--
+  <div class="alert alert-danger alert-dismissible fade show" role="alert">
+    Có lỗi xảy ra, vui lòng thử lại!
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  -->
+
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="bank-name">Chọn ngân hàng</label>
+      <select id="bank-name" class="form-control" disabled>
+        <option value="2" selected>VPBank</option>
+      </select>
+    </div>
+    <div class="form-group col-md-6">
+      <label for="bank-branch">Chi nhánh</label>
+      <input type="text" class="form-control" id="bank-branch" value="Đông Đô">
+    </div>
+  </div>
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="bank-account-name">Tên chủ tài khoản</label>
+      <input type="text" class="form-control text-uppercase" id="bank-account-name" value="DO TUAN PHONG">
+      <div class="invalid-feedback">
+        Nhập họ tên chủ tài khoản
+      </div>
+    </div>
+    <div class="form-group col-md-6">
+      <label for="bank-account-number">Số tài khoản</label>
+      <input type="text" class="form-control" id="bank-account-number" value="6666888800009999">
+      <div class="invalid-feedback">
+        Nhập số tài khoản
+      </div>
+    </div>
+  </div>
+</form>
+
+        </div>
+        
+
+          <div class="modal-footer">
+            <div class="row w-100 align-items-center">
+  <div class="col">
+    <button class="btn btn-link text-danger" data-dismiss="modal" type="button">
+      <i class="fa fa-trash-o mr-2"></i>Xóa tài khoản ngân hàng
+    </button>
+  </div>
+  <div class="col-auto">
+    <button class="btn btn-outline-secondary" data-dismiss="modal" type="button">Bỏ qua</button>
+    <button class="btn btn-primary" data-dismiss="modal" type="button">Cập nhật</button>
+  </div>
+</div>
+
+          </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="modal fade" id="modal-banks-delete-confirmation" tabindex="-1" role="dialog">
+    <div class="modal-dialog " role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-title">Xác nhận</h5>
+
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+
+        
+        <div class="modal-body">
+            <p>Bạn có chắc chắn muốn xóa ngân hàng này?</p>
+
+        </div>
+        
+
+          <div class="modal-footer">
+              <button class="btn btn-outline-secondary" data-dismiss="modal" type="button">Bỏ qua</button>
+  <button class="btn btn-danger" data-dismiss="modal" type="button">Xóa ngân hàng</button>
+
+          </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="modal fade" id="modal-users-delete-confirmation" tabindex="-1" role="dialog">
+    <div class="modal-dialog " role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-title">Xác nhận</h5>
+
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+
+        
+        <div class="modal-body">
+            <p>Bạn có chắc chắn muốn xóa tài khoản này?</p>
+
+        </div>
+        
+
+          <div class="modal-footer">
+              <button class="btn btn-outline-secondary" data-dismiss="modal" type="button">Bỏ qua</button>
+  <button class="btn btn-danger" data-dismiss="modal" type="button">Xóa tài khoản</button>
+
+          </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="modal fade" id="modal-transactions-withdraw" tabindex="-1" role="dialog">
+    <div class="modal-dialog " role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-title">Rút tiền về tài khoản ngân hàng</h5>
+
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+
+        
+        <div class="modal-body">
+          <p class="text-100 text-muted mb-4">
+  <i class="fa fa-info-circle"></i> Lưu ý: Các khoản tiền rút sẽ được thực hiện vào ngày 15 và 30 hàng tháng
+</p>
+<div class="alert alert-danger fade show" role="alert">
+    <p>Để rút tiền, bạn cần cung cấp đầy đủ thông tin về CMTND, Thẻ căn cước hoặc Hộ chiếu của bạn.<p>
+    <a href="/profile.html" class="btn btn-primary">Bổ sung ngay tại đây</a>
+  </div>
+<form id="form-bank-card-edit">
+  <!--
+  <div class="alert alert-danger alert-dismissible fade show" role="alert">
+    Có lỗi xảy ra, vui lòng thử lại!
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  -->
+  
+  <div class="form-group" id="transaction-bank">
+      <label for="bank-name">Chọn ngân hàng</label>
+      <select id="bank-name" class="form-control">
+        <option value="1">VPBank - Đông Đô</option>
+        <option value="2">Techcombank - Ba Đình</option>
+      </select>
+  </div>
+
+  <div class="form-group">
+    <label for="wec-number">Số WEC cần rút <span class="text-muted text-100">(1 WEC = 1.000 ₫)</span></label>
+    <input type="number" class="form-control is-invalid" id="wec-number" >
+    <div class="invalid-feedback">
+      Nhập số WEC
+    </div>
+  </div>
+</form>
+
+        </div>
+        
+
+          <div class="modal-footer">
+              <button class="btn btn-outline-secondary" data-dismiss="modal" type="button">Bỏ qua</button>
+  <button class="btn btn-primary" data-dismiss="modal" type="button">Thực hiện rút tiền</button>
+
+          </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="modal-transactions-transfer" tabindex="-1" role="dialog">
+    <div class="modal-dialog " role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-title">Chuyển WEC</h5>
+
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+
+        
+        <div class="modal-body">
+          <form id="form-bank-card-edit">
+  <!--
+  <div class="alert alert-danger alert-dismissible fade show" role="alert">
+    Có lỗi xảy ra, vui lòng thử lại!
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  -->
+  
+  <div class="form-group" id="transaction-wallet">
+    <label for="wallet-code">Địa chỉ ví nhận</label>
+    <input type="number" class="form-control" id="wallet-code" placeholder="Mã địa chỉ ví">
+  </div>
+
+  <div class="form-group">
+    <label for="wec-number">Số WEC cần chuyển</label>
+    <input type="number" class="form-control is-invalid" id="wec-number" >
+    <div class="invalid-feedback">
+      Nhập số WEC
+    </div>
+  </div>
+</form>
+
+        </div>
+        
+
+          <div class="modal-footer">
+              <button class="btn btn-outline-secondary" data-dismiss="modal" type="button">Bỏ qua</button>
+  <button class="btn btn-primary" data-dismiss="modal" type="button">Thực hiện chuyển WEC</button>
+
+          </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="modal-offers-delete-confirmation" tabindex="-1" role="dialog">
+    <div class="modal-dialog " role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-title">Xác nhận</h5>
+
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+
+        
+        <div class="modal-body">
+            <p>Bạn có chắc chắn muốn xóa Offer này?</p>
+
+        </div>
+        
+
+          <div class="modal-footer">
+              <button class="btn btn-outline-secondary" data-dismiss="modal" type="button">Bỏ qua</button>
+  <button class="btn btn-danger" data-dismiss="modal" type="button">Xóa Offer</button>
+
+          </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="modal fade" id="modal-news-delete-confirmation" tabindex="-1" role="dialog">
+    <div class="modal-dialog " role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-title">Xác nhận</h5>
+
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+
+        
+        <div class="modal-body">
+            <p>Bạn có chắc chắn muốn xóa bài tin này?</p>
+
+        </div>
+        
+
+          <div class="modal-footer">
+              <button class="btn btn-outline-secondary" data-dismiss="modal" type="button">Bỏ qua</button>
+  <button class="btn btn-danger" data-dismiss="modal" type="button">Xóa bài tin</button>
+
+          </div>
+      </div>
+    </div>
+  </div>
+
+
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-sparklines/2.1.2/jquery.sparkline.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+  
+  
+  <!-- daterangepicker: -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>    <script src="/static/scripts/main.js?ver=2.1.0"></script>
+  <script type="text/javascript">
+    $(window).on('load', function () {
+      if (location.hash && location.hash.length) {
+        var hash = decodeURIComponent(location.hash.substr(1));
+        $('#modal-' + hash).modal();
+      }
+    });
+  </script>
+  </body>
+</html>

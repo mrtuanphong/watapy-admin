@@ -153,7 +153,8 @@
               </form>
             </div>
 
-            <div class="table-responsive mt-5">
+            <!-- for desktop only: -->
+            <div class="table-responsive mt-5 d-none d-lg-block">
               <table class="table table-hover">
                 <thead>
                   <tr>
@@ -207,9 +208,65 @@
                   {% endfor %}
                 </tbody>
               </table>
+              {% include "partials/components/pagination.html" %}
             </div>
+            
+            <!-- for mobile only: -->
+            <div class="mt-3 d-lg-none">
+              <!-- item: -->
+              <div class="border-top py-2">
+                <div class="d-flex justify-content-between py-1">
+                  <div class="text-muted">Ngày giao dịch:</div>
+                  <div>16/01/2020 lúc 7:15</div>
+                </div>
+                <div class="d-flex justify-content-between py-1">
+                  <div class="text-muted">Người thực hiện:</div>
+                  <div>Admin</div>
+                </div>
+                <div class="d-flex justify-content-between py-1">
+                  <div class="text-muted">Loại giao dịch:</div>
+                  <div><em><i class="fa fa-reply text-danger"></i> Rút tiền</em></div>
+                </div>
+                <div class="d-flex justify-content-between py-1">
+                  <div class="text-muted">Giá trị giao dịch:</div>
+                  <div><span class="text-danger">-2.160 WEC</span></div>
+                </div>
+                <div class="d-flex justify-content-between py-1">
+                  <div class="text-muted">Trạng thái:</div>
+                  <div><span class="text-warning"><i class="fa fa-clock-o"></i> Chờ xử lý</span></div>
+                </div>
+              </div>
+              <!-- item: -->
 
-            {% include "partials/components/pagination.html" %}
+              {% for item in range(1, 10) %}
+              <!-- item: -->
+              <div class="border-top py-2">
+                <div class="d-flex justify-content-between py-1">
+                  <div class="text-muted">Ngày giao dịch:</div>
+                  <div>16/01/2020 lúc 7:15</div>
+                </div>
+                <div class="d-flex justify-content-between py-1">
+                  <div class="text-muted">Người thực hiện:</div>
+                  <div>Trần Việt</div>
+                </div>
+                <div class="d-flex justify-content-between py-1">
+                  <div class="text-muted">Loại giao dịch:</div>
+                  <div><em><i class="fa fa-handshake-o text-muted"></i> Chiết khấu</em></div>
+                </div>
+                <div class="d-flex justify-content-between py-1">
+                  <div class="text-muted">Giá trị giao dịch:</div>
+                  <div><span class="text-danger">-2.160 WEC</span></div>
+                </div>
+                <div class="d-flex justify-content-between py-1">
+                  <div class="text-muted">Trạng thái:</div>
+                  <div><span class="text-success"><i class="fa fa-clock-o"></i> Hoàn thành</span></div>
+                </div>
+              </div>
+              <!-- item: -->
+              {% endfor %}
+
+              {% include "partials/components/pagination-mobile.html" %}
+            </div>
           </div>
         </section>
       </div>

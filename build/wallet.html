@@ -1,1 +1,574 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta http-equiv="x-ua-compatible" content="ie=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Ví của tôi</title><meta name="description" content="(site meta description)"><link rel="shortcut icon" type="image/png" href="https://cleandesign.studio/watapy-admin/favicon-16x16.png"><link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap&subset=vietnamese" rel="stylesheet"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css"><link rel="stylesheet" href="https://cleandesign.studio/watapy-admin/static/styles/main.css?ver=2.1.0"></head><body class=""><div class="page is-wallet text-200"><nav class="leftpanel d-flex flex-column"><div class="logopanel d-flex justify-content-between align-items-center flex-shrink-0"><a href="/" class="logo ml-3"><img src="https://cleandesign.studio/watapy-admin/static/images/logo-white.png" srcset="https://cleandesign.studio/watapy-admin/static/images/logo-white.png, https://cleandesign.studio/watapy-admin/static/images/logo-white@2x.png 2x" alt="Watapy"></a><button class="menutoggle border-0 bg-transparent text-white"><i class="fa fa-bars"></i></button></div><div class="leftpanelinner d-flex flex-column flex-grow-1"><div class="sidebar-menu flex-grow-1"><div class="sidebar-title text-uppercase text-muted my-2"><small><strong>Danh mục</strong></small></div><ul class="nav nav-pills flex-column nav-stacked nav-bracket"><li class="nav-item nav-parent"><a class="nav-link d-flex align-items-center py-2" href="https://cleandesign.studio/watapy-admin"><i class="fa fa-pie-chart"></i> <span class="flex-grow-1">Báo cáo</span></a><ul class="children"><li><a href="https://cleandesign.studio/watapy-admin/reports.html" class="py-2"><i class="fa fa-caret-right"></i> <span>Báo cáo thống kê</span></a></li><li><a href="https://cleandesign.studio/watapy-admin/performance.html" class="py-2"><i class="fa fa-caret-right"></i> <span>Hiệu quả thành viên</span></a></li></ul></li><li class="nav-item"><a class="nav-link d-flex align-items-center py-2 active" href="https://cleandesign.studio/watapy-admin/wallet.html"><i class="fa fa-credit-card"></i> <span class="flex-grow-1">Ví của tôi</span></a></li><li class="nav-item"><a class="nav-link d-flex align-items-center py-2" href="https://cleandesign.studio/watapy-admin/transactions.html"><i class="fa fa-exchange"></i> <span class="flex-grow-1">Giao dịch <span class="pull-right badge badge-success">new</span></span></a></li><li class="nav-item nav-parent"><a class="nav-link d-flex align-items-center py-2" href="https://cleandesign.studio/watapy-admin"><i class="fa fa-link"></i> <span class="flex-grow-1">Offers</span></a><ul class="children"><li><a href="https://cleandesign.studio/watapy-admin/offers.html" class="py-2"><i class="fa fa-caret-right"></i> <span>Danh sách Offer</span></a></li><li><a href="https://cleandesign.studio/watapy-admin/offers-my-offers.html" class="py-2"><i class="fa fa-caret-right"></i> <span>Offer của tôi</span></a></li><li><a href="https://cleandesign.studio/watapy-admin/offers-performance.html" class="py-2"><i class="fa fa-caret-right"></i> <span>Báo cáo hiệu quả</span></a></li><li><a href="https://cleandesign.studio/watapy-admin/offers-report.html" class="py-2"><i class="fa fa-caret-right"></i> <span>Báo cáo chi tiết</span></a></li></ul></li><li class="nav-item"><a class="nav-link d-flex align-items-center py-2" href="https://cleandesign.studio/watapy-admin/users.html"><i class="fa fa-users"></i> <span class="flex-grow-1">Người dùng</span></a></li><li class="nav-item"><a class="nav-link d-flex align-items-center py-2" href="https://cleandesign.studio/watapy-admin/banks.html"><i class="fa fa-bank"></i> <span class="flex-grow-1">Ngân hàng</span></a></li><li class="nav-item"><a class="nav-link d-flex align-items-center py-2" href="https://cleandesign.studio/watapy-admin/referral.html"><i class="fa fa-share-alt"></i> <span class="flex-grow-1">Giới thiệu</span></a></li><li class="nav-item"><a class="nav-link d-flex align-items-center py-2" href="https://cleandesign.studio/watapy-admin/support.html"><i class="fa fa-life-buoy"></i> <span class="flex-grow-1">Hỗ trợ</span></a></li></ul></div><div class="sidebar-infosummary"><div class="sidebar-title text-uppercase text-muted my-2"><small><strong>Thống kê tổng quát</strong></small></div><ul class="list-unstyled"><li><div class="datainfo"><span class="text-muted">Label 1</span><h4>630, 201</h4></div><div id="sidebar-chart1" class="chart"><canvas width="100" height="30" stroke-width="3" style="display:inline-block;height:30px;vertical-align:top"></canvas></div></li><li><div class="datainfo"><span class="text-muted">Label 2</span><h4>1, 332, 801</h4></div><div id="sidebar-chart2" class="chart"><canvas width="59" height="30" style="display:inline-block;height:30px;vertical-align:top"></canvas></div></li><li><div class="datainfo"><span class="text-muted">Label 3</span><h4>82.2%</h4></div><div id="sidebar-chart3" class="chart"><canvas width="59" height="30" style="display:inline-block;height:30px;vertical-align:top"></canvas></div></li><li><div class="datainfo"><span class="text-muted">Label 4</span><h4>140.05 - 32</h4></div><div id="sidebar-chart4" class="chart"><canvas width="59" height="30" style="display:inline-block;height:30px;vertical-align:top"></canvas></div></li></ul></div></div></nav><div class="mainpanel d-flex flex-column"><nav class="navbar navbar-expand fixed-top navbar-light bg-light py-0 headerbar text-200"><div class="collapse navbar-collapse" id="navbarSupportedContent"><a href="https://cleandesign.studio/watapy-admin" class="logo d-none d-sm-block"><img src="https://cleandesign.studio/watapy-admin/static/images/logo-original.png" srcset="https://cleandesign.studio/watapy-admin/static/images/logo-original.png, https://cleandesign.studio/watapy-admin/static/images/logo-original@2x.png 2x" alt="Watapy"></a><ul class="navbar-nav ml-auto"><li class="nav-item d-flex align-items-center dropdown noti-item"><a class="nav-link align-items-center dropdown-toggle border-right text-dark" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"><div class="position-relative mr-2"><i class="fa fa-bell fa-lg"></i> <span class="badge badge-danger position-absolute">4</span></div><span class="">Thông báo</span></a><div class="dropdown-menu dropdown-menu-right text-200" aria-labelledby="navbarDropdown"><a href="#" class="dropdown-item px-3 d-flex align-items-center"><div class="noti-icon"><span class="fa-stack fa-lg text-muted"><i class="fa fa-circle fa-stack-2x"></i> <i class="fa fa-exchange fa-stack-1x fa-inverse"></i></span></div><div class="flex-grow-1 pl-2"><div>VPBANK tăng 1.500.000 VND</div><div class="text-100 text-muted line-height-reset">14 giờ trước</div></div></a><a href="#" class="dropdown-item px-3 d-flex align-items-center"><div class="noti-icon"><span class="fa-stack fa-lg text-muted"><i class="fa fa-circle fa-stack-2x"></i> <i class="fa fa-exchange fa-stack-1x fa-inverse"></i></span></div><div class="flex-grow-1 pl-2"><div>VPBANK tăng 1.500.000 VND</div><div class="text-100 text-muted line-height-reset">Hôm qua</div></div></a><div class="dropdown-divider"></div><a class="dropdown-item text-center" href="#">Xóa tất cả</a></div></li><li class="nav-item d-flex dropdown user-item"><a class="nav-link align-items-center dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"><img src="https://cleandesign.studio/watapy-admin/static/images/photos/userprofile.png" class="user-avatar rounded-circle flex-shrink-0" alt="" width="32" height="32"><div class="flex-grow-1 mx-2"><div class="user-name text-dark">Phong Đỗ</div><div class="user-group text-black-50">Quản trị viên</div></div></a><div class="dropdown-menu dropdown-menu-right text-200"><a class="dropdown-item" href="profile.html">Thông tin tài khoản</a> <a class="dropdown-item" href="login.html">Đăng xuất</a></div></li></ul></div></nav><main class="flex-grow-1"><div class="container"><div class="page-header position-relative py-4 pb-5 px-lg-3"><div class="row align-items-center"><div class="col-lg"><h2 class="page-title m-0 text-500 font-medium">Ví của tôi</h2><div class="mt-1 text-black-50">Quản lý tài khoản ngân hàng và địa chỉ ví</div></div><div class="col-lg-auto mt-3 mt-lg-0"><button class="btn btn-primary" data-toggle="modal" data-target="#modal-bank-card-add">Thêm TK ngân hàng</button></div></div></div><div class="contentpanel position-relative px-lg-3 pb-4"><section class="bank-card-list"><div class="row"><div class="col-lg-6 col-xl-4 mb-3"><div class="card bank-card h-100 position-relative"><div class="card-body"><div class="media pb-0"><div class="bank-card-logo mr-3"><img src="https://cleandesign.studio/watapy-admin/static/images/banks/watapy.png" class="img-fluid" alt="WATAPY"></div><div class="media-body"><div class="font-bold bank-card-bank-name text-muted">WATAPY</div><div class="bank-card-name text-secondary mt-2"></div><div class="bank-card-number text-secondary line-height-reset"></div><div class="text-600 bank-card-balance mt-3">69.605.631 <span class="text-200">WEC</span></div><div class="text100">1 WEC = 1.000 ₫</div></div></div></div></div></div><div class="col-lg-6 col-xl-4 mb-3"><div class="card bank-card h-100 position-relative"><div class="card-body"><div class="media pb-0"><div class="bank-card-logo mr-3"><img src="https://cleandesign.studio/watapy-admin/static/images/banks/bidv.png" class="img-fluid" alt="BIDV"><div class="bank-card-edit mt-3 mr-3 position-absolute"><button class="btn btn-outline-primary btn-sm btn-block" type="button" data-toggle="modal" data-target="#modal-bank-card-edit"><i class="fa fa-pencil"></i></button></div></div><div class="media-body"><div class="font-bold bank-card-bank-name text-muted">BIDV</div><div class="bank-card-name text-secondary mt-2">DO TUAN PHONG</div><div class="bank-card-number text-secondary line-height-reset">001100888866</div><div class="text-600 bank-card-balance mt-3">1.650.000 <span class="text-200">₫</span></div></div></div></div></div></div><div class="col-lg-6 col-xl-4 mb-3"><div class="card bank-card h-100 position-relative"><div class="card-body"><div class="media pb-0"><div class="bank-card-logo mr-3"><img src="https://cleandesign.studio/watapy-admin/static/images/banks/vpbank.png" class="img-fluid" alt="VPBANK"><div class="bank-card-edit mt-3 mr-3 position-absolute"><button class="btn btn-outline-primary btn-sm btn-block" type="button" data-toggle="modal" data-target="#modal-bank-card-edit"><i class="fa fa-pencil"></i></button></div></div><div class="media-body"><div class="font-bold bank-card-bank-name text-muted">VPBANK</div><div class="bank-card-name text-secondary mt-2">DO TUAN PHONG</div><div class="bank-card-number text-secondary line-height-reset">6666888800009999</div><div class="text-600 bank-card-balance mt-3">620.000 <span class="text-200">₫</span></div></div></div></div></div></div><div class="col-lg-6 col-xl-4 mb-3"><div class="card bank-card h-100 position-relative"><div class="card-body"><div class="media pb-0"><div class="bank-card-logo mr-3"><img src="https://cleandesign.studio/watapy-admin/static/images/banks/techcombank.png" class="img-fluid" alt="Techcombank"><div class="bank-card-edit mt-3 mr-3 position-absolute"><button class="btn btn-outline-primary btn-sm btn-block" type="button" data-toggle="modal" data-target="#modal-bank-card-edit"><i class="fa fa-pencil"></i></button></div></div><div class="media-body"><div class="font-bold bank-card-bank-name text-muted">TECHCOMBANK</div><div class="bank-card-name text-secondary mt-2">DO TUAN PHONG</div><div class="bank-card-number text-secondary line-height-reset">000043215678</div><div class="text-600 bank-card-balance mt-3">000.000 <span class="text-200">₫</span></div></div></div></div></div></div></div></section><section class="card mt-4"><div class="card-header"><div class="text-300 text-uppercase font-medium">Địa chỉ ví</div></div><div class="card-body"><p>Sử dụng đoạn mã dưới đây hoặc quét mã QR để thực hiện các giao dịch chuyển và nhận WEC.</p><div class="form-group"><label class="font-medium">Mã địa chỉ ví:</label><div class="input-group mb-3"><input type="text" class="form-control" value="5a8a218bf3de34733059c3a87ab358c8bfc307a79669bc4758658466dc88db71" readonly="readonly"><div class="input-group-append"><button class="btn btn-outline-secondary" type="button" data-toggle="tooltip" data-placement="top" title="Sao chép mã địa chỉ ví">Sao chép mã</button></div></div></div><div class="form-group"><label class="font-medium">Mã QR:</label><p><img src="https://cleandesign.studio/watapy-admin/static/images/wallet-qr.png" class="img-fluid wallet-qr" alt="Mã QR địa chỉ ví"></p><a href="#" target="_blank">Tải về mã QR</a></div></div></section></div></div></main></div></div><div class="modal fade" id="modal-bank-card-edit" tabindex="-1" role="dialog"><div class="modal-dialog" role="document"><div class="modal-content"><div class="modal-header"><h5 class="modal-title">Thông tin tài khoản</h5><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button></div><div class="modal-body"><form id="form-bank-card-edit"><div class="form-row"><div class="form-group col-md-6"><label for="bank-name">Chọn ngân hàng</label> <select id="bank-name" class="form-control" disabled="disabled"><option value="2" selected="selected">VPBank</option></select></div><div class="form-group col-md-6"><label for="bank-branch">Chi nhánh</label> <input type="text" class="form-control" id="bank-branch" value="Đông Đô"></div></div><div class="form-row"><div class="form-group col-md-6"><label for="bank-account-name">Tên chủ tài khoản</label> <input type="text" class="form-control text-uppercase" id="bank-account-name" value="DO TUAN PHONG"><div class="invalid-feedback">Nhập họ tên chủ tài khoản</div></div><div class="form-group col-md-6"><label for="bank-account-number">Số tài khoản</label> <input type="text" class="form-control" id="bank-account-number" value="6666888800009999"><div class="invalid-feedback">Nhập số tài khoản</div></div></div></form></div><div class="modal-footer"><div class="row w-100 align-items-center"><div class="col"><button class="btn btn-link text-danger" data-dismiss="modal" type="button"><i class="fa fa-trash-o mr-2"></i>Xóa tài khoản ngân hàng</button></div><div class="col-auto"><button class="btn btn-outline-secondary" data-dismiss="modal" type="button">Bỏ qua</button> <button class="btn btn-primary" data-dismiss="modal" type="button">Cập nhật</button></div></div></div></div></div></div><div class="modal fade" id="modal-bank-card-add" tabindex="-1" role="dialog"><div class="modal-dialog" role="document"><div class="modal-content"><div class="modal-header"><h5 class="modal-title">Thêm tài khoản ngân hàng</h5><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button></div><div class="modal-body"><form id="form-bank-card-add"><div class="alert alert-danger alert-dismissible fade show" role="alert">Có lỗi xảy ra, vui lòng thử lại! <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></div><div class="form-row"><div class="form-group col-md-6"><label for="bank-name">Chọn ngân hàng</label> <select id="bank-name" class="form-control"><option selected="selected">---</option><option value="1">Techcombank</option><option value="2">VPBank</option><option value="3">BIDV</option></select></div><div class="form-group col-md-6"><label for="bank-branch">Chi nhánh</label> <input type="text" class="form-control" id="bank-branch"></div></div><div class="form-row"><div class="form-group col-md-6"><label for="bank-account-name">Tên chủ tài khoản</label> <input type="text" class="form-control text-uppercase is-invalid" id="bank-account-name" required><div class="invalid-feedback">Nhập họ tên chủ tài khoản</div></div><div class="form-group col-md-6"><label for="bank-account-number">Số tài khoản</label> <input type="text" class="form-control is-invalid" id="bank-account-number" required><div class="invalid-feedback">Nhập số tài khoản</div></div></div></form></div><div class="modal-footer"><button class="btn btn-outline-secondary" data-dismiss="modal" type="button">Bỏ qua</button> <button class="btn btn-primary" data-dismiss="modal" type="button">Thêm tài khoản</button></div></div></div></div><script src="https://code.jquery.com/jquery-3.4.1.min.js"></script><script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script><script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-sparklines/2.1.2/jquery.sparkline.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script><script src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script><script src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script><script src="https://cleandesign.studio/watapy-admin/static/scripts/main.js?ver=2.1.0"></script></body></html>
+<!doctype html>
+<html lang="en">
+  <head>
+<meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Ví của tôi</title>
+  <meta name="description" content="(site meta description)" />
+  <link rel="shortcut icon" type="image/png" href="/favicon-16x16.png">
+
+  <!-- third party css: -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap&subset=vietnamese" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.css" />
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+  
+  <!-- /third party css -->    <link rel="stylesheet" href="/static/styles/main.css?ver=2.1.0" />
+  </head>
+  <body class="">
+    
+    <div class="page is-wallet text-200">
+      
+      
+
+      <nav class="leftpanel d-flex flex-column">
+<!-- logo: -->
+  <div class="logopanel d-flex justify-content-between align-items-center flex-shrink-0">
+    <a href="/" class="logo ml-3"><img src="/static/images/logo-white.png" srcset="/static/images/logo-white.png 1x, /static/images/logo-white@2x.png 2x" alt="Watapy"></a>
+    <button class="menutoggle border-0 bg-transparent text-white"><i class="fa fa-bars"></i></button>
+  </div>
+
+  <!-- menu: -->
+  <div class="leftpanelinner d-flex flex-column flex-grow-1">
+
+<div class="sidebar-menu flex-grow-1">
+  <div class="sidebar-title text-uppercase text-muted my-2">
+    <small><strong>Danh mục</strong></small>
+  </div>
+  <ul class="nav nav-pills flex-column nav-stacked nav-bracket">
+      <li class="nav-item nav-parent">
+        <a class="nav-link d-flex align-items-center py-2 " href="">
+          <i class="fa fa-pie-chart"></i>
+          <span class="flex-grow-1">
+            Báo cáo
+          </span>
+        </a>
+        
+          <ul class="children">
+              <li>
+                <a href="/reports.html" class="py-2">
+                  <i class="fa fa-caret-right"></i>
+                  <span>Báo cáo thống kê</span>
+                </a>
+              </li>
+              <li>
+                <a href="/performance.html" class="py-2">
+                  <i class="fa fa-caret-right"></i>
+                  <span>Hiệu quả thành viên</span>
+                </a>
+              </li>
+          </ul>
+        
+      </li>
+      <li class="nav-item ">
+        <a class="nav-link d-flex align-items-center py-2 active" href="/wallet.html">
+          <i class="fa fa-credit-card"></i>
+          <span class="flex-grow-1">
+            Ví của tôi
+          </span>
+        </a>
+        
+        
+      </li>
+      <li class="nav-item ">
+        <a class="nav-link d-flex align-items-center py-2 " href="/transactions.html">
+          <i class="fa fa-exchange"></i>
+          <span class="flex-grow-1">
+            Giao dịch
+              <span class="pull-right badge badge-success">new</span>
+          </span>
+        </a>
+        
+        
+      </li>
+      <li class="nav-item nav-parent">
+        <a class="nav-link d-flex align-items-center py-2 " href="">
+          <i class="fa fa-link"></i>
+          <span class="flex-grow-1">
+            Offers
+          </span>
+        </a>
+        
+          <ul class="children">
+              <li>
+                <a href="/offers.html" class="py-2">
+                  <i class="fa fa-caret-right"></i>
+                  <span>Danh sách Offer</span>
+                </a>
+              </li>
+              <li>
+                <a href="/offers-my-offers.html" class="py-2">
+                  <i class="fa fa-caret-right"></i>
+                  <span>Offer của tôi</span>
+                </a>
+              </li>
+              <li>
+                <a href="/offers-performance.html" class="py-2">
+                  <i class="fa fa-caret-right"></i>
+                  <span>Báo cáo hiệu quả</span>
+                </a>
+              </li>
+              <li>
+                <a href="/offers-report.html" class="py-2">
+                  <i class="fa fa-caret-right"></i>
+                  <span>Báo cáo chi tiết</span>
+                </a>
+              </li>
+          </ul>
+        
+      </li>
+      <li class="nav-item ">
+        <a class="nav-link d-flex align-items-center py-2 " href="/users.html">
+          <i class="fa fa-users"></i>
+          <span class="flex-grow-1">
+            Người dùng
+          </span>
+        </a>
+        
+        
+      </li>
+      <li class="nav-item ">
+        <a class="nav-link d-flex align-items-center py-2 " href="/banks.html">
+          <i class="fa fa-bank"></i>
+          <span class="flex-grow-1">
+            Ngân hàng
+          </span>
+        </a>
+        
+        
+      </li>
+      <li class="nav-item ">
+        <a class="nav-link d-flex align-items-center py-2 " href="/referral.html">
+          <i class="fa fa-share-alt"></i>
+          <span class="flex-grow-1">
+            Giới thiệu
+          </span>
+        </a>
+        
+        
+      </li>
+      <li class="nav-item ">
+        <a class="nav-link d-flex align-items-center py-2 " href="/support.html">
+          <i class="fa fa-life-buoy"></i>
+          <span class="flex-grow-1">
+            Hỗ trợ
+          </span>
+        </a>
+        
+        
+      </li>
+  </ul>
+</div><div class="sidebar-infosummary">
+  <div class="sidebar-title text-uppercase text-muted my-2">
+    <small><strong>Thống kê tổng quát</strong></small>
+  </div>
+  <ul class="list-unstyled">
+    <li>
+      <div class="datainfo">
+        <span class="text-muted">Label 1</span>
+        <h4>630, 201</h4>
+      </div>
+      <div id="sidebar-chart1" class="chart">
+        <canvas width="100" height="30" stroke-width="3" style="display: inline-block; height: 30px; vertical-align: top;"></canvas>
+      </div>
+    </li>
+    <li>
+      <div class="datainfo">
+        <span class="text-muted">Label 2</span>
+        <h4>1, 332, 801</h4>
+      </div>
+      <div id="sidebar-chart2" class="chart">
+        <canvas width="59" height="30" style="display: inline-block; height: 30px; vertical-align: top;"></canvas>
+      </div>
+    </li>
+    <li>
+      <div class="datainfo">
+        <span class="text-muted">Label 3</span>
+        <h4>82.2%</h4>
+      </div>
+      <div id="sidebar-chart3" class="chart">
+        <canvas width="59" height="30" style="display: inline-block; height: 30px; vertical-align: top;"></canvas>
+      </div>
+    </li>
+    <li>
+      <div class="datainfo">
+        <span class="text-muted">Label 4</span>
+        <h4>140.05 - 32</h4>
+      </div>
+      <div id="sidebar-chart4" class="chart">
+        <canvas width="59" height="30" style="display: inline-block; height: 30px; vertical-align: top;"></canvas>
+      </div>
+    </li>
+  </ul>
+</div>
+<!-- infosummary -->  </div>      </nav>
+      <div class="mainpanel d-flex flex-column">
+<nav class="navbar navbar-expand fixed-top navbar-light bg-light py-0 headerbar text-200">
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <a href="" class="logo d-none d-sm-block"><img src="/static/images/logo-original.png" srcset="/static/images/logo-original.png 1x, /static/images/logo-original@2x.png 2x" alt="Watapy"></a>
+
+      <ul class="navbar-nav ml-auto">
+        <!-- notifications: -->
+        <li class="nav-item  d-flex align-items-center dropdown noti-item">
+          <a class="nav-link align-items-center dropdown-toggle border-right text-dark" href="#" id="navbarDropdown" role="button" data-toggle="dropdown">
+            <div class="position-relative mr-2">
+              <i class="fa fa-bell fa-lg"></i>
+              <span class="badge badge-danger position-absolute">4</span>
+            </div>
+            <span class="">Thông báo</span>
+          </a>
+          <div class="dropdown-menu dropdown-menu-right text-200" aria-labelledby="navbarDropdown">
+            <a href="#" class="dropdown-item px-3 d-flex align-items-center">
+              <div class="noti-icon">
+                <span class="fa-stack fa-lg text-muted">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-exchange fa-stack-1x fa-inverse"></i>
+                </span>
+              </div>
+              <div class="flex-grow-1 pl-2">
+                <div>VPBANK tăng 1.500.000 VND</div>
+                <div class="text-100 text-muted line-height-reset">14 giờ trước</div>
+              </div>
+            </a>
+            <a href="#" class="dropdown-item px-3 d-flex align-items-center">
+              <div class="noti-icon">
+                <span class="fa-stack fa-lg text-muted">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-exchange fa-stack-1x fa-inverse"></i>
+                </span>
+              </div>
+              <div class="flex-grow-1 pl-2">
+                <div>VPBANK tăng 1.500.000 VND</div>
+                <div class="text-100 text-muted line-height-reset">Hôm qua</div>
+              </div>
+            </a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item text-center" href="#">Xóa tất cả</a>
+          </div>
+        </li>
+        <!-- profile: -->
+        <li class="nav-item d-flex dropdown user-item">
+          <a class="nav-link align-items-center dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown">
+            <img src="/static/images/photos/userprofile.png" class="user-avatar rounded-circle flex-shrink-0" alt="" width="32" height="32">
+            <div class="flex-grow-1 mx-2">
+              <div class="user-name text-dark">Phong Đỗ</div>
+              <div class="user-group text-black-50">Quản trị viên</div>
+            </div>
+          </a>
+          <div class="dropdown-menu dropdown-menu-right text-200">
+            <a class="dropdown-item" href="profile.html">Thông tin tài khoản</a>
+            <a class="dropdown-item" href="login.html">Đăng xuất</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  
+  <!-- /header -->  <!-- begin: main content of this page -->
+  <main class="flex-grow-1">
+    <div class="container">
+      <div class="page-header position-relative py-4 pb-5 px-lg-3">
+        <div class="row align-items-center">
+          <div class="col-lg">
+            <h2 class="page-title m-0 text-500 font-medium">Ví của tôi</h2>
+            <div class="mt-1 text-black-50">Quản lý tài khoản ngân hàng và địa chỉ ví</div>
+          </div>
+          <div class="col-lg-auto mt-3 mt-lg-0">
+            <button class="btn btn-primary" data-toggle="modal" data-target="#modal-bank-card-add">
+              Thêm TK ngân hàng
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="contentpanel position-relative px-lg-3 pb-4">
+        <!-- Bank accounts: -->
+        <section class="bank-card-list">
+          <div class="row">
+              <div class="col-lg-6 col-xl-4 mb-3">
+                <div class="card bank-card h-100 position-relative">
+                  <div class="card-body">
+                    <div class="media pb-0">
+                      <div class="bank-card-logo mr-3">
+                        <img src="/static/images/banks/watapy.png" class="img-fluid" alt="WATAPY"/>
+                      </div>
+                      <div class="media-body">
+                        <div class="font-bold bank-card-bank-name text-muted">WATAPY</div>
+                        <div class="bank-card-name text-secondary mt-2"></div>
+                        <div class="bank-card-number text-secondary line-height-reset"></div>
+                        <div class="text-600 bank-card-balance mt-3">69.605.631 <span class='text-200'>WEC</span class='text-200'></div>
+                          <div class="text100">1 WEC = 1.000 ₫</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-6 col-xl-4 mb-3">
+                <div class="card bank-card h-100 position-relative">
+                  <div class="card-body">
+                    <div class="media pb-0">
+                      <div class="bank-card-logo mr-3">
+                        <img src="/static/images/banks/bidv.png" class="img-fluid" alt="BIDV"/>
+                          <div class="bank-card-edit mt-3 mr-3 position-absolute">
+                            <button class="btn btn-outline-primary btn-sm btn-block" type="button" data-toggle="modal" data-target="#modal-bank-card-edit">
+                              <i class="fa fa-pencil"></i>
+                            </button>
+                          </div>
+                      </div>
+                      <div class="media-body">
+                        <div class="font-bold bank-card-bank-name text-muted">BIDV</div>
+                        <div class="bank-card-name text-secondary mt-2">DO TUAN PHONG</div>
+                        <div class="bank-card-number text-secondary line-height-reset">001100888866</div>
+                        <div class="text-600 bank-card-balance mt-3">1.650.000 <span class='text-200'>₫</span class='text-200'></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-6 col-xl-4 mb-3">
+                <div class="card bank-card h-100 position-relative">
+                  <div class="card-body">
+                    <div class="media pb-0">
+                      <div class="bank-card-logo mr-3">
+                        <img src="/static/images/banks/vpbank.png" class="img-fluid" alt="VPBANK"/>
+                          <div class="bank-card-edit mt-3 mr-3 position-absolute">
+                            <button class="btn btn-outline-primary btn-sm btn-block" type="button" data-toggle="modal" data-target="#modal-bank-card-edit">
+                              <i class="fa fa-pencil"></i>
+                            </button>
+                          </div>
+                      </div>
+                      <div class="media-body">
+                        <div class="font-bold bank-card-bank-name text-muted">VPBANK</div>
+                        <div class="bank-card-name text-secondary mt-2">DO TUAN PHONG</div>
+                        <div class="bank-card-number text-secondary line-height-reset">6666888800009999</div>
+                        <div class="text-600 bank-card-balance mt-3">620.000 <span class='text-200'>₫</span class='text-200'></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-6 col-xl-4 mb-3">
+                <div class="card bank-card h-100 position-relative">
+                  <div class="card-body">
+                    <div class="media pb-0">
+                      <div class="bank-card-logo mr-3">
+                        <img src="/static/images/banks/techcombank.png" class="img-fluid" alt="Techcombank"/>
+                          <div class="bank-card-edit mt-3 mr-3 position-absolute">
+                            <button class="btn btn-outline-primary btn-sm btn-block" type="button" data-toggle="modal" data-target="#modal-bank-card-edit">
+                              <i class="fa fa-pencil"></i>
+                            </button>
+                          </div>
+                      </div>
+                      <div class="media-body">
+                        <div class="font-bold bank-card-bank-name text-muted">TECHCOMBANK</div>
+                        <div class="bank-card-name text-secondary mt-2">DO TUAN PHONG</div>
+                        <div class="bank-card-number text-secondary line-height-reset">000043215678</div>
+                        <div class="text-600 bank-card-balance mt-3">000.000 <span class='text-200'>₫</span class='text-200'></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+          </div>
+        </section>
+
+        <!-- Wallet address: -->
+        <section class="card mt-4">
+          <div class="card-header">
+            <div class="text-300 text-uppercase font-medium">Địa chỉ ví</div>
+          </div>
+          <div class="card-body">
+            <p>Sử dụng đoạn mã dưới đây hoặc quét mã QR để thực hiện các giao dịch chuyển và nhận WEC.</p>
+
+            <div class="form-group">
+              <label class="font-medium">Mã địa chỉ ví:</label>
+              <div class="input-group mb-3">
+                <input type="text" class="form-control" value="5a8a218bf3de34733059c3a87ab358c8bfc307a79669bc4758658466dc88db71" readonly/>
+                <div class="input-group-append">
+                  <button class="btn btn-outline-secondary" type="button" data-toggle="tooltip" data-placement="top" title="Sao chép mã địa chỉ ví">Sao chép mã</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="font-medium">Mã QR:</label>
+              <p>
+                <img src="/static/images/wallet-qr.png" class="img-fluid wallet-qr" alt="Mã QR địa chỉ ví"/>
+              </p>
+              <a href="#" target="_blank">Tải về mã QR</a>
+            </div>
+          </div>
+        </section>
+      </div>
+      
+    </div>
+  </main>
+  <!-- end: main content of this page -->
+      </div>
+      
+
+      
+      
+    </div>
+
+  <div class="modal fade" id="modal-bank-card-edit" tabindex="-1" role="dialog">
+    <div class="modal-dialog " role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-title">Thông tin tài khoản</h5>
+
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+
+        
+        <div class="modal-body">
+          <form id="form-bank-card-edit">
+  <!--
+  <div class="alert alert-danger alert-dismissible fade show" role="alert">
+    Có lỗi xảy ra, vui lòng thử lại!
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  -->
+
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="bank-name">Chọn ngân hàng</label>
+      <select id="bank-name" class="form-control" disabled>
+        <option value="2" selected>VPBank</option>
+      </select>
+    </div>
+    <div class="form-group col-md-6">
+      <label for="bank-branch">Chi nhánh</label>
+      <input type="text" class="form-control" id="bank-branch" value="Đông Đô">
+    </div>
+  </div>
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="bank-account-name">Tên chủ tài khoản</label>
+      <input type="text" class="form-control text-uppercase" id="bank-account-name" value="DO TUAN PHONG">
+      <div class="invalid-feedback">
+        Nhập họ tên chủ tài khoản
+      </div>
+    </div>
+    <div class="form-group col-md-6">
+      <label for="bank-account-number">Số tài khoản</label>
+      <input type="text" class="form-control" id="bank-account-number" value="6666888800009999">
+      <div class="invalid-feedback">
+        Nhập số tài khoản
+      </div>
+    </div>
+  </div>
+</form>
+
+        </div>
+        
+
+          <div class="modal-footer">
+            <div class="row w-100 align-items-center">
+  <div class="col">
+    <button class="btn btn-link text-danger" data-dismiss="modal" type="button">
+      <i class="fa fa-trash-o mr-2"></i>Xóa tài khoản ngân hàng
+    </button>
+  </div>
+  <div class="col-auto">
+    <button class="btn btn-outline-secondary" data-dismiss="modal" type="button">Bỏ qua</button>
+    <button class="btn btn-primary" data-dismiss="modal" type="button">Cập nhật</button>
+  </div>
+</div>
+
+          </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="modal fade" id="modal-bank-card-add" tabindex="-1" role="dialog">
+    <div class="modal-dialog " role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-title">Thêm tài khoản ngân hàng</h5>
+
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+
+        
+        <div class="modal-body">
+          <form id="form-bank-card-add">
+  <div class="alert alert-danger alert-dismissible fade show" role="alert">
+    Có lỗi xảy ra, vui lòng thử lại!
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="bank-name">Chọn ngân hàng</label>
+      <select id="bank-name" class="form-control">
+        <option selected>---</option>
+        <option value="1">Techcombank</option>
+        <option value="2">VPBank</option>
+        <option value="3">BIDV</option>
+      </select>
+    </div>
+    <div class="form-group col-md-6">
+      <label for="bank-branch">Chi nhánh</label>
+      <input type="text" class="form-control" id="bank-branch">
+    </div>
+  </div>
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="bank-account-name">Tên chủ tài khoản</label>
+      <input type="text" class="form-control text-uppercase is-invalid" id="bank-account-name" required>
+      <div class="invalid-feedback">
+        Nhập họ tên chủ tài khoản
+      </div>
+    </div>
+    <div class="form-group col-md-6">
+      <label for="bank-account-number">Số tài khoản</label>
+      <input type="text" class="form-control is-invalid" id="bank-account-number" required>
+      <div class="invalid-feedback">
+        Nhập số tài khoản
+      </div>
+    </div>
+  </div>
+</form>
+
+        </div>
+        
+
+          <div class="modal-footer">
+            <button class="btn btn-outline-secondary" data-dismiss="modal" type="button">Bỏ qua</button>
+<button class="btn btn-primary" data-dismiss="modal" type="button">Thêm tài khoản</button>
+
+          </div>
+      </div>
+    </div>
+  </div>
+
+
+
+    
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-sparklines/2.1.2/jquery.sparkline.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+  
+  
+  <!-- daterangepicker: -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>    <script src="/static/scripts/main.js?ver=2.1.0"></script>
+
+
+  </body>
+</html>
