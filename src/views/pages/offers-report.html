@@ -100,8 +100,9 @@
                     <div class="col-lg-auto mt-3 mt-lg-0"></div>
                   </div>
                 </div>
-                <div class="card-body">
-                  <div class="table-responsive">
+                <div class="card-body">                  
+                  <!-- for desktop only: -->
+                  <div class="table-responsive d-none d-lg-block">
                     <table class="table">
                       <thead>
                         <tr>
@@ -147,9 +148,7 @@
                             <td>2020-02-01 09:25:59</td>
                             <td>2020-02-01 09:37:44</td>
                             <td>
-                              <a href="{{ paths.root }}/offers-detail.html" target="_blank" title="Xem offer này ở của sổ mới">
-                          manhluckhang-vn
-                        </a>
+                              <a href="{{ paths.root }}/offers-detail.html" target="_blank" title="Xem offer này ở của sổ mới">manhluckhang-vn</a>
                             </td>
                             <td>1</td>
                             <td>CPO</td>
@@ -217,6 +216,129 @@
                         {% endfor %}
                       </tbody>
                     </table>
+                  </div>
+
+                  <!-- for mobile only: -->
+                  <div class="mt-3 d-lg-none">
+                    <div class="mb-2">
+                      <div>Offer:</div>
+                      <select class="form-control form-control-sm w-100">
+                        <option value="0">Tất cả</option>
+                        <option value="1342">rockman-vn</option>
+                        <option value="2101">manhluckhang-vn</option>
+                        <option value="1226">juicyslim-vn</option>
+                      </select>
+                    </div>
+                    <div class="mb-3">
+                      <div>Status:</div>
+                      <select class="form-control form-control-sm w-100">
+                        <option value="0">Tất cả</option>
+                        <option value="1">Tạm tính</option>
+                        <option value="2">Chờ duyệt</option>
+                        <option value="3">Trùng đơn</option>
+                        <option value="4">Hủy</option>
+                      </select>
+                    </div>
+                          
+                    {% for item in range(1, 10) %}
+                    <!-- item: -->
+                    <div class="border-top py-2">
+                      <div class="d-flex justify-content-between py-1">
+                        <strong>#001</strong>
+                      </div>
+                      <div class="d-flex justify-content-between py-1">
+                        <div class="text-muted">Click:</div>
+                        <div>100</div>
+                      </div>
+                      <div class="d-flex justify-content-between py-1">
+                        <div class="text-muted">Created at:</div>
+                        <div>2020-02-01 09:21:59</div>
+                      </div>
+                      <div class="d-flex justify-content-between py-1">
+                        <div class="text-muted">Mofiffied at:</div>
+                        <div>2020-02-01 09:21:59</div>
+                      </div>
+                      <div class="d-flex justify-content-between py-1">
+                        <div class="text-muted">Offer:</div>
+                        <div>
+                          <a href="{{ paths.root }}/offers-detail.html" target="_blank">manhluckhang-vn</a>
+                        </div>
+                      </div>
+                      <div class="d-flex justify-content-between py-1">
+                        <div class="text-muted">Product Quantity:</div>
+                        <div>1</div>
+                      </div>
+                      <div class="d-flex justify-content-between py-1">
+                        <div class="text-muted">Type:</div>
+                        <div>CPO</div>
+                      </div>
+                      <div class="d-flex justify-content-between py-1">
+                        <div class="text-muted">Payout:</div>
+                        <div>330.000 ₫</div>
+                      </div>
+                      <div class="d-flex justify-content-between py-1">
+                        <div class="text-muted">Status:</div>
+                        <div>Tạm tính</div>
+                      </div>
+                      <div class="d-flex justify-content-center py-2">
+                        <a href="#" class="btn btn-outline-primary btn-sm btn-block" onclick="$('div.report-item-detail').hide(); $(this).parent().next().toggle(); return false;">Xem chi tiết</a>
+                      </div>
+                      <!-- detail: -->
+                      <div class="text-left bg-secondary report-item-detail" style="display:none">
+                        <table class="table table-bordered bg-white mb-0">
+                          <tbody>
+                            <tr>
+                              <td style="width:20%;" class="bold">#</td>
+                              <td>001</td>
+                            </tr>
+                            <tr>
+                              <td style="width:20%;" class="bold">Conversion ID</td>
+                              <td>AF2Qd3FQSjaUb4</td>
+                            </tr>
+                            <tr>
+                              <td style="width:20%;" class="bold">Product Quantity</td>
+                              <td>1</td>
+                            </tr>
+                            <tr>
+                              <td class="bold">Click Time</td>
+                              <td>2020-01-03 15:14:34                    </td>
+                            </tr>
+                            <tr>
+                              <td class="bold">Offer</td>
+                              <td>rockman-vn</td>
+                            </tr>
+                            <tr>
+                              <td class="bold">Browser Name</td>
+                              <td>chrome mobile</td>
+                            </tr>
+                            <tr>
+                              <td class="bold">Country</td>
+                              <td>VN</td>
+                            </tr>
+                            <tr>
+                              <td class="bold">Device OS</td>
+                              <td>android</td>
+                            </tr>
+                            <tr>
+                              <td class="bold">Device OS Version</td>
+                              <td>9.0</td>
+                            </tr>
+
+                            <tr>
+                              <td class="bold">Message</td>
+                              <td>Khách đồng ý mua hàng</td>
+                            </tr>
+                            <tr>
+                              <td class="bold">Customer phone</td>
+                              <td>09895725**</td>
+                            </tr>
+
+                          </tbody>
+                        </table>
+                      </div>                      
+                    </div>
+                    <!-- item: -->
+                    {% endfor %}
                   </div>
 
                   {% include "partials/components/pagination.html" %}
